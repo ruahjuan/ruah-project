@@ -1,0 +1,77 @@
+/**
+ * chords.css — FIAT
+ * Estilos del modelo chord-over-lyric (dos filas: acordes arriba, letra abajo).
+ * Complementa app.css que contiene los estilos de .cp-line (ChordPro inline).
+ */
+
+/* ── Contenedor del par acordes + letra ── */
+.cp-pair {
+  display: block;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.cp-pair.chorus {
+  background: var(--chorus-bg);
+  border-left: 3px solid var(--violet);
+  padding: 3px 8px;
+  margin-left: -11px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── Fila de acordes (arriba) ── */
+.cp-chords-row {
+  display: block;
+  font-family: var(--font-m);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--chord);
+  line-height: 1.4;
+  white-space: pre;        /* preserva el espaciado de columnas */
+  margin-bottom: 1px;
+}
+
+.cp-pair.chorus .cp-chords-row {
+  color: #5a2fa0;
+}
+
+/* ── Fila de letra (abajo) ── */
+.cp-lyric-row {
+  display: block;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text);
+  white-space: pre-wrap;   /* respeta sangría intencional de la letra */
+  margin-bottom: 4px;
+}
+
+.cp-pair.chorus .cp-lyric-row {
+  color: var(--chorus-text);
+  font-style: italic;
+}
+
+/* ── Print mode: ocultar filas de acordes ── */
+#sbody.print-mode .cp-chords-row {
+  display: none;
+}
+
+#sbody.print-mode .cp-pair {
+  margin-bottom: 2px;
+}
+
+/* ── Preview del editor ── */
+#ed-preview-body .cp-chords-row {
+  font-size: 10px;
+}
+
+#ed-preview-body .cp-lyric-row {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+  .cp-pair.chorus .cp-chords-row {
+    color: #a882f0;
+  }
+}

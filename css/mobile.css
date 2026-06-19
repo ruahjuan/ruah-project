@@ -1,0 +1,222 @@
+/**
+ * mobile.css — RUAH
+ * Estrategia: body NO scrollea. Cada vista ocupa 100% y scrollea internamente.
+ */
+
+@media (max-width: 639px) {
+
+  /* ── Body fijo, sin scroll ── */
+  body {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  /* ── Topbar: fijo, ya tiene height:52px ── */
+  #topbar { flex-shrink: 0; }
+
+  /* ── Vistas: cada una ocupa el espacio restante ── */
+  .view      { display: none; flex-direction: column; }
+  .view.on   { display: flex; flex: 1; overflow: hidden; }
+
+  /* ── HOME: scrollea internamente ── */
+  #v-home         { overflow-y: auto; }
+  .hero           { padding: 36px 20px 32px; flex-shrink: 0; }
+  .hero-name      { font-size: 52px; }
+  .home-wrap      { padding: 20px 16px 60px; flex: 1; }
+
+  /* ── CANCIONES ── */
+  #v-songs        { flex-direction: column; }
+
+  #ctrl-bar {
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  #filter-bar     { flex-shrink: 0; }
+
+  /* Split: columna, lista scrollea */
+  #split {
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+  }
+
+  #list-panel {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    border-right: none;
+    height: auto;
+  }
+
+  /* Detalle: fixed encima, oculto hasta seleccionar */
+  #detail {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important; left: 0 !important;
+    right: 0 !important; bottom: 0 !important;
+    z-index: 200 !important;
+    background: var(--bg) !important;
+    overflow-y: auto !important;
+    flex-direction: column !important;
+  }
+  #detail.mobile-open {
+    display: flex !important;
+  }
+
+  /* ── Botón volver ── */
+  #mobile-back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--f4);
+    background: var(--surf2);
+    border-bottom: 1px solid var(--bord);
+    cursor: pointer;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  #mobile-back svg { width: 18px; height: 18px; }
+
+  /* ── Ocultar elementos no necesarios ── */
+  #empty          { display: none !important; }
+  #hamburger      { display: none !important; }
+  #drawer-overlay { display: none !important; }
+  #sl-panel       { display: none !important; }
+
+  /* ── Canción ── */
+  #sbody { padding: 12px 14px 80px; }
+  #shdr  { padding: 12px 14px 8px; flex-shrink: 0; }
+
+  #controls-panel { padding: 6px 10px; gap: 5px; }
+  .ctrl-label { min-width: 52px; font-size: 10px; }
+  .ctrl-val { min-width: 56px; font-size: 11px; padding: 2px 6px; }
+  .ctrl-val-sm { min-width: 36px; }
+
+  .act-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .abtn       { white-space: nowrap; font-size: 12px; padding: 7px 10px; }
+  .tpb        { width: 28px; height: 28px; }
+
+  /* ── Texto de acordes ── */
+  .cp-lyric, .cp-lyric-only { font-size: 14px; }
+  .cp-chord   { font-size: 11px; }
+  .cp-section { font-size: 11px; }
+
+  /* ── Nav: solo íconos ── */
+  .nav-btn span { display: none; }
+  .nav-btn      { padding: 6px 10px; }
+
+  /* ── Oraciones ── */
+  #v-prayers { overflow-y: auto; }
+  #v-prayers > div { padding: 20px 16px 60px; }
+
+  /* ── Admin ── */
+  #v-admin { overflow-y: auto; }
+}
+
+@media (max-width: 379px) {
+  .hero-name { font-size: 40px; }
+}
+
+/* ── Impresión ── */
+@media print {
+  #topbar, #ctrl-bar, #filter-bar, #list-panel,
+  #shdr .act-row, #shdr #tp, #slinks,
+  #toast, #mobile-back { display: none !important; }
+  body   { overflow: visible !important; height: auto !important; }
+  #detail {
+    overflow: visible !important;
+    position: static !important;
+    display: block !important;
+  }
+  #song-view { display: flex !important; }
+}
+
+/* ── PWA Install Banner ─────────────────────────────────── */
+#pwa-install-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #1a1a1a;
+  border-top: 1px solid #2a2a2a;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+#pwa-install-banner.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#pwa-install-banner img {
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.pwa-install-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pwa-install-text strong {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}
+
+.pwa-install-text span {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.pwa-btn-install {
+  background: #c9a84c;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.pwa-btn-install:hover { background: #dbbe6a; }
+
+.pwa-btn-close {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.pwa-btn-close:hover { color: #aaa; }
