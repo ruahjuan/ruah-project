@@ -5,7 +5,7 @@ Herramienta para músicos que sirven. Cancionero con acordes, transposición, se
 
 ## Funciones
 
-- 196 canciones con acordes y letra en formato ChordPro
+- 220 canciones con acordes y letra en formato ChordPro
 - Transposición en tiempo real
 - Favoritas y setlists
 - Filtros por tag, artista y compositor
