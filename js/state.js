@@ -1,5 +1,5 @@
 /**
- * state.js — FIAT
+ * state.js — RUAH
  * Responsabilidad única: declarar y exportar todo el estado global
  * y las constantes de la aplicación.
  *
