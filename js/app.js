@@ -1,5 +1,5 @@
 /**
- * app.js — FIAT
+ * app.js — RUAH
  * Orquestador principal de la aplicación.
  *
  * Responsabilidades:
@@ -954,18 +954,21 @@ function init() {
     }
 
     // Deep link: soporta /cancion/id (rutas reales) y #cancion/id o #id (legacy hash)
-    const pathMatch = location.pathname.match(/^\/cancion\/(.+)$/);
-    const hashMatch = location.hash.match(/^#(?:cancion\/)?(.+)$/);
-    const initId = pathMatch ? pathMatch[1].trim()
-                 : hashMatch ? hashMatch[1].trim()
-                 : null;
-    if (initId) {
-      const exists = songs.find(s => s.id === initId);
-      if (exists) { showView('songs'); openSong(initId); }
-    }
-  } catch (e) {
-    console.error('[RUAH] Error al cargar:', e);
-  }
+const pathMatch = location.pathname.match(/^\/cancion\/(.+)$/);
+const hashMatch = location.hash.match(/^#(?:cancion\/)?(.+)$/);
+const initId = pathMatch ? pathMatch[1].trim()
+             : hashMatch ? hashMatch[1].trim()
+             : null;
+
+console.log('[DEBUG] pathname:', location.pathname);
+console.log('[DEBUG] pathMatch:', pathMatch);
+console.log('[DEBUG] initId:', initId);
+console.log('[DEBUG] songs.length:', songs?.length);
+
+if (initId) {
+  const exists = songs.find(s => s.id === initId);
+  console.log('[DEBUG] exists:', exists);
+  if (exists) { showView('songs'); openSong(initId); }
 }
 
 // ═══════════════════════════════════════════════════════
