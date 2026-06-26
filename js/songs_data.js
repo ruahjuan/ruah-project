@@ -2159,8 +2159,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/7uMc1kuRnm1eF9dASDN2Sc?si=81bb6fb346e24929",
     "spId": "7uMc1kuRnm1eF9dASDN2Sc",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=94AmBap4yqc",
+    "ytId": "94AmBap4yqc",
     "content": "@@ E       B         \nQuiero vivir la vida,\n@@C#m         G#m\nQue sepa gozar de todo,\n@@ A           C#m            B\nQue no me venda a la falsa diversión.\n@@E            B       C#m\nQue busque la felicidad,\n@@   G#m\nEn mi interior.\n@@ A          C#m      B\nQue busque la felicidad.\n\n\n\n@@             E               B\nQuiero apostar por grandes ideales,\n@@C#m        G#m         A\nQue sepa que mi vida vale,\n@@        C#m           B\nmucho más, mucho más.\n@@             E            B\nQue no me venda a la mediocridad,\n@@C#m          G#m        A   C#m       B\nQue busque servir y amar, servir y amar.\n\n\n\n@@ E          B             C#m   G#m\nQuiero acertar en mis elecciones.\n@@           A           C#m       B\nQue sepa distinguir el bien, y el mal.\n@@            E                  B\nQue no me venda a ser como los demás.\n@@C#m         G#m            A\nQue busque lo que vale la pena,\n@@C#m           B\nlo que vale la pena...\n\n@@            A B                   \nQuiero ser libre, \n@@            G#m         C#m\nQue sepa esclavizarme por amor.\n@@            A   B  \nQue no me venda, \n@@           G#m       C#m\nal capricho ni a la pasión.\n@@             A      B              A     B\nQue busque la libertad interior en Ti, en Ti.\n\n\n@@             E               B\nQuiero apostar por grandes ideales,\n@@C#m        G#m         A\nQue sepa que mi vida vale,\n@@        C#m           B\nmucho más, mucho más.\n@@             E            B\nQue no me venda a la mediocridad,\n@@C#m          G#m        A   C#m       B\nQue busque servir y amar, servir y amar.",
     "tags": [
       "VOCACIONAL",
@@ -2182,10 +2182,15 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/28QrSlnQUeDGmH368yGuZk?si=338dbf1b846c4ab0",
     "spId": "28QrSlnQUeDGmH368yGuZk",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=nRAULe_AMNE",
+    "ytId": "nRAULe_AMNE",
     "content": "@@ C                     G     \nTe cuento que en un invierno, \n@@ Am                E7\nalgún invierno del alma, ya sabés\n@@ F                      E7\nen que peleás con vos mismo\n@@    F                  G               C\nen que te anulás, y en vos nada bueno ves.\n\n@@ C                     G\nVino al rescate un hermano, \n@@ Am                 E7\nviéndome ciego de mí, se compadeció\n@@ F                    E7\n\"dejá a los otros -me dijo-\n@@         F                   G                 C\nque encuentren y tomen lo bueno que hay en vos\"\n\n\n\n@@C                     G \nLo bueno que hay en vos, \n@@Am          Em\nese milagro único que sos\n@@F            E7         \nmisterio que hay en vos, \n@@ F                    G            C\ntu manantial que nos fluye desde Dios.\n\n@@C                     G         \nLo bueno que hay en vos, \n@@      Am          Em\nque a veces está oculto para vos.\n@@ F                E7          \nLo hermoso que hay en vos, \n@@ F                  G                 C\ndeja que tomen lo bueno que hay en vos.\n@@G             Am Em         F    G           C\nLo bueno que hay, en cada cual, en mí y en vos.\n\n\n\nHerida y sin aceptarse, \ntu alma baja a su sótano, y allí\nolvida el bien de su vida.\nNo hay nada digno de ser amado en mí.\nAmnesia autodestructiva\nque el amor y la memoria podrán curar,\nmemoria de tantos bienes\namor que se alegra y comparte la vida que hay.\n\n\nCuando esa niebla te pierda\ncuando parezca que sólo, a tu alrededor\nsea lícito el pesimismo\ny vale muy poco la vida y ya no es un don.\nDejame ir a tu rescate, \ncuando esa nada ahogue tu corazón,\nsean mis ojos tu espejo \ny vuelvas a ver lo valioso que hay en vos.",
-    "tags": [],
+    "tags": [
+      "VOCACIONAL",
+      "SANACIÓN",
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS"
+    ],
     "source": "",
     "srcTag": "base",
     "srcColor": "#9e9e9e",
@@ -2206,7 +2211,9 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
-      "JESÚS"
+      "JESÚS",
+      "VOCACIONAL",
+      "MISIÓN"
     ],
     "source": "",
     "srcTag": "base",
@@ -2222,12 +2229,14 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/08NaP0cEd5stF6H6K1MjKP?si=408f342a58cd43c5",
     "spId": "08NaP0cEd5stF6H6K1MjKP",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=6yzhiM2rQCQ",
+    "ytId": "6yzhiM2rQCQ",
     "content": "@@C                          Em\nLlévame al desierto de mi corazón\n@@F\na lo más profundo donde\n@@ C                 G\npueda escuchar Tu voz.\n\n@@     C                  Em\nEn nuestra intimidad te diré en oración\n@@          F\nque esto poco que yo tengo\n@@ C               G\ntodo, todo te lo doy.\n\n@@              Am                            F\nPara que multipliques lo bueno que hay en mi\n@@           C                  G\ndejando atrás lo que me aleja de Ti.\n\n\n@@            Am\n/Hoy te doy todo lo que soy\n@@      F\ntransfórmalo, Señor.\n@@  C                    G\nHaz conmigo lo que quieras.\n@@         Am\nY con la fuerza de tu amor\n@@          F\nyo me entrego a la misión\n@@                     C         G\nconfiando en que actúas en mi corazón/ x2\n\n\n\n@@    Am                        Em\nEsto poco que yo soy Tú lo elegiste\n@@             F                         C   G\nHoy te lo entrego, Señor, para que lo multipliques…",
     "tags": [
       "ADORACIÓN",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISIÓN",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2265,13 +2274,15 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/123JkL0V1Fw0QWNzvFsc2N?si=873a68bebe8b4007",
     "spId": "123JkL0V1Fw0QWNzvFsc2N",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=_UxlM2Soy_c",
+    "ytId": "_UxlM2Soy_c",
     "content": "(Original: G#)\n@@G              C            Em       D         C\nEn esta tarde, Jesús amigo, vine a rogarte por mí\n@@G            C          Em         D          C\nPero al verte tan herido, ya no pienso más en mi\n@@Em           D         C\nQuiero quedarme por Ti\n\n@@G                C           Em      D         C\nVeo en tus ojos, Jesús amigo a toda la humanidad\n@@G              C\nCargaste solo, nuestros dolores\n@@Em          D            C  Em       D         C\nTe entregaste hasta el final, por amor a los demás\n\n\n\n@@ G           C                G\nQue mi corazón se abra a tu Gracia\n@@                D                          Em\nQue lleve tu Amor adonde quieras que yo vaya\n@@             C                 G        D\nY que tu costado derrame esa Agua de Vida\n\n\n\n@@  G                C           \n¿Cómo explicarte mis soledades, \n@@Em          D          C\nsi el mundo te abandonó?\n@@  G                C       \n¿Cómo mostrarte mis pies cansados, \n@@Em       D            C  Em       D        C\nsi fuiste Vos quien cargó un madero de amor?\n\n\n\n@@ G           C                G\nQue mi corazón se abra a tu Gracia\n@@                D                          Em\nQue lleve tu Amor adonde quieras que yo vaya\n@@             C                 G        D\nY que Tu costado derrame esa Agua de Vida\n\n\n@@       C        Em           C         D\nCon amor, con dolor, esperanza y alegría\n@@         C       Em        Am D G\nPor tu amor crucificado, Jesús amigo",
     "tags": [
       "ADORACIÓN",
       "JESÚS",
-      "PASCUA"
+      "PASCUA",
+      "ACCIÓN DE GRACIAS",
+      "VOCACIONAL"
     ],
     "source": "",
     "srcTag": "base",
@@ -2287,12 +2298,13 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/4MukaveRJJDpY4cI3t5gpL?si=6593d74b5818493c",
     "spId": "4MukaveRJJDpY4cI3t5gpL",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=kzXccdo_mZ8",
+    "ytId": "kzXccdo_mZ8",
     "content": "@@   C                  G              Am               \nMadre, hoy quiero hablarte una vez más, \n@@            Em         F  D       G\nestar cerca de tu corazón, junto a vos.\n@@C            G              Am\nY quiero contarte que ya estoy \n@@            Em           F D        G\nen la lucha diaria por lograr la santidad.\n\n\n@@F              G           C                      \nQuiero que tu me vayas guiando \n@@            Am           F   D           G\npor ese camino que escogí, ser como el Padre.\n@@C            G         Am             \nPero tengo miedo de caer, \n@@          Em          F \ny en la oscuridad no ver, \n@@ Fm                     G\npero Madre, tú estarás allí.\n\n\n@@C            G                   Am\nEl mal va dejando huellas tras de sí, \n@@               Em           F D           G\npero el joven quiere construir un mundo nuevo,\n@@C                  G            Am\nDonde el hombre tenga que luchar \n@@            Em             F D          G\npara que Cristo pueda reinar junto a su Padre.\n\n\n\n@@ F                     G               C\nSer respuesta para el mundo es la misión, \n@@             Am              F         G\ny yo, Madre, me consagro a vos, por entero.\n@@ C           G          Am\nSos la Reina de mi corazón, \n@@                  Em          F\nMadre humilde esclava del Señor,\n@@ Fm                             G\nHazme fuerte en la Alianza de amor.\n\n\n\n@@   C                  G              Am               \nMadre, hoy quiero hablarte una vez más, \n@@            Em         F  D       G\nestar cerca de tu corazón, junto a vos.\n@@C            G              Am\nY quiero contarte que ya estoy \n@@            Em           F G        C\nen la lucha diaria por lograr la santidad.\n",
     "tags": [
       "MARÍA",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "VOCACIONAL"
     ],
     "source": "",
     "srcTag": "base",
@@ -2308,8 +2320,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/0MaGutTmEj5SnI92E4JaW7?si=504ab7d978514a6a",
     "spId": "0MaGutTmEj5SnI92E4JaW7",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=R52PmAZHk1g",
+    "ytId": "R52PmAZHk1g",
     "content": "@@D                    A\nManda tu Espíritu, Jesús\n@@Bm                   G\nQue descienda hoy aquí\n@@D                    A\nQue su soplo llene nuestro corazón\n@@Bm     G\nVen Señor.\n\n@@D      \nLlénanos con tu poder\n@@A\nVen a nuestro corazón\n@@Bm                     G\nSopla tu Espíritu de amor\n\n@@D                         A\nEnciende en nuestro corazón\n@@Bm                       G\nEl fuego sagrado de tu amor\n\n\n@@            D\n/Manda tu Espíritu\n@@             A\nManda tu Espíritu\n@@         Bm              G\nQue descienda en este lugar/ x3\n\n\n@@ D \n/Ven, ven, Espíritu Santo\n@@ A\nVen, ven, Espiritu Santo\n@@ Bm                G\nVen, ven, derrama Tu poder/ x3\n\n\n@@           D\n/Manda tu fuego,\n@@           A\nmanda tu fuego\n@@      Bm             G\nY que arda en este lugar/ x2\n\n\n@@ D \n/Ven, ven, Espíritu Santo\n@@ A\nVen, ven, Espiritu Santo\n@@ Bm                G\nVen, ven, derrama Tu poder/ x3",
     "tags": [
       "ESPÍRITU SANTO",
@@ -2329,8 +2341,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/3l2aRbFZl4k85HDzA7RR9p?si=f92323eae4b644c2",
     "spId": "3l2aRbFZl4k85HDzA7RR9p",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=O8-dnfJWm8I&pp=ygUhdmVuIGVzcGlyaXR1IGRlIGRpb3MgYXJpZWwgZ2xhc2Vy0gcJCToLAYcqIYzv",
+    "ytId": "O8-dnfJWm8I",
     "content": "@@G      D         Em            \nVen, Espíritu de Dios \n@@                 C   Am         D\ninúndame de amor ayúdame a seguir\n@@G      D        Em                 \nVen y dame tu calor \n@@                C     D             G D\nquema mi corazón enséñame a seguir\n\n\n\n@@ G      D        Em             \nVen, Espíritu de Dios, \n@@          C   Am       D \nven a mi ser, ven a mi vida\n@@ G      D         Em             \nVen, Espíritu de Amor, \n@@         C D          G\nven a morar, Maranathá\n\n\n\n@@G      D            Em  \nHoy la vida que me das \n@@                   C    Am           D\nte invoca en mi dolor y clama ven Señor\n@@G        D         Em                     \nVen y cambia mi existir \n@@                   C\ntransforma mi penar\n@@    D            G D\nEn glorias hacia Ti.\n\n\n@@ G      D        Em             \nVen, Espíritu de Dios, \n@@          C   Am       D \nven a mi ser, ven a mi vida\n@@ G      D         Em             \nVen, Espíritu de Amor, \n@@         C D          G\nven a morar, Maranathá",
     "tags": [
       "ADORACIÓN",
@@ -2350,8 +2362,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/7guP600YdiDXKLGBLFCqDY?si=cd0fa5bb3927452b",
     "spId": "7guP600YdiDXKLGBLFCqDY",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=vd76TvN6jFE",
+    "ytId": "vd76TvN6jFE",
     "content": "@@C       G                                    \nElla conoce mis flaquezas \n@@     Dm                F\ny mi pobre corazón y aún así me llama\n@@   C          G                    \nEstrella, que guía en la tormenta \n@@   Dm                  F\ny apaga el temor, nos llena de su gracia\n\n@@Am                  Dm \nSolo un paso debo dar \n@@Am                  Dm\nsi con Ella quiero estar\n@@Am                Dm      \nNo me soltaré jamás, \n@@      F            G        Gsus4 G\ncon Ella al Cielo quiero llegar.\n\n\n\n@@        C           \nDe su mano voy \n@@          G               Dm F\nhasta la puesta del sol, María\n@@        C               \nElla es fiel estrella \n@@       G                Dm F\nque guía hacia Dios, María\n@@        C               \nSu promesa regala \n@@     G                  Dm F\nen nombre del amor, María\n@@      Am           G     F   G     C\nQue jamás perecerá un hijo de María.\n\n\n\n@@C         G       Dm        F\nElla es la luz que guía mi camino\n@@C          G       Dm                F\nSeguro estoy que siempre está conmigo\n@@  C          G     \nSiento su amor, \n@@      Dm               F\npues ella es Madre de la creación\n@@     Am         G\nTransforma mi corazón\n@@ Dm                     F     G      C  G Dm F               \nCuida de sus hijos, los vuelve hacia Dios.\n\n\n\n@@        C           \nDe su mano voy \n@@          G               Dm F\nhasta la puesta del sol, María\n@@        C               \nElla es fiel estrella \n@@       G                Dm F\nque guía hacia Dios, María\n@@        C               \nSu promesa regala \n@@     G                  Dm F\nen nombre del amor, María\n@@      Am           G     F   G     C\nQue jamás perecerá un hijo de María.",
     "tags": [
       "MARÍA",
@@ -2371,8 +2383,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/2xdwtXAFEwOHHmPa9vlPqW?si=bd5ba78d40ce4d3a",
     "spId": "2xdwtXAFEwOHHmPa9vlPqW",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=b18E6j2BFdA",
+    "ytId": "b18E6j2BFdA",
     "content": "@@     C           G            Am\nTe adoro con fervor, Deidad oculta\n@@       F              G             C  \nQue estás bajo éstas formas escondida\n@@  F          E7            Am G F\nA Ti mi corazón se rinde entero\n@@    Dm                  G\nY desfallece todo si te mira.\n\n@@      C             G                Am\nSe engaña en Ti, la vista, el tacto, el gusto  \n@@     F             G            C\nMas Tu Palabra engendra fe rendida\n@@    F              E7            Am F\nCuanto el Hijo de Dios ha dicho creo                          \n@@      Dm                 F           G\nPues no hay verdad cual la Verdad Divina\n\n\n@@     F           G             Am\n¡Oh memorial de la pasion de Cristo!\n@@     F                 G             Am           \n¡Oh pan santo que al hombre das la vida!\n@@     F           E7         Am G F\nConcede que de Ti viva mi alma\n@@    Dm         F          G\nY guste de tus ocultas delicias.\n\n\n@@   C            G           Am\nJesús, a quien ahora miro oculto\n@@  F                G               C             \nCumple, Señor, lo que mi pecho ansía\n@@         F        E7             Am  G  F\nQue a cara descubierta contemplándote\n@@ Dm                F           G  \nGoce por siempre de tu clara vista.\n\n@@   C              G          Am\nJesús mí ayer mí hoy y mí mañana \n@@      F               G            C\nLos pongo entre tus manos sin medida\n@@     F          E7           Am G F\nConcédeme la gracia de adorarte\n@@  Dm            F         G\nY entregarte mí sí toda la vida.\n\n@@F G  Am          \nAmén  \n@@F G Am\nAmén   \n@@F E7 Am Dm G C\nAmén.   \n",
     "tags": [
       "ADORACIÓN",
@@ -2393,12 +2405,14 @@ const SONGS_DATA = [
     "key": "Am",
     "spotify": "https://open.spotify.com/intl-es/track/0ZbzDQGSzHAIaPDVkbno26?si=ce1f5e2207d04d38",
     "spId": "0ZbzDQGSzHAIaPDVkbno26",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=TsPHhZeIKmI",
+    "ytId": "TsPHhZeIKmI",
     "content": "@@Am         F             Am               F\nTodo para Vos, sólo para Vos, yo soy para Dios.\n@@Am         F             Am               F\nTodo para Vos, sólo para Vos, yo soy para Dios.\n\n\n\n@@Am               F                  Am\nMi nombre, el dibujo de la huella digital\n@@                       F\nQue delinea mi identidad\n@@Am               F                           Am\nMi historia, el camino que he tenido que abrazar\n@@                     F\nMi cansancio y el deseo de llegar\n@@Dm       G     Dm         Gsus4      G\nY mis anhelos, mis más profundos sueños\n@@Bb        F              G      Dsus4 D\nCada suspiro de mi corazón es tuyo\n\n\n\n@@Am         F             Am               F\nTodo para Vos, sólo para Vos, yo soy para Dios.\n@@Am         F             Am               F\nTodo para Vos, sólo para Vos, yo soy para Dios.\n\n\n@@Am                 F                     Am\nMis manos y el esfuerzo cotidiano por el pan\n@@                 F  \nLa cosecha y la siembra\n@@Am              F                          Am\nMi cuerpo y mi alma, mi salud, mi enfermedad\n@@            F\nMi virtud y mi debilidad\n@@Dm     G     Dm        Gsus4       G\nY mis afectos, a quienes yo más quiero\n@@Bb       F                 G\nCada mirada que alumbra mi voz\n@@   Dsus4 D\nEs tuya (mi Señor)\n\n@@Am         F             Am               F\nTodo para Vos, sólo para Vos, yo soy para Dios.\n@@Am         F             Am               F\nTodo para Vos, sólo para Vos, yo soy para Dios.\n\n(CAMBIA ESTRIBILLO:)\n@@Dm         F              C             G\nTodo para Vos, sólo para Vos, yo soy para Dios\n@@Dm         F              C             G\nTodo para Vos, sólo para Vos, yo soy para Dios\n\n\n@@Am\nMi todo, mi 100%\n@@F\nMi todo, mi 100%\n@@C\nDe sol a sol, de enero a enero\n@@              G              D\nDe vientre a vientre te lo entrego (x4)",
     "tags": [
       "ADORACIÓN",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "ACCIÓN DE GRACIAS",
+      "OFRENDA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2414,13 +2428,14 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/5Xcb7couQKuVWmSvHckout?si=d5d55fc3adab4af8",
     "spId": "5Xcb7couQKuVWmSvHckout",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=1ye107pdMoQ",
+    "ytId": "1ye107pdMoQ",
     "content": "@@Cmaj7\nTe encontré sin esperarte\n@@              G\nEs como un sueño que nunca soñé\n@@        Am\nTan hermoso ante mis ojos\n@@        Am7\nTan hermoso ante mí\n@@        G\nEres mi sol en esta noche.\n\n@@     Cmaj7\nMe pensaste desde siempre\n@@          G\nTantos detalles colocaste\n@@Am\nTodo fue por tu Gracia\n@@Am7\nTodo fue por tu Gracia\n@@         G\nEres mi sol en esta noche\n\n\n@@Dm          G\nDelante de mí estás\n@@    C            C/B        Am\nDispuesto a levantarme de nuevo\n@@F          G             C   C7 \n¿Quién podría amarme tanto?\n@@Dm               G\nEl sol que me ilumina y me guía\n@@       C     C/B     Am\nMe abraza y me consuela\n@@F            Fm     Bb     C\nSoy desde y para siempre tuyo\n\nTan pequeño Tú te hiciste\nPara poder llamar mi atención\n¿Cómo no entregarme?\n¿Cómo no darle todo\nA mi sol en esta noche?\n\nCierro mis ojos y te pienso\nCuando los abro te encuentro ahí\n¿Quién podría ser?\n¿Quién podría ser?\nSólo mi sol en esta noche\n",
     "tags": [
       "ADORACIÓN",
       "VOCACIONAL",
-      "PASCUA"
+      "PASCUA",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2436,8 +2451,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/0YlKwGPhm6ciZSoyNrsRbY?si=f1c82cb43f5940d4",
     "spId": "0YlKwGPhm6ciZSoyNrsRbY",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=mtMx1XR_eVA",
+    "ytId": "mtMx1XR_eVA",
     "content": "@@   C                 F\nMirada creadora, creando;\n@@C                  G\nla del Salvador, salvando.\n@@   C                Am  G  C     F\nMirada de la Comunión, amando.\n\n@@  C               F\nMirada de misericordia\n@@      C         G\ndel amor crucificado;\n@@   C                       Am\nmirada que penetra en mi alma\n@@    G            C  C7\nun fuego abrasador.\n\n\n\n@@         F           C\nEnséñame, ¡oh, Trinidad!\n@@ E7                Am\ncómo es tu libre mirada.\n@@G       F            C\nEnséñame, ¡oh, Trinidad!\n@@      E7                   Am\npues es la más bella y preciada,\n@@    G             C\nla más pura de amor.\n\n\n@@   C                  F\nMirada de verdad sincera,\n@@   C                G\nmirada de Rey que reina;\n@@   C                     Am     G  C\nmirada que envuelve mi vida, y purifica.\n\n@@   C                   F\nMirada del principio y fin,\n@@   C              G\nmirada del Resucitado;\n@@   C                           Am   \nmirada que deslumbra con su luz\n@@     G     C   C7\ny al cegar, sana.\n\n\n\n@@         F           C\nEnséñame, ¡oh, Trinidad!\n@@ E7                Am\ncómo es tu libre mirada.\n@@G       F            C\nEnséñame, ¡oh, Trinidad!\n@@      E7                   Am\npues es la más bella y preciada,\n@@    G             C\nla más pura de amor.\n\n\n@@         F                   G\nPerdóname si cuando miro, miro sin mirar,\n@@         C           C/B   Am\nsi estos ojos que me diste no saben amar.\n@@      F                      G\nPues sólo veo cuerpos, sólo veo humanidad\n@@          C           C/B    Am       F G\npero me pierdo, mi Señor, toda divinidad.",
     "tags": [
       "ADORACIÓN",
@@ -2462,8 +2477,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/1nyyDXkVpaLgBlWU4Bkx41?si=5c917b01bdcb4bd1",
     "spId": "1nyyDXkVpaLgBlWU4Bkx41",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=WUSlFf-vGvM",
+    "ytId": "WUSlFf-vGvM",
     "content": "@@     E                   C#m\nNecesito de tu aire para respirar\n@@      E                     C#m\nNecesito de tu viento para continuar\n@@       A           Am\nVen y sóplame tu aliento,\n@@        E             C#m            \nQue devuelva el movimiento \n@@       F#m\nde mi transitar\n@@       B    G#7\nHacia Tu lugar\n\n\n\n@@       C#m        G#m\nVen y dame de tu aire\n@@      A                      B                G#7\nY devuélvele la vida a estos huesos que están secos\n@@       C#m        G#m\nVen y dame de tu aire\n@@        A                            E\nY transforma lo que es piedra en un corazón\n@@     B            E\nCon un latido nuevo.\n\n\n\nNecesito de tu aire para reavivar\nNecesito de tu viento para regresar\nVen y sóplame tu aliento\nQue devuelva el movimiento de mi transitar\nHacia tu lugar.",
     "tags": [
       "ADORACIÓN",
@@ -2483,12 +2498,13 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/2SkPhCOPbTO5tjJS0bPvkG?si=94e88f224a1147b6",
     "spId": "2SkPhCOPbTO5tjJS0bPvkG",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=TcVPy1H66A8",
+    "ytId": "TcVPy1H66A8",
     "content": "@@C                    \nDeja de herirte, \n@@     Am\ndeja de poner en mi boca\n@@               F     G\npalabras que nunca dije.\n@@             C                                  \nDeja de pensar que estoy enfadado, \n@@          Am\ndeja de decir\n@@         F                          G\nque soy Yo el que se está alejando de ti.\n@@                    Am  \nY es que aún no lo ves \n@@      G/B       C\nme entrego por ti una y otra vez,\n@@    F                    G\ntú siempre serás mi favorito,\n@@            Am G/B C \nnunca te dejaré, \n@@          Dm  G\nnunca te dejaré.\n\n\n\n@@C                                  \nY es que no hay nada, \n@@            Am\nnada, nada, nada\n@@             F                  \nque puedas hacer \n@@             G\npara que te deje de querer.\n@@                 C                  \nY es que no hay nada, \n@@              Am\nhagas lo que hagas,\n@@       F             G                          \npor favor, deja de decir \n@@                       C\nque no eres amado por mí.\n\n\n\n@@C           \nNo hay nada en tu alma\n@@                 Am\nque haga que en ti deje de pensar,\n@@       F \nestos muros que te destrozan\n@@           G\nson entre tú y tu libertad.\n@@    Am                \nHazme caso hijo mío \n@@    G/B   C\nyo solo quiero verte feliz,\n@@    F                      G                        \ntú siempre tendrás mi perdón, \n@@                   Am  G\nte falta perdonarte a ti.\n\n\n\n@@C                                  \nY es que no hay nada, \n@@            Am\nnada, nada, nada\n@@             F                  \nque puedas hacer \n@@             G\npara que te deje de querer.\n@@                 C                  \nY es que no hay nada, \n@@              Am\nhagas lo que hagas,\n@@       F             G                          \npor favor, deja de decir \n@@                       C\nque no eres amado por mí.\n\n\n\n@@                Am                             \nEs que, aunque peques y me cambies \n@@         G\npor las cosas terrenales\n@@            F                                     \naunque te alejes y me olvides \n@@      G  \ny me borres de tus planes.\n@@           Am        \nAunque te rindas y te caigas \n@@      G\ny no sepas levantarte, \n@@            F             G\nsi estás perdido pide ayuda.\n\n@@                C            \nEs que, aunque peques y me cambies \n@@        Bb\npor las cosas terrenales\n@@            F                                             \naunque te alejes y me olvides \n@@       G\ny me borres de tus planes.\n@@            C                                   \nAunque te rindas y te caigas \n@@     Bb\ny no sepas levantarte, \n@@            F            G\nsi estás perdido pide ayuda.",
     "tags": [
       "ADORACIÓN",
-      "JESÚS"
+      "JESÚS",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2504,12 +2520,13 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/3ANbr70hwT1fWh44VjfWjX?si=b510953da5d14413",
     "spId": "3ANbr70hwT1fWh44VjfWjX",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=43095GlHrsY",
+    "ytId": "43095GlHrsY",
     "content": "@@E        A  E                  B\nNada te turbe, que nada te espante.\n@@C#m           E           A        B\nQue todo se pasa, que el odio no queda.\n\n@@E       A    E               B\nY la paciencia, que todo lo alcanza\n@@C#m             E       A       B\nY quien a Dios tiene ya nada le falta.\n\n\n\n@@C#m   A            E       B\nSólo Dios alcanza, sí, sólo Dios, (sólo Dios).\n@@C#m       A            E          B\nEstamos hechos para Dios, para Dios, (para Dios).\n@@C#m  A               E      B\nSólo Dios llena el vacío interior, (Interior).\n@@C#m       A             E         B          E\nEstamos hechos para Dios, para Dios, para Dios.",
     "tags": [
       "ADORACIÓN",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "VOCACIONAL"
     ],
     "source": "",
     "srcTag": "base",
@@ -2525,8 +2542,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/0t9wX3RRNTFbB1nToGeUjm?si=8a07439d64e140fa",
     "spId": "0t9wX3RRNTFbB1nToGeUjm",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=MY9zu_E2920&pp=ygUkbmFkaWUgdGUgYW1hIGNvbW8geW8gbWFydGluIHZhbHZlcmRl",
+    "ytId": "MY9zu_E2920",
     "content": "@@   C            G             Am \nCuánto he esperado este momento, \n@@F              Dm              G\ncuánto he esperado que estuvieras así,\n@@   C            G               Am\nCuánto he esperado que me hablaras,\n@@F              Dm           G\ncuánto he esperado que vinieras a mí.\n\n@@ C     G               Am\nYo sé bien lo qué has vivido, \n@@ F       Dm                G\nsé también por qué has llorado,\n@@ C     G                Am\nYo sé bien lo que has sufrido, \n@@ F                       Gsus4 G\npues de tu lado no me he ido\n\n\n\n@@               C  G       Am   \nPues nadie te ama como yo, \n@@               F          G\npues nadie te ama como yo.\n@@         C          G               Am\nMira la cruz, esa es mi más grande prueba\n@@ F                   G\nNadie te ama como yo.\n\n@@               C  G       Am   \nPues nadie te ama como yo, \n@@               F          G\npues nadie te ama como yo.\n@@        C           G                Am\nMira la cruz, fue por ti, fue porque te amo\n@@F                G   C\nNadie te ama como yo.\n\n\n\n@@C      G              Am\nYo sé bien lo que me dices,\n@@ F                      G \naunque a veces no me hablas.\n@@ C  G                Am\nSé bien lo que en ti sientes,\n@@ F                     G \naunque nunca lo compartas.\n\n@@ C      G           Am\nYo a tu lado he caminado,\n@@F                       G\njunto a ti yo siempre he ido,\n@@   C     G             Am\nY aún a veces te he cargado, \n@@ F                 Gsus4  G\nyo he sido tu mejor amigo.",
     "tags": [
       "ADORACIÓN",
@@ -2548,12 +2565,13 @@ const SONGS_DATA = [
     "key": "Em",
     "spotify": "https://open.spotify.com/intl-es/track/1FsKOekuFNMRPljB2gUGMQ?si=71d5d3e9257f425b",
     "spId": "1FsKOekuFNMRPljB2gUGMQ",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=-xfwWhh3wFE&pp=ygUgbmVjZXNpdG8gZGUgdHUgYW1vciBwYXNjdWEgam92ZW4%3D",
+    "ytId": "-xfwWhh3wFE",
     "content": "(Original: Gm)\n@@     Em       C      Em      C       G           D\nNecesito tanto, necesito tanto, necesito de tu amor.\n\n\n@@     Em           C             Em       C\nNecesito al fin tocarte, aunque sea solamente,\n@@       G            D            Em           C\nen el borde de tu manto y en el medio de la gente;\n@@      G              D         Em             C\ny sentir que de Vos viene esa fuerza que me cura,\n@@        G            D            Em  C\ntantos años de esperar y de amargura.\n\n@@     Em             C         Em           C\nNecesito estar con Vos, bastará tocar tu manto,\n@@            G             D          Em            C\nporque en Vos está el poder de enjugar por fin mi llanto.\n@@        G           D           Em          C\nSueño con volver a casa y que vuelva la alegría,\n@@     G             D           Em  C\ny mi vida pueda al fin llamarse vida.\n\n\n\n@@      G    D      Em C\n¡Necesito de tu amor! (x2)\n\n\n\nNecesito estar más cerca, cerca de tu compasión,\ntengo que jugarme todo, sé que eres el Señor.\nTodo, todo lo he perdido y mi pena sigue abierta,\npero espero un signo y mi fe está alerta.\n\nSentirás al lado tuyo que hay un pobre que se acerca,\nmuy pequeño y que te toca con los ojos en la tierra;\npero lleno de esperanza, de esperanza y decisión\nde alcanzarte y alcanzar tu corazón.\n\n\n\n¡Necesito de tu amor!",
     "tags": [
       "ADORACIÓN",
-      "SANACIÓN"
+      "SANACIÓN",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2569,8 +2587,8 @@ const SONGS_DATA = [
     "key": "Em",
     "spotify": "https://open.spotify.com/intl-es/track/5tb0zDdE7iEd4S4pFGzA9i?si=1147bf83fd234ebd",
     "spId": "5tb0zDdE7iEd4S4pFGzA9i",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=WLViO1FOhiQ",
+    "ytId": "WLViO1FOhiQ",
     "content": "@@            Em                               \nHace unos años yo te vi vagando \n@@              Bm\nsin un rumbo fijo buscando un amor\n@@           C                                  \nTe preocupabas de cosas banales \n@@            B7\ncamufladas de satisfacción.\n\n@@         Em\nY esa sonrisa con la que naciste \n@@            Bm\nse fue destiñendo por la soledad\n@@           C\nMiraste al cielo gritándome fuerte: \n@@     B7\n“si existes dónde estás”\n\n\n\n@@            G                           \nY no estás solo vas \n@@                        Am7\ncaminando y yo voy detrás\n@@                                C\nYo voy guiando cada paso que das\n@@                              D\nNo tengas miedo y confía en mí que nada va a pasar.\n@@            G\nYo creo en ti, \n@@                              Am7\nno le hagas caso a tu inseguridad\n@@                               C\nYo te creé para que puedas volar\n@@                             D               C D\nY descubrir que existe un amor incondicional.\n\n\n\n@@        Em \nSé muy bien que no es tan fácil \n@@      Bm\npresumir que soy tu amigo\n@@        C\nEn un mundo que no quiere \n@@           B7\nque Dios guíe su camino\n\n@@       Em\nDame todas tus tristezas \n@@     Bm\ntus heridas y tu voz\n@@       C\nDame todos tus anhelos \n@@       B7\ncanta con el corazón…\n\n\n\n@@            G                           \nY no estás solo vas \n@@                        Am7\ncaminando y yo voy detrás\n@@                                C\nYo voy guiando cada paso que das\n@@                              D\nNo tengas miedo y confía en mí que nada va a pasar.\n@@            G\nYo creo en ti, \n@@                              Am7\nno le hagas caso a tu inseguridad\n@@                               C\nYo te creé para que puedas volar\n@@                             D               \nY descubrir que existe un amor incondicional.\n\n\n\n@@C                     G                         \nEn mis sueños yo te pienso, \n@@                     Am7\na cada paso estoy contigo\n@@                  B7\nTienes todo mi cariño\n@@ C                   G                     \nAunque seas perseguido \n@@                   Am7\ny veas una nube oscura\n@@                  B7\nEn mí tienes un amigo",
     "tags": [
       "ADORACIÓN",
@@ -2590,8 +2608,8 @@ const SONGS_DATA = [
     "key": "Em",
     "spotify": "https://open.spotify.com/intl-es/track/1kOjLugWMQuTP3L4B3sf9z?si=eb032fcb33604650",
     "spId": "1kOjLugWMQuTP3L4B3sf9z",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=g08T95dhErU&list=PLS0dRMWK6Asgl4u8rMrbaia5t2Q-r5mqe&index=1&pp=iAQB8AUB",
+    "ytId": "g08T95dhErU",
     "content": "@@Em                 C            \nNo recibimos el Espíritu de Dios \n@@ G                       D\npara seguir viviendo esclavos\n@@ Em                 C\nSino que hijos adoptivos, el Señor \n@@G                      D\nnos hizo por su hijo amado\n\n@@  Em                   C\nY es el Espíritu quien hoy \n@@                         G                       \nnos dice en nuestro corazón\n@@                          D\nNo tengan miedo de ser santos\n@@Em                   C\nÉl, a su lado, nos llamó \n@@                         G\ny convocados por su amor\n@@                    D\nTodos unidos le cantamos\n\n\n\n@@     Em              C        G             D\nNo tenemos miedo, no. No tenemos miedo, no. (x2)\n\n\n\nCae la tarde, pierde el día su fulgor \ny el miedo crece entre las sombras\nPero, en la noche, el creyente corazón \nespera el brillo de la aurora\n\nAsí, despierto, nuestro amor\nespera el mensajero albor\nDel día que ya está llegando\nSus centinelas somos hoy \ntestigos de ese nuevo sol\nQue es Jesús resucitado\n\n@@          G           D              C\nY así, en Cristo alimentamos la esperanza\n@@          G                      D\nDe construir la civilización del amor\n@@     B7                      C\nEl amor de Dios inclina la balanza\n@@            Am                 \nSi a nuestro lado está, \n@@        D\n¿quién nos podrá enfrentar?\n\n\n\nYa no podemos, por la gracia del Señor \npermanecer indiferentes\nYa no podemos resignarnos al dolor, \na la miseria, a la muerte\n\nDios nos invita a iluminar \ncon nuestra vida pastoral\nLas realidades en penumbras\nY es nuestra apuesta, nuestro plan, \nde transformar la realidad\nCon Su presencia y con tu ayuda\n\n\n\nSi en la balanza de este mundo y su dolor, \nmás que el amor, pesan las armas\nSi manda el dólar, si la guerra y la opresión, \nnos acorralan la esperanza\n\nAún hay oportunidad \npara jugarse de verdad, \npara no darse por vencido\nHay un camino que tomar, \npor los humildes, por la paz\nPor la verdad de Jesucristo\n\nY así, en Cristo alimentamos la esperanza…",
     "tags": [
       "ADORACIÓN",
@@ -2616,12 +2634,11 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/5shZNIbllFQ1HNXawrJv1W?si=d13c2a20a3334f84",
     "spId": "5shZNIbllFQ1HNXawrJv1W",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=lNMxQK-Jvtg",
+    "ytId": "lNMxQK-Jvtg",
     "content": "(Original: G mayor)\n@@D          A          Bm      G\nCristo, tu cruz es respuesta real\n@@            D                A\nPara este mundo, para este tiempo\n@@                 G  A\nQue huye en temores\n@@            D             A          G  A\nTú eres Camino, eres Verdad, eres la Vida\n\n\n\n@@           D               A\nNo tengo miedo de la libertad\n@@           Bm                G\nNo tengo miedo, Señor de la Vida\n@@                 D\nMe quiero entregar\n@@           A                    Bm\nToma mis manos mi voz y mi andar\n@@         G         Em                   A\nY yo alzaré alto la cruz derramada de amor\n@@                  D               A\nPara que sea bandera de la juventud\n@@           Bm                    G\nTu triunfo santo que junto a mi canto\n@@                 D\nSe harán fuerte luz\n@@           A               Bm\nPara que vean tu rostro, Jesús\n@@               G\nHombres con sed\n@@             Em                    A           D\nHombres valientes que quieran seguir tu caminar.\n\n\n\nAl verte herido reinando en la cruz\nDices mi nombre\nSuenan tambores al escucharte\nOigo las voces de aquellos hombres que tienen hambre\n\n\n\nSanta María, me acojo a tu amor\nPido tu fuego que arde de ruegos hoy por tus hijos\nVirgen María, rosa del cielo, oye mi canto.",
     "tags": [
       "ANIMACIÓN",
-      "MARÍA",
       "ACCIÓN DE GRACIAS",
       "JESÚS",
       "VOCACIONAL",
@@ -2641,8 +2658,8 @@ const SONGS_DATA = [
     "key": "Dm",
     "spotify": "https://open.spotify.com/intl-es/track/7F481UYKoaLYLsUCADbtf2?si=ca630c7865af4500",
     "spId": "7F481UYKoaLYLsUCADbtf2",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=0-e3B-EKnbQ",
+    "ytId": "0-e3B-EKnbQ",
     "content": "@@Dm                              Bb\nPor tu Iglesia que te espera a oscuras\n@@        F            Am\nPor tu pueblo que te reza aguardando la aurora\n@@Dm   Bb      F    Am\nTe rogamos, te rogamos.\n\n@@        Dm  \nPor las naciones paganas \n@@    Bb                      F\nque tienen sed de Ti, sin saberlo\n@@        Am\nTen piedad, ten piedad.\n\n@@        Dm                       Bb         F  \nPor los pueblos oprimidos por el totalitarismo\n@@          Am\nY la opresión de la mentira.\n@@      Dm                         Bb \nPor aquellos perseguidos por tu nombre \n@@                      F\nque se ocultan para orar\n@@                  Am\nY aquellos extraídos de su hogar.\n\n@@     Dm                  Bb\nPor sus perseguidores cegados por el odio\n@@     F                 Am\nPerdónales, Padre, no saben lo que hacen.\n\n@@    Dm                               \nPor los que no nos aman, \n@@            Bb\npor los que no sabemos amar\n@@             F                              \nPor los que sufren y agonizan \n@@                Am\ny hoy duermen en el hospital.\n@@                Dm\nPor los que hoy es su última noche\n@@       Bb                      F\nCuyos ojos no verán el nuevo día\n@@                    Am\nTen piedad, ten piedad.\n\n@@    Dm                     \nPor todos los que sufren \n@@         Bb\nla tentación del suicidio\n@@            F                      Am\nPor los dispuestos a dejar ganar al mal.\n@@      Dm                   Bb\nPor aquellos cuyas noches son interminables\n@@    F                         C          A7\nY a los que la angustia les ha quitado la paz.\n\n\n\n@@       Dm           Bb            F   C A7\nKyrie eleison, Kyrie eleison, Kyrie eleison\n@@       Dm           Bb            F   C A7\nKyrie eleison, Kyrie eleison, Kyrie eleison\n\n\n\n@@      Dm\nPor aquellos que trabajan en la prostitución\n@@     Bb\nY se ven obligados a vender su amor\n@@     F\nPor los que caen en la trampa \n@@ Am\ndel vicio y las drogas. \n@@    Dm\nPor los que hoy duermen en prisión \n@@            Bb\nPor los que hoy esperan su ejecución\n@@       F                  C  A7\nPor aquellos a los que torturan.\n\n@@        Dm\nPor criminales por los ladrones\n@@            Bb\nPor los que erran en soledad\n@@             F\nPor los que sufren \n@@         C               A7\nla indiferencia de los demás.\n\n\n\n@@       Dm           Bb            F   C A7\nKyrie eleison, Kyrie eleison, Kyrie eleison\n@@       Dm           Bb            F   C A7\nKyrie eleison, Kyrie eleison, Kyrie eleison\n\n\n\n@@       Dm                        \nPor la ciudad, \n@@                    Bb\npor todos sus habitantes\n@@             F                 \nQue en sus sueños \n@@            Am\nsolo existas Tú (solo existas Tú).\n@@Dm                                \nPor nuestros difuntos \n@@            Bb\nque aún no han visto tu rostro                                                                    \n@@        F                     Am\nPor los alejados entre la multitud\n\n@@        Dm\nPor los niños que descansan \n@@      Bb\nen el seno de su madre\n@@           F                    Am     \nPor las mujeres que van a dar a luz\n@@          Dm                           \nPara que reine \n@@                  Bb\nTu paz en cada hogar                                        \n@@              F\nPor los que quieren \n@@                   C  A7 \nsaciar tu sed de amar…                    \n\n\n\n@@       Dm           Bb            F   C A7\nKyrie eleison, Kyrie eleison, Kyrie eleison\n@@       Dm           Bb            F   C A7\nKyrie eleison, Kyrie eleison, Kyrie eleison \n\n\n\n@@        Dm                      \nTen piedad, ten piedad, ten piedad.(x3)\n@@               Am          Dm\nTen piedad, Señor, ten piedad",
     "tags": [
       "ADORACIÓN",
@@ -2663,10 +2680,16 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/0QQ3vhWM6VJd4YuhZsp81m?si=9d7fb982bb714c21",
     "spId": "0QQ3vhWM6VJd4YuhZsp81m",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=_hNkgaAkCNE",
+    "ytId": "_hNkgaAkCNE",
     "content": "@@ D               Bm          Em\nTomame en tus brazos y prepárame Jesús,\n@@D               E         A\nDame de tu Espíritu para abrazar tu cruz,\n@@Bm            A     Bm              A\nTe ofrezco mi vida, sé tú Señor mi guía.\n\n@@D              Bm          Em\nLa noche pasa rápido y mañana he de morir\n@@ D          E             A\nPero como siempre Tu calor yo siento en mi\n@@Bm                 A      Bm                A\nme pongo en tus manos, descanso en tus brazos\n\n\n\n@@              D    Bm           G             A\nHoy vengo a darte todo lo que hay dentro de mí\n@@               D    Bm    G           A\nVengo a entregarte todo por lo que viví\n@@         Bm    F#              Bm7 E7 A\nMi juventud Señor está en tu altar, recíbela.\n@@          D           Bm      G          A\nHoy digo si hoy te respondo con sinceridad\n@@          D             Bm      G            A\nEstoy dispuesto y me arriesgo, este paso a dar\n@@        Bm    F#             G  A  D       C G A\nAquí estoy Señor, hágase en mí, Tu voluntad,\n@@    D       C G A\nTu voluntad\n\n\n@@D                Bm         Em\nTu has sido bien claro sobre lo que debo dar\n@@D                    E       A\nY hoy me has concedido mi vida ofrendar.\n@@Bm            A    Bm           A\nQuedate conmigo quiero ser testigo,\n@@ G             E               A\nDel inmenso amor que hay en Ti;\n\n\n\n@@              D    Bm           G             A\nHoy vengo a darte todo lo que hay dentro de mí\n@@               D    Bm    G           A\nVengo a entregarte todo por lo que viví\n@@         Bm    F#              Bm7 E7 A\nMi juventud Señor está en tu altar, recíbela.\n@@          D           Bm      G          A\nHoy digo si hoy te respondo con sinceridad\n@@          D             Bm      G            A\nEstoy dispuesto y me arriesgo, este paso a dar\n@@        Bm    F#             G  A  D       C G A\nAquí estoy Señor, hágase en mí, Tu voluntad,\n@@    D       C G A\nTu voluntad\n\n\n@@     Bb\nVolveré para decirles,\n@@        D\nQue morir vale la pena\n@@       Esus4     E\nPor la verdadera vida,\n@@          A\nQue es la vida eterna.\n\n\n\n@@         Bm    F#              Bm7 E7 A\nMi juventud Señor está en tu altar, recíbela.\n@@          D           Bm      G          A\nHoy digo si hoy te respondo con sinceridad\n@@          D             Bm      G            A\nEstoy dispuesto y me arriesgo, este paso a dar\n@@        Bm    F#             G  A  D       C G A\nAquí estoy Señor, hágase en mí, Tu voluntad,\n@@    D       C G A\nTu voluntad\n",
-    "tags": [],
+    "tags": [
+      "OFRENDA",
+      "ADORACIÓN",
+      "VOCACIONAL",
+      "PASCUA",
+      "JESÚS"
+    ],
     "source": "",
     "srcTag": "base",
     "srcColor": "#9e9e9e",
@@ -2681,8 +2704,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/5cVHODyWMSYQDNNbDe5MhN?si=2bf90142119049e0",
     "spId": "5cVHODyWMSYQDNNbDe5MhN",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=vBpBNRwJE4w",
+    "ytId": "vBpBNRwJE4w",
     "content": "@@ C            Dm         G\n/No hay nada imposible para Dios, \n@@       C   F             C\nnada hay fuera de su amor. \n@@       Am         Em  F            C  E7 \nTodo puedo en Aquel que me conforta, \n@@   Am D F         G\nJesús,   confío en Ti./ x2\n\n\n@@   E7     Am F             C\nEspero en Ti, duermo tranquilo, \n@@ Dm         Em          F    D   G\nconfiado espero el día que vendrás. \n\n@@E7 Am Dm     C      E7\nEn Ti está la paz Señor, \n@@   Am F         C            G\nen Ti mi alma puede descansar.\n\n\n@@ C           Dm         G\nNo hay nada imposible para Dios, \n@@       C   F             C\nnada hay fuera de su amor. \n@@       Am         Em  F            C  E7 \nTodo puedo en Aquel que me conforta, \n@@   Am D F         G\nJesús,   confío en Ti.\n\n\n@@    E7     Am F          C\nYo creo en Ti, Tu eres mi roca, \n@@Dm      Em           F  D      G\nrefugio firme contra la tempestad.\n\n@@E7 Am F        C      E7\nEn Ti   está la paz Señor, \n@@   Am F          C            G\nen Ti   la noche brilla como el sol.\n\n\n@@C            Dm         G\n/No hay nada imposible para Dios, \n@@       C   F             C\nnada hay fuera de su amor. \n@@       Am         Em  F            C  E7 \nTodo puedo en Aquel que me conforta, \n@@   Am D F         G\nJesús,   confío en Ti./ x2",
     "tags": [
       "ADORACIÓN",
@@ -2703,8 +2726,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/5wXgGCclUKn9aohBxNZ13n?si=10a0c34c6a3640b4",
     "spId": "5wXgGCclUKn9aohBxNZ13n",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=0LP8PSKVFso",
+    "ytId": "0LP8PSKVFso",
     "content": "@@ C        Dm        G             C Am\nEs difícil imaginar qué pudiste sentir,\n@@           Dm7            G            C\nes difícil tener la piel que sólo lleva el Rey.\n@@C             Dm     G                Em   Am\nEn secreto yo te seguí por temor a la multitud,\n@@                     Dm         G            C\ncuando entraste a Jerusalén te diste a conocer.\n\n\n\n@@            Dm7          G               \nY allá tu tormento empezó, \n@@                    Em          Am\ndesconcertado en tiempo y en Dios,\n@@     Dm          G                  Gm  C7\ntu lamento no llegó a los oídos del pueblo\n@@           F         G   \nque te cantó una mañana, \n@@        Em            Am\nte celebró con tantas ganas\n@@        Dm          D7            G Gsus4\nproclamándote sin dudas: \"Salvador\".\n@@           F            G         \nQue te creyó con esperanza \n@@         Em         Am\ny te abrazó en una alianza,\n@@        Dm             G           C\nencontrando en tu mirada la de Dios.\n\n\n@@                  Dm       G                C  Am \nPronto cruje este corazón de ansiedad por saber\n@@                    Dm          G               C\ndónde irás después a comer el pan que yo esperé.\n@@                 Dm     G                Em   Am\nQueda oscura Jerusalén, tus milagros y tanta fe,\n@@                  Dm             G             C\npor el pueblo que te elevó y hoy se vuelve traidor.\n\n\n\n@@                 Dm7         G\n¿Por qué no le escapas al dolor\n@@                 Em         Am \nrecuperando el Reino para Vos,\n@@      Dm            G               Gm  C7 \ndesoyendo ese clamor que pide salvación?\n@@             F            G\n¿Dónde quedó mi Rey perfecto,\n@@          Em               Am \nque presintió el fracaso incierto?\n@@       Dm             D7              G\nCasi oculto entre las sombras se quedó.\n@@            F         G\n¿Dónde dejaste tu corona,\n@@       Em         Am \naquel brillo y esa gloria?\n@@          F              G            Am\n¡Todo el Reino se te hundió en el corazón!\n@@          F              G            Am\n¡Todo el Reino se te hundió en el corazón!\n@@          F              G             C\n¡Todo el Reino se te hundió en el corazón!",
     "tags": [
       "ADORACIÓN",
@@ -2725,11 +2748,17 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/3TBqr8hjqONayRn0xFtSFM?si=ec5c51348aaa4e09",
     "spId": "3TBqr8hjqONayRn0xFtSFM",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=Il0KhU_zw4s",
+    "ytId": "Il0KhU_zw4s",
     "content": "(Original: E mayor)\n@@D            A        Bm     \nA veces me siento alejado, \n@@G                     Em         A\ny la vergüenza no me deja ni hablar,\n@@D                  A            Bm \nY solo sé que me duele verte clavado, \n@@G                       Em                A\nporque me olvido de lo mucho que me amás.\n\n@@Bm   A   G   Bm  A    G\nQuiero volver a serte fiel\n@@Bm   A     G Bm  A    G   C A\nQuiero volver a serte fiel, fiel\n\n\n\n@@ D       F#m          G          A\nToma de mí lo que te sirva para darlo a los demás\n@@D        F#m          G              A\nToma de mí lo que te sirva, no me guardo nada más\n@@Bm         F#m           G             A\nHoy quiero ser tu instrumento y predicar tu gran verdad\n@@Bm         F#m               G\nLa de Tu Palabra, la de tu Cuerpo\n@@       C                       A\nLa de Tu amor eterno, la de amar al más pequeño.\n\n\n\nTrato de encontrarte en mis hermanos\nPero se me hace imposible sin tu amor\nSoy débil y te pido que tus manos\nAbran de par en par mi corazón.",
     "tags": [
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "OFRENDA",
+      "VOCACIONAL",
+      "ACCIÓN DE GRACIAS",
+      "SALIDA",
+      "COMUNIÓN",
+      "COMUNIDAD"
     ],
     "source": "",
     "srcTag": "base",
@@ -2768,13 +2797,13 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/2H2zjZuR4Ty395ArBqXZpS?si=85c129eb4a234d38",
     "spId": "2H2zjZuR4Ty395ArBqXZpS",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=vlYClW8-1Bk",
+    "ytId": "vlYClW8-1Bk",
     "content": "(Original: G mayor)\n@@ D               A            Bm \n¿Por qué tengo miedo de mí mismo? \n@@ G                           A\n¿Por qué no disfruto hoy de cada minuto?\n@@  D               A                 Bm\n¿Por qué querría ser de un modo distinto?\n@@  G                                A\n¿Por qué vivo siempre en lo que haré?\n\n@@ D          A        Bm\nTanta cosa para motivarme, \n@@ G                 A\nbasta ya de maltratarme\n@@ D             A               Bm\n¿Dime, Padre, por qué no me quiero? \n@@ G                           A\nSolo Tu aprecio mata mi desprecio…\n\n\n\n@@        G             A   \nHazme oír lo que te gusto \n@@          D      A             Bm\nque vea que me miras con pasión\n@@ G                          A\nQue a nadie quieres tanto como a mí\n@@         D   A   D\n¡Soy pasión de Dios!\n\n\n@@     D         A       Bm\nMe dicen que huya de mi debilidad, \n@@ G                                A\nTú me dices que permanezca en ella\n@@ D              A        Bm\nMe valoran por éxitos y perfección, \n@@ G                          A\nTú disfrutas conmigo tal y como soy\n@@  D      A             Bm\nDébil, enfermo y en pecado. \n@@ G                           A\nImpuro, impotente y quebradizo\n@@ D           A        Bm\nSolo así descubro como me amas, \n@@ G                             A\nsolo así descubro como me quieres…\n\n\n\n@@        G             A   \nHazme oír lo que te gusto \n@@          D      A             Bm\nque vea que me miras con pasión\n@@            G            A                  \nQue te recreas en mi belleza,\n@@           D    A      Bm \nque soy la niña de tus ojos\n@@ G                          A\nQue a nadie quieres tanto como a mí\n@@        D       F#7  Bm\nEres mi Padre y enloqueces\n@@G                           A\nQue a nadie quieres tanto como a mí\n@@         D   A   D\n¡Soy pasión de Dios!\n\n\n\n@@Em                       F#m\nCon la furia del mar y la solidez de la roca\n@@      Em                          A\nCon el ímpetu de la tormenta, la fuerza del vendaval\n@@Bm           A          D            G D Em\nCon esa misma contundencia tú me dices\n@@                      A\n\"Tú eres mío, tú eres mío\"",
     "tags": [
       "ADORACIÓN",
-      "JESÚS",
-      "SANACIÓN"
+      "SANACIÓN",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2790,8 +2819,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/1qw4AwLR6pAlXiE1pK44IS?si=513bafc7953c42ca",
     "spId": "1qw4AwLR6pAlXiE1pK44IS",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=oI7muT07lKk",
+    "ytId": "oI7muT07lKk",
     "content": "(Original: A mayor)\n@@C                     G                      \nSeñor que perdido estoy \n@@                   Am                    \nno encuentro el camino, \n@@                F\nya se ha ido el sol.\n@@               C\nLas nubes me cubren, \n@@              G\nya no siento nada. \n@@                Am\nMis culpas me atrapan, \n@@                F\nmis fuerzas me fallan.\n@@C          G  \nSi solo tal vez, \n@@              Am\nme dices porqué yo vuelvo \n@@    F                C\na caer de nuevo, Señor\n@@                 G               \nNo puedo, esta vez, \n@@              Am\nya me derrumbé.\n@@              F                 \nY caigo a tus pies perforados, \n@@   Fm              Gsus G\nyo puse esos clavos.\n\n\n\n@@C              G                Am  \nHoy vuelvo a gritar tu nombre Señor \n@@                F                C\nse mueve esta culpa en mi corazón.\n@@               G             Am   \nMe siento querido y arrepentido, \n@@             F                 C\nno puedo mirarte te pido perdón.\n@@              G        \nConfieso mis faltas, \n@@              Am\ncon eso no alcanza. \n@@                F                C\nLuego Tú me abrazas y siento calor\n@@               G                   Am              \nEncuentro tus ojos, tan puros tan claros, \n@@              F                  Fm\nlos míos con llanto tan tristes e insanos\n@@              C                G\nTe dicen perdón, te ruego perdón \n@@              Am                 F\nte claman Señor me quedo con Vos.\n\n\n\nYa calma mi niño, ven no llores más\nTu mancha he borrado, \nbien limpio has quedado\nVive en el amor, \ncomo lo hice yo\nCamina a mi lado, \ntu fe te ha salvado\nYa no llores más…\n\n\n\nYa calma mi niño, ven no llores más\nTu mancha he borrado, \nbien limpio has quedado\nVive en el amor, \ncomo lo hice yo\nCamina a mi lado, \ntu fe te ha salvado\nYa no llores más, \ny quédate en paz.",
     "tags": [
       "ADORACIÓN",
@@ -2811,13 +2840,14 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/0kEVRt0f1GSKI26N2FGvw6?si=390dc12425804025",
     "spId": "0kEVRt0f1GSKI26N2FGvw6",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=7XUgErUm904",
+    "ytId": "7XUgErUm904",
     "content": "(Original: Bb mayor)\n@@   G                     C\nJesús, contigo quiero estar\n@@       G                 C\nMe regalas la paz del corazón\n@@   G                      C\nSeñor, no soy digno de tenerte\n@@      G                       C\nPero Tú a mi casa quieres entrar\n\n@@   G                    C\nJesús, no hay nada que yo\n@@        G                             C\nPueda continuar anhelando, sino tu amor\n@@    G                    C\nSeñor, no hay mayor alegría\n@@        G                        C\nQue poder compartir mi vida contigo\n\n@@ Am7            Bm7     C\nQuiero permanecer en Ti\n@@Am7             Bm7        C\nY que Tú permanezcas en mí\n\n\n\n@@  G        D          C \nCristo, mi paz, mi alegría \n@@  G     D        C \nEres la luz de mi vida \n@@ G      D             C \nEres amor que permanece \n@@Am7        Bm7 \nGozo del alma, \n@@ C         D          G\nfuente de Vida y Verdad.\n\n\n\nJesús, compañero del camino\nEnséñame a amar a los demás\nSeñor, alimento que se entrega\nInscríbeme en tu corazón\n\nQuiero permanecer en Ti\nY que Tú permanezcas en mí\n",
     "tags": [
       "ADORACIÓN",
       "VOCACIONAL",
-      "JESÚS"
+      "JESÚS",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2853,13 +2883,15 @@ const SONGS_DATA = [
     "key": "Em",
     "spotify": "https://open.spotify.com/intl-es/track/5AtX4XafdSrfCh3URioEjS?si=21698e1fd9ef4a37",
     "spId": "5AtX4XafdSrfCh3URioEjS",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=LuaKOlKLqfQ",
+    "ytId": "LuaKOlKLqfQ",
     "content": "@@        Em                        C\nCon el viento que aletea sobre el agua\n@@                   G                     D\nEl aliento que proclama una nueva creación\n@@        Em                        C\nCon el agua que sepulta y que levanta\n@@                     G                     D\nLa promesa que abalanza mil caminos a la luz\n@@         Am                      C\nCon el fuego que devora mis entrañas\n@@                   B7\nY que brota de la cruz\n\n\n\n@@     Em           C                      G                      \nQue todos sean uno como Tú, Padre, en mí, \n@@                    D\ncomo yo, Padre, en Ti\n@@     Em           C                      G                      \nQue todos sean uno como Tú, Padre, en mí, \n@@                    D\ncomo yo, Padre, en Ti\n\n\n\nPara dar razón al mundo de esperanza\nDe una vida que proclama la victoria del amor\nPara darles, Padre eterno, nuestro sello\nY celebren mi presencia, este, oeste, norte a sur\nConsumados los envío a todas partes\nComo me enviaste Tú",
     "tags": [
       "ADORACIÓN",
       "ESPÍRITU SANTO",
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "ANIMACIÓN",
+      "VOCACIONAL"
     ],
     "source": "",
     "srcTag": "base",
@@ -2875,8 +2907,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/2xySNqQujPmTSbVrtjEhnx?si=5e307d17bb894d3b",
     "spId": "2xySNqQujPmTSbVrtjEhnx",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=QQXZ9bJU5jE",
+    "ytId": "QQXZ9bJU5jE",
     "content": "\n@@C                         F\nEn la intimidad de tu presencia\n@@    C                       F\nTe rindo hoy mi ser y mi corazón\n@@    Am                  F\nNo hay lugar mejor que a tus pies, Señor\n@@    C                            G\nEn Tí encuentro paz, encuentro amor\n\n@@       Am      F\nRecibe mi corazón\n@@   C           G\nJesús mi buen pastor\n@@      Am        F\nRecibe mi oración\n@@            C         G\nTe entrego hoy mi corazón.",
     "tags": [
       "ADORACIÓN",
@@ -2896,11 +2928,13 @@ const SONGS_DATA = [
     "key": "Am",
     "spotify": "https://open.spotify.com/intl-es/track/1lsYIp6sBoRVQdmQmOVllk?si=a72f6f711b374a6b",
     "spId": "1lsYIp6sBoRVQdmQmOVllk",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=B21uKDrVGdM&list=RDB21uKDrVGdM&start_radio=1",
+    "ytId": "B21uKDrVGdM",
     "content": "@@Am               G         Am\nNinguno de nosotros vive para sí\n@@      F     G          Am\ny ninguno muere para sí.\n@@   Am        G          Am\nSi vivimos, vivimos para el Señor.\n@@      F         G         Am\nSi morimos, morimos para Él.\n@@      F         G         Am\nSi morimos, morimos para Él.\n\n\n\n@@       F            G            Am\n¡Aleluya! Todo es posible para nosotros.\n@@       F   G             Am\nResucitó Cristo, Nuestro Señor.\n@@        F                G                 Am\nÉl vive hoy, es nuestro amor y nuestra esperanza.\n@@   F       G          Am\nRenace la Vida y el Corazón.\n@@   F       G           Am\nRenace la Vida y el Corazón.\n\nNos apremia el amor del Redentor\nporque por nosotros Él murió,\npara que todos los que vivan\nvivan para Él en la Pascua de su amor\nvivan para Él en la Pascua de su amor\n\n",
     "tags": [
-      "PASCUA"
+      "PASCUA",
+      "ACCIÓN DE GRACIAS",
+      "COMUNIÓN"
     ],
     "source": "",
     "srcTag": "base",
@@ -2916,11 +2950,13 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/7nFyYbr75YM9VN7Q6iszRN?si=a9ace9946d7f440d",
     "spId": "7nFyYbr75YM9VN7Q6iszRN",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=VFHWktYT3I8",
+    "ytId": "VFHWktYT3I8",
     "content": "@@ D                       G\nRompe esas cadenas Espíritu\n@@ D                  G\nEsas que no dejan concentrar\n@@ D                    G      D  G\nPara que yo pueda rezar en paz\n\n@@ D                      G\nQue nada me impida estar acá\n@@  D                     G\nQue nada me importe, nada más\n@@         D                        G\nQue sentirme protegido, acompañado\n@@                 D   G\nAmado y perdonado\n\n\n\n@@         D G    D        G\nPor eso ven, Espíritu Santo ven (x2)",
     "tags": [
-      "ESPÍRITU SANTO"
+      "ESPÍRITU SANTO",
+      "COMUNIDAD",
+      "ADORACIÓN"
     ],
     "source": "",
     "srcTag": "base",
@@ -2936,8 +2972,8 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/3GykddLFzP5y2iXfDt8RRi?si=c6af8dae3b174839",
     "spId": "3GykddLFzP5y2iXfDt8RRi",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=Eosehf6PWPc&pp=ygUVTWF4aSBrYXJnaGkgc2FsIHkgbHV6",
+    "ytId": "Eosehf6PWPc",
     "content": "(Original: B mayor)\n@@A        Bm\nLuz del mundo\n@@ D                         A\ndeja de ocultarte en lo profundo\n@@A         Bm\nSal de la tierra,\n@@   D                       A\nCuida tu sabor nunca lo pierdas.\n@@F#m E         D\nAnuncia la Palabra,\n@@F#m  E           D\ncon obras es tu vida la que habla\n@@F#m E            D\nAyuda a tus hermanos,\n@@F#m      E          D\nQue el mundo necesita de tus manos\n\n\n@@      A F#m     E\nSal y Luz, Luz y Sal\n@@    Bm\nmezclado entre la gente\n@@         G           E\nestá Jesús en la ciudad\n@@       A F#m     E\nMostrará la Verdad,\n@@      Bm\nno habrá noche en tu vida\n@@      G                 E\nserá siempre un despertar.\n\n@@A           Bm\nLuz, si Tu iluminas,\n@@D                           A\nNo puede ocultarse la ciudad sobre la cima.\n@@ A      Bm\nSal excelente,\n@@ D                              A\nMirando hacia el cielo, con los pies en el presente.\n@@F#m    E             D\nY aunque quizás tropieces,\n@@F#m   E            D\nno olvides que Jesús cayó tres veces\n@@F#m E           D\nLevántate y camina,\n@@F#m   E               D\nque con tu andar el mundo se ilumina\n\n\n@@      A F#m     E\nSal y Luz, Luz y Sal\n@@    Bm\nmezclado entre la gente\n@@         G           E\nestá Jesús en la ciudad\n@@       A F#m     E\nMostrará la Verdad,\n@@      Bm\nno habrá noche en tu vida\n@@      G                 E\nserá siempre un despertar.\n\n@@      E\nSi al Cielo caminas, tu amor ilumina...",
     "tags": [
       "ADORACIÓN",
@@ -2961,8 +2997,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/4SlsK5EGA7fjlDhwlEnflI?si=2afcef92d2434b64",
     "spId": "4SlsK5EGA7fjlDhwlEnflI",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=aOeBQNxzsuU",
+    "ytId": "aOeBQNxzsuU",
     "content": "@@C         G                Am\nAmo al Señor porque El escucha\n@@F                 G \nel clamor de mis súplicas.\n@@C                 G          Am   \nPorque inclina su oído hacia mí \n@@F               G\ncuando yo lo invoco.\n@@      C          G               Am    \nLos lazos de la muerte me envolvieron, \n@@          F                    G\nme alcanzaron las redes del abismo.\n@@ C           G           Am     \nCaí en la angustia y la tristeza \n@@      F            G\ninvoqué al Señor, ¡sálvame!\n\n@@     C              G     Am \nEl Señor es justo y bondadoso \n@@          F            G\nnuestro Dios es compasivo.\n@@     C             G       Am       \nEl Señor protege a los sencillos, \n@@      F                       G\nyo estaba en la miseria y me salvó.\n@@       C     G       Am           \nAlma mía recobra la calma \n@@         F                      G\nporque Dios ha sido bueno conmigo\n@@C          G         Am      \nEl libró mi vida de la muerte, \n@@   F            G\nde lágrimas y caídas.\n\n@@C         G              Am        \nTenía confianza cuando dije: \n@@      F                G\nqué grande es mi desgracia.\n@@      C           G    Am   \n¿Con qué pagaré al Señor\n@@  F                  G\ntodo el bien que me hizo?\n\n@@   C            E7          Am         \n/Alzaré la copa de la salvación, \n@@       F                   G\ninvocaré el nombre del Señor.\n@@       C       E7         Am         \nCumpliré mis votos al Señor \n@@        F                 G\nen presencia de todo su pueblo./ x2\n",
     "tags": [
       "ADORACIÓN",
@@ -2977,14 +3013,14 @@ const SONGS_DATA = [
   },
   {
     "id": "salmo-117-este-es-el-d-a-que-hizo-el-se-or",
-    "title": "SALMO 117: “ESTE ES EL DÍA QUE HIZO EL SEÑOR”",
+    "title": "SALMO 117: \"ESTE ES EL DÍA QUE HIZO EL SEÑOR\"",
     "artist": "PASCUA JOVEN SAN ISIDRO",
     "composer": "",
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/5Ub5ojVVA2AQGejPL9DI0b?si=2324539035334d7d",
     "spId": "5Ub5ojVVA2AQGejPL9DI0b",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=-jnlmy1hVIE",
+    "ytId": "-jnlmy1hVIE",
     "content": "@@E                   B            A    E\nEste es el día que hizo el Señor, ¡Aleluya!\n@@A                    E      A  B  E\nHoy la alegría es de todos, ¡Aleluya!\n\n\n@@G#m                A              E\n¡Den gracias al Señor, porque es bueno!\n@@G#m                A             F#7  B\n¡Den gracias a su amor que es eterno!\n@@G#7                   C#m  F#7\nQue lo diga el pueblo de Israel:\n@@E    D  B       E\n¡es eterno su amor!\n\n\n@@E                   B            A    E\nEste es el día que hizo el Señor, ¡Aleluya!\n@@A                    E      A  B  E\nHoy la alegría es de todos, ¡Aleluya!\n\n@@G#m             A         E\n«La mano del Señor es sublime, \n@@G#m               A        F#7 B\nhace proezas la mano del Señor».\n@@G#7               C#m F#7\nNo voy a morir, yo viviré\n@@E            D       B       E\npara contar lo que hizo el Señor.\n\n\n@@E                   B            A    E\nEste es el día que hizo el Señor, ¡Aleluya!\n@@A                    E      A  B  E\nHoy la alegría es de todos, ¡Aleluya!\n\n\n@@G#m                  A                  E\nLa piedra que desecharon los constructores \n@@  G#m                   A       F#7 B\nse ha convertido en la piedra angular.\n@@G#7                    C#m  F#7\nEsto ha sido hecho por el Señor\n@@  E       D        B        E\ny es admirable a nuestros ojos.\n\n\n@@E                   B            A    E\nEste es el día que hizo el Señor, ¡Aleluya!\n@@A                    E      A  B  E\nHoy la alegría es de todos, ¡Aleluya!",
     "tags": [
       "ADORACIÓN",
@@ -3000,18 +3036,19 @@ const SONGS_DATA = [
   },
   {
     "id": "salmo-18-yo-te-amo-se-or",
-    "title": "SALMO 18: “YO TE AMO, SEÑOR”",
+    "title": "SALMO 17: \"YO TE AMO, SEÑOR\"",
     "artist": "PASCUA JOVEN SAN ISIDRO",
     "composer": "",
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/27M824b60RQ2X9IVOo0f0Y?si=4937580f37f24a40",
     "spId": "27M824b60RQ2X9IVOo0f0Y",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=ZcSqxIBHmr4",
+    "ytId": "ZcSqxIBHmr4",
     "content": "@@      G                 Am    \nYo te amo Señor mi fortaleza \n@@              C               G D\nmi roca mi baluarte mi liberador\n@@    G                      Am \nTú eres la peña en que amparo \n@@                  C             D\nmi escudo y mi fuerza, mi Salvador\n\n\n@@Em                  Bm          \nEn el templo se escuchó mi voz \n@@C                      G   D\nclamé por Ti en mi angustia\n@@Em                   Bm \nExtendiste tu mano y no caí \n@@C                      G     D\nTu poder del enemigo me libró\n\n\nLas olas de la muerte me envolvían \nme aguardaba la ruina, pero el Señor venció\nTú eres la luz que me ilumina \nquien abre mis caminos, Tú eres mi Dios\n\n\nCuando yo invoqué tu nombre \ncon mano poderosa, me salvó tu Amor\nSon perfectos tus caminos tu mano me sostiene, \nTú eres mi Rey\n",
     "tags": [
       "ADORACIÓN",
-      "SALMO"
+      "SALMO",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3021,14 +3058,14 @@ const SONGS_DATA = [
   },
   {
     "id": "salmo-23-el-senor-es-mi-pastor",
-    "title": "SALMO 23 \"EL SEÑOR ES MI PASTOR\"",
+    "title": "SALMO 23: \"EL SEÑOR ES MI PASTOR\"",
     "artist": "NICO MONTERO",
     "composer": "",
-    "key": "",
+    "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/2BpF9yOYc6drLLdSA4iECs?si=ac109460978a43b9",
     "spId": "2BpF9yOYc6drLLdSA4iECs",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=VxNOIL1sAU0",
+    "ytId": "VxNOIL1sAU0",
     "content": "@@     G            D              Em    \nEl Señor es mi pastor, nada me falta. \n@@     C      Am     D\nEl Señor es mi pastor.\n@@     G            D              Em    \nEl Señor es mi pastor, nada me falta. \n@@     C      D     G\nEl Señor es mi pastor.\n\n\n@@       G                             \nEn praderas reposa mi alma, \n@@        Em\nen su agua descansa mi sed.\n@@       C                  G/B\nEl me guía por senderos justos \n@@      Am                   D\npor amor, por amor de su nombre.\n\n@@         G\nAunque pase por valles oscuros, \n@@       Em\nningún mal, ningún mal temeré\n@@         C                     G/B\nporque sé que el Señor va conmigo, \n@@     Am                D\nsu cayado sostiene mi fe.\n\n\n@@     G            D              Em    \nEl Señor es mi pastor, nada me falta. \n@@     C      Am     D\nEl Señor es mi pastor.\n@@     G            D              Em    \nEl Señor es mi pastor, nada me falta. \n@@     C      D     G\nEl Señor es mi pastor.\n\n@@       G\nTú preparas por mí una mesa \n@@           Em\nfrente a aquellos que buscan mi mal\n@@      C                 G/B\nCon aceite me ungiste, Señor \n@@      Am             D\ny mi copa rebosa de Tí.\n\n@@          G\nGloria a Dios, Padre omnipotente \n@@       Em\ny a su Hijo Jesús, el Señor\n@@       C                      G/B\ny al Espíritu que habita en el mundo \n@@        Am               D\npor los siglos eternos. Amén.\n\n\n@@     G            D              Em    \nEl Señor es mi pastor, nada me falta. \n@@     C      Am     D\nEl Señor es mi pastor.\n@@     G            D              Em    \nEl Señor es mi pastor, nada me falta. \n@@     C      D     G\nEl Señor es mi pastor.",
     "tags": [
       "ADORACIÓN",
@@ -3050,8 +3087,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/0uVsr2WcGBqpVfmWBYzuEh?si=d3dfe08ac577437e",
     "spId": "0uVsr2WcGBqpVfmWBYzuEh",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=Z65-_IHsgG4",
+    "ytId": "Z65-_IHsgG4",
     "content": "@@    E                    A                    \nRendid a Yahvé, Santos del Señor, \n@@            E                      B\ngloria al poder, al que hace la creación\n@@           E                       A      \nRendid honor al glorioso nombre del Señor \n@@       E           B           E\ny adoradle en su Santo esplendor\n\n\n@@             E       A      E          \nSobre los mares resuena la voz de Dios \n@@           E             A        B\nglorioso es Dios su voz hace temblar\n@@           E           A      E     E7\nQue poderosa es la voz del Altísimo\n@@      A             B                   E\nAleluya... su voz desgaja los cedros del Líbano\n@@     A                B                   E\nAleluya... la voz del Señor lanza llamas de fuego\n@@     A                B                 E\nAleluya... sacude los montes la voz del Altísimo\n@@     A                B             E\nAleluya... y en su santuario gritan ¡Gloria!\n\n\nSentado está Dios sobre la tempestad \nsentado está Yahvé cual Rey eterno\nLa fuerza da al que pone su confianza en Él \nYahvé, bendice a su pueblo con paz.",
     "tags": [
       "ALABANZA",
@@ -3072,8 +3109,8 @@ const SONGS_DATA = [
     "key": "Em",
     "spotify": "https://open.spotify.com/intl-es/track/1T6n7EqUH0IH3yOdCk3ii9?si=20968d9f9eb749bf",
     "spId": "1T6n7EqUH0IH3yOdCk3ii9",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=HFUuF9I0NV0",
+    "ytId": "HFUuF9I0NV0",
     "content": "@@ Em                Bm\nSalve, Reina de los Cielos\n@@C               G\ny Señora de los ángeles;\n@@Am     B7        Em  A\nsalve raíz, salve puerta,\n@@ C                     Dsus D\nque dio paso a nuestra luz.\n\n@@  Em               Bm\nAlégrate, Virgen gloriosa,\n@@ C                  G\nentre todas la más bella;\n@@Am         B7       Em  A \nsalve, agraciada doncella,\n@@  C                   D\nruega a Cristo por nosotros. \n@@C   G  Am  D   G\nAmén, aaaaamén.",
     "tags": [
       "MARÍA"
@@ -3092,8 +3129,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/6iAkt3n8ws4mFulwLzRDK9?si=446311c1437a4baf",
     "spId": "6iAkt3n8ws4mFulwLzRDK9",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=p2N79YwcBsI",
+    "ytId": "p2N79YwcBsI",
     "content": "@@          D         Bm\nCuando estoy a Tus pies\n@@       G           A         G\npuedo ver Tu grandeza y mi pequeñez.\n@@         D           Bm A\nCuando Tú, Espíritu Santo\n@@   G                              Bm A\ninfundes Tu amor me quema por dentro\n@@G            A         Bm     A        G\nSolo puedo alabarte y darte gracias Señor.\n@@G            A                 Bm        A      G\nLevantando yo mis brazos te entrego mi adoración...\n\n\n@@      D        A\nEres Santo, Señor\n@@      Em     Bm A\nEres Santo, Santo\n@@        D       A\nTe doy gloria, Señor\n@@         Em   Bm A\nTe doy gloria, gloria\n\n\n@@        Em                 Bm A\nRey de Reyes, Señor de Señores\n@@       Em            Bm A\nToda mi vida te pertenece\n@@      Em                  Bm A\nRey de Reyes, Señor de Señores\n@@         Em          Bm A\nToda mi vida te pertenece\n@@        Em                 Bm A\nRey de Reyes, Señor de Señores\n@@         Em           G  A\nToda mi vida te pertenece…\n\n\n@@      D        A\nEres Santo, Señor\n@@      Em     Bm A\nEres Santo, Santo\n@@        D       A\nTe doy gloria, Señor\n@@         Em   Bm A\nTe doy gloria, gloria",
     "tags": [
       "ADORACIÓN",
@@ -3132,8 +3169,8 @@ const SONGS_DATA = [
     "artist": "DANIEL POLI",
     "composer": "DANIEL POLI",
     "key": "A",
-    "spotify": "",
-    "spId": "",
+    "spotify": "https://open.spotify.com/intl-es/track/7cJZR320wJmAjlPkqZuPWM?si=80e8c4d21726471c",
+    "spId": "7cJZR320wJmAjlPkqZuPWM",
     "youtube": "https://www.youtube.com/watch?v=BxjM71rYXWI",
     "ytId": "BxjM71rYXWI",
     "content": "@@ A     E  \nSanto, santo, \n@@F#m           C#m \nSanto es el Señor, \n@@D            E\nDios del universo.\n@@A              E  \nLlenos están \n@@   F#m      C#m  \nel cielo y la tierra \n@@D       E\nde Su gloria.\n\n\n@@A         E       \nHosanna en el cielo, \n@@F#m         C#m\nHosanna en las alturas\n@@D          A                       \nBendito es el que viene \n@@     E\nen nombre del Señor.\n@@A         E       \nHosanna en el cielo, \n@@F#m         C#m\nHosanna en las alturas\n@@D          A                       \nBendito es el que viene \n@@     E             D A\nen nombre del Señor.",
@@ -3154,8 +3191,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/5nDw1Sffkz91hVRwqSTvPW?si=151e17fbd05c4062",
     "spId": "5nDw1Sffkz91hVRwqSTvPW",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=W-a3WLfTxPs",
+    "ytId": "W-a3WLfTxPs",
     "content": "(Original: E mayor)\n@@ G                C          G \nTantas veces me he sentido mal, \n@@            C      D\nes que no veía la verdad\n@@           Em        Bm          C\nQue en la Cruz está Jesús crucificado\n@@     Em            D           C\nY murió cargando todos mis pecados.\n\n@@G        C            G  \nY si yo tuviera que elegir, \n@@           C        D\nvivir ciego o mirarte a Tí.\n@@     Em     Bm           C\nElegiría vivir lo que aprendí,\n@@        Em            D               C\nQue Jesús me amó y se entregó por mi.\n\n\n@@      G             D        C           G\nEsta Pascua descubrí una entrega por amor,\n@@       G             D \nque revive como el fuego \n@@            C             D\nque me enciende el corazón.\n@@   Em        Bm  \nIlumina mi camino, \n@@          C        D\nme doy cuenta fuiste Vos.\n@@             G          Bm       C\nQuien me amó y se entregó por mí\n@@      Em             D      C\nPor amor Él se entregó por mí.\n@@        G           Bm       C\nEl me amó y se entregó por mí\n@@   Em    D               G\nY ahora yo me entrego a Tí\n\n\n\nCada vez que vuela a dudar,\nSe que ahora voy a recordar\nQue Jesús vive y esta resucitado\nEl me salvó y tengo ganas de gritarlo.",
     "tags": [
       "PASCUA",
@@ -3176,11 +3213,12 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/65u5ps7fJTEbETnFn6DpR9?si=cce44ca720b04116",
     "spId": "65u5ps7fJTEbETnFn6DpR9",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=C8ufPXi_K-0",
+    "ytId": "C8ufPXi_K-0",
     "content": "(Original: E mayor)\n@@ G               D\nCómo se llama esa persona\n@@Em           C                 G              \nQue acompañó siempre tu historia, \n@@             D       Em\nque se graduó con Vos\n@@         C            G\nEn la academia de la vida\n@@         D          Em               C\nY fue curando las heridas que la guerra dejó\n@@      G        D   Em C\nEn tu corazón, oh, oh, oh.\n\n@@  G              D\nCómo se llama esa persona\n@@ Em          C               G              D   Em\nQue fue bordándose en su manto tu sueño de volar\n@@          C              G \nQue se metiera en tus zapatos\n@@        D           Em             C\nPara seguir tu débil paso y hacer todo eso solo\n@@ G     D Em C\nPor amor\n\n\n@@            G D            Em C\nSe llama María, se llama María\n@@      G                D               Em C\nLa estrella que guía al día la madre del sol\n@@             G D              Em C\nSe llama María, se llama María\n@@     G          D              Em C\nLa eterna compañía de mi corazón\n@@            G      D \nDe mi corazón (Madre)\n@@           Em      C\nDe mi corazón (Madre)\n@@            G       D   Em  C\nDe mi corazón (Madre, Madre)\n\n\nCómo se llama esa persona\nQue en las arrugas de su mano dibuja una ilusión\nDe que tú y yo seamos hermanos\nY que su voz sea nuestro canto, \nque nos convoque siempre\nPara llegar a Dios.",
     "tags": [
-      "MARÍA"
+      "MARÍA",
+      "ANIMACIÓN"
     ],
     "source": "",
     "srcTag": "base",
@@ -3196,8 +3234,8 @@ const SONGS_DATA = [
     "key": "Em",
     "spotify": "https://open.spotify.com/intl-es/track/1t7i3ZQgjhU341Il43ijW8?si=4d886be69d984251",
     "spId": "1t7i3ZQgjhU341Il43ijW8",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=dWbjPRB7O1w",
+    "ytId": "dWbjPRB7O1w",
     "content": "@@Em             C    \nCreo, sencillamente. \n@@   G               B7                Em\nQuiero disfrutar de la serenidad del creer.\n@@Em           C               G              B7    \nDesligar el creer del sentir, creo, mi Dios, y basta.\n@@    Em                       C      \nTe creo en tus misterios sin entenderlos\n@@    G                             B7\nTe creo en mí (te creo en mí) y en el pan blanco\n@@       Em             C\nEn el prójimo y en la creación\n@@     G              B7\nSin verte en ningún lado.\n\n\n@@Em                    C         G\nCreo, Señor, sencillamente. Porque creer es confiar\n@@   B7                                Em\nY cómo me gusta creerte sintiendo dudas\n@@           C                G     B7\nSintiendo dudas, sintiendo dudas\n\n@@Em                      C\nDigo que eres amor, escucho que soy tu amado\n@@      G                                  B7\nNo siento y qué más da te quiero y eso basta…\n\n\n@@Em                   C        \nAmo, Señor, sencillamente.\n@@     G               \nPorque amar es entregarse\n@@   B7                              Em\nY cómo me gusta amarte estando frío,\n@@          C            G  B7\nEstando frío, estando frío\n\n\n@@Em                            C\nEspero en Tu Palabra, vivo en Tu promesa\n@@  G                B7\nGozo en Ti, lo que aún me falta…\n\n\n@@Em                     C\nEspero Señor, sencillamente.\n@@     G  \nPorque esperar es descansar\n@@   B7                                  Em\nY cómo me gusta esperarte sintiendo miedo,\n@@            C                G    B7\nSintiendo miedo, sintiendo miedo.\n\n@@Em\nCreo (Señor sencillamente)\n@@C\nAmo (sencillamente)\n@@    G\nEspero\n@@ B7                                 C\nCómo me gusta seguirte sintiendo dudas\n@@          G\nEstando frío\n@@            B7\nSintiendo miedo\n@@            Em              C\nCómo me gusta, cómo me gusta\n@@   G                    B7\nCreerte, amarte y esperarte.\n\n@@    Em            E\nTe sigo, sencillamente…",
     "tags": [
       "ANIMACIÓN",
@@ -3219,8 +3257,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/2z95K9iHbUXEUkL04vWriD?si=7d3ccf5244a94387",
     "spId": "2z95K9iHbUXEUkL04vWriD",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=rAuavN3TDSQ",
+    "ytId": "rAuavN3TDSQ",
     "content": "@@  Am       F                 C      G \nQuiero decirte que hoy también te ví. \n@@  Am       F              C       G\nEntre los rostros de esta gran ciudad\n@@Am           F             C      \nTe ví en las manos de un obrero, \n@@         G              Am\nen la pasión de un enfermero\n@@             F              C   G\nTe ví en los ojos de aquel sin hogar.\n\n@@  Am       F                 C      G\nQuiero decirte que hoy también sentí \n@@  Am       F            C    G\nque tu presencia me tocaba\n@@  Am       F            C      \nSentí tus fríos pies descalzos \n@@        G         Am\nen ese niño sin abrazos\n@@          F          C  G\nSentí tu piel desabrigada.\n\n\n@@Am G    F      C\nTodo aquí te nombra\n@@Am G   F    C\nEntre luz y sombra\n@@Am  G    F     C\nTienes mis sentidos\n@@ F                   C\nComo a niño sorprendido.\n\n\n@@Am         F                  C     G\nQuiero decirte que hoy también te oí \n@@Am      F          C    G\nen el bullicio de la calle\n@@Am       F              C             \nEn el consejo de una abuela, \n@@        G                Am\nen la maestra de una escuela\n@@       F            C   G\nOi tu música en detalles\n\n@@Am         F                 C        G\nQuiero decirte que hoy también saboreé\n@@Am       F            C  G \nel gusto de tu compañía\n@@Am       F            C     \nMate cocido y pan caliente \n@@        G            Am\nen esa sonrisa sin dientes\n@@                F            C  G\nQue fue un manjar para mis días.\n\n\n@@Am G    F      C\nTodo aquí te nombra\n@@Am G   F    C\nEntre luz y sombra\n@@Am  G    F     C\nTienes mis sentidos\n@@ F                   C\nComo a niño sorprendido.\n\n\n@@Am         F                 C   G\nQuiero decirte que hoy también olí \n@@Am      F            C    G\nese perfume de tus manos\n@@Am           F          C   \nEn un comedor comunitario \n@@             G              Am\ny en la bondad de un empresario\n@@             F            C    G\nTe olí en las flores y en el barro.\n\n@@Am         F                 C        G\nQuiero decirte que hoy también te hallé \n@@Am       F             C   G\nno solamente en los altares\n@@Am        F             C   \nO en el silencio de los templos, \n@@           G           Am\nte ví en el grito de los pueblos\n@@          F               C  G\nEntremezclado en las ciudades\n\n\n@@Am G    F      C\n/Todo aquí te nombra\n@@Am G   F    C\nEntre luz y sombra\n@@Am  G    F     C\nTienes mis sentidos\n@@ F                   C\nComo a niño sorprendido./ x2\n\n@@  F           C\nTodo aquí te nombra\n@@F                       C\nMuriendo, sirviendo, naciendo, viviendo",
     "tags": [
       "ADORACIÓN",
@@ -3242,8 +3280,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/71FF85itDM6ArHuBaWNyah?si=be9bfcf2995b4d4f",
     "spId": "71FF85itDM6ArHuBaWNyah",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=oSb-TD1f9Rk&list=RDoSb-TD1f9Rk&start_radio=1",
+    "ytId": "oSb-TD1f9Rk",
     "content": "(Original: A mayor, transporte en 2do)\n@@              G    C                    G      C\nDesde el principio, cuando Dios te pensó, \n@@           Em   Am                  G    C\nquiso regalarte un hermoso plan de amor.\n\n@@                  G    C                  G  C\nPensó en cada detalle de tu vida y de tu ser,\n@@                        Em     \ntrazó una historia interesante \n@@ Am                 G\nque quiere verte recorrer.\n\n@@            G     C            G  C\nQuiso entregarte un precioso don, \n@@                       Em   Am           G\npara que lleves su mensaje por toda la creación.\n\n\n\n@@                  Em       \nY no guardes para ti \n@@C                           G  D\nesa misión que El te ha confiado, \n@@             Em \nÉl espera de ti \n@@C                    G  D\nque fructifique su regalo, \n@@              Em\ndando a conocer \n@@C                    G  D\nla grandeza de ser amado \n@@        Am                        D\npor un Dios que te confía más y más \n@@                   G\nsi eres fiel a su llamado.\n\n\n\n@@                  G\nÉl quiere que se cumpla \n@@C        G \nen ti su plan de amor \n@@             D           Em\npara que al verte cara a cara \n@@Am                      G\npueda expresar a viva voz: \n@@ Dsus  D            G\n«Servidor bueno y fiel, \n@@C                    G       C\nya que respondiste siendo fiel,\n@@                Em \nven entra en tu casa \n@@Am                G Dsus D\na gozar con tu Señor»\n\n\n\n@@                  Em       \nY no guardes para ti \n@@C                           G  D\nesa misión que El te ha confiado, \n@@             Em \nÉl espera de ti \n@@C                    G  D\nque fructifique su regalo, \n@@              Em\ndando a conocer \n@@C                    G  D\nla grandeza de ser amado \n@@        Am                        D\npor un Dios que te confía más y más \n@@                   G\nsi eres fiel a su llamado.",
     "tags": [
       "VOCACIONAL",
@@ -3263,8 +3301,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/73bzF5NJuyebpnzHLofzt9?si=beb605db6aa24e19",
     "spId": "73bzF5NJuyebpnzHLofzt9",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=lW0IyYzH-U8",
+    "ytId": "lW0IyYzH-U8",
     "content": "(Original: F#)\n@@E        F#m        G#m    A      E F#m G#m A\nMe acompaña este día Tu risa Señor.\n@@E         F#m     G#m        A           C#m\nSe alza en el horizonte tu historia en canción.\n@@B                    A\nSerán tus brazos abiertos,\n@@G#7                      C#m\nQue me mantienen despierto,\n@@   A        E        F#m              D  B\nAquellos brillantes pilares de mi corazón.\n\n@@E     F#m       G#m         A      E F#m G#m A\nEs el ruido del viento, que trae Tu Voz.\n@@E       F#m       G#m        A           C#m \nFuerza que me levanta y me lleva hacia el Sol.\n@@B                   A\nSerá el silencio de Cristo,\n@@G#7                   C#m\nAquél que pocos han visto.\n@@     A         E           F#m \nEl sueño que inunda en Su paso\n@@          D                  B\nAl más soñador, al más soñador\n\n\n@@      E             A               B\nSerá Dios, el que grita desde el corazón.\n@@        F#m       G#7        C#m\nEl que lucha por darme Su Amor,\n@@        A         E         F#m                 B\nEl que llena mi espacio, y quiere inundarme despacio.\n@@      E            A                 B\nSerás Tú quien desafíe el mundo por mí,\n@@          F#m      G#7     C#m\nQuien no tiene principio ni fin,\n@@         A       E       F#m          A          B          E F#m G#m A\nEl que mira y espera, que le entregue mi vida entera para servir.\n\n\nLos caminos se abren, mirando su andar,\nTus pisadas son marcas que otros seguirán,\nSerán tus ojos ventanas,\npara mirar el mañana,\nSabiendo que hoy y por siempre\nTenemos la paz, tenemos Tu Paz\n\n\n@@      E             A               B\nSerá Dios, el que grita desde el corazón.\n@@        F#m       G#7        C#m\nEl que lucha por darme Su Amor,\n@@        A         E         F#m                 B\nEl que llena mi espacio, y quiere inundarme despacio.\n@@      E            A                 B\nSerás Tú quien desafíe el mundo por mí,\n@@          F#m      G#7     C#m\nQuien no tiene principio ni fin,\n@@         A       E       F#m          A          B          \nEl que mira y espera, que le entregue mi vida entera...\n\n@@       E          A                      B\nSerá Dios, la esperanza de aquél que creyó,\n@@        F#m    G#7       C#m\nque se puede vivir del Amor.\n@@        A        E\nEl que mira y espera,\n@@    F#m          A         B            E F#m G#m A\nQue le entregue mi vida entera para servir.",
     "tags": [
       "ADORACIÓN",
@@ -3285,12 +3323,13 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/00XGuQ8j2wPgJwFRdrPluV?si=fd3471bae9264a78",
     "spId": "00XGuQ8j2wPgJwFRdrPluV",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=uCkprXbg07c",
+    "ytId": "uCkprXbg07c",
     "content": "(Original: C mayor)\n@@   E          Bm E7  \nSeñor, aquí estoy, \n@@      A     G#m         C#m\notra vez postrado a tus pies\n@@           A  G#7\nPara entregarte\n\n@@         C#m          G#m          A\nToda mi vida, lo que tengo, lo que soy\n@@                   C#m       \nLo pongo en tus manos \n@@           G#m          A    B   E\nporque no hay lugar mejor para mí.\n",
     "tags": [
       "ADORACIÓN",
-      "ENTREGA"
+      "ENTREGA",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3306,11 +3345,12 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/0zBe6Xu4ggrp9ycQQ3ccCX?si=879e9f839a0744fd",
     "spId": "0zBe6Xu4ggrp9ycQQ3ccCX",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=_7qS2fRxASM",
+    "ytId": "_7qS2fRxASM",
     "content": "(Original: C mayor)\n@@        A                          C#m\nSi conocieras cómo te amo, si conocieras cómo te amo\n@@     D       Bm        E\nDejarías de vivir sin amor.\n@@         A                         C#m\nSi conocieras cómo te amo, si conocieras cómo te amo\n@@     D            Bm            E\nDejarías de mendigar cualquier amor.\n\n\n@@       F#m             C#m            D      E         A\nSi conocieras cómo te amo, cómo te amo serías más feliz.\n\n\nSi conocieras cómo te busco, si conocieras cómo te busco\nDejarías que te alcanzara mi voz,\nSi conocieras cómo te busco, si conocieras cómo te busco\nDejarías que te hablara al corazón\n\n\nSi conocieras cómo te busco\nCómo te busco, escucharías más mi voz\n\n\nSi conocieras cómo te sueño, si conocieras cómo te sueño\nMe preguntarías lo que espero de ti\nSi conocieras cómo te sueño, si conocieras cómo te sueño\nBuscarías lo que he pensado para ti\n\n\nSi conocieras cómo te sueño\nCómo te sueño, pensarías más en mí.",
     "tags": [
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3326,8 +3366,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/4gPRmjYf6n1BtIaGmRm4Gk?si=7250c21dd5574f9f",
     "spId": "4gPRmjYf6n1BtIaGmRm4Gk",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=mkVTsrcIqQg",
+    "ytId": "mkVTsrcIqQg",
     "content": "(Original: C mayor)\n@@D                                           \nSi quieres, te acompaño en el camino, \n@@     A\ny en el camino vamos conversando.\n@@     D                                          \nY al conversar, tus hombros se descargan;  \n@@     A\ndescargas, pues tu peso voy llevando.\n@@      F#m                               \nPues pesa el peso de tu desencanto \n@@     C#m\ny es tu resignación aún más pesada.\n@@   D                                    \nPero te sostendré, pues ya sostuve \n@@   A\nla cruz de toda cruz en mis espaldas.\n\n@@    F#m                                  \nMe duele que te alejes de los tuyos, \n@@     C#m\ny el creciente dolor de tu aislamiento;\n@@      D                                 \npues toda mi pasión es ver reunidos \n@@   A\na los hijos de Dios que andan dispersos.\n@@   A                                C#7    \nYo sé que ya no crees en nuestro sueño: \n@@  F#m                     C#m\nBuscás seguridad retrocediendo.\n@@      D                                \nPero hasta en dirección equivocada \n@@    A\nlo mío es ir contigo, compañero.\n\n\n@@    Dmaj7                        A  C#7\n/Si quieres, te acompaño en el camino\n@@    F#m C#m                     D\nSi quieres, hoy me quedare contigo./ x2\n\n\nEscucha profecías, peregrino, \nno seas testigo de desesperanza.\nEs hora que levantes la cabeza. \nY, aunque anochece, alientes la confianza.\n\nPues es posible ver de otra manera \nla trama que se te hizo tan confusa.\n¿No ves el hilo de oro de la Pascua \nque rediseña todo lo que cruza?\n\n¿No ves que desde dentro de las muertes,\nla muerte fue implotada y ya no mata?\nY se revela el nombre de la vida: \nY el nudo que te ataba te desata.\nPartir juntos el pan en nuestra mesa \ndescifra quiénes somos y seremos.\nLa Pascua nos irrumpe, amor de amores, \nlo más vivo venciendo lo más muerto.\n\n\nPor fin sabrás quién soy, sabrás quién eres, \nmientras despiertas del antiguo sueño:\nY entenderás que es fiel a sus promesas, \nel Dios que prometió ser compañero.\n\nY de la historia mía y de la tuya \nya no te escaparás, ni tendrás miedo.\nVerás la historia como historia abierta\ny la esperanza arder su ardor sereno.\n\nY sentirás nostalgia de tu gente. \nY querrás compartir tu aliento nuevo.\nSin más demora, ponte ya en camino. \nSin más demora, ponte en medio de ellos.\n\nY brillará en tu fe de caminante \nmi nombre y mi misterio de camino\nY de mi fiel estar-acompañando \ntu amor de acompañante será el signo.",
     "tags": [
       "PASCUA",
@@ -3349,11 +3389,12 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/2YN3zePLSbICmu6gRblO3r?si=c95f1c6dfb694c1f",
     "spId": "2YN3zePLSbICmu6gRblO3r",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=WqFc-K1xJSY",
+    "ytId": "WqFc-K1xJSY",
     "content": "@@A               D               A\nSi rasgaras los cielos y descendieras,\n@@A                D            E\nSi se corriera el velo y yo te viera,\n\n\n@@  F#m         C#m       D      E\n/La luz de tu mirada me iluminaría\n@@         F#m               D         E      A\nY en un eterno abrazo de amor me consumiría./ x2\n\nCuando el árbol florece en la primavera,\n(Cuando el árbol florece en la primavera)\nCuando las cosas pasan sin que yo quiera,\n(Cuando las cosas pasan sin que yo quiera)\n\nLa luz de tu mirada me iluminaría,\nEn un eterno abrazo de amor me consumiría,\n(Y en un eterno abrazo de amor me consumiría)\n\nCuando me levanto a cada mañana,\n(Cuando me levanto a cada mañana)\nLa fuerza de Cristo me acompaña,\n(La fuerza de Cristo me acompaña)\n\n@@    F#m        C#m          D       G\nMe ayuda a caminar, me ayuda a misionar\n@@          A       D      E      A\ny paso a paso la gracia encontrar,\n@@           A       D      E      A\n(y paso a paso la gracia encontrar)\n\nSi rasgaras los cielos y descendieras,\n(Si rasgaras los cielos y descendieras)\nSi se corriera el velo y yo te viera,\n(Si se corriera el velo y yo te viera)\n\nLa luz de tu mirada me iluminaría\ny en un eterno abrazo de amor me consumiría,\n(y en un eterno abrazo de amor me consumiría)\nY en un eterno abrazo de amor me consumiría.",
     "tags": [
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3369,8 +3410,8 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/7AhG3CMxP7s6eVQXt603Bb?si=6e4aab5d2f664c9c",
     "spId": "7AhG3CMxP7s6eVQXt603Bb",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=J0DbB3Ri-NI",
+    "ytId": "J0DbB3Ri-NI",
     "content": "@@A              \nSi Tú no vienes, \n@@        C#m                    F#m\nnos faltarán las alas para la plegaria,\n@@         A7                       D\ndesgastaremos el silencio y las palabras\n@@              Bm              E      Bm7 E\nsi en lo escondido tu voz no clama.\n\n@@A              \nSi Tú no vienes,\n@@          C#m                    F#m\nserá imposible el abrazo del reencuentro\n@@           A7                        D\ncon el hermano que la ofensa puso lejos\n@@           Bm                   E\nsi Tú no enciendes de nuevo el fuego…\n\n@@         C#7        F#m    \nPero si vienes a recrearnos \n@@          Bm  E            A    C#7\ny con un soplo das vida al barro,\n@@           F#m  B7        E7\ncomo un artista irás plasmando\n@@D          A     E             A\nun rostro nuevo de hijos y hermanos,\n\n\n@@          D                 Amaj7\npor eso ven, Espíritu Santo, ven,\n@@D               A E     Bm7 E\nEspíritu Santo, ven.\n\n\n@@           A \nSi Tú no vienes \n@@      C#m                       F#m\nolvidaremos la esperanza que llevamos\n@@         A7                      D\nSucumbiremos al desanimo y al llanto\n@@         Bm            E      Bm7 E\nSi Tú no vienes a consolarnos\n\n@@         A   \nSi Tú no vienes \n@@       C#m                     F#m\nevitaremos el camino aconsejado\n@@         A7                        D\nPor el Señor de las espinas y el calvario\n@@         Bm             E\nSi Tú no vienes a recordarlo\n\n@@        C#7          F#m \nPero si vienes a sostenernos\n@@           Bm    E             A\nY nos conduces como un maestro\n@@C#7         F#m   B7         E\nEn nuestra carne se irá escribiendo\n@@D        A     E       A\nCada palabra del Evangelio\n\n\n@@         D                 Amaj7\nPor eso ven, Espíritu Santo, ven\n@@D               A E   Bm7 E\nEspíritu Santo, ven\n\n\n@@          A  \nSi Tú no vienes\n@@          C#m                       F#m \nnuestra mirada será ciega ante tus rastros\n@@        A7                  D\nLa poca fe dominará lo cotidiano\n@@          Bm                E     Bm7 E\nSi no nos donas el ser más sabios\n\n@@           A \nSi Tú no vienes \n@@       C#m                           F#m\ny no sacudes con tu viento nuestra casa\n@@          A7                      D\nY con un sello de profeta nos consagras\n@@            Bm               E\nTendremos miedo si no nos cambias\n\n@@        C#7            F#m\nPero si vienes y en el silencio\n@@            Bm   E           A\nDel alma escribes reglones nuevos\n@@C#7      F#m    B7      E\nEntre nosotros se irá tejiendo\n@@D           A     E          A\nLa historia cierta del nuevo Reino\n\n\n@@         D                 Amaj7\nPor eso ven, Espíritu Santo, ven\n@@D               A E   Bm7 E\nEspíritu Santo, ven",
     "tags": [
       "ESPÍRITU SANTO",
@@ -3391,8 +3432,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/6WpBT6BHecwSrt41c5i9gK?si=e24e19a1c8bb4b99",
     "spId": "6WpBT6BHecwSrt41c5i9gK",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=PM7fWcQsnUw",
+    "ytId": "PM7fWcQsnUw",
     "content": "@@C                     F               \nSiempre imaginé la felicidad \n@@             C                F\nligada al poder y a la comodidad.\n@@C                     F    \nSiempre imaginé la felicidad \n@@             C                 F\nligada a mis sueños cumplidos.\n@@Dm           Am               G\nNo sabía que la felicidad era así.\n@@                 C               F\nMiembro de un pueblo, tengo familia.\n@@      C                F\nCiudadano del Cielo y de estirpe elegida\n@@       C               F\nDe nación, piedra de Iglesia,\n@@      C               F\nque habita en Jerusalén.\n@@Dm           Am           \nOveja del divino redil \n@@    G\na quien el Pastor señala y susurra:\n\n\n@@ F             G                     \n\"Estos son mi madre y mis hermanos, \n@@ C     G/B   Am\nsoy de tu familia.\n@@  F          G      C\n¡Qué bonita es tu Iglesia!\".\n\n\n@@C                     F               \nSiempre imaginé la felicidad \n@@             C                F\nligada al poder y a la comodidad.\n@@C                     F    \nSiempre imaginé la felicidad \n@@             C                 F\nligada a mis sueños cumplidos.\n@@Dm           Am                   G\nNo sabía que la felicidad ahora está aquí.\n\n@@           C          F\nAquí y no allí, ahora y no mañana.\n@@   C                            F\nEn lo que hago y no en lo que queda por hacer.\n@@           C           F\nDentro de mí Él sabe que me amas.\n@@     C                     F\nEn serte fiel y no en entender o poseer.\n@@  Dm              Am \nAquí la noche es clara como el día,\n@@  G\nlugar desde el que miras y me susurras:\n\n\n@@     F              G     C     G/B   Am\n\"¡Cuánto te he esperado, soy de tu familia.\n@@  F          G     C\n¡Qué bonita es tu Iglesia!\".\n\n\n@@ Dm               Am                \nRiéndome de mi autosuficiencia, \n@@    G\ncontigo, Pan Blanco, que me susurras:\n\n\n@@ F         G               \n\"¡Sed uno como el Padre y Yo, \n@@         C     G/B   Am\nporque soy de tu familia!\n@@  F          G\n¡Qué bonita es...!\n\n@@ F             G                     \n\"Estos son mi madre y mis hermanos, \n@@ C     G/B   Am\nsoy de tu familia.\n@@  F          G      C\n¡Qué bonita es tu Iglesia!\".\n",
     "tags": [
       "ANIMACIÓN",
@@ -3412,11 +3453,12 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/5HvjCSh0j2NL2Q4yr9Ui8t?si=55a46ccc31084110",
     "spId": "5HvjCSh0j2NL2Q4yr9Ui8t",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=9ogXRLxUU-0",
+    "ytId": "9ogXRLxUU-0",
     "content": "@@   C                            F\nPuedo construir un muro imponente alrededor\n@@C                               F\no ignorar la voz que pronuncia mi Señor.\n\n@@Am                         F \nPero aunque me olvide de Tí, \n@@                 D           G\nTú no te olvidas de mí y vendrás,\n\n@@           C                        F                        \ny me gritarás que siempre me amarás, \n@@                      Dm\nque siempre me has amado,\n@@                    G                  \nque siempre has estado a mi lado \n@@         Am                F\ny que jamás quedaré separado.\n@@             Dm                   \nPorque mi pecado \n@@                     G             F Fm C\ncon tu Sangre y tu Cruz has pagado.\n\n\n@@ C                         F\nPuede hacerme creer el orgullo,\n@@ C                            F \nque me pertenezco y no soy tuyo.\n\n@@Am                         F \nPero aunque me olvide de Tí, \n@@                 D           G\nTú no te olvidas de mí y vendrás,\n\n@@           C                        F                        \ny me gritarás que siempre me amarás, \n@@                      Dm\nque siempre me has amado,\n@@                    G                  \nque siempre has estado a mi lado \n@@         Am                F\ny que jamás quedaré separado.\n@@             Dm                   \nPorque mi pecado \n@@                     G             F Fm C\ncon tu Sangre y tu Cruz has pagado.",
     "tags": [
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "PASCUA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3432,8 +3474,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/6M4vj2LoWy4SPHwS6wPaqP?si=72a52528ee354476",
     "spId": "6M4vj2LoWy4SPHwS6wPaqP",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=m4mxF0a4LPM",
+    "ytId": "m4mxF0a4LPM",
     "content": "@@   D          A          Bm          \nA veces en algunos días grises, \n@@          F#m          G  \ncuando pierdo la esperanza, \n@@        Em               A\ncuando no encuentro la paz\n@@       G        Gm               D       \nMe pregunto, si es verdad que existes, \n@@       Bm              C   \nsi realmente eres mi amigo, \n@@       G             A\nsi lo eres ¿dónde estás?\n\n@@    D         A             Bm\nEs ese el momento cuando dudo, \n@@       F#m          G       Em         A\nun momento de vacío y de fría oscuridad\n@@         G         Gm                 D       \nPorque pienso que si en verdad no existes \n@@     Bm       C             G          A\nmi vida sería vana como un libro sin final\n\n\n\n@@           D           A             Bm\nPero una voz, siento surgir dentro de mí \n@@           F#m            G\nque me devuelve toda mi fe\n@@Em                    A\nEs la voz de Dios mi amigo.\n@@          D              A                 Bm             \nY es esa voz que con dulzura me habla de paz, \n@@          F#m              G\nla que me dice que Dios será\n@@  Em               A  D\nSiempre nuestro amigo.\n\n\n\nA veces me contás que estás perdido, \nque no encuentras el camino \nque te devuelva la fe\nY me dices, que Dios está muy lejos, \nque no sabes acercarte, \nquieres que se acerque Él.\n\nAhora que ya encontré de nuevo \nal Señor que me guía y que me enseña a amar\nTe invito a que intentes encontrarlo \nverás que no está tan lejos\nY que Él te espera ya\n\n\n\nY tú también vas a escuchar la dulce Voz \nque te hablará llena de amor\nEs la voz de Dios mi amigo.\nY es esa voz que con dulzura te habla de paz \nla que te dice que Dios será\nSiempre nuestro amigo.",
     "tags": [
       "ADORACIÓN",
@@ -3454,8 +3496,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/45j3FTJcsgQD7Dp1fub1Yo?si=e2e0f9dce54d427c",
     "spId": "45j3FTJcsgQD7Dp1fub1Yo",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=i4nJYy_Xge4",
+    "ytId": "i4nJYy_Xge4",
     "content": "@@       C                         G             \n/Te conozco desde antes que nacieras. \n@@         Am                     F\nSe tu historia, conozco tus problemas\n@@        C              G                 Dm F\nVi tus llantos y tus alegrías, y aun así te amo./ x2\n\n\n@@    C                      G         \nTe amo, no importa lo que hagas, \n@@    Am                        F\nte amo, no importa donde vayas\n@@    C                      G                 \nTe amo, no importa lo que digas, \n@@                Dm                    F\npor siempre te amo, y siempre te amaré.\n\n\n@@Am             G           F  G \nNunca temas siempre estaré \n@@  Am           G            F G\ny en mi mano yo te sostendré.\n\n\n@@    C                      G         \nTe amo, no importa lo que hagas, \n@@    Am                        F\nte amo, no importa donde vayas\n@@    C                      G                 \nTe amo, no importa lo que digas, \n@@                Dm                    F\npor siempre te amo, y siempre te amaré.",
     "tags": [
       "ADORACIÓN",
@@ -3475,8 +3517,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/7oZJ0gKUXuPwUGGdHXFzM6?si=7c7852d350714a12",
     "spId": "7oZJ0gKUXuPwUGGdHXFzM6",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=9ikteaE-whE",
+    "ytId": "9ikteaE-whE",
     "content": "@@D                          A                Bm\nTienes que encender una luz aunque sea pequeña,\n@@   G                  Em                A\nsi ella se apaga este mundo será una tiniebla.\n@@G                           A   \nTienes que arriesgarte a creer \n@@         D   F#m     Bm\ny no cerrar más tu puerta,\n@@ G               A                    D\nvale la pena su brillo aunque sea pequeña.\n\n@@D                   A               Bm \nNo permitas que la noche invada tu vida,\n@@G                      Em                      A\nhay mucha belleza en vos para que esté escondida.\n@@G                   A            \nNo le niegues a los otros tus ojos, \n@@      D      F#m       Bm\ntu amor, tu voz, tu alegría.\n@@ G                A                   D  D7\nNo te quites libertad ni borres tu sonrisa.\n\n\n\n@@   G                    A                    D\nTienes que atreverte a vivir de una forma distinta.\n@@     G                A                    D\nLlenarte los ojos de amor y sembrar cada día.\n@@     G                        A                  \nY verás como cambia este mundo \n@@               D          F#7      Bm\ncuando sin temor abras al fin tu puerta,\n@@        G                  A                    D\ny mantengas prendida tu luz por pequeña que sea.\n\n\n\nY cuando la oscuridad te lastime muy dentro, \ndeja brillar tu candil que puede ser eterno.\nSólo podrás ser feliz \nsi te atreves a amar sin medida y sin tiempo\nmanteniendo la llama encendida a pesar de los vientos.\n\nSi quieres te ayudo a cuidar tu pequeña chispa,\nhasta que sea llamarada que de fuerza y vida.\nHasta que tu corazón \nsea un signo de amor para el que camina\ny seamos muchos los que tengamos la luz encendida.",
     "tags": [
       "ADORACIÓN",
@@ -3497,8 +3539,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/1pH8hegajVWgUjCETRzhe5?si=4b552908b2db4973",
     "spId": "1pH8hegajVWgUjCETRzhe5",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=A0qpI2tcVQA",
+    "ytId": "A0qpI2tcVQA",
     "content": "@@D         Dmaj7 G         Dmaj7 G        \nPara escuchar, para escucharte, \n@@         Dmaj7    G       Dmaj7 G\npara escucharme en mi interior.\n@@      Em7 F#m      G       Bm      A     G\nY aceptar Tu voluntad, aceptar mi fragilidad.\n\n@@D    Dmaj7 G      Dmaj7 G      \nPara mirar, para mirarte, \n@@      Dmaj7    G        Dmaj7 G\npara mirarme en lo profundo.\n@@          Em7 F#m      G\nY contemplar Tu creación, \n@@        Bm        A        G\ncontemplar Tu belleza mi Dios.\n\n\n\n@@        D             Dmaj7\nEn el silencio, en mi silencio,\n@@      Em7 F#m G\nEn Tu silencio\n@@            C   A           D Dmaj7 G\nSilencio fecundo para los dos.\n\n\n\n@@D           Dmaj7      G        Dmaj7            G    \nPara abandonarme en Ti, abandonarme en Tu regazo\n@@      Em7 F#m      G      Bm    A        G\nY renovar mi corazón, renovar nuestro amor.\n\n@@D     Dmaj7     G       Dmaj7       G       \nPara volver a la fuente, volver al presente\n@@       Em7 F#m    G        Bm       A       G\nY disfrutar de Tu luz, disfrutar de esta soledad\n\n\n\n@@        D             Dmaj7\nEn el silencio, en mi silencio,\n@@      Em7 F#m G\nEn Tu silencio\n@@            C   A           D Dmaj7 G\nSilencio fecundo para los dos.\n\n\n\n@@D        Dmaj7      G       Dmaj7       G           \nPara encontrar Tu paz, encontrar mi verdad\n@@           Em7 F#m     G            Bm     A    G\nY permanecer en Tu amor, permanecer en ti Jesús.\n\n@@D     Dmaj7              G  Dmaj7              G               \nPara sufrir mirando Tu cruz, sufrir cargando la mía\n@@   Em7    F#m      G     Bm        A            G\nY amar, amarte Jesús, amarme como me amas Tú.\n\n\n\n@@        D             Dmaj7 G\nEn el silencio, en mi silencio,\n@@      Em7 F#m G\nEn Tu silencio\n@@            C   A  \nSilencio fecundo.\n\n@@        D             Dmaj7 G\nEn el silencio, en mi silencio,\n@@      Em7 F#m G\nEn Tu silencio\n@@            C   A           D\nSilencio fecundo para los dos.",
     "tags": [
       "ADORACIÓN",
@@ -3519,8 +3561,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/5qx9Y32YrJ7xyd9VsogMJO?si=91869e58ae4e49ce",
     "spId": "5qx9Y32YrJ7xyd9VsogMJO",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=vCuqDM3Nsag",
+    "ytId": "vCuqDM3Nsag",
     "content": "(Original: C)\n@@G                         D\nHe descubierto que estabas ahí\n@@           Em        C\ncuando mi alma cansada no sabía dónde ir\n@@G                     D\nManos gastadas, de tanto intentar\n@@     Em       C                         G\nAlcanzar horizontes, dar sentido al navegar\n@@                           C\nBuscaba el rumbo, piel curtida al sol\n@@G                     C\ndel corazón brotaba una oración\n@@        G D       Em C\n¡Ven Señor, ven Señor!\n\n\n@@         Em    \nY hoy estoy aquí \n@@      G\ncaminando sobre el mar\n@@      C              \nmultiplicando milagros, \n@@     G             D\ncelebrando Tu verdad\n@@             Em          \nporque hoy sigues sanando,\n@@               G\nporque hoy quieres perdonar\n@@      C                           D                      \npor amor sigues llamando a tantos \n@@                    G\na caminar sobre el mar.\n\n\n@@G                    D\nSolté las redes caminé hacia Ti\n@@       Em          C\nhas hecho lo imposible posible para mí\n@@G                      D\nSoplaba el viento y rugía el mar\n@@      Em        C\nextendiste tus manos, acogiste mi verdad\n\n@@G                        C\nValiente el paso, al cielo, sin temor\n@@G                    C\nen Tu mirada veo la dirección\n@@       G D         Em C\n¡Voy Señor, Voy Señor!\n\n\n@@         Em    \nY hoy estoy aquí \n@@      G\ncaminando sobre el mar\n@@      C              \nmultiplicando milagros, \n@@     G             D\ncelebrando Tu verdad\n@@             Em          \nporque hoy sigues sanando,\n@@               G\nporque hoy quieres perdonar\n@@      C                          D                      \npor amor sigues llamando a tantos...\n\n@@         Em    \nY hoy estoy aquí \n@@      G\ncaminando sobre el mar\n@@      C              \nmultiplicando milagros, \n@@     G             D\ncelebrando Tu verdad\n@@             Em          \nporque hoy sigues sanando,\n@@               G\nporque hoy quieres perdonar\n@@      C                           D                      \npor amor sigues llamando a tantos \n@@                    G\na caminar sobre el mar.",
     "tags": [
       "ADORACIÓN",
@@ -3541,8 +3583,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/5TrmMhylXPFVCcAVgfawJv?si=e716bd52b23548a6",
     "spId": "5TrmMhylXPFVCcAVgfawJv",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=hHOMxyzUcyw&list=PLPk8GhKuEHQIlqI3QorYvrqdAN_C5h0K0",
+    "ytId": "hHOMxyzUcyw",
     "content": "@@ G                      D\nSopla sobre mí, dulce huésped de mi alma\n@@      Em                    C\nVen sopla sobre mí, suave brisa de los cielos.\n\n@@ G                      D\nSopla sobre mí, dulce huésped de mi alma\n@@      Em                    C\nVen sopla sobre mí, suave brisa de los cielos.\n\n@@ D                           C\nQuiero descansar en Tu Presencia\n@@D                        C\nQuiero abandonarme en Tí\n\n\n@@        Em             C   G                D\n/Derramate Espíritu en mí, cura todas mis heridas\n@@          Em             C  G       D\nConsuelame y sumérgeme, en Tu amor./ x2\n\n",
     "tags": [
       "ADORACIÓN",
@@ -3562,8 +3604,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/5eOLqE8cY6SJ1BJ3NqaRGb?si=5e70f81d26754aac",
     "spId": "5eOLqE8cY6SJ1BJ3NqaRGb",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=7WzSWHe4qak",
+    "ytId": "7WzSWHe4qak",
     "content": "@@ D        Bm          C G         D\nSoplo de Dios, dame vida, dame vida. (x2)\n\n\n@@G                  A  \nSuave brisa de la paz, \n@@                   Bm   A\ntu rumor me trae calma\n@@             G\nFrente a los terremotos\n@@Em                    A      \nMi manto cubrirá mi rostro, \n@@               Bm          A\nmanténme de pie en la entrada,\n@@           G       E\nYo quiero oír tu Palabra.\n\n\n\n@@ D        Bm          C G         D\nSoplo de Dios, dame vida, dame vida. (x2)\n\n\n\n@@G                 A\nViento de la Libertad\n@@                 Bm   A             G\nNo sé de dónde vienes, ni a dónde vas\n@@Em                       A\nPero te oigo y sé que estás,\n@@            Bm       A\nComo Nicodemo, Señor,\n@@            G           E\nQuisiera nacer de tu aliento.\n\n\n\n@@ D        Bm          C G         D\nSoplo de Dios, dame vida, dame vida. (x2)\n\n\n\n@@G                 A \nRáfaga de eternidad\n@@                    Bm \nFuerte como la Verdad, \n@@A              G\nresuena en mi casa,\n@@Em              A\nEnséñame a expresar,\n@@                  Bm       A \nQue yo hable tu idioma Señor\n@@             G           E\nYo quiero hablar con Tu Voz\n\n\n\n@@ D        Bm          C G         D\nSoplo de Dios, dame vida, dame vida. (x4)\n\n\n\n@@D                       Am                                   \n/Sopla Espíritu Santo tu Amor, \n@@                         C                        \nSopla Espíritu Santo tu Amor, \n@@                         G   A\nSopla Espíritu Santo tu Amor/ x2\n\n@@D                   Am    \n/Sin Vos no tiene sentido mi voz, \n@@            G                        Asus4      A\nno tiene sentido sin Vos, no tengo sentido sin Dios./ x4",
     "tags": [
       "ESPÍRITU SANTO",
@@ -3584,12 +3626,15 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/3XoepHkkMlMwZyeXDSmfav?si=ca4844b3a3a84caa",
     "spId": "3XoepHkkMlMwZyeXDSmfav",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=2nCAy_yaeGE",
+    "ytId": "2nCAy_yaeGE",
     "content": "(Original: F#)\n@@C                   F                 C\nAntes de que yo naciera ya me conocías.\n@@Am                    F                 C  G\nAntes de que me perdiera, moriste por mí.\n@@Am                     Em              F\nAntes que mis padres, Tú deseaste mi vida;\n@@Dm                   G                C  G\nMe llamaste por mi nombre y estoy aquí.\n\n\n@@     Am            Em\nSoy amado, soy deseado\n@@       F           G         C  G\nFui creado por Tu amor, mi Dios\n@@      Am           Em\nSoy amado, soy deseado\n@@       F           G       C \nFui creado por Tu amor, Abbá.\n@@ Am G\nAbbá\n@@   C  F G\nAbbá\n\n@@        Am                      F\nMe formaste en el seno de mi madre\n@@      Dm        F            C G\nMe llenaste de gloria y dignidad\n@@        Am                       F\nCon tu palma me cubres y me arropas\n@@    Dm          G             C G\nAcompañas mi vida en libertad.\n",
     "tags": [
       "ADORACIÓN",
-      "MARÍA"
+      "DIOS PADRE",
+      "SANACIÓN",
+      "VOCACIONAL",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3605,8 +3650,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/35sx4rk6TGum93jIZettPj?si=e4579f644503491d",
     "spId": "35sx4rk6TGum93jIZettPj",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=vtSjNBXs1h8",
+    "ytId": "vtSjNBXs1h8",
     "content": "(Original: Bb)\n@@G          Em   C                  D\nMi mejor amigo decidió morir por mí\n@@G                Em  C                      D\nCargó con mi castigo para que yo pudiera vivir\n@@G               Em     C              D\nNo viniste a juzgarme, me viniste a salvar\n@@G                    Em    C                     D\nY ahora lo que más quieres es que yo me deje amar\n\n\n@@   C D Em       C     D     G\nAbrázame, hoy me dejo querer.\n@@G            C                   Em           D\nTodos mis pecados arden en el fuego de Tu amor\n@@G              C               Em         D\nY siempre que yo me caiga Tú me levantarás.\n\n\n\nCoronado con espinas, vestido de dolor\nEn tu último suspiro mi mundo se apagó\nPero al tercer día, un gran ruido se escuchó\nFueron ángeles cantando: ¡Jesús resucitó!\n\n@@   C D Em       C     D     G\nAbrázame, hoy me dejo querer.\n@@G            C                   Em           D\nTodos mis pecados arden en el fuego de Tu amor\n@@G              C               Em         D\nY siempre que yo me caiga Tú me levantarás.\n\n@@G                        C\n/Quiero volver a nacer en Ti\n@@                        Em\nQuiero volver a nacer en Ti\n@@                         D\nQuiero volver a nacer en Ti/ x2\n\n@@G                     C\n/Uohh ¡Ahora soy libre! Uohh ¡Ahora soy libre!\n@@Em                     D\n¡Porque tú me haces libre!/ x2\n\n@@G             C                 Em           D\nTodos mis pecados arden en el fuego de tu amor.",
     "tags": [
       "PASCUA",
@@ -3626,12 +3671,13 @@ const SONGS_DATA = [
     "key": "Am",
     "spotify": "https://open.spotify.com/intl-es/track/1FnT5Cn1zIDaYyQtJE2FrY?si=25be2df16f3242a5",
     "spId": "1FnT5Cn1zIDaYyQtJE2FrY",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=f9VHrL8-QlA&list=PL8VWokoLw37xYmQ6vvl4w90iWIjnhvoGi&index=8",
+    "ytId": "f9VHrL8-QlA",
     "content": "(Original: Em)\n@@Am               F\nHoy acepto seguirte\n@@C               G\nDejar viejas certezas atrás\n@@Am               F               \nArriesgar mis verdades, \n@@                 C           G\nabrazar la inquietud, ir más allá\n\n@@Am                F\nTus brazos extendidos\n@@C              G\nMarcan el horizonte al final\n@@Am              F\nEncuentro Tu mirada\n@@               C                       G\nEscapo del temor que me ancla en mi barca\n\n@@Em            Am\nPero dudo y espero...\n@@Em                   F                         G\nQue el viento sople menos, que el sol alumbre más\n\n\n@@Am          F\nSurge valentía\n@@           Am                 G\nDisipa las dudas de este corazón\n@@               Am\nQue teme al cruzar\n@@               F                 C\nLas fronteras que limitan lo conocido\n@@           G                         Am\nAllá mar adentro, sobre el agua caminar\n\n\nEn tus huellas mis pasos\nEn tus manos la fuerza del mar\nComo tú quiero amar las miserias del mundo\nCómo tú a mi debilidad.\n\n@@Am          F\nSurge valentía\n@@           Am                 G\nDisipa las dudas de este corazón\n@@               Am\nQue teme al cruzar\n@@               F                 C\nLas fronteras que limitan lo conocido\n@@           G                         Am\nAllá mar adentro, sobre el agua caminar\n\n@@Am          F\nSurge valentía\n@@                    Am        \nDespunta en mi Tu modo\n@@                 G                  Am\nTus huellas, tus llagas, tu forma de amar\n@@              F                  G\nY cuando cansado, peligre tropezar\n@@           Am F C G\nSurge valentía\n@@            Am F C G\nSurge valentía.\n@@             Am\nSurge valentía.\n\n\n",
     "tags": [
       "ADORACIÓN",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3647,8 +3693,8 @@ const SONGS_DATA = [
     "key": "Am",
     "spotify": "https://open.spotify.com/intl-es/track/19O5rytHZFDR9yMUig6oih?si=d6c09a9f2d1e4ba6",
     "spId": "19O5rytHZFDR9yMUig6oih",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=9MC2kuUPfno",
+    "ytId": "9MC2kuUPfno",
     "content": "(Original: Cm)\n@@ Am        Em\nSurja Dios Padre\n@@ F     G             Am  Em\nse dispersen sus enemigos\n@@F  G               C  Am\nY huyan de Su presencia\n@@ F  G          Am \nAquellos que lo odian.\n\n@@ Am        Em\nSurja Dios Hijo\n@@ F     G             Am  Em\nse dispersen sus enemigos\n@@F  G               C  Am\nY huyan de Su presencia\n@@ F  G          Am \nAquellos que lo odian.\n\n@@ Am           Em\nSurja Dios Espíritu\n@@ F     G             Am  Em\nse dispersen sus enemigos\n@@F  G               C  Am\nY huyan de Su presencia\n@@ F  G          Am \nAquellos que lo odian.\n\n@@ C           G          F\nDios vive en mí, y yo en Él.\n@@        G\nY yo en Él.\n@@ C           G          F\nDios vive en mí, y yo en Él.\n@@        G\nY yo en Él.\n\n\n@@ Am        Em\nSurja Dios Trino\n@@ F     G             Am  Em\nse dispersen sus enemigos\n@@F  G               C  Am\nY huyan de Su presencia\n@@ F  G           Am \nAquellos que lo odian.\n\n\n@@ C           G          F\nDios vive en mí, y yo en Él.\n@@        G\nY yo en Él.\n@@ C           G          F\nDios vive en mí, y yo en Él.\n@@        G\nY yo en Él.\n\n\n@@Am        Em\nEn Tu presencia voy,\n@@Am        Em\nEn Tu presencia voy,\n@@Am        Em              F  E7\nEn Tu presencia voy, Dios Trino.\n\n@@Am        Em\nEn Tu presencia voy,\n@@Am        Em\nEn Tu presencia voy,\n@@Am        Em              F  E7\nEn Tu presencia voy, Dios Trino.\n\n\n@@ C           G          F\nDios vive en mí, y yo en Él.\n@@        G\nY yo en Él.\n@@ C           G          F\nDios vive en mí, y yo en Él.\n@@        G\nY yo en Él.",
     "tags": [
       "ALABANZA",
@@ -3673,13 +3719,14 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/4Ps76YTJ8vlrAa9wiQ5ZKx?si=c4280080eea84c5a",
     "spId": "4Ps76YTJ8vlrAa9wiQ5ZKx",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=EAGuQhBs5CM",
+    "ytId": "EAGuQhBs5CM",
     "content": "@@          A     Bm                C#m D\nSolo por Tí Jesús me quiero consumir\n@@                  Bm\ncomo el cirio se quema en tu altar,\n@@G                 E\nconsumirme de amor.\n\n@@         A      Bm                   C#m   D\nSolo por Tí Jesús me quiero hoy entregar\n@@                 Bm\ncomo el río se entrega al mar\n@@Esus4   E         A\nentregarme de amor\n\n\n@@          D                    E\nPues Tú eres mi amparo y mi refugio,\n@@                C#m F#m\nLa alegría de mi alma\n@@        D                      E\nSolo en Tí reposa toda mi esperanza\n@@       C#m         F#m\nNo vacilaré en el dolor\n@@F#7    Bm           G  E\nTe seguiré, hasta el fin.",
     "tags": [
       "ADORACIÓN",
       "JESÚS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3695,8 +3742,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/1HImRLRp9t9u6AoGUoSKYL?si=9e0b1a15e5bc4277",
     "spId": "1HImRLRp9t9u6AoGUoSKYL",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=O10bju18Kyw",
+    "ytId": "O10bju18Kyw",
     "content": "@@G                            Bm\nOye Señor mi amigo, cuando veo tu amor eterno\n@@  C                                   G     D\nSiento encogerse mi alma, soy tan pequeño.\n\n@@G                                C\nNo te importan mis obras, no te alejas si estoy lejos,\n@@Am                      G                   D\nMe amas aunque no te ame, no impones precio.\n\n@@G                            Bm\nQuisiera darte todo, pero es tan poco lo que tengo:\n@@C                 Am               G    D\nUn pobre y tibio amor que busca dueño.\n\n@@G                           C\nPero a pesar de todo Tú lo aceptas con gran afecto\n@@   Am              G             D\nY haces del tibio amor un amor nuevo.\n\n\n\n@@         Em         Bm              C             G\nSoy tan pobre y tan rico, pues tu amor me hace valioso,\n@@ D      Em        Bm       C             D\nPongo ante Ti mi nada, y reluce como el oro.\n@@    Em              Bm           C         Cm\nY al ver cuánto me amas, quiero regalarme todo.\n@@        G          C     D     G\n¡Señor hazme generoso como Tú!\n\n\n\n@@G                           Bm\nAl repetir tu nombre se me llena de gozo el alma\n@@C                 Am                G    D\nY me brota este canto y un mar de calma.\n@@   G                            C\nQuiero gritarle al mundo que el amor ha vencido al odio\n@@Am                G                  D\nY quiero amar al hombre como Tú lo amas.\n\n@@G                            Bm\nSi acaso tú quisieras ser el dueño de esta alma inquieta,\n@@C               Am              G    D\nNo dudes en tomarla ella es tu sierva.\n@@G                            C\nPero como es tan débil se resiste a cambiar su senda,\n@@Am                   G                D\nHazla pues mansa y dócil como una oveja.\n\n\n\n@@         Em         Bm              C             G\nSoy tan pobre y tan rico, pues tu amor me hace valioso,\n@@ D      Em        Bm       C             D\nPongo ante Ti mi nada, y reluce como el oro.\n@@    Em              Bm           C         Cm\nY al ver cuánto me amas, quiero regalarme todo.\n@@        G          C     D     G\n¡Señor hazme generoso como Tú!",
     "tags": [
       "ADORACIÓN",
@@ -3739,12 +3786,13 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/6h9OCTgGHmlWUXKoPDyOCh?si=dec3ed708f824346",
     "spId": "6h9OCTgGHmlWUXKoPDyOCh",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=uVbWCVSPEtI",
+    "ytId": "uVbWCVSPEtI",
     "content": "@@ D             A     D7                    G\nAún en la tormenta, aún aunque arrecie el mar.\n@@     D        A           D\nTe alabo, te alabo en verdad.\n\n@@ D                 A   D7             G\nAún lejos de los míos, aún en mi soledad,\n@@    D        A            Am7 D7\nte alabo, te alabo en verdad.\n\n\n@@      G           A           D  F#          Bm \nPues solo a Tí te tengo, pues Tú eres mi heredad, \n@@    G        A           Am7 D7\nte alabo, te alabo en verdad.\n@@      G           A                     D  F#       Bm\nPues solo a Tí te tengo, Señor, pues Tú eres mi heredad,\n@@    G       A            D\nte alabo, te alabo en verdad.\n\n@@ D                 A       D7                   G\nAún sin muchas palabras, aún aunque no sé alabar,\n@@    D        A          Am7 D7\nte alabo, te alabo en verdad.\n",
     "tags": [
       "ALABANZA",
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3760,8 +3808,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/2HqDqSq5mDTT3zC3ufSi3q?si=d866e86a02c84ada",
     "spId": "2HqDqSq5mDTT3zC3ufSi3q",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=1AZ9rY6KuT8",
+    "ytId": "1AZ9rY6KuT8",
     "content": "\n@@   C\nDerrama tu gracia hoy aquí\n@@ Am\nHaz que tu vida crezca en mí\n@@      F\nConstruye tu casa\n@@                   C\nHaz tu morada en mí.\n\n@@   C\nDerrama tu gracia hoy aquí\n@@Am\nHaz que tu vida crezca en mí\n@@   F\nSegún Tu Palabra\n@@        Dm\nQue se haga Tu voluntad\n\n\n@@           F               Am\nEn mi corazón con toda mi vida\n@@            F              Am\nEn mi corazón con toda mi alma\n@@            C\nTe digo que sí\n@@            F\nTe digo que sí\n@@            C\nTe digo que sí.\n\n@@   C\nDerrama tu gracia hoy en mí\n@@         Am\nComo María te quiero servir\n@@     F\nSer fiel a Tu voluntad\n@@       Dm                C\nComo ella a mi cruz abrazar\n\n\n@@           F               Am\nEn mi corazón con toda mi vida\n@@            F              Am\nEn mi corazón con toda mi alma\n@@            C\nTe digo que sí\n@@            F\nTe digo que sí\n@@            C\nTe digo que sí.\n\n\n@@                 F Am          C      Em\nCuando ruja el mar y azote la tempestad\n@@                      F                  Am\nY aunque a veces no pueda escuchar Tu voz\n@@                 C\nTe sigo hasta el final.\n\n@@                 F Am          C                   Em\nCuando ruja el mar y azote la tempestad (azote la tempestad)\n@@                      F                  Am\nY aunque a veces no pueda escuchar Tu voz\n@@                  G\nTe sigo hasta el final.\n\n\n@@           F               Am\nEn mi corazón con toda mi vida\n@@            F              Am\nEn mi corazón con toda mi alma\n\n@@           F               Am\nEn mi corazón con toda mi vida\n@@            F              Am\nEn mi corazón con toda mi alma\n@@             C\nTe digo que sí\n@@            F\nTe digo que sí\n@@            Am\nTe digo que sí.\n@@             F\nTe digo que sí\n@@            Dm\nTe digo que sí\n@@             C\nTe digo que sí.",
     "tags": [
       "MARÍA",
@@ -3782,12 +3830,13 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/4wNSqtzjaqfQgZy5FKldQc?si=918a95d0c7c84eb6",
     "spId": "4wNSqtzjaqfQgZy5FKldQc",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=YaFIBm-Ro20",
+    "ytId": "YaFIBm-Ro20",
     "content": "(Original: C# mayor)\n@@                A\nTe estaba esperando\n@@       D                        A\nCon anhelo de encontrarme contigo\n@@      D                Bm\nPara poder abrazarte, amigo\n@@ C#m                      Esus4 E\nCurar tus heridas con mis manos\n\n@@          A\nEn este silencio\n@@     D                        A\nBendito que es refugio de alegría\n@@        D   \nQue renueva el corazón\n@@           Bm\nFuente de vida\n@@       C#m\nPara el alma dormida\n@@          D                     Esus4 E\nQuiero abrir, entrar, quedarme contigo\n\n@@        F#dim   C#7    F#m\nCuando seguías lejos corrí hacia ti\n@@Bm7               Esus4         E\nNo me resistí a tu anhelo de volver\n\n\n@@  A         D\nQuédate aquí\n@@ E                   A             F#m\nPermanezcamos en este abrazo de luz\n@@          Bm7   E\nQue nos hace felices\n@@  A          D\nQuédate en mí\n@@        F#dim    C#7   F#m\nYa no importa lo que pasó\n@@               Bm\nTe estaba esperando\n@@ Esus4 E    A Bm A E    F#\nQuédate aquí\n\n\n@@      B\nHe venido\n@@      E                  B\nA quitar para siempre el pecado\n@@          E\nPara que brille el amor\n@@        C#m\nTe he llamado\n@@       D#m  \nA anunciar que estoy vivo\n@@           E               F#sus4 F#\nQue comparto la mesa del pobre\n\n@@        G#dim    D#7   G#m\nCuando seguías lejos corrí hacia ti\n@@C#m                F#sus4      F#\nNo me resistí a tu anhelo de volver\n\n\n@@  B         E\nQuédate aquí\n@@ F#                   B             G#m\nPermanezcamos en este abrazo de luz\n@@          C#m7   F#\nQue nos hace felices\n@@  B          E\nQuédate en mí\n@@        G#dim    D#7   G#m\nYa no importa lo que pasó\n@@               C#m    A  F#\nTe estaba esperando\n\n@@  B         E\nQuédate aquí\n@@ F#                   B             G#m\nPermanezcamos en este abrazo de luz\n@@          C#m7   F#\nQue nos hace felices\n@@  B          E\nQuédate en mí\n@@        G#dim    D#7   G#m\nYa no importa lo que pasó\n@@               C#m    \nTe estaba esperando\n@@F#sus4 F#   G\nQuédate aquí\n@@  F#         B \nQuédate en mi.\n",
     "tags": [
       "ADORACIÓN",
-      "DIOS PADRE"
+      "DIOS PADRE",
+      "JESÚS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3803,8 +3852,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/5jLmeh6dGL7R4zuxV63c9v?si=2a85f9dd7b864426",
     "spId": "5jLmeh6dGL7R4zuxV63c9v",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=3dsTbHPuDio",
+    "ytId": "3dsTbHPuDio",
     "content": "(Original en G)\n@@D                                   A\nTen calma contigo mismo y mira a dónde vas\n@@Em           G                           A\nEspera un minuto y piensa bien lo que harás\n@@D                               A\nEn medio de tormenta es duro navegar\n@@Em               G                   A\nY una mala decisión te puede caro costar.\n\n@@D                                       A\nNo sea un mal momento el que te haga fracasar\n@@Em                G                        A\nTener alguien en contra es bueno para pensar\n@@D                          A\nLa vida está llena de cosas a enfrentar\n@@Em                   G                    A\npero aún así es muy bella y hay que caminar\n\n\n@@           C             B7\nHacia adelante sin ver atrás,\n@@           Em G        A\nvivir cada día y nada más\n@@          C              B7\nY lo que venga tú lo forjarás\n@@             Em  G             A\nTú tienes la llave abres o cerrarás.\n@@           D\nPero ten calma…\n\n\n@@D                                    A\nTen calma que es tu vida la que en juego está\n@@Em            G                      A\nY a otros no culpes por tu mediocridad\n@@D                                A\nSi alguien te ha fallado es bueno recordar\n@@Em                     G                   A\nQue tú también lo has hecho, basta ya de llorar\n\n@@D                   A\nTú eres valioso lo creas o no\n@@Em                  G                 A\nPero el amor no es amor si no causa dolor\n@@D                                    A\nAl igual que el oro por el fuego hay que pasar\n@@Em         G                  A\nPurificarlo todo y lo mejor de ti lograr.\n\n\n@@                 C            B7\nY aunque hoy se llore, se sanará\n@@                      Em  G               A\nSolo aquel que ha perdido sabe también ganar\n@@         C              B7\nMira adelante, sin ver atrás\n@@           Em G        A\nvive cada día y nada más\n@@          C              B7\nY lo que venga tú lo forjarás\n@@            Em   G             A\nTú tienes la llave abres o cerrarás (x3)\n\nPero ten calma...",
     "tags": [
       "VOCACIONAL"
@@ -3823,13 +3872,14 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/5hIm1ls3rIXhjNIIxAdJMr?si=6076af5ccdd945ce",
     "spId": "5hIm1ls3rIXhjNIIxAdJMr",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=3n6WwL5NRF8",
+    "ytId": "3n6WwL5NRF8",
     "content": "(Original: transporte en 3ro, F mayor)\n@@D              Bm  F#m   G  \nNos llamaste a la eternidad \n@@D               Bm     F#m     G  \nNos mostraste donde está la paz \n@@Em           A\nDejo todo aquí en mi barca \n@@Em             G  \nPara ir junto a Vos \n\n\n@@A7         D                 Asus2 \nBienaventurados los que te siguen \n@@                  Bm \nLos mansos y humildes \n@@                 G              A7        D \nPorque ellos poseerán la Tierra de Misericordia \n@@             Asus2                 Em \nLos justos y tristes, los más perseguidos \n@@         G       Asus2   G  \nLos que llevan Tu luz, Jesús \n@@          A7 \nLos que llevan Tu luz\n\n\n@@D             Bm      F#m     G  \nEs tu historia, la que transformó \n@@D           Bm     F#m       G  \nCon tu vida la medida del amor \n@@Em         A \nDejo todo mi pasado \n@@Em               G  \nPorque voy con Vos \n\n\n@@A7         D                 Asus2 \nBienaventurados los que te siguen \n@@                  Bm \nLos mansos y humildes \n@@                 G              A7        D \nPorque ellos poseerán la Tierra de Misericordia \n@@             Asus2                 Em \nLos justos y tristes, los más perseguidos \n@@         G       Asus2   G  \nLos que llevan Tu luz, Jesús \n@@          A7 \nLos que llevan Tu luz..\n\n@@      G          D \nY es así como quiero hoy vivir \n@@      Bm             F#m \nEntregarme a los demás \n@@      G            A\nPredicar toda verdad \n@@      G           D \nY es así, como quiero compartir \n@@         Bm           F#m \nPorque creo una vez más \n@@             G           A7 \nQue es con Vos mi realidad…\n",
     "tags": [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "JESÚS"
     ],
     "source": "",
     "srcTag": "base",
@@ -3845,8 +3895,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/32AudWhiMVnj7j4gbdzxTX?si=41fdd183b68f4de7",
     "spId": "32AudWhiMVnj7j4gbdzxTX",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=44YVarFD5A8",
+    "ytId": "44YVarFD5A8",
     "content": "@@ G                           Am7\nPadre, pon tu Espíritu sobre mí\n@@       G                    Am7            D\nAquí estoy, aquí me tienes. Gracias por la vida\n@@        G    D/F#  Em\nQue la viva siendo todo yo\n@@        Am7         D\nQue la viva siendo todo yo...\n\n\n@@      G\nTodo libre, todo entregado. Todo Tú, todo dado\n@@       Bm\nTodo alegre, todo amante, todo amado\n@@           Am                                            \nTodo arrodillado, todo Hijo, todo Hermano, todo Padre,\n@@       C\ntodo disfrutón\n@@         D                C\nTodo mariano, todos por todos\n@@Am        D                G\nQue viva todo con toda el alma.\n\n\n",
     "tags": [
       "ESPÍRITU SANTO",
@@ -3867,8 +3917,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/5l85fh6eobJeIGCG9nPJdV?si=3ba6dbd4dd4841a2",
     "spId": "5l85fh6eobJeIGCG9nPJdV",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=Haj7OJRS8Y4&list=OLAK5uy_nISUNBie6FxmHXOsAB653Sk15CP-qXcCU&index=3",
+    "ytId": "Haj7OJRS8Y4",
     "content": "@@        C      F      C    \nMis alegrías y mis tristezas \n@@       Am      F       G\nlo que tengo y lo que soy\n@@             C        F     C      \nTodos mis sueños y mis anhelos \n@@      F      G      C\ntodo te lo entrego Dios.\n\n\n@@         C             F C\nTodo es tuyo, todo es tuyo\n@@  F         Am         G\nHaz lo que quieras de mí\n@@         C            F Am G\nTodo es tuyo, todo es tuyo\n@@    F       G      C\nJesús yo confío en Tí.\n\n\n@@            C         F    C           \nToma mis tiempos y mis talentos\n@@       Am    F     G\nToma manos y mi voz\n@@         C       F     C\nPara tu Gloria para tu Reino\n@@      F       G     C\nTodo te lo entrego Dios.\n\n\n@@         C             F C\nTodo es tuyo, todo es tuyo\n@@  F         Am         G\nHaz lo que quieras de mí\n@@         C            F Am G\nTodo es tuyo, todo es tuyo\n@@    F        G      C\nJesús yo confío en Tí.\n\n\n@@Am     F\nTodo, todo\n@@      C       G\nTe entrego Señor (x4)",
     "tags": [
       "ADORACIÓN",
@@ -3889,8 +3939,8 @@ const SONGS_DATA = [
     "key": "F",
     "spotify": "https://open.spotify.com/intl-es/track/2mDYMuqcVat5m29BVhfqep?si=03e3fd1837a6443d",
     "spId": "2mDYMuqcVat5m29BVhfqep",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=YFCXa3aw5k4",
+    "ytId": "YFCXa3aw5k4",
     "content": "(Original: F mayor)\n@@      C              Am        F         G   \nComo barro en tus manos me dejo moldear, \n@@      C         Am        F  G\ntus caricias me dan libertad.\n@@        C        Am       F        G\nCon ternura me formas a Tu voluntad,\n@@       C          Am      F G\nsoy el sueño que plasmarás.\n\n@@    Am   F G\nPor eso yo   todo lo espero de Tí.\n\n\n@@C                   Am                    F\nAbandonado en tu amor, perdido en tu mirar, \n@@                      G               C\nconfiado en tus promesas quiero cantar.\n@@C                   Am                    F\nAbandonado en tu amor, perdido en tu mirar, \n@@                      G               C\nconfiado en tus promesas quiero cantar,\n@@            Am          F    G     C\nque si Tú estás no necesito nada más.\n\n\nComo un niño en los brazos de su mamá, \nTú me llenas de seguridad.\nNada temo a tu lado, me cubres con paz: \nyo confío en tu bondad.\nPor eso yo todo lo espero de Tí.\n\n\nTu presencia desborda mi alma Señor, \nla superas con inmensidad.\nContemplando tu rostro en intimidad, \nmás te amo más te quiero amar.\nPor eso yo todo lo espero de Tí.\n",
     "tags": [
       "ADORACIÓN",
@@ -3911,12 +3961,13 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/63MZGHS1p7BwzZfTwJ02XZ?si=e39e1de4766b4f39",
     "spId": "63MZGHS1p7BwzZfTwJ02XZ",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=yJTmiht-URU",
+    "ytId": "yJTmiht-URU",
     "content": "@@   E                               \nTú obras maravillas con tu gracia, \n@@ A\nnada es imposible en tus manos\n@@ B                 C#m    B     A\nVen, hasta lo más hondo de mi ser\n\n@@    E\nTú obras maravillas con tu gracia, \n@@ A\nnada es imposible en tus manos\n@@ B                C#m    B      A\nVen, hasta lo más hondo de mi ser\n@@ B               C#m      B     A\nVen, creo en Tu Palabra y Tu poder\n@@       B\nPorque…\n\n\n@@                 E\nTodo lo haces nuevo, Jesús\n@@                 A\nTodo lo haces nuevo, Jesús\n@@            B\nMi vida es tuya, Señor\n@@          A\nRenuévame con tu amor\n@@          E\nSeñor Jesús\n\n\n@@E\nLimpia mis heridas con tu gracia, \n@@ A\nquema con tu fuego hoy mi vida\n@@ B                C#m    B      A\nVen, hasta lo más hondo de mi ser. \n@@ B                C#m    B      A\nVen, creo en tu Palabra y tu poder...\n\n\n@@                 E\nTodo lo haces nuevo, Jesús\n@@                 A\nTodo lo haces nuevo, Jesús\n@@            B\nMi vida es tuya, Señor\n@@         A\nRenuévame con tu amor...\n@@                E\nTodo lo haces nuevo, Jesús\n@@                 A\nTodo lo haces nuevo, Jesús\n@@            B\nMi vida es tuya, Señor\n@@          A\nRenuévame con tu amor\n@@          E\nSeñor Jesús.\n\n\n@@E               B                       C#m    \nDejando todo atrás quiero volver a empezar, \n@@          A          E\nrestáurame, renuévame. (x3)",
     "tags": [
       "ADORACIÓN",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "ALABANZA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3932,8 +3983,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/2GHVULfLqbUTpQX1cngjbR?si=6e5fa9181e1d4892",
     "spId": "2GHVULfLqbUTpQX1cngjbR",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=Rgav054Qagk",
+    "ytId": "Rgav054Qagk",
     "content": "@@          D             A            \nEn cada paso, en cada día, \n@@         Em            G\nen todo gesto Ella estará\n@@         D                A    \nEn mi silencio y en mis palabras, \n@@          Em              G\nviene conmigo siempre está\n\n@@          D           A               \nEn mis dolores y alegrías, \n@@             Em            G\nen cada momento Ella estará\n@@         Bm            A     \nEn mi mirada y pensamientos,\n@@          Em              G\nviene conmigo siempre está\n\n\n@@         D       A  \nTodo te doy, Mamá, \n@@          Bm      G\nsoy todo tuyo, María\n@@        Bm \nMe llevarás \n@@            A           G A\nhasta alcanzar la Santidad. (x2)\n\n\n@@             Em         G   \nTú serás mi Madre y mi Reina \n@@     D            A\ny tu Hijo será mi Rey\n@@          Em            G  \nEsta vida no será más mía, \n@@            D         A B7\nun libre esclavo yo seré\n\n\n@@         E       B  \nTodo te doy, Mamá, \n@@         C#m      A\nsoy todo tuyo, María\n@@       C#m \nMe llevarás \n@@            B           A B\nhasta alcanzar la Santidad. (x2)",
     "tags": [
       "MARÍA",
@@ -3953,8 +4004,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/2tPaG5Z7Kbkdm7WnkPnQVX?si=a3ca046b7240407d",
     "spId": "2tPaG5Z7Kbkdm7WnkPnQVX",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=8Z5crV40ewU",
+    "ytId": "8Z5crV40ewU",
     "content": "(Original: transporte en 2ro, E mayor)\n@@D                Bm   G                      Bm\nToma Señor y recibe toda mi libertad, mi memoria\n@@            G     Em         A\nmi entendimiento y mi voluntad.\n\n\n@@           D                       Bm            \nTodo mi haber y poseer Vos me lo diste \n@@         G      A     \na Vos Señor lo torno.\n@@         D                     Bm\nTodo es tuyo disponé a Tu Voluntad.\n@@           G              A                   D\nDame Tu amor, dame Tu gracia, que esta me basta.\n",
     "tags": [
       "ADORACIÓN",
@@ -3976,8 +4027,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/4TFgmeIrhHx15xwwfxMY9d?si=25f79d23bda64473",
     "spId": "4TFgmeIrhHx15xwwfxMY9d",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=uH0fqCf_fpc",
+    "ytId": "uH0fqCf_fpc",
     "content": "@@ D                                  G     \nMiras al frente y no sabes a donde vas\n@@                                    D\nPropones planes que no logras realizar\n@@ D                                 G\nSerá el miedo el que te nuble la razón\n@@                             A\nTe paraliza y congela el corazón\n\n@@A                  Bm         A      G\nNo te rindas hay mucho más por conocer\n@@A                  Bm                G A\nEn la paciencia tu corazón vuelve a ver\n\n\n@@     Bm                 G \nTranquilo que no estas solo \n@@                         D\nsiempre hay alguien contigo\n@@               A                 Bm\nY que en sus brazos te carga rendido\n@@             G             \nTu vuelves más ligero \n@@           D        A\nsi te abandonas en Mí.\n\n@@        Bm             G     \nNo te agites, cierra los ojos, \n@@                       D\nabre el alma y ven conmigo.\n@@         A                      Bm\nSoy tu refugio tu resguardo, tu amigo\n@@         G         \nEn mi Palabra sabrás \n@@          D       A\ndonde está el Camino.\n\n\n@@      D                 A\nTe vi llorar en tu habitación\n@@               Bm            G\nBuscando respuesta en el dolor\n@@              D                 A\nNo veas el pasado, camina a mi lado\n@@            Bm                    G\nYo te levantaré aunque caigas mil veces.\n\n@@A                  Bm         A      G\nNo te rindas hay mucho más por conocer\n@@A                  Bm                G A\nEn la paciencia tu corazón vuelve a ver\n\n\n@@     Bm                 G \nTranquilo que no estas solo \n@@                         D\nsiempre hay alguien contigo\n@@               A                 Bm\nY que en sus brazos te carga rendido\n@@             G             \nTu vuelves más ligero \n@@           D        A\nsi te abandonas en Mí.\n\n@@        Bm             G     \nNo te agites, cierra los ojos, \n@@                       D\nabre el alma y ven conmigo.\n@@         A                      Bm\nSoy tu refugio tu resguardo, tu amigo\n@@         G         \nEn mi Palabra sabrás \n@@          D       A\ndonde está el Camino.\n\n@@         Bm            G\nAunque todos te abandonen\n@@       D                A\nYo estaré a tu lado, estaré a tu lado… (x2)",
     "tags": [
       "ACCIÓN DE GRACIAS",
@@ -3998,8 +4049,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/62IPt7M4ZqAgbWPj9tjhde?si=71dc682ee8c54093",
     "spId": "62IPt7M4ZqAgbWPj9tjhde",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=x79lZl-77HM",
+    "ytId": "x79lZl-77HM",
     "content": "@@                  G\nDame Tu transparencia,\n@@               Bm               C   B7\n¡oh! fuente del ser, fuente de la vida.\n@@                 Em\nDame tu transparencia,\n@@          Am                    D\nel deseo claro, tu estable armonía.\n\n@@     B7            Em                  Bm\n/No dejes que preocupen mi alma en exceso,\n@@                C                    D\nlas nubes que tienen que cruzar mi cielo.\n@@            Em\nDame ojos limpios,\n@@     C            D            G      D\ncorazón más creyente y más bueno./ x2\n\n\nDame tu transparencia,\n¡oh! fuente de todo, fuente de hermosura.\nDame tu transparencia,\ncreativas mis manos, mansas y seguras.\nLava mi corazón del mal que lo enturbia,\nmi amor sea un arroyo de aguas profundas;\ndame alma de niño,\ntransparente a la mirada tuya.\n\n\nDame tu transparencia,\n¡oh! fuente de amor, fuente de la gracia.\nDame tu transparencia,\nrecta la intención y fiel la palabra.\nDevuelve la inocencia que robó el pecado,\nla estable certeza de saberme amado,\ndame tu presencia,\nagua viva que limpia mi barro.",
     "tags": [
       "ADORACIÓN",
@@ -4019,8 +4070,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/37biQ185RLOHoELp6uhNm8?si=b73680c0ec714bf2",
     "spId": "37biQ185RLOHoELp6uhNm8",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=_yQby4vEcuE",
+    "ytId": "_yQby4vEcuE",
     "content": "@@D                  A\nFueron treinta monedas\n@@Bm               F#m\nQue cobró quien te entregó,\n@@G         D            A\nEl equivalente a tu crucifixión.\n\n@@D               A\nSólo treinta monedas\n@@Bm           F#m\nDel que se sirvió después de Vos\n@@G               D           A\nLa corona de espinas, todo Tu dolor.\n\n\n@@G                 A               Bm\nYo no quiero ser como Judas que te entregó\n@@G                 D             A\nA esas treinta monedas, a tu flagelación\n@@G                 A               Bm\nNo me dejes ser como Judas que te entregó\n@@G                 D            A              D\nNi por treinta monedas, ni por nada, ni por nada\n\nTreinta trozos de plata,\n¿Cuánto valen en Tu Reino?\n¿Cuánto suman para el tiempo eterno?\n\nTreinta pobres monedas\nPueden llegar a tentarte\nPero nunca van a resucitarte",
     "tags": [
       "PASCUA"
@@ -4039,8 +4090,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/2vXeFRI4rdq7mNfHAri4h8?si=e6f21b5ff0c84047",
     "spId": "2vXeFRI4rdq7mNfHAri4h8",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=3n4dX_I5hY8",
+    "ytId": "3n4dX_I5hY8",
     "content": "@@D  A      Bm    G      Em    A\nVivía sin rumbo me sentía vacío\n@@D    A     Bm   G           Em       A\nEstaba perdido no encontraba el camino.\n\n@@D    A    Bm    G       Em   A\nMi vida pasaba pero no te veía\n@@D            A      Bm  G       Em     A\nEn cambio, Vos seguías caminando conmigo\n\n\n@@           D     A      Bm\nPero entendí que Vos, Señor\n@@G          Em           A\nPerdonas mucho al que ama\n@@        D            A      Bm            A\nQue tu amor no me juzga, sino que me abraza\n@@        G           A              D\nY descubrí que sos Vos el que me salva.\n\n\nAhora lo comprendo mi corazón lo siente\nAunque a veces no vea estás conmigo siempre\n\nVos sos mi Maestro mi amigo el que me guía\nAhora que abrí mis ojos quiero darte mi vida\n",
     "tags": [
       "ADORACIÓN",
@@ -4061,8 +4112,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/2psRxvMQso5o5RYKxaDEIY?si=f1fefcae0d2a467c",
     "spId": "2psRxvMQso5o5RYKxaDEIY",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=KTusDPTfTyg",
+    "ytId": "KTusDPTfTyg",
     "content": "@@ D                G               D   G                     \nComo cualquier otra historia de amor, \n@@D                  G             A\ntu vida fue encendiéndose de a poco.\n@@G             F#7            Bm \nTe basta sólo con cerrar los ojos, \n@@G                 Em            A\npara sentir que está en tu corazón.\n\n@@D                G             D    G                \nBuscas una respuesta en tu interior, \n@@D                G                A\nporque todos te dicen que estás loco.\n@@G               F#7         Bm  \nY tu alma te responde: Síguelo \n@@     G         A\na Jesús, tu Señor.\n\n\n@@D             A               Bm  \nTú, puedes seguirlo, puedes amarlo \n@@          G     E7    A\ny abandonar en Él tu vida\n@@          D                 A     \nEs tu momento, te está llamando \n@@           G    A         D\npuedes dejarlo, todo por Él.\n\n\n@@D                G          D  G\nQuizás tú digas nada tengo yo, \n@@D              G                 A\npero tienes todo lo que El te ha dado.\n@@G               F#7        Bm \nTus manos, tus oídos y tu voz, \n@@G               Em          A\npara ser instrumento de su amor.\n\n@@D                  G          D  G\nLos hombres necesitan de tu SÍ, \n@@D           G          A\nde tu fidelidad a su Palabra.\n@@G                   F#7            Bm\nDe que te hagas pequeño y Cristo así,\n@@          G            A\ncrezca en ti, crezca en ti...\n\n\n@@D             A               Bm  \nTú, puedes seguirlo, puedes amarlo \n@@          G     E7    A\ny abandonar en Él tu vida\n@@         D                 A     \nEs tu momento, te está llamando \n@@           G    A         D\npuedes dejarlo, todo por Él.",
     "tags": [
       "ANIMACIÓN",
@@ -4084,8 +4135,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/6V2lhU4QThgUyZhQd4in7D?si=e0b5a016a4e74b45",
     "spId": "6V2lhU4QThgUyZhQd4in7D",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=5wXCLdnOQj4",
+    "ytId": "5wXCLdnOQj4",
     "content": "(Original en A mayor)\n@@E               G#m        A  B\nJesús, al contemplar en tu vida\n@@E               G#m           A          B\nel modo que Tú tienes de tratar a los demás\n@@E              G#m           A\nme dejo interpelar por tu ternura,\n@@              B                   E\ntu forma de amar nos mueve a amar;\n@@                    G#m        A\ntu trato es como el agua cristalina\n@@                   B\nque limpia y acompaña el caminar.\n\n\n@@  E       G#m        A   \nJesús, enséñame Tu modo \n@@      B                        E\nde hacer sentir al otro más humano,\n@@         G#m             A        \nque tus pasos sean mis pasos;\n@@    B               E\nmi modo de proceder.\n\n\nJesús, hazme sentir con tus sentimientos,\nmirar con tu mirada, comprometer mi acción,\ndonarme hasta la muerte por el reino,\ndefender la vida hasta la cruz,\namar a cada uno como amigo,\ny en la oscuridad llevar tu luz.\n\nJesús, yo quiero ser compasivo con quien sufre,\nbuscando la justicia, compartiendo nuestra fe.\nQue encuentre una auténtica armonía\nentre lo que creo y quiero ser,\nmis ojos sean fuente de alegría,\nque abrace tu manera de ser.\n\nQuisiera conocerte, Jesús, tal como eres.\nTu imagen sobre mí es lo que transformará\nMi corazón en uno como el tuyo\nque sale de sí mismo para dar;\ncapaz de amar al Padre y los hermanos,\nque va sirviendo al Reino en libertad.",
     "tags": [
       "ADORACIÓN",
@@ -4107,8 +4158,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/4wM7PvYZyY0py6Nf6blzG9?si=5e3b89b4e8b64dfd",
     "spId": "4wM7PvYZyY0py6Nf6blzG9",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=27kduF5GxFU",
+    "ytId": "27kduF5GxFU",
     "content": "@@E  B     C#m      G#m         A      \nUna vez más me invitas a frenar \n@@                   E B\ny mis miedos abrazar\n@@ E        B      C#m         G#m  \nQuiero pedir perdón en mi hogar \n@@   A                  F#m           B\ny así poder mirar y amar con libertad\n\n\n@@         E         B           A\nHoy no quiero derribar estas paredes\n@@ E              B            A          B\nQuiero darme cuenta de lo mucho que me quieres\n@@   C#m       G#m      A\nEncontrar tu Reino sereno en mi hogar\n@@  F#m             A      B            E\nSabiendo que la tempestad ha de pasar.\n\n\n@@ C#m          G#7  C#m7          F#\nAunque me cueste elijo hoy confiar\n@@         A                  B\nquiero vivir esa alegría que Tú me puedes dar…\n\n\n@@         E         B           A\nHoy no quiero derribar estas paredes\n@@ E              B            A          B\nQuiero darme cuenta de lo mucho que me quieres\n@@   C#m       G#m      A\nEncontrar tu Reino sereno en mi hogar\n@@  F#m             A      B            E\nSabiendo que la tempestad ha de pasar.",
     "tags": [
       "VOCACIONAL",
@@ -4131,8 +4182,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/4Vot5fFHCg1jJqcLChg08R?si=9283e75354d741bd",
     "spId": "4Vot5fFHCg1jJqcLChg08R",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=HIJatBNMdxs",
+    "ytId": "HIJatBNMdxs",
     "content": "@@        E                A\nNo permitas, Jesús, que muera\n@@E                        A\nsin antes ver tu Reino entre los vivos.\n@@C#m         G#m \nQue no me vaya \n@@          A\nsi alguien no te conociera.\n@@C#m              G#m          \nQue me quede hasta que el mundo \n@@   A     B\nte haya oído.\n\n\n@@A             B              E   \nMaestro, qué bien estamos acá. \n@@A              B               E\nAy, si todos pudieran sentir tu paz.\n@@ A           B          \nDéjame quedarme y ser yo, \n@@C#m          G#m\npor favor quedate y se Vos,\n@@ A           B                  E\ndéjame quedarme y llevar tu amor.\n\n\nQue al final de mis días pueda decir \nque he peleado el buen combate hasta el fin;\ncompleté mi carrera, conservé mi fe. \nLa corona de justicia está preparada para mí.",
     "tags": [
       "ADORACIÓN",
@@ -4176,8 +4227,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/6AkZgnMp66iHKFVrgPHhYq?si=e465303dbc1440bb",
     "spId": "6AkZgnMp66iHKFVrgPHhYq",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=X7lsjOGGdBA",
+    "ytId": "X7lsjOGGdBA",
     "content": "@@G                          D\nTú me conoces mejor que nadie\n@@Em                                C\nMe has visto caer de nuevo en la tentación\n@@G                       D\nTú me perdonas sin sentir rencor\n@@Em                        C\nLo que ni siquiera me perdono yo\n\n@@G                          D\nTu misericordia me hace grande\n@@Em                          C\nMi debilidad me hace pecador\n@@G                                D\nCuando lloro hasta que se hace tarde\n@@Em                          C\nTú estás ahí sintiendo mi dolor\n\n\n@@C               D           G         D      Em\nSe que no soy digno de recibir lo que Tú me das\n@@C                D                 G\nY hoy vengo a pedirte perdón de nuevo\n@@C             D                   G      D   Em\nSólo con Tu amor eres quien me puede consolar\n@@C                  D                G\nEstando en tu presencia estoy completo.\n\n@@C               D             G  D  Em\nPerdóname, Señor porque no fui capaz\n@@C                 D              G\nDe encontrarte a Ti en todas las cosas\n@@C              D                  G  D  Em\nNo supe ver el bien donde otros ven el mal\n@@C              D              G\nAyúdame porque quiero cambiar.\n\n\n@@G                           D\nTengo siempre los mismos miedos\n@@Em                           C\nDudas que me dan inseguridad\n@@G                     D\nPero Tú me miras sonriendo\n@@Em                          C\nPorque hacerme así fue Tu voluntad\n\n@@C               D\nSácame del camino equivocado\n@@          G           D          Em\nPorque a veces me cuesta ver la luz\n@@                      C                         D\nY hoy me postro ante Ti y Tú me acoges en tus brazos\n@@   G      D      Em\nJesús, Jesús, Jesús.\n\n\n@@C               D           G         D      Em\nSe que no soy digno de recibir lo que Tú me das\n@@C                D                 G\nY hoy vengo a pedirte perdón de nuevo\n@@C             D                   G      D   Em\nSólo con Tu amor eres quien me puede consolar\n@@C                  D                G\nEstando en tu presencia estoy completo.\n\n@@C               D             G  D  Em\nPerdóname, Señor porque no fui capaz\n@@C                 D              G\nDe encontrarte a Ti en todas las cosas\n@@C              D                  G  D  Em\nNo supe ver el bien donde otros ven el mal\n@@C              D           Em\nAyúdame porque quiero cambiar.\n@@C              D              G\nAyúdame porque quiero cambiar.\n",
     "tags": [
       "ADORACIÓN",
@@ -4198,13 +4249,15 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/2I6j1zemyzWldCHicCy7TQ?si=ee780b200c9f4aa7",
     "spId": "2I6j1zemyzWldCHicCy7TQ",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=Q3jdIOyGw6E",
+    "ytId": "Q3jdIOyGw6E",
     "content": "@@     G          C           G        \nUna tierra que no tiene fronteras, \n@@      Bm         C            D\nsino manos que juntas formarán\n@@       Em          Bm         \nUna cadena, más fuerte \n@@        C             G\nque el odio y que la muerte\n@@     D#            F           Dsus4 D\nLo sabemos, el camino es el Amor\n\n@@      C         D             G  \nUna patria más justa y más fraterna \n@@        D#                         D\ndonde todos construyamos la unidad\n@@        C              D               \nDonde nadie es desplazado \n@@         C            G\nporque todos son llamados\n@@     D#           F            Dsus4 D\nLo sabemos, el camino es el Amor\n\n\n@@          C D       G        \nUn nuevo sol, se levanta \n@@          C            D              G\nsobre la nueva civilización que nace hoy\n@@       C           B7   \nUna cadena, más fuerte \n@@        Em             A7\nque el odio y que la muerte\n@@     G            D            G\nLo sabemos el camino es el Amor\n\n\nLa Justicia es la fuerza de la Paz, \nla Justicia que nos hace perdonar\nLa Verdad es la fuerza \nque nos da la liberación\nLo sabemos, el camino es el amor\n\nEl que tiene comparte su riqueza, \nel que sabe no impone su verdad\nEl que manda entiende \nque el poder es un servicio\nLo sabemos, el camino es el Amor.",
     "tags": [
       "MISIÓN",
       "COMUNIÓN",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "SALIDA",
+      "ANIMACIÓN"
     ],
     "source": "",
     "srcTag": "base",
@@ -4220,12 +4273,15 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/6WTdsYUlvy5HX6r8pj2f0r?si=322b0afc43db4b02",
     "spId": "6WTdsYUlvy5HX6r8pj2f0r",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=abctOsl67iU",
+    "ytId": "abctOsl67iU",
     "content": "(Original: transporte en 3ro, Bb)\n@@       G                            C\nSi por un segundo vieras cómo te miro\n@@          Cm                              G\nCuando duermes, cierras los ojos, yo ahí sigo\n@@D                       Em    D     C\nSe me cae la baba, imposible no mirar\n@@    Am7                              D\nNo quiero dejar de hacerlo, no lo intentes imaginar.\n\n@@       G                             C\nSi por un segundo vieras cómo te escucho\n@@        Cm                                      G\nCada ruido, cada palabra, y cuando no hablas mucho\n@@   D                          Em       D       C\nY hables o estés callado, solo me importa si estás\n@@        Am                            D               D7\nEn mi amor cabe el silencio, cabe hablar y mucho más\n\n\n@@     G                        C\nReviento de amor, estoy temblando de gozo\n@@    D                          B7              Em D\nte como con la mirada, estás aquí y no estás solo.\n@@        G                           C\nCada lágrima, cada risa, en mi memoria se han grabado\n@@         D                         B7              Em D\ncada detalle de tu cuerpo y de tu alma fueron pensados\n@@     G                           C              D\nNo creo que aguante más contenerme aquí detrás\n@@          D7                          B7            Em D\nquiero entrar, hacerte mío, curar tu herida si me la das\n@@       C                           D\nsi por un segundo vieras cómo te miro\n@@                        G\nno querrías ver nada más.\n\n\nSi por un segundo vieras cuánto te amo\nYo solo sé entregarme, aunque sea en vano\nY tiemblo al imaginar cuando llegues al cielo\nCostará respirar en el abrazo que nos daremos\nSi por un segundo vieras lo que hay por llegar\nLo que aguarda escondido, casualidades sin azar\nLo sueño tantas veces, en cada don, ¿qué puedo hacer?\nTú recibes mi regalo, al cielo miras, agradece.\n\n\n@@     G                        C\nReviento de amor, estoy temblando de gozo\n@@    D                          B7              Em D\nte como con la mirada, estás aquí y no estás solo.\n@@        G                           C\nCada lágrima, cada risa, en mi memoria se han grabado\n@@         D                         B7              Em D\ncada detalle de tu cuerpo y de tu alma fueron pensados\n@@     G                           C              D\nNo creo que aguante más contenerme aquí detrás\n@@          D7                          B7            Em D\nquiero entrar, hacerte mío, curar tu herida si me la das\n@@       C                           D\nsi por un segundo vieras cómo te miro\n@@                        G\nno querrías ver nada más.\n\n@@    G                          C\nReviento de amor y estoy temblando de gozo\n@@     D                    B7              Em  D\nhay tanta locura en este amor que no controlo.\n@@   G                 C\nPierde tu vida, recibirás la Eternidad\n@@       D                           B7        Em\nla alegría de ser esclavo, esclavo de mi Libertad.\n@@       C                           D\nSi por un segundo vieras cómo te miro\n@@                       G\nno querrías ver nada más.",
     "tags": [
       "ADORACIÓN",
-      "DIOS PADRE"
+      "DIOS PADRE",
+      "SANACIÓN",
+      "JESÚS",
+      "PASCUA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4241,8 +4297,8 @@ const SONGS_DATA = [
     "key": "D",
     "spotify": "https://open.spotify.com/intl-es/track/0qTm17GyjytmoXcw8CVUOo?si=a702e79896074572",
     "spId": "0qTm17GyjytmoXcw8CVUOo",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=gpreX_QZMUE",
+    "ytId": "gpreX_QZMUE",
     "content": "(Original: transporte en 3ro, F)\n@@D                G          D  \nHoy vengo ante Tí a agradecerte \n@@D             G           A\nmiro hacia atrás y veo tu mano en todo.\n@@Bm        F#m             G                         D\n¡Qué poca fe! ¡Qué ciega fui! Al no querer confiar en Tí\n@@                             G     D\nEs que no entiendo por qué dudé tanto.\n\n@@D                G          D\nHoy vengo ante Ti a agradecerte \n@@D          G             A\npor tanta gracia, por quererme\n@@Bm         F#m            G                       D\nMe hiciste ver que junto a Tí la vida tiene otro matiz.\n@@               Em           A\nMe llenaste el alma y descubrí\n\n\n@@            D                     G       \nQue vale la pena jugársela a tu manera \n@@             D                         A\nY que vale la pena ser signo de contradicción\n@@                Bm                          G\nque el que se abraza a tu cruz que el que navega junto a Tí\n@@A                        D\nvive un poco el Cielo aquí.\n\n\nHoy me entrego a Tí, hoy te regalo esta simple vida yo te la consagro\nMoldeala Vos, que pueda ser un instrumento a tu merced\nte soy toda tuya en adelante.\n\nQuiero agradecer con mi palabra y contarte que logré saberme amada\nY que al fin yo comprendí cuál es el fruto de vivir\naquel que quiero compartir.\n\n\n@@            D                     G       \nQue vale la pena jugársela a tu manera \n@@             D                         A\nY que vale la pena ser signo de contradicción\n@@                Bm                          G\nque el que se abraza a tu cruz que el que navega junto a Tí\n@@A                        D\nvive un poco el Cielo aquí.\n\n@@              D                       G\nY que vale la pena algunas noches en vela\n@@                       D                             A\nQue aunque no se comprenda el gozo del triunfo es mayor\n@@                  D                           G\nLa paz que uno alcanza embriaga el alma y la llena\n@@               D                 A\nCuando se entiende que vale la pena\n@@               D\njugársela por Él.",
     "tags": [
       "ADORACIÓN",
@@ -4263,8 +4319,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/3W9oJwgfbSRREdzK0ssEZQ?si=5627fd706d034320",
     "spId": "3W9oJwgfbSRREdzK0ssEZQ",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=iSlmXtEC3s8",
+    "ytId": "iSlmXtEC3s8",
     "content": "@@C          Am  F             G\nSeñor ante Ti, hoy vengo a dejar\n@@Am                                  F       G\nmis proyectos mi vida, mis sueños, mi libertad,\n@@C             Am  F        G\nSeñor desde hoy, mi felicidad\n@@      Am                          F             G\nserá amarte y servirte buscando hacer Tu voluntad.\n\n\n@@   C                                              \nRecibe Señor en tus manos la ofrenda \n@@         Am\nque hoy vengo a traer ante Ti,\n@@F                  Dm               \nreviste con tu fortaleza \n@@             G\nmi débil pobreza que hoy te dice Sí.\n@@   F                    G                 \nY nunca permitas que crea que serte fiel\n@@ C       G        Am\nsolo depende de mí,\n@@       F                 G                \npues llevo en vasijas de barro \n@@               F       G      C\nel tesoro que sin merecer recibí.\n\n\nSeñor aquí estoy, Tu sabes como soy.\nCon Tu gracia transforma mi alma, \nlimpia mi corazón.\n\nSeñor haz que en mí, \nsiempre crezca esta sed,\nde querer que en tus aguas profundas, \npueda un día beber.\n",
     "tags": [
       "VOCACIONAL",
@@ -4284,12 +4340,13 @@ const SONGS_DATA = [
     "key": "C#m",
     "spotify": "https://open.spotify.com/intl-es/track/7zQYUSdUQ78Gp2OwWr9HGm?si=4733ea37a7894b44",
     "spId": "7zQYUSdUQ78Gp2OwWr9HGm",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=TIJeYg91Gog",
+    "ytId": "TIJeYg91Gog",
     "content": "\n@@    C#m                   A\nEl Señor nos envió a cumplir con la Misión\n@@       E                   B\nen el mundo anunciar la Verdad.\n@@    C#m                 A\nBautizar y enseñar la Palabra a los demás\n@@       E                   B\ny el poder de Dios Trino obrará.\n@@      C#m          A         E                B\nCon nosotros estará Cristo siempre hasta el final.\n@@F#m          C#m A                 B\nTestigos del Amor, oigamos hoy Su voz:\n\n\n@@         C#m  A    E      B       C#m   A          E   B\nVayan y hagan discípulos en las naciones. Vayan y hagan. (x2)\n\n\n\nVamos de dos en dos sin dinero o provisión,\nentregados confiemos en Dios.\nEl pondrá en nuestra voz las palabras del Amor\ny milagros en nuestra labor.\nMensajeros de la Paz, sembradores del Perdón,\nTestigos del Amor, sigamos hoy su Voz:\n\nVayan y hagan discípulos en las naciones. Vayan y hagan.\nVayan y hagan discípulos en las naciones. Vayan y hagan.",
     "tags": [
       "ANIMACIÓN",
-      "MISIÓN"
+      "MISIÓN",
+      "VOCACIONAL"
     ],
     "source": "",
     "srcTag": "base",
@@ -4305,12 +4362,13 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/79lnumkzXZCE671uieSv9k?si=f4d84e3f319d4292",
     "spId": "79lnumkzXZCE671uieSv9k",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=hI9PHMLhau4",
+    "ytId": "hI9PHMLhau4",
     "content": "(Original: C mayor)\n@@              G              D              Em\nVen Señor Jesús porque sin Ti ya no hay paisaje\n@@              C             Am              D\nVen Señor Jesús porque sin Ti no hay melodías\n@@              G              D        \nVen Señor Jesús porque sin Ti \n@@       Em             Bm\nno encuentro paz en nada\n@@    C      Am        D\nsin Ti mis ojos no brillan\n\n@@                 G       D     \nLa vida es poca cosa sin Ti \n@@   Em     Bm    C  \nsin Ti, sin Ti, sin Ti, \n@@Am              D\nla vida es poca cosa\n\n\n@@              G D                \nVen Señor Jesús, \n@@                 Em Bm    \nven pronto a mi vida\n@@               C  Am    D\nven pronto Señor ven pronto\n\n\n@@           G          D     Em           \nPorque sin Ti yo no quiero la vida, \n@@       Bm         C  \nya no canto con alma\n@@       Am         D     \nya mis manos no sirven. \n\n@@                   G\nYa no escucho latidos\n@@         D         Em    \nYa no abrazo con fuerza \n@@        Bm            C  \nmi corazón no se ensancha\n@@       Am         D\nmi sonrisa no es plena.\n\n@@           G       D     Em\nY todo sin Ti nada vale la pena\n@@           C        Am       D\nporque sin Ti ya no me llena nada.\n@@            G        B7     Em   \nPorque sin Ti todo suena vacío \n@@    C          Am      D\nsin Ti todo me deja tristeza.\n\n@@           G         D     Em\nPorque sin Ti yo no respiro hondo,\n@@            C Am        D\nporque sin Ti todo me cansa.\n@@           G      B7   Em    \nPorque sin Ti me falta todo \n@@      Bm    C             Am     D\ny me sobra todo, todo sin Ti, sin Ti.\n\n\n@@              G\nVen Señor Jesús\n@@D                Em Bm\nVen pronto a mi vida\n@@              C    Am    D    G\nVen pronto Señor, ven pronto.",
     "tags": [
       "ADORACIÓN",
-      "JESÚS"
+      "JESÚS",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -4326,8 +4384,8 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/6D0bkfzL9dLVhDoli7Bz6M?si=54b1a5978cc44cc2",
     "spId": "6D0bkfzL9dLVhDoli7Bz6M",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=8KfDzM4nDc4",
+    "ytId": "8KfDzM4nDc4",
     "content": "@@A                       D                  A\nVen y sígueme, y mar adentro echa ya tus redes.\n@@ A               D            A\nVen y yo te haré pescador de hombres.\n\n\n@@          D                  A             D                     A\nEn tus palabras echaré mis redes, dejo mi barca y donde quieras iré.\n@@          D        E          F#m              D    E           A\nTú me llamaste, Señor, por mi nombre y sólo a Tí, Señor, te seguiré.\n\n\nTe vi trabajar aquella noche en que fracasaste.\nSé de tu dolor, de tu vergüenza y de tus fragilidades.\n\n\n@@          D                    A               \nHoy yo te pido que confíes de nuevo, \n@@          D                        A\nvuelve a tirar con la esperanza de ayer.\n@@          D                      F#m  \nEstoy contigo y te prometo abundancia,\n@@      D             E              A\ndeja todo por mi amor, ven y sígueme.\n\n\n@@         D                  A\nEn tus palabras echaré mis redes\n@@          D                        A\nvuelve a tirar con la esperanza de ayer.\n@@          D                      F#m  \nEstoy contigo y te prometo abundancia,\n@@      D             E              A\ndeja todo por mi amor, ven y sígueme.",
     "tags": [
       "ADORACIÓN",
@@ -4348,8 +4406,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/3aa8MTB92N5exEl6kgc37t?si=68e8f35b3d04416c",
     "spId": "3aa8MTB92N5exEl6kgc37t",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=ENpgXykWBsY",
+    "ytId": "ENpgXykWBsY",
     "content": "(Original: A mayor)\n@@E                          B                          \nNo importa lo que te enseñaron, \n@@                      C#m\ncómo de Él te han contado,\n@@                          G#m\nsi no lo has visto y encontrado.\n@@C#m                     G#m                         \nNo se conoce el mar adentro \n@@                      A\nsi no te metes en sus olas\n@@                        B\nNo se lo sabe desde afuera.\n@@C#m                   G#m                            \nYa no te bastan las teorías, \n@@                        A\nprobalo a Dios así en tu vida\n@@                      B\nÉl lo da todo y quita nada.\n\n\n@@ E            B\nVen y verás, ven y verás,\n@@F#m                A         B\nAlguien te ama y quiere mostrarlo.\n@@ E            B\nVen y verás, ven y verás,\n@@F#m               A         B  E\nLo que Jesús te tiene preparado.\n\n\nAunque sean muchas las preguntas \ny si te surgen tantas dudas\nde si es verdad lo que te canto.\nÉl que conoce desde antes, \nsabe tu nombre y lo que vives,\nY lo que siempre vas buscando.\nEscucha dentro su llamado, \nverás Él pasa a tu lado\nY tu respuesta va esperando...\n\n\n@@ E            B\nVen y verás, ven y verás,\n@@F#m                A         B\nAlguien te ama y quiere mostrarlo.\n@@ E            B\nVen y verás, ven y verás,\n@@F#m               A         B  E\nLo que Jesús te tiene preparado.\n\n@@C#m\nVen, ven, que a vos te está buscando\n@@B\nVen, ven, a vos te está esperando\n@@A\nVen, ven, que a vos te está soñando\n@@F#m         B\nVen y lo verás.\n@@C#m\nVen, ven, y velo por tus ojos\n@@B\nVen, ven, que no te estén contando\n@@A\nVen, ven, anímate a probarlo\n@@F#m        B\nVen y lo verás.",
     "tags": [
       "ANIMACIÓN",
@@ -4369,8 +4427,8 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/4XlbYtYj3kie1tLogoO0VO?si=5d280d7434d84bf5",
     "spId": "4XlbYtYj3kie1tLogoO0VO",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=F9hEyQ-M3sw",
+    "ytId": "F9hEyQ-M3sw",
     "content": "(Original: E mayor)\n@@A                D\nDesde niño te quiero\n@@A            D\nMi amigo Jesús\n@@A                       D\nMe has amado desde siempre\n@@ A                   D\nCristo, Maestro y Señor\n\n@@A                 D\nCon lo poco que tengo\n@@A             D\nMe miraste a mí\n@@A                       D\nCon tus ojos llenos de amor\n@@       Bm            E\nTraspasaste mi corazón \n\n@@Bm                      E\nHoy me llamas por mi nombre\n@@D              E\n¿Dónde vives Señor?\n\n\n@@  A                   D\nVen con lo poco que tienes\n@@  E                     F#m\nVen con lo mucho que eres\n@@ D                 A\nVen con tu fragilidad\n@@Bm                E        C#7\nVen con tu amor, con tu verdad\n@@F#m       C#m   D            A\nHijo escogido, ven como un niño\n@@Bm       C#m                 D   E\nYo te llevaré de la mano conmigo\n@@          A\n¡Ven y verás!\n\n\n\nQuiero quedarme contigo\nEn tu casa Señor\nAquí me siento acogido\nMe abrazas y me haces feliz\nTu voz escuché y te seguí\n¿Dónde vives Señor?\n",
     "tags": [
       "ADORACIÓN",
@@ -4391,8 +4449,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "https://open.spotify.com/intl-es/track/6H7jNxw2QEhTWUyobRZrd7?si=1db362fd7ed2422d",
     "spId": "6H7jNxw2QEhTWUyobRZrd7",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=rblVU9J5oUA",
+    "ytId": "rblVU9J5oUA",
     "content": "@@ C      G   Am    F     G\nVengo ante Tí, Jesús amado\n@@  C     G   Am  F  G\nVengo ante Tí…\n\n\n@@Am               F\nPara postrarme, para adorarte\n@@ C                G\nPara cantarte y a Tí glorificarte (bis)\n\n\n@@ Am                F\nY no tengo miedo de postrarme,\n@@ C             G\nAnte quien se dio por mí.\n@@ Am               F\nY no tengo dudas de amarle,\n@@C           G            Am  F  C  G\nal que me amó, hasta el fin..\n\n",
     "tags": [
       "ADORACIÓN"
@@ -4411,8 +4469,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/7oMgpX0X6TnxXdADuAz7Sc?si=6b205fe5128747f1",
     "spId": "7oMgpX0X6TnxXdADuAz7Sc",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=YjEiDYCK_a8",
+    "ytId": "YjEiDYCK_a8",
     "content": "@@     G               C             D\nLos lirios del campo y las aves del cielo\n@@G                 C                     D\nno se preocupan por que están en mis manos\n@@  Em               C         G            D\nTené confianza en Mí, acá estoy junto a vos.\n\n@@  G             C             D\nAmá lo que sos y tus circunstancias,\n@@  G             C                    D\nEstoy con vos, con tu cruz en mi espalda,\n@@ Em              C     \nTodo terminará bien, \n@@           G               D\n\"Yo hago nuevas todas las cosas\".\n\n\n@@    Em C            G D        \nYo vengo a traerte vida, \n@@              Em  C           D\nvida en abundancia, en abundancia.\n@@             Em C                G D\nYo soy el Camino, la Verdad y la Vida\n@@              Em  C           D\nVida en abundancia, en abundancia.\n\n\nNo hice al hombre para que esté solo, \ncaminen juntos como hermanos.\nSopórtense mutuamente, \námense unos a otros\n\nLa felicidad de la vida eterna \nempieza conmigo en la tierra\nSentite vivo, \nla fiesta del reino comienza acá.\n\n\nAnimo tus sueños y tus proyectos, \ntodas tus búsquedas y tus anhelos\nYa oí tu plegaria, \narrojate a la esperanza.\n\nSubí a mi barca, navegá mar adentro, \nen lo profundo está lo verdadero.\nAnimate a volar, \nla aventura de confiar.",
     "tags": [
       "ANIMACIÓN",
@@ -4435,8 +4493,8 @@ const SONGS_DATA = [
     "key": "E",
     "spotify": "https://open.spotify.com/intl-es/track/0YEziLegD8eS4GIh9hlzOL?si=a736106964064583",
     "spId": "0YEziLegD8eS4GIh9hlzOL",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=hp9n9VjVH6g",
+    "ytId": "hp9n9VjVH6g",
     "content": "@@   E                    A\nOjalá tuviera más que darte\n@@      C#m          B\npero solo mi vida tengo.\n@@      A          Am         E C#m\nY ya no, pues es tuya para Ti.\n@@      F#m          B         E\nVívela Tú, pues es tuya para Ti.\n\n@@            A           E      \nNo es más fácil porque sufro.\n@@        F#m               B         \nEs mas fácil porque soy feliz.\n\n\n@@      E        C#m\nSi viviré hasta morir, \n@@         A     B\nquiero vivir amando.\n@@        G#m       A\nHasta morir, de amor\n@@          D   B    E\ny eternamente amar.\n\n@@ E                           A\n¿Cómo responder a tanto amor?\n@@     C#m                   B\nSino con mi pequeño corazón\n@@          A        Am        E C#m\nque no quiere latir sino para Ti.\n@@          A            B                         E\nPues yo soy para mi amado y mi amado es para mi.\n\n@@            A                       E\nNo es mas fácil, debo hacerme pequeño.\n@@        F#m                   B\nEs mas fácil, solo aquí yo soy pleno.\n\n@@      E        C#m\nSi viviré hasta morir, \n@@         A     B\nquiero vivir amando.\n@@        G#m       A\nHasta morir, de amor\n@@ F#m           B               A\nVivir amando hasta morir de amor\n@@         D     B   A E\ny eternamente amar.\n",
     "tags": [
       "VOCACIONAL",
@@ -4457,8 +4515,8 @@ const SONGS_DATA = [
     "key": "A",
     "spotify": "https://open.spotify.com/intl-es/track/3fP7nhe5twvDyVNEZ3BYYg?si=4d2b987b92dc41ee",
     "spId": "3fP7nhe5twvDyVNEZ3BYYg",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=u5H09aXfikI",
+    "ytId": "u5H09aXfikI",
     "content": "@@A             E   D            A          \nTe ofrezco Señor todas mis medidas \n@@       F#m           C#m  D         E\ny los límites que le pongo a mi corazón\n@@A               E    D       A         \nY dejo en Tus manos este silencio, \n@@     F#m            C#m            D               E\nque siento desde adentro cuando no escucho Tu voz\n@@      Bm  D            E\nY te daré todo lo que soy\n\n\n@@           F#m           C#m          D             A\nTe doy mi vida que no es vida si me guardo lo que soy\n@@        D       Bm           E\nEn tus brazos quiero descansar hoy\n@@          F#m        C#m          D              A\nVoy hacia Tí, toma de mí, cada recuerdo cada herida\n@@           D      Bm          E\nQue me cegan y quitan la alegría\n@@           Bm             A           E        D  F#m \nSé que transformas en posible lo imposible en mi corazón \n@@C#m    D    A E F#m C#m D E\noooh, oh, ooooh…\n",
     "tags": [
       "ANIMACIÓN",
@@ -4478,13 +4536,15 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/12I75SmL3Tx9dxARd7Xm7Z?si=4278413741624c15",
     "spId": "12I75SmL3Tx9dxARd7Xm7Z",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=wUWo8ZfOLdo",
+    "ytId": "wUWo8ZfOLdo",
     "content": "@@ G                                       \nRecuerdo los tiempos antiguos \n@@         D\nmedito todas tus promesas\n@@     C                   Am                 G D\nHe visto tu obrar y Tu Espíritu soplar sobre mí.\n\n@@  G                         D\nAmaba tus mandatos tu discípulo yo era\n@@           C                     Am            G D\nY no importaba que quisieras de mí ni a dónde ir.\n\n@@            C                                     G\nPero se enfrió mi corazón, me acostumbré a nombrarte\n@@            C                             G\nA hablar de Tí a los demás pero ya no contigo\n@@           C                               G\nDe manantial me convertí en cisterna agrietada\n@@            Am         C        D           G  D\nMi alma en tierra agostada, cansada y sin agua\n\n\n@@                  G\nVuelve a darme vida en tu costado abierto\n@@              D                                            \nde los manantiales de tu amor eterno                      \n@@                C   Am                G   D   \nQuémame por dentro, sopla con Tu aliento\n\n@@                  G\nVuelve a darme vida en tu costado abierto\n@@              D                                            \nde los manantiales de tu amor eterno                      \n@@                C                    D   \nQuémame por dentro, sopla con Tu aliento\n\n\n@@  G          D\n/Dame vida, dame amor\n@@        C Am       G        D\nQuémame con Tu fuego Señor/ x2\n",
     "tags": [
       "ESPÍRITU SANTO",
       "JESÚS",
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS",
+      "VOCACIONAL"
     ],
     "source": "",
     "srcTag": "base",
@@ -4500,12 +4560,13 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/2EPDHHtdQS1Iz9owtiXdbH?si=cd1510f4c3a0434d",
     "spId": "2EPDHHtdQS1Iz9owtiXdbH",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=W0FweLRo920",
+    "ytId": "W0FweLRo920",
     "content": "(Original: transporte en 3ro, Bb)\n@@G           C      G\nYa no eres pan y vino\n@@G                C         G               D\nAhora que eres Cuerpo y Sangre, vives en mí\n@@C                              G\nDe rodillas yo caigo al contemplar tu bondad\n@@  Em                    D\n¿Cómo no te voy a adorar?\n\n@@     G               C      G\nMientras te pierdes en mis labios\n@@     G            C      G            D\nTu gracia va inundando todo mi corazón\n@@         C                       G\nPor esa paz que me llena de alegría mi ser\n@@   Em                 D\n¿Cómo no te voy a adorar?\n\n\n@@          G           D\nSeñor Jesús, mi Salvador\n@@        C              G\nAmor Eterno, Amor Divino.\n@@ C           G             D               G\nYa no falta nada, lo tengo todo, te tengo a Ti.\n@@ C           G             D                G\nYa no falta nada, lo tengo todo, te tengo a Ti.\n\n\n\nDueño y Rey del universo\n¿Cómo puede ser posible que busques mi amor?\nTú tan Grande, yo pequeño y te fijas en mí\n¿Cómo no te voy a adorar?\n\nDe rodillas, yo te pido\nQue el día cuando tú me llames, sea como hoy\nPara mirarte a los ojos y poderte decir\nQue ¿cómo no te voy a adorar?",
     "tags": [
       "ADORACIÓN",
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -4521,8 +4582,8 @@ const SONGS_DATA = [
     "key": "G",
     "spotify": "https://open.spotify.com/intl-es/track/6Bkynvfuqeg2s9y9jkyk8a?si=1aaf1fdff0d84835",
     "spId": "6Bkynvfuqeg2s9y9jkyk8a",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=ik7GQ_hhQkE",
+    "ytId": "ik7GQ_hhQkE",
     "content": "(Original: transporte en 3ro, Bb)\n@@G                                     C\nA veces la vida se siente como naufragar\n@@  Am                   C                  D\nquedar flotando a la deriva en medio del mar.\n@@    C                  D        G        D     Em\nBuscar un trozo de madera, un poco de seguridad\n@@ Am                    D              G\npara sostenerme con fuerza y sobrevivir.\n\n@@ G                                        C\nA veces perder significa volverse a encontrar\n@@Am                      C               D\ncon todo lo que yo no puedo, lo que no se da.\n@@   C                    D           G         D     Em\nSentir que todo lo que avanzo me deja en el mismo lugar\n@@   Am                   D                    G  Em\ny entonces quisiera rendirme y dejar de luchar.\n\n@@         C       G          D   Em\nClamo a Ti, mi amigo y mi Dios.\n@@       C         G               D\nVen a mi, dame calma, dame Tu voz.\n@@G          C         Em           D\nYo soy el mar, ya no temas naufragar.\n@@G            C          G           D\nYo soy la fuerza que no te dejará ahogar.\n@@Em           C          G           D\nYo estoy contigo, no te rindas, mírame.\n@@C    D           G\nA tu lado en el mar.\n\n\n@@    G                                     C\nA veces me llena de miedo atreverme a amar\n@@  Am                  C                D\ndejar de cuidar las heridas y solo mostrar.\n@@   C              D            G         D        Em\nEste corazón lastimado que anhela amistad y perdón,\n@@       Am             D                G   Em\nque anhela jugarse la vida por Tu corazón.\n\n\n@@         C       G          D   Em\nClamo a Ti, mi amigo y mi Dios.\n@@       C         G               D\nVen a mi, dame calma, dame Tu voz.\n@@G          C         Em           D\nYo soy el mar, ya no temas naufragar.\n@@G            C          G           D\nYo soy la fuerza que no te dejará ahogar.\n@@Em           C          G           D\nYo estoy contigo, no te rindas, mírame.\n@@C    D           G\nA tu lado en el mar.",
     "tags": [
       "VOCACIONAL",
