@@ -931,6 +931,17 @@ function goCat(tag) {
 
 function init() {
   try {
+    // IMPORTANTE: leer el deep link ANTES de cualquier showView().
+    // showView('home'/'songs'/'prayers') hace history.replaceState(null,'','/'),
+    // lo que pisaría location.pathname antes de poder leerlo si se llamara primero.
+    // Deep link: soporta /cancion/id (rutas reales) y #cancion/id o #id (legacy hash)
+    const pathMatch = location.pathname.match(/^\/cancion\/(.+)$/);
+    const hashMatch = location.hash.match(/^#(?:cancion\/)?(.+)$/);
+    const initId = pathMatch ? pathMatch[1].trim()
+                 : hashMatch ? hashMatch[1].trim()
+                 : null;
+    const slParam = new URLSearchParams(location.search).get('sl');
+
     initState(SONGS_DATA);    // datos embebidos en songs_data.js
     buildTagChips();          // misc.js: pinta los chips de tags en el filtro
     buildChordToolbar();      // toolbar del editor
@@ -942,7 +953,6 @@ function init() {
     buildHomeCats();          // chips de categorías
 
     // Setlist compartido: ?sl=id1,id2,...
-    const slParam = new URLSearchParams(location.search).get('sl');
     if (slParam) {
       const ids = slParam.split(',').map(x => x.trim()).filter(x => songs.find(s => s.id === x));
       if (ids.length) {
@@ -953,21 +963,8 @@ function init() {
       }
     }
 
-    // Deep link: soporta /cancion/id (rutas reales) y #cancion/id o #id (legacy hash)
-    const pathMatch = location.pathname.match(/^\/cancion\/(.+)$/);
-    const hashMatch = location.hash.match(/^#(?:cancion\/)?(.+)$/);
-    const initId = pathMatch ? pathMatch[1].trim()
-                 : hashMatch ? hashMatch[1].trim()
-                 : null;
-
-    console.log('[DEBUG] pathname:', location.pathname);
-    console.log('[DEBUG] pathMatch:', pathMatch);
-    console.log('[DEBUG] initId:', initId);
-    console.log('[DEBUG] songs.length:', songs?.length);
-
     if (initId) {
       const exists = songs.find(s => s.id === initId);
-      console.log('[DEBUG] exists:', exists);
       if (exists) { showView('songs'); openSong(initId); }
     }
   } catch (e) {
