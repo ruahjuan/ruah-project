@@ -734,6 +734,55 @@ function adminExport() {
   toast('✓ JSON exportado');
 }
 
+// Orden fijo de campos para songs_data.js — mantiene los diffs de git limpios
+// entre exportaciones sucesivas (el archivo original tenía 4 órdenes distintos
+// mezclados, así que se normaliza a uno solo de acá en adelante).
+const SONGS_DATA_FIELD_ORDER = [
+  'id', 'title', 'artist', 'composer', 'key',
+  'spotify', 'spId', 'youtube', 'ytId',
+  'content', 'tags',
+  'source', 'srcTag', 'srcColor',
+  'fav', 'thumbnailHint'
+];
+
+/**
+ * Genera el texto completo de songs_data.js a partir del array `songs`
+ * actual en memoria (con todos los cambios hechos en el editor/admin).
+ */
+function buildSongsDataJsText() {
+  const normalized = songs.map(s => {
+    const out = {};
+    SONGS_DATA_FIELD_ORDER.forEach(key => {
+      if (key === 'thumbnailHint') {
+        out[key] = s.thumbnailHint || (s.ytId ? 'youtube' : (s.spId ? 'spotify' : ''));
+      } else if (key === 'tags') {
+        out[key] = s.tags || [];
+      } else if (key in s) {
+        out[key] = s[key];
+      } else {
+        out[key] = (key === 'fav') ? false : '';
+      }
+    });
+    return out;
+  });
+  return `const SONGS_DATA = ${JSON.stringify(normalized, null, 2)};\n`;
+}
+
+/**
+ * Descarga songs_data.js listo para reemplazar el archivo en el repo.
+ * Incluye las 220+ canciones con todos los cambios hechos en el editor.
+ */
+function adminExportSongsData() {
+  const text = buildSongsDataJsText();
+  const blob = new Blob([text], { type: 'application/javascript' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'songs_data.js';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast(`✓ songs_data.js exportado (${songs.length} canciones)`);
+}
+
 function adminImport(ev) {
   const file = ev.target.files[0];
   if (!file) return;
