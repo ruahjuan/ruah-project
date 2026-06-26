@@ -993,7 +993,7 @@ function buildHomeCats() {
   const rest      = sortedTags.slice(FEATURED_N);
 
   featuredWrap.innerHTML = featured.map(t => `
-    <button class="home-cat-card" onclick="goCat(${JSON.stringify(t)})">
+    <button class="home-cat-card" data-tag="${esc(t)}">
       ${_catIconSvg(t)}
       <span class="hcc-name">${esc(toTitleCase(t))}</span>
       <span class="hcc-count">${counts[t]} canciones</span>
@@ -1012,7 +1012,7 @@ function buildHomeCats() {
   }
 
   restWrap.innerHTML = rest.map(t => `
-    <button class="home-cat-chip" onclick="goCat(${JSON.stringify(t)})">
+    <button class="home-cat-chip" data-tag="${esc(t)}">
       ${esc(toTitleCase(t))} <span class="hc-count">${counts[t]}</span>
     </button>
   `).join('');
@@ -1042,6 +1042,17 @@ function goCat(tag) {
   const chips = document.querySelectorAll('#filter-bar .chip[data-tag]');
   chips.forEach(c => c.classList.toggle('tag-on', c.dataset.tag === tag));
 }
+
+// Delegación de eventos para los botones de categoría del Home.
+// IMPORTANTE: nunca usar onclick="goCat(...)" inline aquí — los tags llevan
+// tildes y, peor, JSON.stringify(t) entre comillas dobles dentro de un
+// atributo onclick="" (también con comillas dobles) corta el atributo a la
+// mitad y deja el HTML del botón roto. data-tag + addEventListener es inmune
+// a esto sin importar qué caracteres tenga el tag.
+document.addEventListener('click', e => {
+  const btn = e.target.closest('#home-cats-featured .home-cat-card, #home-cat-chips .home-cat-chip');
+  if (btn && btn.dataset.tag) goCat(btn.dataset.tag);
+});
 
 // ═══════════════════════════════════════════════════════
 // INIT
