@@ -4,7 +4,7 @@
 //               Network First para songs_data.js
 // ============================================================
 
-const CACHE_VERSION = 'ruah-v1';
+const CACHE_VERSION = 'ruah-v2';
 
 // Assets que se cachean en la instalación (shell de la app)
 const STATIC_ASSETS = [
