@@ -1077,7 +1077,10 @@ function _setMeta(attr, key, content) {
 
 function toTitleCase(str) {
   if (!str) return '';
-  return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  // \b\w no reconoce vocales acentuadas ni 'ñ' como parte de la palabra,
+  // así que generaba mayúsculas en lugares random (ej: "jesús" -> "jEsús").
+  // Usamos una clase de caracteres explícita con soporte para acentos.
+  return str.toLowerCase().replace(/(^|[\s\-'"“‘(])([a-záéíóúñü])/gi, (m, sep, c) => sep + c.toUpperCase());
 }
 
 document.addEventListener('DOMContentLoaded', init);
