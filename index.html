@@ -232,8 +232,17 @@
         </svg>
         <h2 class="home-h2">Explorar por categoría</h2>
       </div>
-      <div class="home-cat-chips" id="home-cat-chips">
-        <!-- Se rellena dinámicamente por buildHomeCats() -->
+      <div class="home-cats-featured" id="home-cats-featured">
+        <!-- Se rellena dinámicamente por buildHomeCats(): tarjetas destacadas -->
+      </div>
+      <button class="home-cats-toggle" id="home-cats-toggle" onclick="toggleAllCats()">
+        Ver todas las categorías
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="home-cat-chips" id="home-cat-chips" hidden>
+        <!-- Se rellena dinámicamente por buildHomeCats(): el resto de las categorías -->
       </div>
 
       <!-- Oraciones del músico -->
