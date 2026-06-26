@@ -953,25 +953,94 @@ function buildSotW() {
   if (btn) btn.onclick = () => { showView('songs'); openSong(s.id); };
 }
 
-function buildHomeCats() {
-  const wrap = document.getElementById('home-cat-chips');
-  if (!wrap) return;
+// Iconos por categoría (Tabler-style, mismo set de trazos que el resto del home)
+const CAT_ICONS = {
+  'ALABANZA':          '<path d="M12 2l2.5 6.5L21 9l-5.5 4.5L17 21l-5-3.5L7 21l1.5-7.5L3 9l6.5-.5z"/>',
+  'ADORACIÓN':         '<path d="M12 21c-4-3-8-6-8-11a5 5 0 0110-1 5 5 0 0110 1c0 5-4 8-8 11z"/>',
+  'ENTRADA':           '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  'SALIDA':            '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  'COMUNIÓN':          '<path d="M12 2v6M8 8h8l2 13H6L8 8z"/>',
+  'SALMO':             '<path d="M5 3v18M9 3v12M13 3v18M17 3v8"/>',
+  'PASCUA':            '<circle cx="12" cy="12" r="9"/><path d="M12 3v18M5 8h14M5 16h14"/>',
+  'MARÍA':             '<path d="M12 21c-4-3-8-6-8-11a5 5 0 0110-1 5 5 0 0110 1c0 5-4 8-8 11z"/>',
+  'JESÚS':             '<path d="M12 3v18M7 8h10"/>',
+  'ESPÍRITU SANTO':    '<path d="M12 3c2 3-2 5 0 8s-2 5 0 8M5 12h14"/>',
+  'ACCIÓN DE GRACIAS': '<path d="M12 21s-7-4.5-7-10a5 5 0 0110-1 5 5 0 0110 1c0 5.5-7 10-7 10z"/>',
+  'PENITENCIAL':       '<path d="M12 2v20M5 9l7-7 7 7"/>',
+  'SANACIÓN':          '<path d="M12 21s-7-4.5-7-10a5 5 0 0110-1 5 5 0 0110 1c0 5.5-7 10-7 10z"/>',
+};
+const CAT_ICON_DEFAULT = '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>';
 
-  const allTags = [...new Set(songs.flatMap(s => s.tags || []))].sort();
-  wrap.innerHTML = allTags
-    .map(t => `<button class="home-cat-chip" onclick="goCat(${JSON.stringify(t)})">${esc(t)}</button>`)
-    .join('');
+function _catIconSvg(tag) {
+  const path = CAT_ICONS[tag] || CAT_ICON_DEFAULT;
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true">${path}</svg>`;
+}
+
+function buildHomeCats() {
+  const featuredWrap = document.getElementById('home-cats-featured');
+  const restWrap      = document.getElementById('home-cat-chips');
+  if (!featuredWrap || !restWrap) return;
+
+  // Contar canciones por tag
+  const counts = {};
+  songs.forEach(s => (s.tags || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
+
+  // Ordenar por cantidad descendente (empate: alfabético)
+  const sortedTags = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
+
+  const FEATURED_N = 8;
+  const featured = sortedTags.slice(0, FEATURED_N);
+  const rest      = sortedTags.slice(FEATURED_N);
+
+  featuredWrap.innerHTML = featured.map(t => `
+    <button class="home-cat-card" onclick="goCat(${JSON.stringify(t)})">
+      ${_catIconSvg(t)}
+      <span class="hcc-name">${esc(toTitleCase(t))}</span>
+      <span class="hcc-count">${counts[t]} canciones</span>
+    </button>
+  `).join('');
+
+  const toggle = document.getElementById('home-cats-toggle');
+  if (rest.length === 0) {
+    if (toggle) toggle.style.display = 'none';
+    restWrap.innerHTML = '';
+    return;
+  }
+  if (toggle) {
+    toggle.style.display = '';
+    toggle.firstChild.textContent = `Ver las ${sortedTags.length} categorías `;
+  }
+
+  restWrap.innerHTML = rest.map(t => `
+    <button class="home-cat-chip" onclick="goCat(${JSON.stringify(t)})">
+      ${esc(toTitleCase(t))} <span class="hc-count">${counts[t]}</span>
+    </button>
+  `).join('');
+}
+
+function toggleAllCats() {
+  const wrap   = document.getElementById('home-cat-chips');
+  const toggle = document.getElementById('home-cats-toggle');
+  if (!wrap || !toggle) return;
+  const opening = wrap.hidden;
+  wrap.hidden = !opening;
+  toggle.classList.toggle('open', opening);
+  if (toggle.firstChild) {
+    const total = wrap.querySelectorAll('.home-cat-chip').length + document.querySelectorAll('#home-cats-featured .home-cat-card').length;
+    toggle.firstChild.textContent = opening ? `Ocultar categorías ` : `Ver las ${total} categorías `;
+  }
 }
 
 function goCat(tag) {
+  // No depende de encontrar el chip ya pintado en #filter-bar (que puede no
+  // existir todavía o estar desincronizado por cache vieja del service worker):
+  // se aplica el filtro directo por estado y se sincroniza la UI después.
+  tagFilt = tag;
   showView('songs');
-  // Activar el chip de tag correspondiente en la vista canciones
+  renderList();
+
   const chips = document.querySelectorAll('#filter-bar .chip[data-tag]');
-  chips.forEach(c => {
-    const isTarget = c.dataset.tag === tag;
-    c.classList.toggle('on', isTarget);
-    if (isTarget) setTag(tag, c);
-  });
+  chips.forEach(c => c.classList.toggle('tag-on', c.dataset.tag === tag));
 }
 
 // ═══════════════════════════════════════════════════════
