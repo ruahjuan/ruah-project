@@ -880,25 +880,52 @@ Sumergido en las aguas busco tu paz"
   <script src="/js/editor.js"></script>
   <script src="/js/prayers.js"></script>
   <script src="/js/app.js"></script>
+<script src="/js/banner-coordinator.js"></script>
 <script src="/js/pwa.js"></script>
+<script src="/js/update.js"></script>
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
-      .then(() => console.log('[RUAH] SW registrado'))
+      .then((reg) => {
+        console.log('[RUAH] SW registrado');
+
+        // ¿Ya había un SW nuevo esperando? (ej: se abrió una pestaña vieja)
+        if (reg.waiting) {
+          window.ruahUpdate.mostrarBannerActualizacion(reg);
+        }
+
+        // Detecta cuando se instala una versión nueva
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              window.ruahUpdate.mostrarBannerActualizacion(reg);
+            }
+          });
+        });
+      })
       .catch(err => console.error('[RUAH] SW error:', err));
+
+    // Cuando el SW nuevo toma control, recargamos la página
+    let refrescando = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (refrescando) return;
+      refrescando = true;
+      window.location.reload();
+    });
   }
 </script>
-<!-- BANNER HTML -->
-<div id="pwa-install-banner" role="dialog" aria-label="Instalar RUAH">
+<!-- BANNER HTML (compartido entre instalación PWA y aviso de actualización) -->
+<div id="pwa-install-banner" role="dialog" aria-label="Aviso">
   <img src="/icons/icon-192.png" alt="RUAH" width="40" height="40" />
   <div class="pwa-install-text">
-    <strong>Instalar RUAH</strong>
-    <span>Accedé offline desde tu pantalla de inicio</span>
+    <strong id="pib-title">Instalar RUAH</strong>
+    <span id="pib-msg">Accedé offline desde tu pantalla de inicio</span>
   </div>
-  <button class="pwa-btn-install" onclick="ruahPWA.triggerInstall()">
+  <button class="pwa-btn-install" id="pib-action-btn" onclick="ruahPWA.triggerInstall()">
     Instalar
   </button>
-  <button class="pwa-btn-close" onclick="ruahPWA.hideInstallBanner()" aria-label="Cerrar">
+  <button class="pwa-btn-close" id="pib-close-btn" onclick="ruahPWA.hideInstallBanner()" aria-label="Cerrar">
     ✕
   </button>
 </div>

@@ -43,8 +43,9 @@ self.addEventListener('install', (event) => {
       return cache.addAll(STATIC_ASSETS);
     })
   );
-  // Activa el nuevo SW sin esperar a que se cierren las pestañas
-  self.skipWaiting();
+  // NOTA: ya no llamamos a self.skipWaiting() acá.
+  // El SW nuevo queda "esperando" hasta que el usuario confirme
+  // la actualización desde el banner (ver listener de 'message' abajo).
 });
 
 
@@ -65,6 +66,15 @@ self.addEventListener('activate', (event) => {
   );
   // Toma control de todas las pestañas abiertas inmediatamente
   self.clients.claim();
+});
+
+
+// ── MENSAJE DESDE LA PÁGINA ─────────────────────────────────
+// El usuario apretó "Actualizar" en el banner → activamos el SW nuevo.
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 
