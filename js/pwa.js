@@ -17,14 +17,33 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 // ── MUESTRA EL BANNER ───────────────────────────────────────
+// Pasa por el coordinador para no superponerse con el banner
+// de actualización (comparten el mismo elemento del DOM).
 function showInstallBanner() {
-  const banner = document.getElementById('pwa-install-banner');
-  if (banner) banner.classList.add('visible');
+  window.ruahBanner.solicitar('install', () => {
+    // Restaura el contenido "instalación" por si el banner quedó
+    // con el texto de actualización de una solicitud anterior.
+    const title = document.getElementById('pib-title');
+    const msg = document.getElementById('pib-msg');
+    const btn = document.getElementById('pib-action-btn');
+    if (title) title.textContent = 'Instalar RUAH';
+    if (msg) msg.textContent = 'Accedé offline desde tu pantalla de inicio';
+    if (btn) {
+      btn.textContent = 'Instalar';
+      btn.onclick = triggerInstall;
+    }
+    const closeBtn = document.getElementById('pib-close-btn');
+    if (closeBtn) closeBtn.onclick = hideInstallBanner;
+
+    const banner = document.getElementById('pwa-install-banner');
+    if (banner) banner.classList.add('visible');
+  });
 }
 
 function hideInstallBanner() {
   const banner = document.getElementById('pwa-install-banner');
   if (banner) banner.classList.remove('visible');
+  window.ruahBanner.liberar('install');
 }
 
 // ── DISPARA EL PROMPT NATIVO ────────────────────────────────
