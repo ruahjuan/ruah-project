@@ -12,7 +12,9 @@
   }
 
   /* ── Topbar: fijo, ya tiene height:52px ── */
-  #topbar { flex-shrink: 0; }
+  #topbar { flex-shrink: 0; padding: 0 10px; }
+  #logo   { gap: 7px; }
+  .logo-sub { display: none; }
 
   /* ── Vistas: cada una ocupa el espacio restante ── */
   .view      { display: none; flex-direction: column; }
@@ -115,9 +117,21 @@
   .cp-chord   { font-size: 11px; }
   .cp-section { font-size: 11px; }
 
-  /* ── Nav: solo íconos ── */
-  .nav-btn span { display: none; }
-  .nav-btn      { padding: 6px 10px; }
+  /* ── Nav: tab bar — ícono arriba, nombre siempre visible debajo ── */
+  .nav-btn {
+    flex-direction: column;
+    gap: 2px;
+    padding: 5px 8px 4px;
+    border-radius: 10px;
+  }
+  .nav-btn span {
+    font-size: 9.5px;
+    line-height: 1.1;
+  }
+  .nav-btn svg {
+    width: 17px;
+    height: 17px;
+  }
 
   /* ── Oraciones ── */
   #v-prayers { overflow-y: auto; }
