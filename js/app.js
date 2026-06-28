@@ -71,9 +71,13 @@ function openSong(id) {
   const s = songs.find(x => x.id === id);
   if (!s) return;
 
-  const newPath = '/cancion/' + id;
-  if (location.pathname !== newPath) history.pushState({ song: id }, '', newPath);
-  updateMeta(s);
+  // En modo presentación, la URL y el meta SEO los maneja _presentGoTo()
+  // (apuntan a /setlist, no a la canción individual) — no pisar eso acá.
+  if (!presentActive) {
+    const newPath = '/cancion/' + id;
+    if (location.pathname !== newPath) history.pushState({ song: id }, '', newPath);
+    updateMeta(s);
+  }
 
   curId = id;
   sem = 0;
@@ -361,10 +365,14 @@ function clearSL() {
 function shareSetlist() {
   if (!setlist.length) { toast('El setlist está vacío'); return; }
 
-  // Construir URL con ?sl=id1,id2,...
-  const url = new URL(location.href);
+  // Construir URL desde cero — NUNCA desde location.href, porque si el
+  // usuario está viendo una canción que no es la primera del setlist
+  // (ej. probando un tema suelto), location.pathname quedaría apuntando
+  // a esa canción y rompía el link compartido (abría la canción
+  // equivocada en vez del setlist). Acá se fuerza siempre /setlist.
+  const url = new URL(location.origin + '/setlist');
   url.searchParams.set('sl', setlist.join(','));
-  url.hash = '';
+  if (setlistName && setlistName.trim()) url.searchParams.set('n', setlistName.trim());
   const shareUrl = url.toString();
 
   // Texto plano para clipboard/share
@@ -373,9 +381,11 @@ function shareSetlist() {
     return s ? `${i + 1}. ${s.title}${s.key ? ' (' + s.key + ')' : ''}` : '';
   }).filter(Boolean).join('\n');
 
+  const titleLine = (setlistName && setlistName.trim()) ? setlistName.trim() : 'RUAH · Setlist';
+
   const shareData = {
-    title: 'RUAH · Setlist',
-    text: 'Setlist:\n' + text,
+    title: titleLine,
+    text: titleLine + ':\n' + text,
     url: shareUrl
   };
 
@@ -412,6 +422,227 @@ function renderSL() {
   if (btn) btn.style.display = setlist.length ? '' : 'none';
   if (count) count.textContent = setlist.length ? `(${setlist.length})` : '';
 }
+
+// ═══════════════════════════════════════════════════════
+// MODO PRESENTACIÓN DE SETLIST ("modo escenario")
+// ═══════════════════════════════════════════════════════
+//
+// Vista a pantalla completa que recorre las canciones del setlist
+// una por una (estilo presentación: flechas / swipe), reutilizando
+// #song-view y todos sus controles existentes (transposición, capo,
+// scroll, tamaño de letra, cifrado) sin duplicar esa lógica.
+//
+// Cada canción guarda su propio sem/capo/fontSize mientras se navega,
+// para que la transposición de una no afecte a las demás.
+
+let presentActive  = false;   // ¿estamos en modo presentación?
+let presentIds     = [];      // copia congelada del setlist al entrar
+let presentIdx     = 0;       // índice actual dentro de presentIds
+let presentPerSong = {};      // { id: {sem, capo} } — estado independiente por canción
+let setlistName    = '';      // nombre del setlist (persiste en localStorage)
+
+const SLNAME_LS_KEY = 'ruah_setlist_name';
+
+// Cargar nombre guardado al iniciar la app
+try { setlistName = localStorage.getItem(SLNAME_LS_KEY) || ''; } catch (e) { /* noop */ }
+
+function _saveSetlistName(name) {
+  setlistName = name || '';
+  try { localStorage.setItem(SLNAME_LS_KEY, setlistName); } catch (e) { /* noop */ }
+}
+
+// ── Iniciar presentación desde el panel de Setlist ─────────
+
+function startPresent() {
+  if (!setlist.length) { toast('El setlist está vacío'); return; }
+
+  if (!setlistName.trim()) {
+    const name = prompt('Nombre para este setlist (opcional):', setlistName || '');
+    if (name !== null) _saveSetlistName(name.trim());
+  }
+
+  // Cerrar paneles de armado de setlist si estaban abiertos
+  if (slOpen) toggleSL();
+  const mobileSheet = document.getElementById('mobile-sl-sheet');
+  if (mobileSheet) mobileSheet.classList.remove('open');
+
+  enterPresent([...setlist], 0, setlistName);
+}
+
+// ── Entrar al modo presentación (también usado por deep-link) ─
+
+function enterPresent(ids, startIdx, name) {
+  presentIds     = ids;
+  presentIdx     = Math.min(Math.max(0, startIdx || 0), ids.length - 1);
+  presentPerSong = {};
+  if (typeof name === 'string') setlistName = name;
+
+  presentActive = true;
+  document.body.classList.add('sl-presenting');
+  document.getElementById('sl-present').classList.add('on');
+  document.getElementById('sl-present').setAttribute('aria-hidden', 'false');
+
+  document.getElementById('empty').style.display     = 'none';
+  document.getElementById('song-view').style.display  = 'flex';
+
+  _renderPresentDots();
+  _presentGoTo(presentIdx, true);
+}
+
+function exitPresent() {
+  presentActive = false;
+  document.body.classList.remove('sl-presenting');
+  document.getElementById('sl-present').classList.remove('on');
+  document.getElementById('sl-present').setAttribute('aria-hidden', 'true');
+  _pauseAutoscroll();
+
+  // Limpiar la URL de presentación y volver al inicio del cancionero
+  history.replaceState(null, '', '/');
+  resetMeta();
+  curId = null;
+  document.getElementById('song-view').style.display = 'none';
+  document.getElementById('empty').style.display      = 'flex';
+  showView('home');
+}
+
+function renamePresent() {
+  const name = prompt('Nombre del setlist:', setlistName || '');
+  if (name === null) return;
+  _saveSetlistName(name.trim());
+  document.getElementById('slp-name').textContent = setlistName || 'Setlist';
+
+  // Refrescar meta SEO/OG y la URL con el nuevo nombre
+  const url = new URL(location.origin + '/setlist');
+  url.searchParams.set('sl', presentIds.join(','));
+  if (setlistName.trim()) url.searchParams.set('n', setlistName.trim());
+  url.searchParams.set('i', String(presentIdx + 1));
+  history.replaceState({ present: true, idx: presentIdx }, '', url.pathname + url.search);
+
+  const currentSong = songs.find(x => x.id === curId);
+  updatePresentMeta(presentIds, setlistName, currentSong);
+}
+
+// ── Navegación entre canciones del setlist ──────────────────
+
+function presentNav(delta) {
+  _presentGoTo(presentIdx + delta);
+}
+
+function _presentGoTo(idx, isFirstLoad) {
+  if (idx < 0 || idx >= presentIds.length) return; // límites: no da la vuelta
+
+  // Guardar sem/capo de la canción que estábamos viendo (si no es la primera carga)
+  if (!isFirstLoad && curId) {
+    presentPerSong[curId] = { sem, capo };
+  }
+
+  presentIdx = idx;
+  const id = presentIds[presentIdx];
+
+  openSong(id); // reutiliza toda la lógica existente de render
+
+  // Restaurar (o inicializar) sem/capo independientes de esta canción
+  const saved = presentPerSong[id] || { sem: 0, capo: 0 };
+  sem  = saved.sem;
+  capo = saved.capo;
+  presentPerSong[id] = saved;
+  _presentApplyKeyDisplay();
+  renderBody();
+
+  _presentUpdateBar();
+  _presentUpdateDots();
+  _presentUpdateNavButtons();
+
+  // Reflejar la canción actual en la URL + meta SEO/Open Graph
+  // (para que el link compartido tenga buena preview en WhatsApp, etc.)
+  const url = new URL(location.origin + '/setlist');
+  url.searchParams.set('sl', presentIds.join(','));
+  if (setlistName.trim()) url.searchParams.set('n', setlistName.trim());
+  url.searchParams.set('i', String(presentIdx + 1));
+  history.replaceState({ present: true, idx: presentIdx }, '', url.pathname + url.search);
+
+  const currentSong = songs.find(x => x.id === id);
+  updatePresentMeta(presentIds, setlistName, currentSong);
+}
+
+// Re-aplica el display de tonalidad/capo tras restaurar sem/capo guardados
+function _presentApplyKeyDisplay() {
+  const s = songs.find(x => x.id === curId);
+  if (!s) return;
+  const key = Transposer.displayKey(s.key, sem);
+  document.getElementById('td').textContent          = key + (capo > 0 ? ` [Capo ${capo}]` : '');
+  document.getElementById('tp-key-disp').textContent = key;
+  document.getElementById('tp-rst').style.display    = sem !== 0 ? 'flex' : 'none';
+  const capoDisp = document.getElementById('capo-disp');
+  if (capoDisp) {
+    capoDisp.textContent = capo === 0 ? 'Sin capo' : 'Capo ' + capo;
+    document.getElementById('capo-dec').disabled = capo <= 0;
+    document.getElementById('capo-inc').disabled = capo >= 11;
+  }
+}
+
+function _presentUpdateBar() {
+  document.getElementById('slp-name').textContent = setlistName.trim() || 'Setlist';
+  document.getElementById('slp-pos').textContent   = `${presentIdx + 1} / ${presentIds.length}`;
+}
+
+function _presentUpdateNavButtons() {
+  document.getElementById('slp-prev').disabled = presentIdx <= 0;
+  document.getElementById('slp-next').disabled = presentIdx >= presentIds.length - 1;
+}
+
+function _renderPresentDots() {
+  const wrap = document.getElementById('slp-dots');
+  if (!wrap) return;
+  wrap.innerHTML = presentIds.map((id, i) =>
+    `<span class="slp-dot${i === presentIdx ? ' act' : ''}" data-i="${i}" title="${i + 1}"></span>`
+  ).join('');
+  wrap.querySelectorAll('.slp-dot').forEach(dot => {
+    dot.onclick = () => _presentGoTo(Number(dot.dataset.i));
+  });
+}
+
+function _presentUpdateDots() {
+  const wrap = document.getElementById('slp-dots');
+  if (!wrap) return;
+  wrap.querySelectorAll('.slp-dot').forEach((dot, i) => {
+    dot.classList.toggle('act', i === presentIdx);
+  });
+}
+
+// ── Swipe táctil ─────────────────────────────────────────────
+
+(function initPresentSwipe() {
+  let touchStartX = 0, touchStartY = 0, touching = false;
+
+  document.addEventListener('touchstart', e => {
+    if (!presentActive) return;
+    if (!e.target.closest('#sl-present')) return;
+    touching = true;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', e => {
+    if (!presentActive || !touching) return;
+    touching = false;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    // Solo swipe horizontal claro, para no interferir con el scroll vertical de la letra
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      presentNav(dx < 0 ? 1 : -1);
+    }
+  }, { passive: true });
+})();
+
+// ── Teclado: flechas ←/→ para navegar en modo presentación ───
+
+document.addEventListener('keydown', e => {
+  if (!presentActive) return;
+  if (e.key === 'ArrowRight') presentNav(1);
+  else if (e.key === 'ArrowLeft') presentNav(-1);
+  else if (e.key === 'Escape') exitPresent();
+});
 
 // ═══════════════════════════════════════════════════════
 // FILTROS Y BÚSQUEDA
@@ -879,7 +1110,7 @@ function toggleGearPanel() {
 function shareSong() {
   const s = songs.find(x => x.id === curId);
   if (!s) return;
-  const url  = location.origin + location.pathname + '#' + s.id;
+  const url  = location.origin + '/cancion/' + s.id;
   const text = s.title + (s.artist ? ' — ' + s.artist : '');
   if (navigator.share) {
     navigator.share({ title: 'RUAH · ' + s.title, text, url }).catch(() => {});
@@ -891,12 +1122,21 @@ function shareSong() {
 
 // Navegación con botón Atrás / Adelante del navegador
 function handleNavigation() {
-  // Soporta rutas reales /cancion/id (History API) y hash legacy #cancion/id o #id
-  const pathMatch = location.pathname.match(/^\/cancion\/(.+)$/);
-  const hashMatch = location.hash.match(/^#(?:cancion\/)?(.+)$/);
+  // Soporta rutas reales /cancion/id (History API), /setlist (modo presentación)
+  // y hash legacy #cancion/id o #id
+  const pathMatch    = location.pathname.match(/^\/cancion\/(.+)$/);
+  const hashMatch    = location.hash.match(/^#(?:cancion\/)?(.+)$/);
+  const isPresentUrl = /^\/setlist\/?$/.test(location.pathname);
   const songId = pathMatch ? pathMatch[1].trim()
                : hashMatch ? hashMatch[1].trim()
                : null;
+
+  if (presentActive && !isPresentUrl) {
+    // El usuario usó "Atrás" del navegador para salir del modo presentación
+    exitPresent();
+    return;
+  }
+
   if (songId) {
     const exists = songs.find(s => s.id === songId);
     if (exists) { showView('songs'); openSong(songId); return; }
@@ -1063,13 +1303,18 @@ function init() {
     // IMPORTANTE: leer el deep link ANTES de cualquier showView().
     // showView('home'/'songs'/'prayers') hace history.replaceState(null,'','/'),
     // lo que pisaría location.pathname antes de poder leerlo si se llamara primero.
-    // Deep link: soporta /cancion/id (rutas reales) y #cancion/id o #id (legacy hash)
-    const pathMatch = location.pathname.match(/^\/cancion\/(.+)$/);
-    const hashMatch = location.hash.match(/^#(?:cancion\/)?(.+)$/);
+    // Deep link: soporta /cancion/id (rutas reales), /setlist (modo presentación)
+    // y #cancion/id o #id (legacy hash)
+    const pathMatch    = location.pathname.match(/^\/cancion\/(.+)$/);
+    const hashMatch    = location.hash.match(/^#(?:cancion\/)?(.+)$/);
+    const isPresentUrl = /^\/setlist\/?$/.test(location.pathname);
     const initId = pathMatch ? pathMatch[1].trim()
                  : hashMatch ? hashMatch[1].trim()
                  : null;
-    const slParam = new URLSearchParams(location.search).get('sl');
+    const qs       = new URLSearchParams(location.search);
+    const slParam  = qs.get('sl');
+    const nameParam = qs.get('n');
+    const idxParam  = qs.get('i');
 
     initState(SONGS_DATA);    // datos embebidos en songs_data.js
     buildTagChips();          // misc.js: pinta los chips de tags en el filtro
@@ -1081,18 +1326,28 @@ function init() {
     buildSotW();              // canción de la semana
     buildHomeCats();          // chips de categorías
 
-    // Setlist compartido: ?sl=id1,id2,...
     if (slParam) {
       const ids = slParam.split(',').map(x => x.trim()).filter(x => songs.find(s => s.id === x));
       if (ids.length) {
         setlist = ids;
         renderSL();
-        showView('songs');
-        toast(`Setlist cargado (${ids.length} canciones)`);
+
+        if (isPresentUrl) {
+          // Link de "Compartir setlist": entra directo al modo presentación,
+          // en la canción correcta (1ª por defecto, o la indicada por ?i=).
+          const startIdx = idxParam ? Math.max(0, parseInt(idxParam, 10) - 1) : 0;
+          showView('songs');
+          enterPresent(ids, startIdx, nameParam || '');
+        } else {
+          // Comportamiento legacy: setlist cargado en el panel lateral,
+          // sin forzar ninguna canción en particular.
+          showView('songs');
+          toast(`Setlist cargado (${ids.length} canciones)`);
+        }
       }
     }
 
-    if (initId) {
+    if (initId && !isPresentUrl) {
       const exists = songs.find(s => s.id === initId);
       if (exists) { showView('songs'); openSong(initId); }
     }
@@ -1143,6 +1398,42 @@ function resetMeta() {
   // Restaurar canonical a la raíz
   const canon = document.getElementById('canonical-tag');
   if (canon) canon.setAttribute('href', location.origin + '/');
+}
+
+// Meta SEO/Open Graph para el modo presentación de setlist.
+// Se llama al entrar y en cada cambio de canción dentro de _presentGoTo(),
+// así el link que viaja por WhatsApp muestra el nombre del setlist y
+// (cuando hay una canción activa) cuál se está tocando en ese momento.
+function updatePresentMeta(ids, name, currentSong) {
+  const label = (name && name.trim()) ? name.trim() : 'Setlist';
+  const n = ids.length;
+
+  const pageTitle = `${label} (${n} canciones) | RUAH Cancionero`;
+
+  const songList = ids
+    .map(id => songs.find(s => s.id === id))
+    .filter(Boolean)
+    .map(s => s.title)
+    .join(' · ');
+
+  const desc = currentSong
+    ? `Tocando: ${toTitleCase(currentSong.title)}. Setlist completo: ${songList}.`
+    : `Setlist de ${n} canciones: ${songList}. Letra, acordes y transposición en tiempo real.`;
+
+  const url = new URL(location.origin + '/setlist');
+  url.searchParams.set('sl', ids.join(','));
+  if (name && name.trim()) url.searchParams.set('n', name.trim());
+
+  document.title = pageTitle;
+  _setMeta('name', 'description', desc);
+  _setMeta('property', 'og:title', pageTitle);
+  _setMeta('property', 'og:description', desc);
+  _setMeta('property', 'og:url', url.toString());
+  _setMeta('property', 'og:type', 'website');
+  _setMeta('name', 'twitter:title', pageTitle);
+  _setMeta('name', 'twitter:description', desc);
+  const canon = document.getElementById('canonical-tag');
+  if (canon) canon.setAttribute('href', url.toString());
 }
 
 function _setMeta(attr, key, content) {
