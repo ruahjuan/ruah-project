@@ -51,6 +51,71 @@
     }
     .sl-share:hover { background:var(--surf3,var(--surf2)); }
     .sl-clr { flex:1; }
+
+    /* ── Botón "Presentar" ─────────────────────────── */
+    .sl-present-btn {
+      width:100%; display:flex; align-items:center; justify-content:center; gap:6px;
+      padding:8px 10px; border-radius:6px; border:1px solid #c9a84c;
+      background:#c9a84c; color:#1c1510; font-size:12px; font-weight:600;
+      cursor:pointer; font-family:inherit;
+    }
+    .sl-present-btn:hover { background:#d8b85c; }
+
+    /* ── Modo presentación (escenario) ─────────────── */
+    #sl-present {
+      display:none; position:fixed; inset:0; z-index:300;
+      flex-direction:column; background:var(--bg,#0a0a0a);
+    }
+    #sl-present.on { display:flex; }
+    body.sl-presenting #topbar,
+    body.sl-presenting #ctrl-bar,
+    body.sl-presenting #filter-bar,
+    body.sl-presenting #list-panel,
+    body.sl-presenting #mobile-back,
+    body.sl-presenting #hamburger { display:none !important; }
+
+    #slp-bar {
+      display:flex; align-items:center; gap:10px;
+      padding:10px 14px; padding-top:calc(10px + env(safe-area-inset-top));
+      border-bottom:1px solid var(--bord); background:var(--surf,var(--surf2));
+      flex-shrink:0;
+    }
+    #slp-exit, #slp-rename {
+      display:flex; align-items:center; justify-content:center;
+      width:32px; height:32px; flex-shrink:0; border-radius:8px;
+      border:1px solid var(--bord); background:var(--surf2); color:var(--text);
+      cursor:pointer;
+    }
+    #slp-info { flex:1; min-width:0; text-align:center; }
+    #slp-name {
+      font-size:12.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+      color:#c9a84c; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    #slp-pos { font-size:11px; color:var(--muted); margin-top:1px; }
+
+    #slp-track { padding:6px 14px 0; flex-shrink:0; }
+    #slp-dots { display:flex; gap:5px; justify-content:center; flex-wrap:wrap; }
+    #slp-dots .slp-dot {
+      width:7px; height:7px; border-radius:50%; background:var(--bord);
+      cursor:pointer; flex-shrink:0; transition:background .15s, transform .15s;
+    }
+    #slp-dots .slp-dot.act { background:#c9a84c; transform:scale(1.25); }
+
+    #sl-present #song-view { flex:1; min-height:0; }
+
+    #slp-prev, #slp-next {
+      position:absolute; top:50%; transform:translateY(-50%);
+      width:38px; height:64px; display:flex; align-items:center; justify-content:center;
+      background:rgba(0,0,0,.28); color:#fff; border:none; border-radius:8px;
+      cursor:pointer; z-index:301; opacity:.55; transition:opacity .15s;
+    }
+    #slp-prev:hover, #slp-next:hover { opacity:1; }
+    #slp-prev { left:4px; } #slp-next { right:4px; }
+    #slp-prev:disabled, #slp-next:disabled { opacity:.15; cursor:default; }
+
+    @media (max-width:768px) {
+      #slp-prev, #slp-next { width:30px; height:52px; }
+    }
   </style>
   <link rel="stylesheet" href="/css/chords.css">
   <link rel="stylesheet" href="/css/mobile.css">
@@ -532,6 +597,38 @@
 
         </div><!-- /song-view -->
 
+        <!-- ══════════════════════════════════════════
+             MODO PRESENTACIÓN DE SETLIST
+             Vista de escenario: barra superior con nombre del
+             setlist + posición, navegación prev/next y swipe.
+             Reusa #song-view y todos sus controles (transposición,
+             capo, scroll, tamaño de letra) tal cual están.
+        ══════════════════════════════════════════ -->
+        <div id="sl-present" aria-hidden="true">
+          <div id="slp-bar">
+            <button id="slp-exit" onclick="exitPresent()" aria-label="Salir del modo presentación">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" width="16" height="16" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div id="slp-info">
+              <div id="slp-name">Setlist</div>
+              <div id="slp-pos">1 / 1</div>
+            </div>
+            <button id="slp-rename" onclick="renamePresent()" title="Editar nombre del setlist" aria-label="Editar nombre">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+            </button>
+          </div>
+          <div id="slp-track">
+            <!-- Tira de puntos / mini-índice de canciones -->
+            <div id="slp-dots"></div>
+          </div>
+          <button id="slp-prev" onclick="presentNav(-1)" aria-label="Canción anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button id="slp-next" onclick="presentNav(1)" aria-label="Canción siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
         <!-- Bottom sheet setlist (solo mobile) -->
         <div id="mobile-sl-sheet">
           <div id="mobile-sl-backdrop" onclick="toggleMobileSL()"></div>
@@ -542,6 +639,12 @@
             </div>
             <div class="sl-scroll" id="mobile-sl-scroll">
               <div class="sl-empty">Sin canciones aún.</div>
+            </div>
+            <div class="sl-foot">
+              <button class="sl-present-btn" onclick="startPresent()">
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="13" height="13" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                Presentar
+              </button>
             </div>
             <div class="sl-foot">
               <button class="sl-clr" onclick="clearSL()">Vaciar</button>
@@ -563,6 +666,12 @@
         </div>
         <div class="sl-scroll" id="sl-scroll">
           <div class="sl-empty">Sin canciones aún.</div>
+        </div>
+        <div class="sl-foot">
+          <button class="sl-present-btn" onclick="startPresent()">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="13" height="13" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            Presentar
+          </button>
         </div>
         <div class="sl-foot">
           <button class="sl-clr" onclick="clearSL()">Vaciar</button>
