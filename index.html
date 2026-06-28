@@ -61,12 +61,16 @@
     }
     .sl-present-btn:hover { background:#d8b85c; }
 
-    /* ── Modo presentación (escenario) ─────────────── */
-    #sl-present {
-      display:none; position:fixed; inset:0; z-index:300;
-      flex-direction:column; background:var(--bg,#0a0a0a);
-    }
-    #sl-present.on { display:flex; }
+    /* ── Modo presentación (escenario) ───────────────
+       OJO: #sl-present NO envuelve a #song-view en el HTML (son hermanos
+       dentro de #detail). Por eso esto no es un overlay "inset:0" que tapa
+       todo — es solo la barra superior + flechas, fijas en pantalla,
+       dejando #song-view visible debajo en su lugar normal del flujo.
+       (Versión anterior tapaba la pantalla entera con #sl-present por
+       encima de #song-view sin contenido propio → pantalla en negro.) */
+    #sl-present { display:none; }
+    #sl-present.on { display:block; }
+
     body.sl-presenting #topbar,
     body.sl-presenting #ctrl-bar,
     body.sl-presenting #filter-bar,
@@ -74,11 +78,18 @@
     body.sl-presenting #mobile-back,
     body.sl-presenting #hamburger { display:none !important; }
 
+    /* Con la barra de presentación fija arriba, #detail necesita ceder
+       ese espacio para que el contenido de la canción no quede tapado. */
+    body.sl-presenting #detail { padding-top:64px; }
+    @media (max-width:768px) {
+      body.sl-presenting #detail { padding-top:58px; }
+    }
+
     #slp-bar {
+      position:fixed; top:0; left:0; right:0; z-index:300;
       display:flex; align-items:center; gap:10px;
       padding:10px 14px; padding-top:calc(10px + env(safe-area-inset-top));
       border-bottom:1px solid var(--bord); background:var(--surf,var(--surf2));
-      flex-shrink:0;
     }
     #slp-exit, #slp-rename {
       display:flex; align-items:center; justify-content:center;
@@ -93,7 +104,11 @@
     }
     #slp-pos { font-size:11px; color:var(--muted); margin-top:1px; }
 
-    #slp-track { padding:6px 14px 0; flex-shrink:0; }
+    #slp-track {
+      position:fixed; top:42px; left:0; right:0; z-index:300;
+      padding:6px 14px 0; background:var(--surf,var(--surf2));
+    }
+    @media (max-width:768px) { #slp-track { top:38px; } }
     #slp-dots { display:flex; gap:5px; justify-content:center; flex-wrap:wrap; }
     #slp-dots .slp-dot {
       width:7px; height:7px; border-radius:50%; background:var(--bord);
@@ -101,10 +116,8 @@
     }
     #slp-dots .slp-dot.act { background:#c9a84c; transform:scale(1.25); }
 
-    #sl-present #song-view { flex:1; min-height:0; }
-
     #slp-prev, #slp-next {
-      position:absolute; top:50%; transform:translateY(-50%);
+      position:fixed; top:50%; transform:translateY(-50%);
       width:38px; height:64px; display:flex; align-items:center; justify-content:center;
       background:rgba(0,0,0,.28); color:#fff; border:none; border-radius:8px;
       cursor:pointer; z-index:301; opacity:.55; transition:opacity .15s;
