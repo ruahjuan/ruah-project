@@ -282,6 +282,8 @@ a{color:inherit;text-decoration:none}
 .dot-item:last-child{border-bottom:none}
 .dot-item:hover{background:var(--surf2)}
 .dot-item svg{flex-shrink:0;color:var(--muted)}
+.dot-item.on{background:var(--f1);color:var(--f4)}
+.dot-item.on svg{color:var(--f4)}
 
 /* Fila 2: transposición + scroll + cifrado */
 #shdr-row2{
@@ -416,7 +418,7 @@ a{color:inherit;text-decoration:none}
 /* ── chord label (always rendered, even if empty) ── */
 .cp-chord{
   display:block;
-  font-size:11.5px;
+  font-size:0.72em;
   font-weight:700;
   color:var(--chord);
   font-family:var(--font-m);
@@ -431,7 +433,7 @@ a{color:inherit;text-decoration:none}
 /* ── lyric syllable ── */
 .cp-lyric{
   display:block;
-  font-size:15px;
+  font-size:0.9375em;
   line-height:1.55;
   color:var(--text);
   /* pre: preserve spaces within token; wrap handled by flex-wrap on parent */
@@ -442,7 +444,7 @@ a{color:inherit;text-decoration:none}
 /* ── lyric-only line (no chords) ── */
 .cp-lyric-only{
   display:block;
-  font-size:15px;
+  font-size:0.9375em;
   line-height:1.55;
   color:var(--text);
   margin-bottom:2px;
@@ -460,7 +462,7 @@ a{color:inherit;text-decoration:none}
 /* ── section label ── */
 .cp-section{
   display:block;
-  font-size:10px;font-weight:700;
+  font-size:0.625em;font-weight:700;
   text-transform:uppercase;letter-spacing:.12em;
   color:var(--muted);
   margin:18px 0 8px;
@@ -472,7 +474,7 @@ a{color:inherit;text-decoration:none}
 /* ── annotation (capo, transport) ── */
 .cp-annotation{
   display:block;
-  font-size:12px;font-style:italic;
+  font-size:0.75em;font-style:italic;
   color:var(--muted2);
   margin-bottom:8px;
 }
@@ -484,7 +486,7 @@ a{color:inherit;text-decoration:none}
 #sbody.print-mode .cp-chord{display:none}
 #sbody.print-mode .cp-line{align-items:flex-start}
 #sbody.print-mode .cp-block{display:inline}
-#sbody.print-mode .cp-lyric{font-size:15px;white-space:pre-wrap}
+#sbody.print-mode .cp-lyric{font-size:0.9375em;white-space:pre-wrap}
 
 /* chord guide */
 /* chord guide */

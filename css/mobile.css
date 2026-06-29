@@ -178,9 +178,9 @@
   .tpb        { width: 28px; height: 28px; }
 
   /* ── Texto de acordes ── */
-  .cp-lyric, .cp-lyric-only { font-size: 14px; }
-  .cp-chord   { font-size: 11px; }
-  .cp-section { font-size: 11px; }
+  .cp-lyric, .cp-lyric-only { font-size: 0.875em; }
+  .cp-chord   { font-size: 0.6875em; }
+  .cp-section { font-size: 0.6875em; }
 
   /* ── Nav: tab bar — ícono arriba, nombre siempre visible debajo ── */
   .nav-btn {
