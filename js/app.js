@@ -209,6 +209,10 @@ function toggleFav() {
 function togglePrint() {
   printMode = !printMode;
   document.getElementById('pill-print').classList.toggle('on', printMode);
+  const dotBtn   = document.getElementById('dot-print-btn');
+  const dotLabel = document.getElementById('dot-print-label');
+  if (dotBtn)   dotBtn.classList.toggle('on', printMode);
+  if (dotLabel) dotLabel.textContent = printMode ? 'Mostrar acordes' : 'Ocultar acordes';
   if (curId) renderBody();
   toast(printMode ? 'Acordes ocultos' : 'Acordes visibles');
 }
@@ -302,7 +306,7 @@ function changeCapo(dir) {
 function toggleNotation() {
   chordNotation = chordNotation === 'american' ? 'european' : 'american';
   const btn = document.getElementById('btn-notation');
-  btn.textContent = chordNotation === 'american' ? 'A–B–C' : 'Do–Re';
+  btn.textContent = chordNotation === 'american' ? 'C → Do' : 'Do → C';
   btn.title = chordNotation === 'american' ? 'Cifrado americano (C D E…)' : 'Cifrado europeo (Do Re Mi…)';
   if (curId) renderBody();
   toast(chordNotation === 'american' ? 'Cifrado americano' : 'Cifrado europeo (Do Re Mi…)');
