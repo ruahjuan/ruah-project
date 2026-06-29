@@ -419,14 +419,24 @@ function shareSetlist() {
 }
 
 function renderSL() {
+  const tones = _loadSetlistTones(setlist); // { id: {sem, capo} } guardado para este setlist
+
   const html = !setlist.length
     ? '<div class="sl-empty">Sin canciones aún.</div>'
     : setlist.map((id, i) => {
         const s = songs.find(x => x.id === id);
         if (!s) return '';
-        return `<div class="sl-row" onclick="openSong('${id}')">` +
+        const t = tones[id] || { sem: 0, capo: 0 };
+        const displayKey = Transposer.displayKey(s.key, t.sem || 0);
+        const isCustom = !!(t.sem || t.capo);
+        return `<div class="sl-row">` +
                `<span class="sl-num">${i + 1}</span>` +
-               `<span style="flex:1;font-size:11.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(s.title)}</span>` +
+               `<span class="sl-title" onclick="openSong('${id}')">${esc(s.title)}</span>` +
+               `<div class="sl-tone${isCustom ? ' sl-tone-custom' : ''}">` +
+                 `<button class="sl-tone-btn" onclick="event.stopPropagation();adjustSLTone('${id}',-1)" aria-label="Bajar semitono">−</button>` +
+                 `<span class="sl-tone-disp" title="${isCustom ? 'Tono ajustado para este setlist' : 'Tono original'}">${displayKey || '—'}</span>` +
+                 `<button class="sl-tone-btn" onclick="event.stopPropagation();adjustSLTone('${id}',1)" aria-label="Subir semitono">+</button>` +
+               `</div>` +
                `<button class="sl-del" onclick="event.stopPropagation();removeFromSL('${id}')">✕</button>` +
                `</div>`;
       }).join('');
@@ -442,6 +452,30 @@ function renderSL() {
   const count = document.getElementById('pill-sl-count');
   if (btn) btn.style.display = setlist.length ? '' : 'none';
   if (count) count.textContent = setlist.length ? `(${setlist.length})` : '';
+}
+
+// Ajusta el semitono de UNA canción del setlist directo desde el panel
+// (sin necesidad de entrar al modo Presentación). Usa el mismo storage
+// que _presentGoTo, así "Presentar" y el panel de Setlist siempre están
+// sincronizados — cualquiera de los dos lugares donde ajustes el tono
+// queda guardado para el otro y para compartir.
+function adjustSLTone(id, delta) {
+  const tones = _loadSetlistTones(setlist);
+  const cur = tones[id] || { sem: 0, capo: 0 };
+  cur.sem = ((cur.sem + delta) % 12 + 12) % 12; // wrap 0–11, como la transposición normal
+  if (cur.sem > 6) cur.sem -= 12; // representar como -5..+6 para que se vea natural (ej. -1 en vez de +11)
+  tones[id] = cur;
+  _saveSetlistTones(setlist, tones);
+
+  // Si esa canción está activa ahora mismo en modo presentación, refrescar también ahí
+  if (presentActive && curId === id) {
+    presentPerSong[id] = cur;
+    sem = cur.sem;
+    _presentApplyKeyDisplay();
+    renderBody();
+  }
+
+  renderSL();
 }
 
 // ═══════════════════════════════════════════════════════
