@@ -365,20 +365,41 @@ function clearSL() {
 function shareSetlist() {
   if (!setlist.length) { toast('El setlist está vacío'); return; }
 
+  // ¿Hay tonos guardados (de una presentación anterior) para este setlist?
+  // Si los hay, preguntamos si se incluyen en el link o se comparte con
+  // los tonos originales de cada canción.
+  const savedTones    = _loadSetlistTones(setlist);
+  const hasCustom     = _hasCustomTones(savedTones);
+  const includeTones  = hasCustom
+    ? confirm('Tenés tonos ajustados guardados para este setlist.\n\n¿Compartir CON esos tonos? (Cancelar = compartir con los tonos originales)')
+    : false;
+
   // Construir URL desde cero — NUNCA desde location.href, porque si el
   // usuario está viendo una canción que no es la primera del setlist
   // (ej. probando un tema suelto), location.pathname quedaría apuntando
   // a esa canción y rompía el link compartido (abría la canción
   // equivocada en vez del setlist). Acá se fuerza siempre /setlist.
   const url = new URL(location.origin + '/setlist');
-  url.searchParams.set('sl', setlist.join(','));
+  const slParam = includeTones
+    ? setlist.map(id => {
+        const t = savedTones[id];
+        return (t && (t.sem || t.capo)) ? `${id}:${t.sem || 0}:${t.capo || 0}` : id;
+      }).join(',')
+    : setlist.join(',');
+  url.searchParams.set('sl', slParam);
   if (setlistName && setlistName.trim()) url.searchParams.set('n', setlistName.trim());
   const shareUrl = url.toString();
 
   // Texto plano para clipboard/share
   const text = setlist.map((id, i) => {
     const s = songs.find(x => x.id === id);
-    return s ? `${i + 1}. ${s.title}${s.key ? ' (' + s.key + ')' : ''}` : '';
+    if (!s) return '';
+    const t = includeTones ? savedTones[id] : null;
+    const keyLabel = (t && t.sem)
+      ? Transposer.displayKey(s.key, t.sem)
+      : s.key;
+    const capoLabel = (t && t.capo) ? ` [Capo ${t.capo}]` : '';
+    return `${i + 1}. ${s.title}${keyLabel ? ' (' + keyLabel + ')' : ''}${capoLabel}`;
   }).filter(Boolean).join('\n');
 
   const titleLine = (setlistName && setlistName.trim()) ? setlistName.trim() : 'RUAH · Setlist';
@@ -441,7 +462,8 @@ let presentIdx     = 0;       // índice actual dentro de presentIds
 let presentPerSong = {};      // { id: {sem, capo} } — estado independiente por canción
 let setlistName    = '';      // nombre del setlist (persiste en localStorage)
 
-const SLNAME_LS_KEY = 'ruah_setlist_name';
+const SLNAME_LS_KEY  = 'ruah_setlist_name';
+const SLTONES_LS_KEY = 'ruah_setlist_tones'; // { [setlistKey]: { [id]: {sem, capo} } }
 
 // Cargar nombre guardado al iniciar la app
 try { setlistName = localStorage.getItem(SLNAME_LS_KEY) || ''; } catch (e) { /* noop */ }
@@ -449,6 +471,33 @@ try { setlistName = localStorage.getItem(SLNAME_LS_KEY) || ''; } catch (e) { /* 
 function _saveSetlistName(name) {
   setlistName = name || '';
   try { localStorage.setItem(SLNAME_LS_KEY, setlistName); } catch (e) { /* noop */ }
+}
+
+// Clave estable para identificar "este setlist" entre sesiones — se basa
+// solo en qué canciones lo componen (no en el orden ni en el nombre), para
+// que recordar los tonos sobreviva a reordenar la lista o renombrarla.
+function _setlistKey(ids) {
+  return [...ids].sort().join('|');
+}
+
+function _loadSetlistTones(ids) {
+  try {
+    const all = JSON.parse(localStorage.getItem(SLTONES_LS_KEY) || '{}');
+    return all[_setlistKey(ids)] || {};
+  } catch (e) { return {}; }
+}
+
+function _saveSetlistTones(ids, perSong) {
+  try {
+    const all = JSON.parse(localStorage.getItem(SLTONES_LS_KEY) || '{}');
+    all[_setlistKey(ids)] = perSong;
+    localStorage.setItem(SLTONES_LS_KEY, JSON.stringify(all));
+  } catch (e) { /* noop */ }
+}
+
+// ¿Hay al menos un tono distinto de 0 guardado para este setlist?
+function _hasCustomTones(perSong) {
+  return Object.values(perSong || {}).some(v => v && (v.sem || v.capo));
 }
 
 // ── Iniciar presentación desde el panel de Setlist ─────────
@@ -471,10 +520,12 @@ function startPresent() {
 
 // ── Entrar al modo presentación (también usado por deep-link) ─
 
-function enterPresent(ids, startIdx, name) {
+function enterPresent(ids, startIdx, name, sharedTones) {
   presentIds     = ids;
   presentIdx     = Math.min(Math.max(0, startIdx || 0), ids.length - 1);
-  presentPerSong = {};
+  // Prioridad: tonos que vienen en el link compartido (sharedTones) >
+  // tonos guardados localmente para este mismo setlist > limpio (0,0).
+  presentPerSong = { ..._loadSetlistTones(ids), ...(sharedTones || {}) };
   if (typeof name === 'string') setlistName = name;
 
   presentActive = true;
@@ -490,6 +541,12 @@ function enterPresent(ids, startIdx, name) {
 }
 
 function exitPresent() {
+  // Persistir el tono de la última canción vista antes de salir
+  if (curId) {
+    presentPerSong[curId] = { sem, capo };
+    _saveSetlistTones(presentIds, presentPerSong);
+  }
+
   presentActive = false;
   document.body.classList.remove('sl-presenting');
   document.getElementById('sl-present').classList.remove('on');
@@ -512,14 +569,23 @@ function renamePresent() {
   document.getElementById('slp-name').textContent = setlistName || 'Setlist';
 
   // Refrescar meta SEO/OG y la URL con el nuevo nombre
-  const url = new URL(location.origin + '/setlist');
-  url.searchParams.set('sl', presentIds.join(','));
-  if (setlistName.trim()) url.searchParams.set('n', setlistName.trim());
-  url.searchParams.set('i', String(presentIdx + 1));
+  const url = _buildPresentUrl();
   history.replaceState({ present: true, idx: presentIdx }, '', url.pathname + url.search);
 
   const currentSong = songs.find(x => x.id === curId);
   updatePresentMeta(presentIds, setlistName, currentSong);
+}
+
+// Construye la URL de la barra de direcciones durante el modo presentación.
+// No incluye los tonos ajustados acá — esos viven en localStorage de este
+// dispositivo (ver _saveSetlistTones) y solo se agregan a una URL cuando
+// el usuario decide explícitamente compartirla con shareSetlist().
+function _buildPresentUrl() {
+  const url = new URL(location.origin + '/setlist');
+  url.searchParams.set('sl', presentIds.join(','));
+  if (setlistName.trim()) url.searchParams.set('n', setlistName.trim());
+  url.searchParams.set('i', String(presentIdx + 1));
+  return url;
 }
 
 // ── Navegación entre canciones del setlist ──────────────────
@@ -534,6 +600,7 @@ function _presentGoTo(idx, isFirstLoad) {
   // Guardar sem/capo de la canción que estábamos viendo (si no es la primera carga)
   if (!isFirstLoad && curId) {
     presentPerSong[curId] = { sem, capo };
+    _saveSetlistTones(presentIds, presentPerSong); // persistir en este dispositivo
   }
 
   presentIdx = idx;
@@ -555,10 +622,7 @@ function _presentGoTo(idx, isFirstLoad) {
 
   // Reflejar la canción actual en la URL + meta SEO/Open Graph
   // (para que el link compartido tenga buena preview en WhatsApp, etc.)
-  const url = new URL(location.origin + '/setlist');
-  url.searchParams.set('sl', presentIds.join(','));
-  if (setlistName.trim()) url.searchParams.set('n', setlistName.trim());
-  url.searchParams.set('i', String(presentIdx + 1));
+  const url = _buildPresentUrl();
   history.replaceState({ present: true, idx: presentIdx }, '', url.pathname + url.search);
 
   const currentSong = songs.find(x => x.id === id);
@@ -1327,17 +1391,30 @@ function init() {
     buildHomeCats();          // chips de categorías
 
     if (slParam) {
-      const ids = slParam.split(',').map(x => x.trim()).filter(x => songs.find(s => s.id === x));
+      // Cada entrada puede venir como "id" (formato viejo, sin tono) o
+      // "id:sem:capo" (formato nuevo, cuando se compartió con tonos
+      // ajustados). Se separa el id real del resto antes de validar
+      // contra el catálogo de canciones.
+      const parsed = slParam.split(',').map(raw => {
+        const [id, semStr, capoStr] = raw.trim().split(':');
+        return { id, sem: semStr ? parseInt(semStr, 10) || 0 : 0, capo: capoStr ? parseInt(capoStr, 10) || 0 : 0 };
+      }).filter(p => songs.find(s => s.id === p.id));
+
+      const ids = parsed.map(p => p.id);
+      const sharedTones = {};
+      parsed.forEach(p => { if (p.sem || p.capo) sharedTones[p.id] = { sem: p.sem, capo: p.capo }; });
+
       if (ids.length) {
         setlist = ids;
         renderSL();
 
         if (isPresentUrl) {
           // Link de "Compartir setlist": entra directo al modo presentación,
-          // en la canción correcta (1ª por defecto, o la indicada por ?i=).
+          // en la canción correcta (1ª por defecto, o la indicada por ?i=),
+          // con los tonos que venían en el link (si los había).
           const startIdx = idxParam ? Math.max(0, parseInt(idxParam, 10) - 1) : 0;
           showView('songs');
-          enterPresent(ids, startIdx, nameParam || '');
+          enterPresent(ids, startIdx, nameParam || '', sharedTones);
         } else {
           // Comportamiento legacy: setlist cargado en el panel lateral,
           // sin forzar ninguna canción en particular.
