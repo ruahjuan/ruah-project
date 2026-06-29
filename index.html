@@ -610,66 +610,78 @@
 
         </div><!-- /song-view -->
 
-        <!-- ══════════════════════════════════════════
-             MODO PRESENTACIÓN DE SETLIST
-             Vista de escenario: barra superior con nombre del
-             setlist + posición, navegación prev/next y swipe.
-             Reusa #song-view y todos sus controles (transposición,
-             capo, scroll, tamaño de letra) tal cual están.
-        ══════════════════════════════════════════ -->
-        <div id="sl-present" aria-hidden="true">
-          <div id="slp-bar">
-            <button id="slp-exit" onclick="exitPresent()" aria-label="Salir del modo presentación">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" width="16" height="16" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </button>
-            <div id="slp-info">
-              <div id="slp-name">Setlist</div>
-              <div id="slp-pos">1 / 1</div>
-            </div>
-            <button id="slp-rename" onclick="renamePresent()" title="Editar nombre del setlist" aria-label="Editar nombre">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
-            </button>
-          </div>
-          <div id="slp-track">
-            <!-- Tira de puntos / mini-índice de canciones -->
-            <div id="slp-dots"></div>
-          </div>
-          <button id="slp-prev" onclick="presentNav(-1)" aria-label="Canción anterior">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <button id="slp-next" onclick="presentNav(1)" aria-label="Canción siguiente">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-
-        <!-- Bottom sheet setlist (solo mobile) -->
-        <div id="mobile-sl-sheet">
-          <div id="mobile-sl-backdrop" onclick="toggleMobileSL()"></div>
-          <div id="mobile-sl-panel">
-            <div class="mobile-sl-hd">
-              <span>Setlist</span>
-              <button class="abtn" onclick="toggleMobileSL()" style="padding:3px 8px;font-size:11px">✕</button>
-            </div>
-            <div class="sl-scroll" id="mobile-sl-scroll">
-              <div class="sl-empty">Sin canciones aún.</div>
-            </div>
-            <div class="sl-foot">
-              <button class="sl-present-btn" onclick="startPresent()">
-                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="13" height="13" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                Presentar
-              </button>
-            </div>
-            <div class="sl-foot">
-              <button class="sl-clr" onclick="clearSL()">Vaciar</button>
-              <button class="sl-share" onclick="shareSetlist()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                Compartir
-              </button>
-            </div>
-          </div>
-        </div>
-
       </div><!-- /detail -->
+
+      <!-- ══════════════════════════════════════════
+           MODO PRESENTACIÓN DE SETLIST
+           Vista de escenario: barra superior con nombre del
+           setlist + posición, navegación prev/next y swipe.
+           Reusa #song-view y todos sus controles (transposición,
+           capo, scroll, tamaño de letra) tal cual están.
+           NOTA: vive FUERA de #detail a propósito. #detail tiene
+           display:none !important en mobile cuando no hay canción
+           abierta, y este panel necesita poder mostrarse independiente
+           de eso (enterPresent() abre una canción de todas formas,
+           pero mantenerlo afuera evita heredar ese estado por accidente).
+      ══════════════════════════════════════════ -->
+      <div id="sl-present" aria-hidden="true">
+        <div id="slp-bar">
+          <button id="slp-exit" onclick="exitPresent()" aria-label="Salir del modo presentación">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" width="16" height="16" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <div id="slp-info">
+            <div id="slp-name">Setlist</div>
+            <div id="slp-pos">1 / 1</div>
+          </div>
+          <button id="slp-rename" onclick="renamePresent()" title="Editar nombre del setlist" aria-label="Editar nombre">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          </button>
+        </div>
+        <div id="slp-track">
+          <!-- Tira de puntos / mini-índice de canciones -->
+          <div id="slp-dots"></div>
+        </div>
+        <button id="slp-prev" onclick="presentNav(-1)" aria-label="Canción anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button id="slp-next" onclick="presentNav(1)" aria-label="Canción siguiente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <!-- Bottom sheet setlist (solo mobile)
+           IMPORTANTE: vive FUERA de #detail. #detail tiene
+           display:none !important en mobile cuando no hay canción
+           abierta, así que cualquier panel anidado adentro heredaba
+           ese display:none sin que ningún CSS de .open pudiera
+           revertirlo — esta era la causa de que "Ver setlist" nunca
+           mostrara nada en mobile (se abre desde la lista, sin
+           canción abierta). -->
+      <div id="mobile-sl-sheet">
+        <div id="mobile-sl-backdrop" onclick="toggleMobileSL()"></div>
+        <div id="mobile-sl-panel">
+          <div class="mobile-sl-hd">
+            <span>Setlist</span>
+            <button class="abtn" onclick="toggleMobileSL()" style="padding:3px 8px;font-size:11px">✕</button>
+          </div>
+          <div class="sl-scroll" id="mobile-sl-scroll">
+            <div class="sl-empty">Sin canciones aún.</div>
+          </div>
+          <div class="sl-foot">
+            <button class="sl-present-btn" onclick="startPresent()">
+              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="13" height="13" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Presentar
+            </button>
+          </div>
+          <div class="sl-foot">
+            <button class="sl-clr" onclick="clearSL()">Vaciar</button>
+            <button class="sl-share" onclick="shareSetlist()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Compartir
+            </button>
+          </div>
+        </div>
+      </div>
 
       <!-- Setlist lateral -->
       <div id="sl-panel">
