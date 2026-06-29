@@ -52,6 +52,37 @@
     .sl-share:hover { background:var(--surf3,var(--surf2)); }
     .sl-clr { flex:1; }
 
+    /* ── Fila de canción dentro del panel de Setlist ──
+       Define estructura propia (no depende de reglas de app.css que no
+       controlamos acá) para encajar los controles de tono sin pisar nada. */
+    .sl-row {
+      display:flex; align-items:center; gap:6px;
+      padding:7px 4px; border-bottom:1px solid var(--bord);
+    }
+    .sl-row:last-child { border-bottom:none; }
+    .sl-title {
+      flex:1; min-width:0; font-size:11.5px; cursor:pointer;
+      overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+    }
+
+    /* ── Control de tono por canción (ajustable sin entrar a Presentar) ── */
+    .sl-tone {
+      display:flex; align-items:center; gap:3px; flex-shrink:0;
+      padding:2px; border-radius:6px; background:var(--surf2);
+    }
+    .sl-tone-custom { background:rgba(201,168,76,.16); }
+    .sl-tone-btn {
+      width:18px; height:18px; display:flex; align-items:center; justify-content:center;
+      border:none; border-radius:4px; background:transparent; color:var(--text);
+      font-size:13px; line-height:1; cursor:pointer; font-family:inherit;
+    }
+    .sl-tone-btn:hover { background:var(--bord); }
+    .sl-tone-disp {
+      min-width:26px; text-align:center; font-size:10.5px; font-weight:600;
+      color:var(--text);
+    }
+    .sl-tone-custom .sl-tone-disp { color:#c9a84c; }
+
     /* ── Botón "Presentar" ─────────────────────────── */
     .sl-present-btn {
       width:100%; display:flex; align-items:center; justify-content:center; gap:6px;
