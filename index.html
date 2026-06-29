@@ -509,6 +509,10 @@
                     </svg>
                   </button>
                   <div id="dot-menu" role="menu" aria-hidden="true">
+                    <button class="dot-item" id="dot-print-btn" onclick="togglePrint();closeDotMenu()" role="menuitem">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                      <span id="dot-print-label">Ocultar acordes</span>
+                    </button>
                     <button class="dot-item" onclick="copySong();closeDotMenu()" role="menuitem">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                       Copiar letra
@@ -552,7 +556,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
                 Scroll
               </button>
-              <button class="shdr-pill" id="btn-notation" onclick="toggleNotation()" title="Cifrado americano">A–B–C</button>
+              <button class="shdr-pill" id="btn-notation" onclick="toggleNotation()" title="Cifrado americano">C → Do</button>
             </div>
 
             <!-- Fila 3: ⚙ Más opciones (colapsable) -->
