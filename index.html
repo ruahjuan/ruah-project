@@ -160,6 +160,106 @@
     @media (max-width:768px) {
       #slp-prev, #slp-next { width:30px; height:52px; }
     }
+
+    /* ── Modo Proyector ──────────────────────────────────────
+       Variante del modo presentación para proyectar letra al
+       público. Fondo oscuro, letra gigante centrada, sin chrome. */
+
+    /* Ocultar todo el chrome normal de la canción */
+    body.proj-active #shdr,
+    body.proj-active #tp,
+    body.proj-active .act-row,
+    body.proj-active #gear-panel,
+    body.proj-active .gear-row,
+    body.proj-active #autoscroll-btn { display:none !important; }
+
+    /* Fondo oscuro para toda la pantalla */
+    body.proj-active #detail {
+      background: #0d0d0d;
+    }
+    body.proj-active #song-view {
+      background: #0d0d0d;
+      min-height: 100vh;
+    }
+
+    /* Ocultar acordes: solo mostrar letras */
+    body.proj-active .cp-chords-row,
+    body.proj-active .cp-chord { display:none !important; }
+
+    /* Letra grande, centrada, clara */
+    body.proj-active #sbody {
+      font-size: 2.2em;
+      padding: 24px 5vw 80px;
+      text-align: center;
+    }
+    body.proj-active .cp-lyric,
+    body.proj-active .cp-lyric-row,
+    body.proj-active .cp-lyric-only {
+      color: #f0ead6;
+      line-height: 1.6;
+      white-space: normal;
+    }
+    body.proj-active .cp-section {
+      color: #c9a84c;
+      font-size: 0.5em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-top: 1.4em;
+      margin-bottom: .4em;
+    }
+    body.proj-active .cp-annotation {
+      color: #888;
+      font-size: 0.45em;
+    }
+    body.proj-active .cp-pair {
+      margin-bottom: .5em;
+    }
+
+    /* Título de la canción en modo proyector */
+    body.proj-active #stitle {
+      color: #c9a84c;
+      font-size: 1em;
+      text-align: center;
+      padding-top: 8px;
+    }
+    body.proj-active #sartist {
+      color: #888;
+      font-size: 0.55em;
+      text-align: center;
+    }
+
+    /* Flechas con fondo más opaco sobre fondo oscuro */
+    body.proj-active #slp-prev,
+    body.proj-active #slp-next {
+      background: rgba(255,255,255,.1);
+    }
+    body.proj-active #slp-prev:hover,
+    body.proj-active #slp-next:hover {
+      background: rgba(255,255,255,.22);
+    }
+
+    /* Barra superior más oscura */
+    body.proj-active #slp-bar,
+    body.proj-active #slp-track {
+      background: #0d0d0d;
+      border-color: #2a2a2a;
+    }
+
+    /* Botón de salida proyector en la barra */
+    #slp-proj-indicator {
+      display: none;
+      font-size: 10px;
+      color: #c9a84c;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .8;
+    }
+    body.proj-active #slp-proj-indicator { display: inline; }
+
+    @media (max-width:768px) {
+      body.proj-active #sbody { font-size: 1.6em; padding: 16px 4vw 80px; }
+    }
   </style>
   <link rel="stylesheet" href="/css/chords.css">
   <link rel="stylesheet" href="/css/mobile.css">
@@ -666,8 +766,11 @@
           </button>
           <div id="slp-info">
             <div id="slp-name">Setlist</div>
-            <div id="slp-pos">1 / 1</div>
+            <div id="slp-pos">1 / 1 <span id="slp-proj-indicator">· PROYECTOR</span></div>
           </div>
+          <button id="slp-proj-btn" onclick="toggleProjector()" title="Modo proyector (letra para el público)" aria-label="Activar/desactivar modo proyector" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:8px;border:1px solid var(--bord);background:var(--surf2);color:var(--text);cursor:pointer;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
+          </button>
           <button id="slp-rename" onclick="renamePresent()" title="Editar nombre del setlist" aria-label="Editar nombre">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
           </button>
@@ -709,6 +812,12 @@
             </button>
           </div>
           <div class="sl-foot">
+            <button class="sl-present-btn" onclick="startProjector()" style="background:#1c1510;color:#c9a84c;border-color:#c9a84c;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
+              Proyectar
+            </button>
+          </div>
+          <div class="sl-foot">
             <button class="sl-clr" onclick="clearSL()">Vaciar</button>
             <button class="sl-share" onclick="shareSetlist()">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
@@ -731,6 +840,12 @@
           <button class="sl-present-btn" onclick="startPresent()">
             <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="13" height="13" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
             Presentar
+          </button>
+        </div>
+        <div class="sl-foot">
+          <button class="sl-present-btn" onclick="startProjector()" style="background:#1c1510;color:#c9a84c;border-color:#c9a84c;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
+            Proyectar
           </button>
         </div>
         <div class="sl-foot">
