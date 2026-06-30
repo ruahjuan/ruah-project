@@ -288,6 +288,30 @@
     }
     #slp-font-ctrl button:hover { background: var(--bord); }
 
+    /* Control de autoscroll del proyector (debajo de los dots) */
+    #slp-scroll-ctrl {
+      display: none;
+      align-items: center; justify-content: center;
+      gap: 6px; padding: 5px 0 2px;
+    }
+    body.proj-active #slp-scroll-ctrl { display: flex; }
+    #slp-scroll-ctrl button {
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 6px; border: 1px solid var(--bord);
+      background: var(--surf2); color: var(--text);
+      font-size: 13px; font-weight: 700; font-family: inherit;
+      cursor: pointer; flex-shrink: 0; transition: background .12s;
+    }
+    #slp-scroll-ctrl button:hover { background: var(--bord); }
+    #slp-scroll-btn.on {
+      background: #c9a84c; color: #1c1510; border-color: #c9a84c;
+    }
+    #slp-scroll-spd {
+      font-size: 11px; font-weight: 600; color: var(--muted);
+      min-width: 28px; text-align: center;
+    }
+
     /* Indicador de modo en la barra */
     #slp-proj-indicator {
       display: none;
@@ -823,6 +847,15 @@
         <div id="slp-track">
           <!-- Tira de puntos / mini-índice de canciones -->
           <div id="slp-dots"></div>
+          <!-- Autoscroll del proyector (visible solo en proj-active) -->
+          <div id="slp-scroll-ctrl">
+            <button id="slp-scroll-btn" onclick="projScrollToggle()" aria-label="Autoscroll" title="Iniciar autoscroll">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="13" height="13" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </button>
+            <button onclick="projScrollSpeed(-1)" aria-label="Más lento" title="Más lento">−</button>
+            <span id="slp-scroll-spd">1.0×</span>
+            <button onclick="projScrollSpeed(1)" aria-label="Más rápido" title="Más rápido">+</button>
+          </div>
         </div>
         <button id="slp-prev" onclick="presentNav(-1)" aria-label="Canción anterior">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
