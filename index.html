@@ -163,9 +163,26 @@
 
     /* ── Modo Proyector ──────────────────────────────────────
        Variante del modo presentación para proyectar letra al
-       público. Fondo oscuro, letra gigante centrada, sin chrome. */
+       público. Fondo configurable, letra grande centrada, sin chrome.
 
-    /* Ocultar todo el chrome normal de la canción */
+       Temas (clase en body):
+         .proj-dark  — negro  (default)
+         .proj-light — blanco
+         .proj-warm  — beige/crema
+    */
+
+    /* Variables por tema */
+    body.proj-dark  { --proj-bg:#0d0d0d; --proj-bar:#111; --proj-bord:#2a2a2a;
+                      --proj-text:#f0ead6; --proj-section:#c9a84c;
+                      --proj-muted:#777; --proj-arrow:rgba(255,255,255,.12); }
+    body.proj-light { --proj-bg:#ffffff; --proj-bar:#f2f2f2; --proj-bord:#ddd;
+                      --proj-text:#111111; --proj-section:#8a6a00;
+                      --proj-muted:#666; --proj-arrow:rgba(0,0,0,.10); }
+    body.proj-warm  { --proj-bg:#f5edd8; --proj-bar:#ede0c4; --proj-bord:#d8c9a3;
+                      --proj-text:#2a1f0e; --proj-section:#7a5200;
+                      --proj-muted:#7a6040; --proj-arrow:rgba(0,0,0,.10); }
+
+    /* Ocultar chrome de la canción */
     body.proj-active #shdr,
     body.proj-active #tp,
     body.proj-active .act-row,
@@ -173,92 +190,99 @@
     body.proj-active .gear-row,
     body.proj-active #autoscroll-btn { display:none !important; }
 
-    /* Fondo oscuro para toda la pantalla */
-    body.proj-active #detail {
-      background: #0d0d0d;
-    }
+    /* Fondo */
+    body.proj-active #detail,
     body.proj-active #song-view {
-      background: #0d0d0d;
+      background: var(--proj-bg);
       min-height: 100vh;
     }
 
-    /* Ocultar acordes: solo mostrar letras */
+    /* Ocultar acordes */
     body.proj-active .cp-chords-row,
     body.proj-active .cp-chord { display:none !important; }
 
-    /* Letra grande, centrada, clara */
+    /* Letra grande y centrada — el tamaño base es 3em pero los botones
+       +/- existentes siguen funcionando (modifican #sbody font-size en em,
+       que se multiplica encima de este valor). */
     body.proj-active #sbody {
-      font-size: 2.2em;
-      padding: 24px 5vw 80px;
+      font-size: 3em;
+      padding: 24px 6vw 100px;
       text-align: center;
     }
     body.proj-active .cp-lyric,
     body.proj-active .cp-lyric-row,
     body.proj-active .cp-lyric-only {
-      color: #f0ead6;
-      line-height: 1.6;
+      color: var(--proj-text);
+      line-height: 1.65;
       white-space: normal;
     }
     body.proj-active .cp-section {
-      color: #c9a84c;
-      font-size: 0.5em;
-      letter-spacing: .1em;
+      color: var(--proj-section);
+      font-size: 0.42em;
+      letter-spacing: .12em;
       text-transform: uppercase;
-      margin-top: 1.4em;
-      margin-bottom: .4em;
-    }
-    body.proj-active .cp-annotation {
-      color: #888;
-      font-size: 0.45em;
-    }
-    body.proj-active .cp-pair {
+      margin-top: 1.6em;
       margin-bottom: .5em;
     }
+    body.proj-active .cp-annotation {
+      color: var(--proj-muted);
+      font-size: 0.38em;
+    }
+    body.proj-active .cp-pair { margin-bottom: .5em; }
 
-    /* Título de la canción en modo proyector */
+    /* Título y artista */
     body.proj-active #stitle {
-      color: #c9a84c;
+      color: var(--proj-section);
       font-size: 1em;
       text-align: center;
       padding-top: 8px;
     }
     body.proj-active #sartist {
-      color: #888;
-      font-size: 0.55em;
+      color: var(--proj-muted);
+      font-size: 0.45em;
       text-align: center;
     }
 
-    /* Flechas con fondo más opaco sobre fondo oscuro */
+    /* Flechas */
     body.proj-active #slp-prev,
     body.proj-active #slp-next {
-      background: rgba(255,255,255,.1);
+      background: var(--proj-arrow);
+      color: var(--proj-text);
     }
     body.proj-active #slp-prev:hover,
-    body.proj-active #slp-next:hover {
-      background: rgba(255,255,255,.22);
-    }
+    body.proj-active #slp-next:hover { filter: brightness(1.3); }
 
-    /* Barra superior más oscura */
+    /* Barra superior */
     body.proj-active #slp-bar,
     body.proj-active #slp-track {
-      background: #0d0d0d;
-      border-color: #2a2a2a;
+      background: var(--proj-bar);
+      border-color: var(--proj-bord);
     }
+    body.proj-active #slp-name { color: var(--proj-section); }
+    body.proj-active #slp-pos  { color: var(--proj-muted); }
 
-    /* Botón de salida proyector en la barra */
+    /* Botón de ciclo de tema en la barra */
+    #slp-theme-btn {
+      display: none;
+      align-items: center; justify-content: center;
+      width: 32px; height: 32px; flex-shrink: 0;
+      border-radius: 8px; border: 1px solid var(--bord);
+      background: var(--surf2); color: var(--text);
+      cursor: pointer; font-size: 14px; line-height: 1;
+    }
+    body.proj-active #slp-theme-btn { display: flex; }
+
+    /* Indicador de modo en la barra */
     #slp-proj-indicator {
       display: none;
-      font-size: 10px;
-      color: #c9a84c;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      opacity: .8;
+      font-size: 10px; color: #c9a84c;
+      font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; opacity: .8;
     }
     body.proj-active #slp-proj-indicator { display: inline; }
 
     @media (max-width:768px) {
-      body.proj-active #sbody { font-size: 1.6em; padding: 16px 4vw 80px; }
+      body.proj-active #sbody { font-size: 2em; padding: 16px 4vw 90px; }
     }
   </style>
   <link rel="stylesheet" href="/css/chords.css">
@@ -771,6 +795,7 @@
           <button id="slp-proj-btn" onclick="toggleProjector()" title="Modo proyector (letra para el público)" aria-label="Activar/desactivar modo proyector" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:8px;border:1px solid var(--bord);background:var(--surf2);color:var(--text);cursor:pointer;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
           </button>
+          <button id="slp-theme-btn" onclick="cycleProjectorTheme()" aria-label="Cambiar fondo del proyector" title="Cambiar fondo: negro → blanco → beige">☀︎</button>
           <button id="slp-rename" onclick="renamePresent()" title="Editar nombre del setlist" aria-label="Editar nombre">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
           </button>
