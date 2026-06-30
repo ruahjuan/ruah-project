@@ -587,8 +587,9 @@ function exitPresent() {
 
   presentActive = false;
   document.body.classList.remove('sl-presenting');
-  document.body.classList.remove('proj-active');   // limpiar proyector también
+  document.body.classList.remove('proj-active');
   projectorMode = false;
+  _applyProjectorTheme();   // limpia la clase de tema (proj-dark/light/warm)
   _projectorUpdateBtn();
   document.getElementById('sl-present').classList.remove('on');
   document.getElementById('sl-present').setAttribute('aria-hidden', 'true');
@@ -608,9 +609,39 @@ function exitPresent() {
 // pero pantalla oscura con letra gigante centrada sin acordes,
 // pensada para proyectar al público (iglesia, sala).
 
-let projectorMode = false;
+let projectorMode  = false;
+const PROJ_THEMES  = ['proj-dark', 'proj-light', 'proj-warm'];
+const PROJ_ICONS   = ['☀︎', '☾', '✦'];   // negro→sol, blanco→luna, beige→estrella
+const PROJ_LABELS  = ['negro', 'blanco', 'beige'];
+const PROJ_THEME_KEY = 'ruah_proj_theme';
+let projectorThemeIdx = 0;  // 0=dark 1=light 2=warm
 
-// Arranca el modo proyector directamente desde el panel del setlist
+// Cargar tema guardado
+try {
+  const saved = parseInt(localStorage.getItem(PROJ_THEME_KEY), 10);
+  if (!isNaN(saved) && saved >= 0 && saved < PROJ_THEMES.length) projectorThemeIdx = saved;
+} catch(e) { /* noop */ }
+
+// Aplica la clase de tema al body
+function _applyProjectorTheme() {
+  PROJ_THEMES.forEach(t => document.body.classList.remove(t));
+  if (projectorMode) document.body.classList.add(PROJ_THEMES[projectorThemeIdx]);
+  const btn = document.getElementById('slp-theme-btn');
+  if (btn) {
+    btn.textContent = PROJ_ICONS[projectorThemeIdx];
+    btn.title = `Fondo: ${PROJ_LABELS[projectorThemeIdx]} — click para cambiar`;
+  }
+}
+
+// Cicla entre los 3 temas (solo funciona con proyector activo)
+function cycleProjectorTheme() {
+  projectorThemeIdx = (projectorThemeIdx + 1) % PROJ_THEMES.length;
+  try { localStorage.setItem(PROJ_THEME_KEY, projectorThemeIdx); } catch(e) { /* noop */ }
+  _applyProjectorTheme();
+  toast(`Fondo: ${PROJ_LABELS[projectorThemeIdx]}`);
+}
+
+// Arranca el modo proyector desde el panel del setlist
 function startProjector() {
   if (!setlist.length) { toast('El setlist está vacío'); return; }
 
@@ -626,6 +657,7 @@ function startProjector() {
   projectorMode = true;
   enterPresent([...setlist], 0, setlistName);
   document.body.classList.add('proj-active');
+  _applyProjectorTheme();
   _projectorUpdateBtn();
   toast('Modo proyector activado');
 }
@@ -634,6 +666,7 @@ function startProjector() {
 function toggleProjector() {
   projectorMode = !projectorMode;
   document.body.classList.toggle('proj-active', projectorMode);
+  _applyProjectorTheme();
   _projectorUpdateBtn();
   toast(projectorMode ? 'Modo proyector activado' : 'Modo proyector desactivado');
 }
@@ -646,7 +679,6 @@ function _projectorUpdateBtn() {
   btn.style.border     = projectorMode ? '1px solid #c9a84c' : '1px solid var(--bord)';
   btn.title = projectorMode ? 'Desactivar modo proyector' : 'Activar modo proyector (letra para el público)';
 }
-
 
 
 function renamePresent() {
