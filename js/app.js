@@ -589,8 +589,9 @@ function exitPresent() {
   document.body.classList.remove('sl-presenting');
   document.body.classList.remove('proj-active');
   projectorMode = false;
-  _applyProjectorTheme();   // limpia la clase de tema (proj-dark/light/warm)
+  _applyProjectorTheme();
   _projectorUpdateBtn();
+  applyFontSize();   // restaurar tamaño normal de lectura
   document.getElementById('sl-present').classList.remove('on');
   document.getElementById('sl-present').setAttribute('aria-hidden', 'true');
   _pauseAutoscroll();
@@ -611,16 +612,37 @@ function exitPresent() {
 
 let projectorMode  = false;
 const PROJ_THEMES  = ['proj-dark', 'proj-light', 'proj-warm'];
-const PROJ_ICONS   = ['☀︎', '☾', '✦'];   // negro→sol, blanco→luna, beige→estrella
+const PROJ_ICONS   = ['☀︎', '☾', '✦'];
 const PROJ_LABELS  = ['negro', 'blanco', 'beige'];
-const PROJ_THEME_KEY = 'ruah_proj_theme';
-let projectorThemeIdx = 0;  // 0=dark 1=light 2=warm
+const PROJ_THEME_KEY   = 'ruah_proj_theme';
+const PROJ_FONT_KEY    = 'ruah_proj_font';
+const PROJ_FONT_MIN    = 1.2;
+const PROJ_FONT_MAX    = 6.0;
+const PROJ_FONT_STEP   = 0.4;
+const PROJ_FONT_DEFAULT = 3.0;   // em base en desktop
+let projectorThemeIdx = 0;
+let projFontSize = PROJ_FONT_DEFAULT;
 
-// Cargar tema guardado
+// Cargar preferencias guardadas
 try {
-  const saved = parseInt(localStorage.getItem(PROJ_THEME_KEY), 10);
-  if (!isNaN(saved) && saved >= 0 && saved < PROJ_THEMES.length) projectorThemeIdx = saved;
+  const st = parseInt(localStorage.getItem(PROJ_THEME_KEY), 10);
+  if (!isNaN(st) && st >= 0 && st < PROJ_THEMES.length) projectorThemeIdx = st;
 } catch(e) { /* noop */ }
+try {
+  const sf = parseFloat(localStorage.getItem(PROJ_FONT_KEY));
+  if (!isNaN(sf) && sf >= PROJ_FONT_MIN && sf <= PROJ_FONT_MAX) projFontSize = sf;
+} catch(e) { /* noop */ }
+
+function _applyProjFont() {
+  const sbody = document.getElementById('sbody');
+  if (sbody && projectorMode) sbody.style.fontSize = projFontSize + 'em';
+}
+
+function projFontChange(dir) {
+  projFontSize = Math.min(PROJ_FONT_MAX, Math.max(PROJ_FONT_MIN, projFontSize + dir * PROJ_FONT_STEP));
+  try { localStorage.setItem(PROJ_FONT_KEY, projFontSize); } catch(e) { /* noop */ }
+  _applyProjFont();
+}
 
 // Aplica la clase de tema al body
 function _applyProjectorTheme() {
@@ -658,6 +680,7 @@ function startProjector() {
   enterPresent([...setlist], 0, setlistName);
   document.body.classList.add('proj-active');
   _applyProjectorTheme();
+  _applyProjFont();
   _projectorUpdateBtn();
   toast('Modo proyector activado');
 }
@@ -667,6 +690,12 @@ function toggleProjector() {
   projectorMode = !projectorMode;
   document.body.classList.toggle('proj-active', projectorMode);
   _applyProjectorTheme();
+  if (projectorMode) {
+    _applyProjFont();
+  } else {
+    // Restaurar el font-size normal (applyFontSize usa la variable global fontSize)
+    applyFontSize();
+  }
   _projectorUpdateBtn();
   toast(projectorMode ? 'Modo proyector activado' : 'Modo proyector desactivado');
 }
