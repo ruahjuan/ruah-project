@@ -240,13 +240,26 @@ function changeFontSize(dir) {
 let _scrollInterval = null;
 let scrollSpeed = 1; // px por tick (ajustable)
 
-function toggleAutoscroll() {
+function _syncScrollBtns(on) {
   const btn = document.getElementById('btn-scroll');
+  if (btn) { btn.classList.toggle('on', on); btn.title = on ? 'Detener scroll' : 'Autoscroll'; }
+  const pBtn = document.getElementById('slp-scroll-btn');
+  if (pBtn) { pBtn.classList.toggle('on', on); pBtn.title = on ? 'Detener autoscroll' : 'Iniciar autoscroll'; }
+}
+
+function _syncScrollSpd() {
+  const lbl = scrollSpeed.toFixed(1) + '×';
+  const spd = document.getElementById('scroll-spd');
+  if (spd) spd.textContent = lbl;
+  const pSpd = document.getElementById('slp-scroll-spd');
+  if (pSpd) pSpd.textContent = lbl;
+}
+
+function toggleAutoscroll() {
   if (_scrollInterval) {
     clearInterval(_scrollInterval);
     _scrollInterval = null;
-    btn.classList.remove('on');
-    btn.title = 'Autoscroll';
+    _syncScrollBtns(false);
   } else {
     const detail = document.getElementById('detail');
     _scrollInterval = setInterval(() => {
@@ -255,26 +268,29 @@ function toggleAutoscroll() {
       if (detail.scrollTop + detail.clientHeight >= detail.scrollHeight - 2) {
         clearInterval(_scrollInterval);
         _scrollInterval = null;
-        btn.classList.remove('on');
+        _syncScrollBtns(false);
       }
     }, 50);
-    btn.classList.add('on');
-    btn.title = 'Detener scroll';
+    _syncScrollBtns(true);
   }
 }
 
 function changeScrollSpeed(dir) {
   scrollSpeed = Math.min(5, Math.max(0.5, scrollSpeed + dir * 0.5));
-  document.getElementById('scroll-spd').textContent = scrollSpeed.toFixed(1) + '×';
+  _syncScrollSpd();
 }
+
+// Autoscroll del modo proyector: misma lógica/estado que el normal,
+// solo que los botones viven en la barra del proyector en vez del gear-panel.
+function projScrollToggle() { toggleAutoscroll(); }
+function projScrollSpeed(dir) { changeScrollSpeed(dir); }
 
 // Pausar autoscroll al abrir otra canción
 function _pauseAutoscroll() {
   if (_scrollInterval) {
     clearInterval(_scrollInterval);
     _scrollInterval = null;
-    const btn = document.getElementById('btn-scroll');
-    if (btn) btn.classList.remove('on');
+    _syncScrollBtns(false);
   }
 }
 
