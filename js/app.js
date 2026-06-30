@@ -587,6 +587,9 @@ function exitPresent() {
 
   presentActive = false;
   document.body.classList.remove('sl-presenting');
+  document.body.classList.remove('proj-active');   // limpiar proyector también
+  projectorMode = false;
+  _projectorUpdateBtn();
   document.getElementById('sl-present').classList.remove('on');
   document.getElementById('sl-present').setAttribute('aria-hidden', 'true');
   _pauseAutoscroll();
@@ -599,6 +602,52 @@ function exitPresent() {
   document.getElementById('empty').style.display      = 'flex';
   showView('home');
 }
+
+// ── Modo Proyector ───────────────────────────────────────────
+// Variante de la presentación de setlist: misma navegación,
+// pero pantalla oscura con letra gigante centrada sin acordes,
+// pensada para proyectar al público (iglesia, sala).
+
+let projectorMode = false;
+
+// Arranca el modo proyector directamente desde el panel del setlist
+function startProjector() {
+  if (!setlist.length) { toast('El setlist está vacío'); return; }
+
+  if (!setlistName.trim()) {
+    const name = prompt('Nombre para este setlist (opcional):', setlistName || '');
+    if (name !== null) _saveSetlistName(name.trim());
+  }
+
+  if (slOpen) toggleSL();
+  const mobileSheet = document.getElementById('mobile-sl-sheet');
+  if (mobileSheet) mobileSheet.classList.remove('open');
+
+  projectorMode = true;
+  enterPresent([...setlist], 0, setlistName);
+  document.body.classList.add('proj-active');
+  _projectorUpdateBtn();
+  toast('Modo proyector activado');
+}
+
+// Toggle proyector desde el botón en la barra de presentación
+function toggleProjector() {
+  projectorMode = !projectorMode;
+  document.body.classList.toggle('proj-active', projectorMode);
+  _projectorUpdateBtn();
+  toast(projectorMode ? 'Modo proyector activado' : 'Modo proyector desactivado');
+}
+
+function _projectorUpdateBtn() {
+  const btn = document.getElementById('slp-proj-btn');
+  if (!btn) return;
+  btn.style.background = projectorMode ? '#c9a84c'  : 'var(--surf2)';
+  btn.style.color      = projectorMode ? '#1c1510'  : 'var(--text)';
+  btn.style.border     = projectorMode ? '1px solid #c9a84c' : '1px solid var(--bord)';
+  btn.title = projectorMode ? 'Desactivar modo proyector' : 'Activar modo proyector (letra para el público)';
+}
+
+
 
 function renamePresent() {
   const name = prompt('Nombre del setlist:', setlistName || '');
