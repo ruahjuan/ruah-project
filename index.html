@@ -272,6 +272,22 @@
     }
     body.proj-active #slp-theme-btn { display: flex; }
 
+    /* Botones A− / A+ de tamaño de letra en la barra del proyector */
+    #slp-font-ctrl {
+      display: none;
+      align-items: center; gap: 3px; flex-shrink: 0;
+    }
+    body.proj-active #slp-font-ctrl { display: flex; }
+    #slp-font-ctrl button {
+      width: 30px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 7px; border: 1px solid var(--bord);
+      background: var(--surf2); color: var(--text);
+      font-size: 11px; font-weight: 700; font-family: inherit;
+      cursor: pointer; flex-shrink: 0;
+    }
+    #slp-font-ctrl button:hover { background: var(--bord); }
+
     /* Indicador de modo en la barra */
     #slp-proj-indicator {
       display: none;
@@ -796,6 +812,10 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
           </button>
           <button id="slp-theme-btn" onclick="cycleProjectorTheme()" aria-label="Cambiar fondo del proyector" title="Cambiar fondo: negro → blanco → beige">☀︎</button>
+          <div id="slp-font-ctrl">
+            <button onclick="projFontChange(-1)" aria-label="Letra más chica" title="Reducir tamaño de letra">A−</button>
+            <button onclick="projFontChange(1)"  aria-label="Letra más grande" title="Aumentar tamaño de letra">A+</button>
+          </div>
           <button id="slp-rename" onclick="renamePresent()" title="Editar nombre del setlist" aria-label="Editar nombre">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
           </button>
