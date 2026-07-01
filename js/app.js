@@ -358,6 +358,7 @@ function addToSL() {
   if (setlist.includes(curId)) { toast('Ya está en el setlist'); return; }
   setlist.push(curId);
   renderSL();
+  _updateSaveBtnVisibility();
   toast('Agregada al setlist ✓');
   // En mobile, abrir el sheet automáticamente para que el usuario lo vea
   const sheet = document.getElementById('mobile-sl-sheet');
@@ -368,18 +369,219 @@ function addToSL() {
 
 function removeFromSL(id) {
   setlist = setlist.filter(x => x !== id);
+  if (!setlist.length) activeMslId = null;  // ya no representa una lista guardada
   renderSL();
+  _updateSaveBtnVisibility();
 }
 
 function clearSL() {
   setlist = [];
+  activeMslId = null;
   renderSL();
+  _updateSaveBtnVisibility();
   // Limpiar parámetro ?sl= de la URL sin recargar
   const url = new URL(location.href);
   if (url.searchParams.has('sl')) {
     url.searchParams.delete('sl');
     history.replaceState(null, '', url.pathname);
   }
+}
+
+// ═══════════════════════════════════════════════════════
+// MIS SETLISTS — listas guardadas (hasta MSL_MAX)
+// ═══════════════════════════════════════════════════════
+// Cada lista guardada: { id, name, songs:[ids], createdAt, updatedAt }
+// Los tonos por canción NO se duplican acá: siguen viviendo en
+// SLTONES_LS_KEY indexados por _setlistKey(ids), así que cargar una
+// lista guardada automáticamente trae sus tonos si coinciden los IDs.
+
+const MSL_LS_KEY = 'ruah_my_setlists';
+const MSL_MAX     = 15;
+let activeMslId    = null;   // id de la lista guardada actualmente cargada (null = setlist suelto sin guardar)
+
+function _loadMyLists() {
+  try { return JSON.parse(localStorage.getItem(MSL_LS_KEY) || '[]'); }
+  catch (e) { return []; }
+}
+
+function _saveMyLists(lists) {
+  try { localStorage.setItem(MSL_LS_KEY, JSON.stringify(lists)); }
+  catch (e) { /* noop */ }
+}
+
+function _mslGenId() {
+  return 'sl_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+// Abre el prompt para guardar el setlist activo como una lista nueva
+// (o actualizar la que ya está cargada, si activeMslId apunta a una).
+function openSaveSetlistDialog() {
+  if (!setlist.length) { toast('El setlist está vacío'); return; }
+
+  const lists = _loadMyLists();
+
+  // Si ya hay una lista cargada, preguntar si actualizar o guardar como nueva
+  if (activeMslId && lists.some(l => l.id === activeMslId)) {
+    const updateExisting = confirm(
+      '¿Actualizar la lista guardada con los cambios actuales?\n\n' +
+      'Cancelar = guardar como una lista nueva en su lugar.'
+    );
+    if (updateExisting) {
+      saveSetlistAs(null, activeMslId);
+      return;
+    }
+  }
+
+  if (lists.length >= MSL_MAX) {
+    toast(`Ya tenés ${MSL_MAX} listas guardadas (el máximo). Borrá alguna antes de crear otra.`);
+    showView('setlists');
+    return;
+  }
+
+  const name = prompt('Nombre para esta lista:', setlistName || '');
+  if (name === null) return;
+  saveSetlistAs(name.trim());
+}
+
+// Guarda (o actualiza) el setlist activo como una lista en Mis Setlists.
+// Si se pasa updateId, actualiza esa lista existente en vez de crear una nueva.
+function saveSetlistAs(name, updateId) {
+  if (!setlist.length) { toast('El setlist está vacío'); return; }
+
+  const lists = _loadMyLists();
+  const now = Date.now();
+
+  if (updateId) {
+    const idx = lists.findIndex(l => l.id === updateId);
+    if (idx === -1) { toast('No se encontró la lista a actualizar'); return; }
+    lists[idx].songs     = [...setlist];
+    lists[idx].updatedAt = now;
+    if (name) lists[idx].name = name;
+    _saveMyLists(lists);
+    activeMslId = updateId;
+    toast('Lista actualizada ✓');
+  } else {
+    if (lists.length >= MSL_MAX) {
+      toast(`Ya tenés ${MSL_MAX} listas guardadas (el máximo).`);
+      return;
+    }
+    const entry = {
+      id: _mslGenId(),
+      name: (name && name.trim()) ? name.trim() : 'Setlist sin nombre',
+      songs: [...setlist],
+      createdAt: now,
+      updatedAt: now,
+    };
+    lists.push(entry);
+    _saveMyLists(lists);
+    activeMslId = entry.id;
+    if (entry.name) _saveSetlistName(entry.name);
+    toast('Lista guardada ✓');
+  }
+
+  renderMyLists();
+  _updateSaveBtnVisibility();
+}
+
+// Carga una lista guardada como el setlist activo (reemplaza el actual)
+function loadMyList(id) {
+  const lists = _loadMyLists();
+  const entry = lists.find(l => l.id === id);
+  if (!entry) { toast('No se encontró la lista'); return; }
+
+  if (setlist.length && !confirm(
+    `Esto reemplaza el setlist actual (${setlist.length} canción${setlist.length === 1 ? '' : 'es'}) por "${entry.name}".\n\n¿Continuar?`
+  )) return;
+
+  // Filtrar por si alguna canción fue borrada del cancionero desde que se guardó
+  const validIds = entry.songs.filter(id => songs.some(s => s.id === id));
+  if (validIds.length < entry.songs.length) {
+    toast(`${entry.songs.length - validIds.length} canción(es) de esta lista ya no existen`);
+  }
+
+  setlist = validIds;
+  activeMslId = entry.id;
+  _saveSetlistName(entry.name);
+  renderSL();
+  renderMyLists();
+  _updateSaveBtnVisibility();
+  toast(`"${entry.name}" cargada ✓`);
+
+  // Abrir el panel de setlist para que la vea de inmediato
+  if (window.innerWidth < 768) {
+    const sheet = document.getElementById('mobile-sl-sheet');
+    if (sheet) sheet.classList.add('open');
+  } else if (!slOpen) {
+    toggleSL();
+  }
+}
+
+// Borra una lista guardada (no toca el setlist activo)
+function deleteMyList(id, evt) {
+  if (evt) evt.stopPropagation();
+  const lists = _loadMyLists();
+  const entry = lists.find(l => l.id === id);
+  if (!entry) return;
+  if (!confirm(`¿Borrar la lista "${entry.name}"? Esta acción no se puede deshacer.`)) return;
+
+  _saveMyLists(lists.filter(l => l.id !== id));
+  if (activeMslId === id) activeMslId = null;
+  renderMyLists();
+  _updateSaveBtnVisibility();
+  toast('Lista borrada');
+}
+
+// Muestra/oculta el botón "+ Guardar setlist actual" según haya algo que guardar
+function _updateSaveBtnVisibility() {
+  const btn = document.getElementById('msl-save-current-btn');
+  if (!btn) return;
+  btn.style.display = setlist.length ? 'inline-block' : 'none';
+}
+
+// Formatea fecha relativa simple (hoy, ayer, hace N días, o fecha)
+function _mslRelDate(ts) {
+  const diffDays = Math.floor((Date.now() - ts) / 86400000);
+  if (diffDays <= 0) return 'hoy';
+  if (diffDays === 1) return 'ayer';
+  if (diffDays < 7) return `hace ${diffDays} días`;
+  const d = new Date(ts);
+  return d.toLocaleDateString('es-AR', { day: 'numeric', month: 'short' });
+}
+
+// Renderiza la vista completa de Mis Setlists
+function renderMyLists() {
+  const container = document.getElementById('msl-list');
+  if (!container) return;
+
+  const lists = _loadMyLists().sort((a, b) => b.updatedAt - a.updatedAt);
+
+  if (!lists.length) {
+    container.innerHTML = `
+      <div class="msl-empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="6" height="18" rx="1.3"/><line x1="13" y1="6" x2="21" y2="6"/><line x1="13" y1="12" x2="21" y2="12"/><line x1="13" y1="18" x2="21" y2="18"/></svg>
+        <p>Todavía no guardaste ninguna lista.<br>Armá un setlist desde el cancionero y tocá "Guardar setlist actual" para verlo acá.</p>
+      </div>`;
+    return;
+  }
+
+  container.innerHTML = lists.map(l => {
+    const isActive = l.id === activeMslId;
+    const count = l.songs.length;
+    return `
+      <div class="msl-card${isActive ? ' active' : ''}" onclick="loadMyList('${l.id}')">
+        <div class="msl-dot"${isActive ? ' style="background:var(--f4)"' : ''}></div>
+        <div class="msl-meta">
+          <div class="msl-name">${esc(l.name)}</div>
+          <div class="msl-info">${count} canción${count === 1 ? '' : 'es'} · editada ${_mslRelDate(l.updatedAt)}</div>
+        </div>
+        ${isActive ? '<span class="msl-active-badge">Activa</span>' : ''}
+        <div class="msl-actions">
+          <button class="msl-del-btn" onclick="deleteMyList('${l.id}', event)" aria-label="Borrar lista" title="Borrar lista">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+          </button>
+        </div>
+      </div>`;
+  }).join('') + `<div class="msl-count-note">${lists.length} / ${MSL_MAX} listas guardadas</div>`;
 }
 
 function shareSetlist() {
@@ -918,6 +1120,7 @@ function showView(v) {
   document.getElementById('v-' + v).classList.add('on');
   document.getElementById('nb-' + v).classList.add('on');
   if (v === 'admin') adminRenderTable();
+  if (v === 'setlists') { renderMyLists(); _updateSaveBtnVisibility(); }
   const hb = document.getElementById('hamburger');
   if (hb) hb.style.display = 'none';
   if (v === 'home' || v === 'songs' || v === 'prayers') {
@@ -1592,6 +1795,10 @@ function init() {
       const exists = songs.find(s => s.id === initId);
       if (exists) { showView('songs'); openSong(initId); }
     }
+
+    // Mis Setlists: actualizar visibilidad del botón "Guardar" si hay algo en el setlist
+    _updateSaveBtnVisibility();
+
   } catch (e) {
     console.error('[RUAH] Error al cargar:', e);
   }
