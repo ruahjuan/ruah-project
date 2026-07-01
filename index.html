@@ -366,6 +366,15 @@
         </svg>
         <span>Canciones</span>
       </button>
+      <button class="nav-btn" id="nb-setlists" onclick="showView('setlists')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="6" height="18" rx="1.3"/>
+          <line x1="13" y1="6" x2="21" y2="6"/>
+          <line x1="13" y1="12" x2="21" y2="12"/>
+          <line x1="13" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>Setlists</span>
+      </button>
       <button class="nav-btn" id="nb-prayers" onclick="showView('prayers')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
@@ -896,6 +905,10 @@
             </button>
           </div>
           <div class="sl-foot">
+            <button class="sl-clr" onclick="openSaveSetlistDialog()" style="color:var(--f5);border-color:var(--f3)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Guardar lista
+            </button>
             <button class="sl-clr" onclick="clearSL()">Vaciar</button>
             <button class="sl-share" onclick="shareSetlist()">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
@@ -927,6 +940,10 @@
           </button>
         </div>
         <div class="sl-foot">
+          <button class="sl-clr" onclick="openSaveSetlistDialog()" style="color:var(--f5);border-color:var(--f3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Guardar lista
+          </button>
           <button class="sl-clr" onclick="clearSL()">Vaciar</button>
           <button class="sl-share" onclick="shareSetlist()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
@@ -937,6 +954,22 @@
 
     </div><!-- /split -->
   </div><!-- /v-songs -->
+
+
+  <!-- ══════════════════════════════════════════
+       VISTA: MIS SETLISTS
+  ══════════════════════════════════════════ -->
+  <div class="view" id="v-setlists">
+    <div style="max-width:700px;margin:0 auto;width:100%;padding:32px 24px 60px;overflow-y:auto">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap">
+        <h2 class="home-h2">Mis Setlists</h2>
+        <button id="msl-save-current-btn" onclick="openSaveSetlistDialog()" style="display:none;background:var(--f1);border:1px solid var(--f3);color:var(--f5);border-radius:20px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap;">
+          + Guardar setlist actual
+        </button>
+      </div>
+      <div id="msl-list"></div>
+    </div>
+  </div>
 
 
   <!-- ══════════════════════════════════════════
