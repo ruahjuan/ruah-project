@@ -883,6 +883,40 @@ a{color:inherit;text-decoration:none}
 .sl-num{font-family:var(--font-m);font-size:10px;color:var(--muted);min-width:14px}
 .sl-del{margin-left:auto;font-size:14px;color:var(--muted)}
 .sl-del:hover{color:var(--f4)}
+
+/* ── Mis Setlists (vista de listas guardadas) ── */
+.msl-empty{
+  text-align:center;padding:48px 20px;color:var(--muted);
+}
+.msl-empty svg{width:40px;height:40px;color:var(--bord2);margin-bottom:14px}
+.msl-empty p{font-size:13.5px;line-height:1.6;max-width:320px;margin:0 auto}
+.msl-card{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 16px;border-radius:var(--radius);
+  background:var(--surf);border:1px solid var(--bord);
+  margin-bottom:10px;cursor:pointer;transition:border-color .15s,box-shadow .15s;
+}
+.msl-card:hover{border-color:var(--f3);box-shadow:var(--shadow)}
+.msl-card.active{border-color:var(--f4);background:var(--f1)}
+.msl-dot{width:9px;height:9px;border-radius:50%;background:var(--f3);flex-shrink:0}
+.msl-meta{flex:1;min-width:0}
+.msl-name{font-size:14px;font-weight:600;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msl-info{font-size:11.5px;color:var(--muted);margin-top:2px}
+.msl-active-badge{
+  font-size:9.5px;font-weight:700;color:var(--f4);
+  background:var(--f2);border-radius:6px;padding:2px 7px;
+  text-transform:uppercase;letter-spacing:.03em;flex-shrink:0;
+}
+.msl-actions{display:flex;gap:4px;flex-shrink:0}
+.msl-actions button{
+  width:30px;height:30px;display:flex;align-items:center;justify-content:center;
+  border-radius:7px;border:1px solid var(--bord);background:var(--surf2);
+  color:var(--muted);cursor:pointer;flex-shrink:0;
+}
+.msl-actions button:hover{color:var(--f4);border-color:var(--f3)}
+.msl-actions button.msl-del-btn:hover{color:#c0392b;border-color:#c0392b}
+.msl-count-note{font-size:11.5px;color:var(--muted2);text-align:center;margin-top:14px}
 .sl-foot{padding:10px;border-top:1px solid var(--bord)}
 .sl-clr{width:100%;padding:6px;border-radius:8px;border:1px solid var(--bord);font-size:12px;color:var(--muted);cursor:pointer}
 .sl-clr:hover{background:var(--surf2)}
