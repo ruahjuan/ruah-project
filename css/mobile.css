@@ -24,7 +24,7 @@
   #v-home         { overflow-y: auto; }
   .hero           { padding: 36px 20px 32px; flex-shrink: 0; }
   .hero-name      { font-size: 52px; }
-  .home-wrap      { padding: 20px 16px 60px; flex: 1; }
+  .home-wrap      { padding: 20px 16px 110px; flex: 1; }
 
   /* ── CANCIONES ── */
   #v-songs        { flex-direction: column; }
@@ -52,6 +52,7 @@
     overflow-y: auto;
     border-right: none;
     height: auto;
+    padding-bottom: 90px;
   }
 
   /* Detalle: fixed encima, oculto hasta seleccionar */
@@ -182,25 +183,47 @@
   .cp-chord   { font-size: 0.6875em; }
   .cp-section { font-size: 0.6875em; }
 
-  /* ── Nav: tab bar — ícono arriba, nombre siempre visible debajo ── */
+  /* ── Nav: bottom bar flotante ──────────────────────────────
+     #nav sigue viviendo dentro de <header> en el DOM (no lo
+     movemos ni duplicamos botones: el JS de showView() sigue
+     encontrando los mismos IDs). position:fixed lo saca del
+     flujo del header y lo ancla abajo, como una tab bar nativa. */
+  #nav {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    z-index: 150;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    background: var(--surf);
+    border: 1px solid var(--bord);
+    border-radius: 22px;
+    padding: 8px 6px;
+    box-shadow: var(--shadow-lg);
+  }
+
   .nav-btn {
+    flex: 1;
     flex-direction: column;
     gap: 2px;
-    padding: 5px 8px 4px;
-    border-radius: 10px;
+    padding: 7px 4px 6px;
+    border-radius: 14px;
   }
   .nav-btn span {
-    font-size: 9.5px;
+    font-size: 10px;
     line-height: 1.1;
   }
   .nav-btn svg {
-    width: 17px;
-    height: 17px;
+    width: 19px;
+    height: 19px;
   }
 
   /* ── Oraciones ── */
   #v-prayers { overflow-y: auto; }
-  #v-prayers > div { padding: 20px 16px 60px; }
+  #v-prayers > div { padding: 20px 16px 110px; }
 
   /* ── Admin ── */
   #v-admin { overflow-y: auto; }
