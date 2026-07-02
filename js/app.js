@@ -1551,6 +1551,42 @@ function shareSong() {
   }
 }
 
+// ── Exportar canción actual a PDF ──
+// Usa sem/capo/chordNotation tal cual están en pantalla ahora mismo,
+// igual que renderBody() los usa para dibujar el cuerpo de la canción.
+function exportSongPDF() {
+  const s = songs.find(x => x.id === curId);
+  if (!s) return;
+  try {
+    PdfExport.exportSong(s, { sem, capo }, chordNotation);
+  } catch (e) {
+    console.error('exportSongPDF:', e);
+    toast('No se pudo generar el PDF');
+  }
+}
+
+// ── Exportar el setlist completo a PDF ──
+// Una página por canción + portada con índice, respetando los tonos
+// ajustados que el usuario haya guardado para este setlist.
+function exportSetlistPDF() {
+  if (!setlist.length) { toast('El setlist está vacío'); return; }
+  const tones = _loadSetlistTones(setlist); // { id: {sem, capo} }
+  const items = setlist
+    .map(id => {
+      const song = songs.find(x => x.id === id);
+      if (!song) return null;
+      const t = tones[id] || { sem: 0, capo: 0 };
+      return { song, sem: t.sem || 0, capo: t.capo || 0 };
+    })
+    .filter(Boolean);
+  try {
+    PdfExport.exportSetlist(setlistName && setlistName.trim() ? setlistName.trim() : 'Setlist', items, chordNotation);
+  } catch (e) {
+    console.error('exportSetlistPDF:', e);
+    toast('No se pudo generar el PDF');
+  }
+}
+
 // Navegación con botón Atrás / Adelante del navegador
 function handleNavigation() {
   // Soporta rutas reales /cancion/id (History API), /setlist (modo presentación)
