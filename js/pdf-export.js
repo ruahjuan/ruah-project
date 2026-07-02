@@ -177,15 +177,21 @@ const PdfExport = (function () {
         case 'chord-row': {
           y = ensureSpace(doc, y, LINE_H * 2);
           const chordStr = transposeChordString(block.chords, semitones, notation);
+          const fs = 10.5; // misma fuente Y mismo tamaño en ambas filas: es lo único
+                            // que hace que los espacios del string de acordes caigan
+                            // en la misma columna que en la fila de letra.
           doc.setFont('courier', 'bold');
-          doc.setFontSize(10);
+          doc.setFontSize(fs);
           doc.setTextColor(...GOLD);
           doc.text(chordStr, MARGIN, y);
-          y += LINE_H - 1.5;
-          doc.setFont('helvetica', block.isChorus ? 'italic' : 'normal');
-          doc.setFontSize(11);
+          y += LINE_H - 1;
+          doc.setFont('courier', block.isChorus ? 'oblique' : 'normal');
+          doc.setFontSize(fs);
           doc.setTextColor(...INK);
-          doc.text(block.lyric.trim(), MARGIN, y);
+          // OJO: NO usar .trim() acá — el parser solo aplica trimEnd(),
+          // los espacios iniciales son los que alinean la letra bajo el
+          // acorde correspondiente.
+          doc.text(block.lyric, MARGIN, y);
           y += LINE_H + 1;
           break;
         }
