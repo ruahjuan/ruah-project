@@ -1147,6 +1147,24 @@
       </div>
 
       <!-- ③ ÁREA PRINCIPAL flexible: editor | preview -->
+      <!-- El selector de pestañas de abajo solo se muestra en mobile
+           (ver mobile.css): en desktop editor y preview van lado a lado,
+           en mobile cada uno ocupa toda la pantalla y se alterna con esto. -->
+      <div class="ed-pane-switch">
+        <button type="button" class="eps-btn on" id="eps-edit" onclick="edSwitchPane('edit')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/>
+          </svg>
+          Editar
+        </button>
+        <button type="button" class="eps-btn" id="eps-preview" onclick="edSwitchPane('preview')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+          </svg>
+          Vista previa
+        </button>
+      </div>
+
       <div class="ed-body">
 
         <!-- Panel izquierdo: editor -->
