@@ -1491,6 +1491,10 @@ function adminAccess() {
   const pwd = prompt('Contraseña:');
   if (pwd === ADMIN_PWD) {
     _adminUnlocked = true;
+    // Dejar visible el botón del nav: si entraste por /admin (mobile,
+    // sin Ctrl+Shift+A disponible) igual queda un camino de vuelta.
+    const navBtn = document.getElementById('nb-admin');
+    if (navBtn) navBtn.style.display = '';
     showView('admin');
   } else if (pwd !== null) {
     toast('Contraseña incorrecta');
@@ -1775,6 +1779,10 @@ function init() {
     const pathMatch    = location.pathname.match(/^\/cancion\/(.+)$/);
     const hashMatch    = location.hash.match(/^#(?:cancion\/)?(.+)$/);
     const isPresentUrl = /^\/setlist\/?$/.test(location.pathname);
+    // Acceso a Admin por URL: en mobile no hay Ctrl+Shift+A (ni teclado
+    // físico), así que /admin (o #admin) es la puerta de entrada — se
+    // puede tipear o guardar como acceso directo en la pantalla de inicio.
+    const isAdminUrl   = /^\/admin\/?$/.test(location.pathname) || /^#admin$/i.test(location.hash);
     const initId = pathMatch ? pathMatch[1].trim()
                  : hashMatch ? hashMatch[1].trim()
                  : null;
@@ -1792,6 +1800,8 @@ function init() {
     buildHomeStats();         // stats: canciones, categorías, oraciones
     buildSotW();              // canción de la semana
     buildHomeCats();          // chips de categorías
+
+    if (isAdminUrl) adminAccess(); // pide contraseña y entra directo a Admin
 
     if (slParam) {
       // Cada entrada puede venir como "id" (formato viejo, sin tono) o
