@@ -161,6 +161,7 @@ function editorOpen(id) {
     buildTagPicker([]);
   }
   document.getElementById('song-editor').style.display = 'flex';
+  edSwitchPane('edit');
   document.getElementById('ed-title').focus();
   edPreviewUpdate();
 }
@@ -170,5 +171,20 @@ function editorClose() {
 }
 
 function toggleEdPreview() {
-  // kept for backward compat — preview is now always visible
+  // kept for backward compat — preview is now always visible on desktop
+}
+
+// ── Selector Editar / Vista previa (mobile) ────────────────
+// En desktop ambos paneles están visibles a la vez y esto no
+// se usa. En mobile (ver mobile.css) solo uno se muestra por
+// vez a pantalla completa, para no dejar el textarea de
+// ChordPro reducido a una franja de 45% de alto.
+function edSwitchPane(which) {
+  const body = document.querySelector('.ed-body');
+  if (!body) return;
+  body.classList.toggle('show-preview', which === 'preview');
+  const eEdit = document.getElementById('eps-edit');
+  const ePrev = document.getElementById('eps-preview');
+  if (eEdit) eEdit.classList.toggle('on', which === 'edit');
+  if (ePrev) ePrev.classList.toggle('on', which === 'preview');
 }
