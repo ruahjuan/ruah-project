@@ -810,6 +810,12 @@ a{color:inherit;text-decoration:none}
 /* Divisor visual entre paneles (desktop) */
 .ed-divider{ display:none }
 
+/* Selector Editar/Vista previa: solo tiene sentido en mobile,
+   donde el editor pasa a mostrar un panel por vez a pantalla
+   completa (ver mobile.css). En desktop ambos paneles conviven
+   lado a lado, así que esto queda oculto. */
+.ed-pane-switch{ display:none }
+
 /* Preview panel: scroll independiente */
 .ed-preview-scroll{
   flex:1;
