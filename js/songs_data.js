@@ -5082,5 +5082,25 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "yo-soy-el-camino",
+    "title": "YO SOY EL CAMINO",
+    "artist": "GRUPO PUEBLO DE DIOS",
+    "composer": "",
+    "key": "Am",
+    "spotify": "https://open.spotify.com/intl-es/track/2ysUiqGbNpfFXNsqiySFI9?si=7143c645f7f14f47",
+    "spId": "2ysUiqGbNpfFXNsqiySFI9",
+    "youtube": "https://www.youtube.com/watch?v=42yod5oivkI&list=PLYUKzBWbiHv7vn43kIIVoeg6GGmwMVq_z&index=9",
+    "ytId": "42yod5oivkI",
+    "content": "@@   Am    Dm      Am\nYo soy la luz del mundo,\n@@Dm       Am      E      Am  G\nno hay tinieblas junto a mí­.\n@@      C     F       C\nTendrán la luz de la vida\n@@ Dm      Am     F      E\npor la palabra que les di.\n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@    Am    Dm     Am\nYo soy el pan de vida\n@@Dm       Am     E      Am G\ny con ustedes me quedé;\n@@       C     F        C\nme entrego como alimento\n@@Dm        Am    F    E\nsoy el misterio de la fe.  \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@    Am    Dm      Am\nYo soy el Buen Pastor\n@@Dm      Am     E    Am G\ny por amor mi vida doy;\n@@      C       F      C\nyo quiero un solo rebaño,\n@@Dm        Am     F    E\nsoy para todos salvador.  \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@Am        Dm       Am\nYo soy la Vid verdadera\n@@Dm        Am      E   Am G\nmi Padre Dios, el Viñador\n@@     C      F          C\nproduzcan fruto abundante\n@@Dm       Am      F        E\npermaneciendo en mi amor. \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@Am        Dm      Am\nYo soy Señor y Maestro\n@@  Dm         Am      E     Am G\ny un mandamiento nuevo doy:\n@@        C     F      C\nque se amen unos a otros\n@@Dm        Am    F    E\ncomo los he amado Yo. \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.",
+    "tags": [
+      "COMUNIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
