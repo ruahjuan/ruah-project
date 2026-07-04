@@ -5015,5 +5015,51 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "jesus-te-seguire",
+    "title": "JESÚS TE SEGUIRÉ",
+    "artist": "DANIEL POLI",
+    "composer": "DANIEL POLI",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/29sS0FtCkLadpxx4rzc6MH?si=d4335c5805a947c6",
+    "spId": "29sS0FtCkLadpxx4rzc6MH",
+    "youtube": "https://www.youtube.com/watch?v=1Y2hulP_vB4",
+    "ytId": "1Y2hulP_vB4",
+    "content": "@@    D         Bm         G         A\nJesús te seguiré, donde me lleves iré\n@@          D                  Bm       \nmuéstrame ese lugar donde vives \n@@         G         E       A\nquiero quedarme contigo allí­.\n\n\n@@      Bm            D    \nEscuchando tus palabras \n@@      E             G\nalgo nuevo nace en mí­\n@@        Bm\nes que nunca nadie \n@@ D           E             G\nnos habí­a venido a hablar así­.\n@@        D             \nAhora veo claro, \n@@G                 A\nla verdad está en Ti.  \n@@ A7\n¡Aleluya, Gloria al Señor!\n\n\n@@    D         Bm         G         A\nJesús te seguiré, donde me lleves iré\n@@          D                  Bm       \nmuéstrame ese lugar donde vives \n@@         G         E       A\nquiero quedarme contigo allí­.\n\n\n@@        Bm            D\nHoy he visto como se aman \n@@        E            G\nlos que viven junto a Ti.\n@@      Bm              D\nHace tiempo que sediento \n@@          E           G\nhabí­a querido amar así­.\n@@        D              G\nAhora siento que tu amor \n@@             A\nviene hacia mí­. \n@@           A7\n¡Aleluya , Gloria al Señor!\n\n\n@@    D         Bm         G         A\nJesús te seguiré, donde me lleves iré\n@@          D                  Bm       \nmuéstrame ese lugar donde vives \n@@         G         E       A\nquiero quedarme contigo allí­.\n\n\n@@        Bm           D\nHoy he visto a los leprosos sanos \n@@  E            G\ny a los ciegos ver.\n@@          Bm          D\nHasta el pan multiplicaste, \n@@       E           G\npara darles de comer.\n@@        D\n¡Oh Maestro bueno, \n@@G               A\ntodo lo haces bien! \n@@           A7\n¡Aleluya , Gloria al Señor!\n\n\n@@    D         Bm         G         A\nJesús te seguiré, donde me lleves iré\n@@          D                  Bm       \nmuéstrame ese lugar donde vives \n@@         G         E       A\nquiero quedarme contigo allí­.\n@@         D\nJunto a Tí.",
+    "tags": [
+      "COMUNIÓN",
+      "JESÚS",
+      "ANIMACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "cristo-vale-la-pena",
+    "title": "CRISTO VALE LA PENA",
+    "artist": "JESÚS SALVADOR",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/0zQwlIwAZuiBinxzyqCUnw?si=bba551f525984e89",
+    "spId": "0zQwlIwAZuiBinxzyqCUnw",
+    "youtube": "https://www.youtube.com/watch?v=Uk4gEmxJ270",
+    "ytId": "Uk4gEmxJ270",
+    "content": "@@G                  D\nYo sé que me necesitas\n@@Em                  Bm\nque necesitas mi amor,\n@@C           D        G\nme llamas para que luche\n@@Am                  D\nen este mundo de hoy.\n\n@@G                  D\nYo sé que diste la vida\n@@Em                 Bm\npara nuestra salvación,\n@@C             D         G\nhoy quiero amar sin medida\n@@Am                   D\nquiero jugarme por Vos.\n\n\n@@ C        D    Em\n/Cristo vale la pena\n@@C   D          Em\nluchemos con fe.\n@@C        D      Em\nMaría será la estrella\n@@C          D       Em\nque nos guíe hasta El./ x2\n\n\n@@G               D\nMaría dame la fuerza\n@@Em                 Bm\npara poderles mostrar\n@@C         D      G\na todos mis hermanos\n@@Am                    D\nlo hermoso que es amar.\n\n@@G                   D\nPara poder con mis labios\n@@Em                 Bm\nTu Palabra proclamar\n@@C             D      G\nhaz de mí un instrumento\n@@Am                 D\ny así Tu amor sembrar.\n\n\n@@ C        D    Em\n/Cristo vale la pena\n@@C   D          Em\nluchemos con fe.\n@@C        D      Em\nMaría será la estrella\n@@C          D       Em\nque nos guíe hasta El./ x2",
+    "tags": [
+      "SALIDA",
+      "COMUNIÓN",
+      "JESÚS",
+      "ANIMACIÓN",
+      "MISIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
