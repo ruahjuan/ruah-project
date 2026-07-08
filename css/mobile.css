@@ -11,6 +11,12 @@
     overflow: hidden;
   }
 
+  /* ── Home: el footer queda tapado por el nav flotante de abajo
+     si no le damos aire (mismo criterio que #v-prayers). ── */
+  #app-footer {
+    padding-bottom: calc(24px + 70px + env(safe-area-inset-bottom));
+  }
+
   /* ── Topbar: fijo, ya tiene height:52px ── */
   #topbar { flex-shrink: 0; padding: 0 10px; }
   #logo   { gap: 7px; }
