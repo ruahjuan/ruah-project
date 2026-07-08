@@ -13,7 +13,7 @@ const PRAYERS = [
 <p>No vengo a mostrar mi voz ni mis acordes.<br>Vengo a abrir una puerta para que Vos entrés.</p>
 <p>Si sueno bien, que sea tu belleza la que se escuche.<br>Si me equivoco, que mi error no opaque tu gracia.</p>
 <p>Toma estos dedos, esta voz, este corazón inquieto.<br>Que la música que toque hoy no sea mía: sea tuya.</p>
-<p>Fiat — hágase tu voluntad, Señor. No la mía. La tuya.</p>
+<p>Hágase tu voluntad, Señor. No la mía.</p>
 <p><em>Amén.</em></p>`
   },
   {
