@@ -1677,8 +1677,8 @@ const CAT_ICONS = {
   'MARÍA':             '<path d="M12 21c-4-3-8-6-8-11a5 5 0 0110-1 5 5 0 0110 1c0 5-4 8-8 11z"/>',
   'JESÚS':             '<path d="M12 3v18M7 8h10"/>',
   'ESPÍRITU SANTO':    '<path d="M12 3c2 3-2 5 0 8s-2 5 0 8M5 12h14"/>',
-  // Llama / corazón ardiente
-  'ACCIÓN DE GRACIAS': '<path d="M12 21c-3.5 0-6-2.3-6-5.5 0-2.1 1.1-3.5 2-4.8.4.9.9 1.4 1.6 1.4-.5-2.3.2-4.6 2.1-6.1.2 1.5.9 2.5 1.9 3.4 1.4 1.2 2.4 2.6 2.4 4.6 0 3.4-1.5 7-4 7z" stroke-linejoin="round"/>',
+  // Manos en oración
+  'ACCIÓN DE GRACIAS': '<path d="M12 3c-2.2 2.5-3.5 5.5-3.5 9 0 2.8.9 5.3 2.5 7h2c1.6-1.7 2.5-4.2 2.5-7 0-3.5-1.3-6.5-3.5-9z" stroke-linejoin="round"/><path d="M12 6.5v11.5" stroke-linecap="round"/><path d="M9.7 18.7h4.6" stroke-linecap="round"/>',
   'PENITENCIAL':       '<path d="M12 2v20M5 9l7-7 7 7"/>',
   'SANACIÓN':          '<path d="M12 21s-7-4.5-7-10a5 5 0 0110-1 5 5 0 0110 1c0 5.5-7 10-7 10z"/>',
   // Iglesia con cruz y puerta
@@ -1688,6 +1688,7 @@ const CAT_ICONS = {
   // Micrófono
   'ANIMACIÓN':         '<rect x="9" y="3" width="6" height="10" rx="3"/><path d="M6 11a6 6 0 0012 0" stroke-linecap="round"/><path d="M12 17v3.5M9.5 21h5" stroke-linecap="round"/>',
 };
+CAT_ICONS['ESPÍRITU SANTO'] = '<path d="M12 21c-3.5 0-6-2.3-6-5.5 0-2.1 1.1-3.5 2-4.8.4.9.9 1.4 1.6 1.4-.5-2.3.2-4.6 2.1-6.1.2 1.5.9 2.5 1.9 3.4 1.4 1.2 2.4 2.6 2.4 4.6 0 3.4-1.5 7-4 7z" stroke-linejoin="round"/>';
 const CAT_ICON_DEFAULT = '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>';
 
 // Color de fondo + acento por categoría destacada (usa la paleta de marca
@@ -1698,6 +1699,7 @@ const CAT_COLORS = {
   'MISA':              { bg: 'var(--surf3)',     fg: 'var(--f5)' },
   'VOCACIONAL':        { bg: 'var(--chorus-bg)', fg: 'var(--chorus-text)' },
   'ANIMACIÓN':         { bg: 'var(--f2)',        fg: 'var(--f4)' },
+  'ESPÍRITU SANTO':    { bg: 'var(--surf2)',     fg: 'var(--f5)' },
 };
 
 function _catIconSvg(tag) {
@@ -1721,8 +1723,8 @@ function buildHomeCats() {
   // puro conteo — así no saltan de lugar cada vez que se cargan canciones).
   // Si alguna de estas todavía no tiene canciones cargadas, se completa con
   // las siguientes más usadas para no dejar el bloque incompleto.
-  const FEATURED_PINNED = ['ADORACIÓN', 'ACCIÓN DE GRACIAS', 'MISA', 'VOCACIONAL', 'ANIMACIÓN'];
-  const FEATURED_N = 5;
+  const FEATURED_PINNED = ['ADORACIÓN', 'ACCIÓN DE GRACIAS', 'MISA', 'VOCACIONAL', 'ANIMACIÓN', 'ESPÍRITU SANTO'];
+  const FEATURED_N = 6;
   const pinnedAvailable = FEATURED_PINNED.filter(t => counts[t]);
   const fillers = sortedTags.filter(t => !pinnedAvailable.includes(t));
   const featured = pinnedAvailable.concat(fillers).slice(0, FEATURED_N);
