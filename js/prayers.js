@@ -82,8 +82,8 @@ const PRAYERS = [
 
 /**
  * Construye los tabs y paneles de oraciones en el contenedor indicado.
- * Se llama dos veces: una para #v-home (ptabs / prayer-panels)
- * y otra para #v-prayers (ptabs-p / prayer-panels-p).
+ * Ahora se llama una sola vez, para #v-prayers (ptabs-p / prayer-panels-p).
+ * La sección duplicada que había en el Home se eliminó.
  */
 function buildPrayerSet(tabsId, panelsId) {
   const tabs   = document.getElementById(tabsId);
@@ -123,6 +123,5 @@ function buildPrayerSet(tabsId, panelsId) {
 
 /** Punto de entrada llamado desde app.js → init() */
 function buildPrayers() {
-  buildPrayerSet('ptabs',   'prayer-panels');    // vista Home
   buildPrayerSet('ptabs-p', 'prayer-panels-p');  // vista Oraciones
 }
