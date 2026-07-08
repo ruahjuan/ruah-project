@@ -204,6 +204,14 @@
   gap: 7px;
 }
 
+/* El atributo HTML [hidden] perdía contra esta regla (un estilo de autor
+   siempre gana al estilo por defecto del navegador, sin importar la
+   especificidad) — por eso los chips se veían desplegados desde el arranque
+   en vez de esperar al click en "Ver todas". */
+.home-cat-chips[hidden] {
+  display: none;
+}
+
 .home-cat-chip {
   display: inline-flex;
   align-items: center;
