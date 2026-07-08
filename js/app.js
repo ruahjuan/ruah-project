@@ -1667,7 +1667,8 @@ function buildSotW() {
 // Iconos por categoría (Tabler-style, mismo set de trazos que el resto del home)
 const CAT_ICONS = {
   'ALABANZA':          '<path d="M12 2l2.5 6.5L21 9l-5.5 4.5L17 21l-5-3.5L7 21l1.5-7.5L3 9l6.5-.5z"/>',
-  'ADORACIÓN':         '<path d="M12 21c-4-3-8-6-8-11a5 5 0 0110-1 5 5 0 0110 1c0 5-4 8-8 11z"/>',
+  // Custodia del Santísimo: rayos + hostia + pie
+  'ADORACIÓN':         '<circle cx="12" cy="10.5" r="4"/><circle cx="12" cy="10.5" r="1.3" fill="currentColor" stroke="none"/><path d="M12 3v2M12 15.5v1.4M4.5 10.5h2M17.5 10.5h2M6.9 5.4l1.3 1.3M15.8 6.7l1.3-1.3M6.9 15.6l1.3-1.3M15.8 14.3l1.3 1.3" stroke-linecap="round"/><path d="M8.5 18h7l1 3.5h-9z" stroke-linejoin="round"/>',
   'ENTRADA':           '<path d="M5 12h14M13 6l6 6-6 6"/>',
   'SALIDA':            '<path d="M19 12H5M11 6l-6 6 6 6"/>',
   'COMUNIÓN':          '<path d="M12 2v6M8 8h8l2 13H6L8 8z"/>',
@@ -1676,15 +1677,32 @@ const CAT_ICONS = {
   'MARÍA':             '<path d="M12 21c-4-3-8-6-8-11a5 5 0 0110-1 5 5 0 0110 1c0 5-4 8-8 11z"/>',
   'JESÚS':             '<path d="M12 3v18M7 8h10"/>',
   'ESPÍRITU SANTO':    '<path d="M12 3c2 3-2 5 0 8s-2 5 0 8M5 12h14"/>',
-  'ACCIÓN DE GRACIAS': '<path d="M12 21s-7-4.5-7-10a5 5 0 0110-1 5 5 0 0110 1c0 5.5-7 10-7 10z"/>',
+  // Llama / corazón ardiente
+  'ACCIÓN DE GRACIAS': '<path d="M12 21c-3.5 0-6-2.3-6-5.5 0-2.1 1.1-3.5 2-4.8.4.9.9 1.4 1.6 1.4-.5-2.3.2-4.6 2.1-6.1.2 1.5.9 2.5 1.9 3.4 1.4 1.2 2.4 2.6 2.4 4.6 0 3.4-1.5 7-4 7z" stroke-linejoin="round"/>',
   'PENITENCIAL':       '<path d="M12 2v20M5 9l7-7 7 7"/>',
   'SANACIÓN':          '<path d="M12 21s-7-4.5-7-10a5 5 0 0110-1 5 5 0 0110 1c0 5.5-7 10-7 10z"/>',
+  // Iglesia con cruz y puerta
+  'MISA':              '<path d="M12 2v3M10.5 3.5h3" stroke-linecap="round"/><path d="M6 21V11l6-4 6 4v10" stroke-linejoin="round"/><path d="M9.5 21v-5h5v5"/>',
+  // Brújula
+  'VOCACIONAL':        '<circle cx="12" cy="12" r="9"/><path d="M15.3 8.7l-2 4.6-4.6 2 2-4.6z" stroke-linejoin="round"/>',
+  // Micrófono
+  'ANIMACIÓN':         '<rect x="9" y="3" width="6" height="10" rx="3"/><path d="M6 11a6 6 0 0012 0" stroke-linecap="round"/><path d="M12 17v3.5M9.5 21h5" stroke-linecap="round"/>',
 };
 const CAT_ICON_DEFAULT = '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>';
 
+// Color de fondo + acento por categoría destacada (usa la paleta de marca
+// definida en css/app.css, así que respeta el modo oscuro automáticamente)
+const CAT_COLORS = {
+  'ADORACIÓN':         { bg: 'var(--vlight)',    fg: 'var(--violet)' },
+  'ACCIÓN DE GRACIAS': { bg: 'var(--f1)',        fg: 'var(--f4)' },
+  'MISA':              { bg: 'var(--surf3)',     fg: 'var(--f5)' },
+  'VOCACIONAL':        { bg: 'var(--chorus-bg)', fg: 'var(--chorus-text)' },
+  'ANIMACIÓN':         { bg: 'var(--f2)',        fg: 'var(--f4)' },
+};
+
 function _catIconSvg(tag) {
   const path = CAT_ICONS[tag] || CAT_ICON_DEFAULT;
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true">${path}</svg>`;
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="24" height="24" aria-hidden="true">${path}</svg>`;
 }
 
 function buildHomeCats() {
@@ -1699,17 +1717,28 @@ function buildHomeCats() {
   // Ordenar por cantidad descendente (empate: alfabético)
   const sortedTags = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
 
-  const FEATURED_N = 8;
-  const featured = sortedTags.slice(0, FEATURED_N);
-  const rest      = sortedTags.slice(FEATURED_N);
+  // Destacadas fijas (las 5 de mayor uso real, curadas a mano en vez de
+  // puro conteo — así no saltan de lugar cada vez que se cargan canciones).
+  // Si alguna de estas todavía no tiene canciones cargadas, se completa con
+  // las siguientes más usadas para no dejar el bloque incompleto.
+  const FEATURED_PINNED = ['ADORACIÓN', 'ACCIÓN DE GRACIAS', 'MISA', 'VOCACIONAL', 'ANIMACIÓN'];
+  const FEATURED_N = 5;
+  const pinnedAvailable = FEATURED_PINNED.filter(t => counts[t]);
+  const fillers = sortedTags.filter(t => !pinnedAvailable.includes(t));
+  const featured = pinnedAvailable.concat(fillers).slice(0, FEATURED_N);
+  const rest      = sortedTags.filter(t => !featured.includes(t));
 
-  featuredWrap.innerHTML = featured.map(t => `
-    <button class="home-cat-card" data-tag="${esc(t)}">
+  featuredWrap.innerHTML = featured.map(t => {
+    const c = CAT_COLORS[t];
+    const style = c ? ` style="background:${c.bg};color:${c.fg}"` : '';
+    return `
+    <button class="home-cat-card" data-tag="${esc(t)}"${style}>
       ${_catIconSvg(t)}
       <span class="hcc-name">${esc(toTitleCase(t))}</span>
       <span class="hcc-count">${counts[t]} canciones</span>
     </button>
-  `).join('');
+  `;
+  }).join('');
 
   const toggle = document.getElementById('home-cats-toggle');
   if (rest.length === 0) {
