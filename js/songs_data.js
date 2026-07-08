@@ -56,7 +56,8 @@ const SONGS_DATA = [
     "tags": [
       "COMUNIÓN",
       "ANIMACIÓN",
-      "ENTRADA"
+      "ENTRADA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -269,7 +270,9 @@ const SONGS_DATA = [
     "ytId": "ewbQkBa0oxI",
     "content": "@@ D   Em  A    D\nAleluya, aleluya\n@@    Em   A   D\naleluya, aleluya\n\n@@ D   Em  A    D\nAleluya, aleluya\n@@    Em   A   D\naleluya, aleluya",
     "tags": [
-      "ALELUYA"
+      "ALELUYA",
+      "LITÚRGICA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -289,7 +292,9 @@ const SONGS_DATA = [
     "ytId": "LEUMuKcmv2k",
     "content": "@@C    G     Am       Em    \nAleluya aleluya aleluya, \n@@F    C    Dm G\naleluya aleluya\n\n@@C    G     Am       Em    \nAleluya aleluya aleluya, \n@@F    C     G C \naleluya aleluya",
     "tags": [
-      "ALELUYA"
+      "ALELUYA",
+      "LITÚRGICA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -310,7 +315,8 @@ const SONGS_DATA = [
     "content": "@@D                C   G   D\nAlma de Cristo, santifícame\n@@D                  C  G  D\nCuerpo de Cristo, sálvame\n@@D                      C G  D\nSangre de Cristo, embriágame\n@@D               C    G    D\nAgua de su costado, lávame\n\n@@D                  C  G    D\nPasión de Cristo, confórtame\n@@D                C G  D\nOh, buen Jesús, óyeme\n\n\n@@ Bm            G        D     A\nDentro de tus llagas escóndeme\n@@       Bm              G        D     A\nNo permitas que me aparte de Ti (de Ti)\n@@      Bm         G       D     A\nDel maligno enemigo defiéndeme\n@@      Bm           G     D     A\nEn la hora de mi muerte llámame\n@@   Em\nY mándame ir a Ti\n@@ G                D          A\nPara que con tus Santos te alabe\n@@         Em          G\nPor los siglos de los siglos.\n\n@@ Bm            G        D     A\nDentro de tus llagas escóndeme\n@@       Bm              G        D     A\nNo permitas que me aparte de Ti (de Ti)\n@@      Bm         G       D     A\nDel maligno enemigo defiéndeme\n@@      Bm           G     D     A\nEn la hora de mi muerte llámame\n@@   Em\nY mándame ir a Ti\n@@ G                D          A\nPara que con tus Santos te alabe\n@@         Em          G\nPor los siglos de los siglos.\n@@ C  D\nAmén",
     "tags": [
       "ADORACIÓN",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -334,7 +340,8 @@ const SONGS_DATA = [
       "MISIÓN",
       "ACCIÓN DE GRACIAS",
       "COMUNIÓN",
-      "COMUNIDAD"
+      "COMUNIDAD",
+      "LITÚRGICA"
     ],
     "source": "",
     "srcTag": "base",
@@ -397,7 +404,8 @@ const SONGS_DATA = [
     "content": "@@  A              E\nAquí hay un muchacho\n@@     F#m        C#m         D            A\nQue solamente tiene cinco panes y dos peces\n@@              Bm        E\nMás ¿Qué es eso para tanta gente?\n\n@@   A             E\nAquí hay un muchacho\n@@     F#m        C#m           D               A\nQue solamente tiene un corazón dispuesto a dar\n@@               Bm       E\nMás, ¿Qué es eso para tanta gente?\n\n@@F#m            C#m           D           A\nAquí está este corazón que quiere serte fiel\n@@              Bm     E        F#m  \nMás, ¿Qué es eso si no tiene a Tí?      \n@@ D  E            A\n¿Si no te tiene a Tí?\n\n\n@@ A  E      F#m       D Bm         A               E\nToma este corazón, toma cuanto tengo y cuanto soy\n@@ D          E           A       E   F#m\nToma mi pasado, mi presente y mi futuro\n@@  D           E          A\n¡Todo cuanto tengo tómalo!\n\n\n@@    A          E          F#m        C#m\nMi corazón tomaste, mis panes bendijiste\n@@     D           A       Bm          E\nA la gente repartiste, y a todos alcanzó\n@@    D                E       F#m         C#m\nMi vida está en tus manos y quieres repartirla\n@@D                      Bm           E         E7\nComo hiciste con mis panes aquel día, ¡Oh Señor!\n\n@@  A               E\nAquí están mis palabras\n@@ F#m              C#m            D          A\nAquí están mis acciones, aquí están mis ilusiones\n@@               Bm         E\nMás, ¿Qué es eso sin Tu amor Señor?\n\n@@F#m            C#m           D           A\nAquí está este corazón que quiere serte fiel\n@@              Bm     E        F#m  \nMás, ¿Qué es eso si no tiene a Tí?      \n@@ D  E            A\n¿Si no te tiene a Tí?\n\n\n@@ A  E      F#m       D Bm         A               E\nToma este corazón, toma cuanto tengo y cuanto soy\n@@ D          E           A       E   F#m\nToma mi pasado, mi presente y mi futuro\n@@  D           E          A\n¡Todo cuanto tengo tómalo!\n",
     "tags": [
       "OFRENDA",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -572,7 +580,8 @@ const SONGS_DATA = [
     "content": "@@          C          G  \nEl día es hoy, la hora ya, \n@@           Em      C       \npronto, Jesús, por mi vida \n@@      Bm  Em\npasarás. \n@@             C \nSé que tu amor es fuerte, \n@@           D \nquiero trepar y verte. \n\n\n@@          Em           C \nVen a mi casa, a mi hogar, \n@@            D                  B7  \nque hace tiempo guardo un lugar \n@@        Em               C \ny llevo dentro tantos deseos \n@@           D G  \nde conversar. \n@@ D        Em           C \nVen a mi casa, a mi hogar, \n@@          D               B7  \nque con Vos se va a iluminar, \n@@          Em             C \ny ese rincón oscuro y cerrado \n@@         Bm     Em  \nabre de par en par, \n@@      Am              D \ny sea tuyo lo que es mío, \n@@            G  \ntuyo mi hogar. \n\n\n@@    C                   G\nNo sé por qué estoy aquí,\n@@            Em     C \nquiero guardar tus ojos \n@@           Bm Em\ndentro de mí, \n@@           C\nporque miraste hondo,\n@@            D \nlo comprendiste todo. \n\n\n@@          Em           C \nVen a mi casa, a mi hogar, \n@@            D                  B7  \nque hace tiempo guardo un lugar \n@@        Em               C \ny llevo dentro tantos deseos \n@@           D G  \nde conversar. \n@@ D        Em           C \nVen a mi casa, a mi hogar, \n@@          D               B7  \nque con Vos se va a iluminar, \n@@          Em             C \ny ese rincón oscuro y cerrado \n@@         Bm     Em  \nabre de par en par, \n@@      Am              D \ny sea tuyo lo que es mío, \n@@            G  \ntuyo mi hogar.\n\n\nÉl que me amó, sin despreciar,\nY me miró y me vino a visitar.\nLe devolvió a mis manos\nUn latido de hermano.",
     "tags": [
       "ENTRADA",
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -637,7 +646,8 @@ const SONGS_DATA = [
       "OFRENDA",
       "ADORACIÓN",
       "MISIÓN",
-      "COMUNIDAD"
+      "COMUNIDAD",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -658,7 +668,8 @@ const SONGS_DATA = [
     "content": "@@                  D\nCon Ella vamos a Vos\n@@                A\nY con Vos renovamos la historia\n@@            Bm                   G\nSeguimos soñando, seguimos creyendo\n@@              Em                 A\nSus pasos seguimos y otros seguirán\n\n@@                  D\nCon Ella vamos a Vos\n@@                A\nY con Vos renovamos la historia\n@@            Bm                   G\nSeguimos soñando, seguimos creyendo\n@@              Em                 A\nSus pasos seguimos y otros seguirán\n@@              D\nY otros seguirán\n\n\n@@ D                                        \nEste es tu tiempo y el mío \n@@                A\nsoñamos que puede ser realidad\n@@                Bm               G                     \nSu plan está escrito en líneas torcidas \n@@               Em                  A\npara que vos y yo podamos verlo más.\n@@                 D\nQue nada es perfecto, que todo es posible, \n@@              A\nÉl sueña y soñamos vamos par a par\n@@              Bm               G\nTe doy de mi mano, estamos unidos,\n@@              Em             A\nya todo es posible Él así lo hará...\n\n@@                  D\nCon Ella vamos a Vos\n@@                A\nY con Vos renovamos la historia\n@@            Bm                   G\nSeguimos soñando, seguimos creyendo\n@@              Em                 A\nSus pasos seguimos y otros seguirán\n\n@@                  D\nCon Ella vamos a Vos\n@@                A\nY con Vos renovamos la historia\n@@            Bm                   G\nSeguimos soñando, seguimos creyendo\n@@              Em                 A\nSus pasos seguimos y otros seguirán\n@@              D\nY otros seguirán\n\n\n@@Bm                        \nEste es tu tiempo y el mío, \n@@   F#m\nel miedo ya no tiene lugar\n@@ G                       \nCanta no quedes callado, \n@@ Em                A\nvive, cree y sueña ya…\n",
     "tags": [
       "ANIMACIÓN",
-      "MARÍA"
+      "MARÍA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -741,7 +752,9 @@ const SONGS_DATA = [
     "ytId": "ni2aH5LFPwM",
     "content": "@@  A    E     F#m         \nCordero de Dios, \n@@      D         Bm         E\nque quitas el pecado del mundo.\n@@ D       E        A     E\nTen piedad de nosotros. \n\n@@  A    E     F#m         \nCordero de Dios, \n@@      D         Bm         E\nque quitas el pecado del mundo.\n@@ D       E        A     E\nTen piedad de nosotros.\n\n@@  A    E     F#m         \nCordero de Dios, \n@@      D         Bm         E\nque quitas el pecado del mundo.\n@@ D  E    F#m F#7    \nDanos la paz\n@@ Bm E     A    \nDanos la paz",
     "tags": [
-      "CORDERO"
+      "CORDERO",
+      "LITÚRGICA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1064,7 +1077,8 @@ const SONGS_DATA = [
     "tags": [
       "MARÍA",
       "ANIMACIÓN",
-      "SALIDA"
+      "SALIDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1128,7 +1142,8 @@ const SONGS_DATA = [
     "content": "@@          G            Bm\nDios te salve, María, Sagrada María,\n@@   C                   G  D\nSeñora de nuestro camino.\n@@      Em                 Bm                  \nLlena eres de gracia, llamada entre todas \n@@   C               G  D\na ser la Madre de Dios.\n\n@@     G                   Bm\nEl Señor es contigo y tú eres la sierva\n@@    C                      G D\nDispuesta a cumplir su Misión\n@@      Em            Bm\nY bendita tú eres, dichosa te llaman, \n@@  C                G  D\na Tí, la elegida de Dios\n\n@@      C                               \nY bendito es el fruto que crece en tu vientre, \n@@       G                  D\nel Mesías del pueblo de Dios,\n@@        G                      C         D           G D\nAl que tanto esperamos que nazca que sea nuestro Rey.\n\n\n@@   G                      Bm                                 \nMaría, he mirado hacia el cielo \n@@                  C                     G D\npensando entre nubes tu rostro encontrar,\n@@ Em                        C                     \nAl fin te encontré en un establo, \n@@               G                 D\nentregando la vida a Jesús Salvador.\n@@    G                 Bm\nMaría, he querido sentirte \n@@                C                     G D\nentre tantos milagros que cuentan de ti,\n@@   Em                      Bm\nAl fin te encontré en mi camino, \n@@       C                 G\nen la misma vereda que yo,\n@@    C                                       \nTenías tu cuerpo cansado, \n@@                D                       D7\nun niño en los brazos durmiendo en tu paz.\n@@    G               C       D       G\nMaría, mujer que regalas la vida sin fin.\n\n@@         G                Bm\nTú eres Santa María, eres Nuestra Señora\n@@         C                      G  D\nporque haces tan nuestro al Señor,\n@@      Em                 Bm\nEres Madre de Dios, eres mi tierna madre \n@@   C                   G D\ny Madre de la humanidad,\n@@      C\nTe pedimos que ruegues por todos nosotros \n@@   G                D\nheridos de tanto pecar,\n@@        G                 C\nDesde hoy, hasta el día final \n@@         D      G  D\nde este peregrinar.\n\n\n@@    G                 Bm\nMaría, he buscado tu imagen serena\n@@    C                     G D\nVestida entre mantos de luz,\n@@    Em                  C\nY al fin te encontré dolorosa\n@@             G                       D\nLlorando de pena a los pies de una cruz\n@@    G                Bm\nMaría, he querido sentirte \n@@               C                      G\nentre tantos milagros que cuentan de ti,\n@@   Em                      Bm\nAl fin te encontré en mi camino, \n@@       C                 G\nen la misma vereda que yo,\n@@    C\nTenías tu cuerpo cansado, \n@@                D                      D7\nun niño en los brazos durmiendo en tu paz\n@@    G               C       D       Em Bm\nMaría, mujer que regalas la vida sin fin,\n@@        C       D       G\nQue regalas la vida sin fin.",
     "tags": [
       "MARÍA",
-      "SALIDA"
+      "SALIDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1258,7 +1273,8 @@ const SONGS_DATA = [
     "content": "@@E                     D E                   \nMe has forjado caminante, \n@@                 G#m  A\nbuscador de horizontes\n@@      G#7      C#m         F#7       B\nmás lejanos y claros, más lejanos y claros,\n\n@@ E                   D   E\nSer un rastreador paciente \n@@               G#m  A\nde tus huellas amadas\n@@      G#7          C#m\nes la cruz que yo abrazo, \n@@      F#7           B\nes la cruz que yo abrazo\n\n\n@@A            B          E             C#m\nSeñor que esté mi corazón velando ardiente,\n@@ A         B             E        E7\ncuida que no me olvide de mi destino,\n@@C          D           G D        Em\nque nunca la soberbia esté en mi frente;\n@@Am          B7       E\nmantenme como humilde peregrino,\n@@C#m               A             B E\ncazador paciente, viajero en camino.\n\n@@ E                      D  E\nComo el cazador que anhela \n@@                G#m  A\ny no alcanza su presa \n@@     G#7          C#m\ndesfallezco y me canso, \n@@     F#7           B\ndesfallezco y me canso\n\n@@ E                    D  E\nMe detengo y eso es vano \n@@            G#m A\nsolo vivo si pongo\n@@        G#7         C#m\nmi esperanza en lo arduo,\n@@        F#7         B\nmi esperanza en lo arduo.\n\n\n@@A            B          E             C#m\nSeñor que esté mi corazón velando ardiente,\n@@ A         B             E        E7\ncuida que no me olvide de mi destino,\n@@C          D           G D        Em\nque nunca la soberbia esté en mi frente;\n@@Am          B7       E\nmantenme como humilde peregrino,\n@@C#m               A             B E\ncazador paciente, viajero en camino.\n\n\nSi mi marcha te conmueve \ny alivianas mi carga\ny agilizas mis pasos, \ny agilizas mis pasos.\n\nNos veremos una aurora \ny sabré al alcanzarte\nque soy yo el alcanzado, \nque soy yo el alcanzado.",
     "tags": [
       "VOCACIONAL",
-      "SALIDA"
+      "SALIDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1281,7 +1297,8 @@ const SONGS_DATA = [
       "ANIMACIÓN",
       "MISIÓN",
       "VOCACIONAL",
-      "ENTRADA"
+      "ENTRADA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1347,7 +1364,8 @@ const SONGS_DATA = [
       "ALABANZA",
       "ANIMACIÓN",
       "COMUNIÓN",
-      "SALIDA"
+      "SALIDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1369,7 +1387,8 @@ const SONGS_DATA = [
     "tags": [
       "ACCIÓN DE GRACIAS",
       "COMUNIDAD",
-      "SALIDA"
+      "SALIDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1439,7 +1458,8 @@ const SONGS_DATA = [
       "VOCACIONAL",
       "ACCIÓN DE GRACIAS",
       "JESÚS",
-      "PASCUA"
+      "PASCUA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1595,7 +1615,8 @@ const SONGS_DATA = [
     "tags": [
       "VOCACIONAL",
       "ADORACIÓN",
-      "OFRENDA"
+      "OFRENDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1639,7 +1660,8 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "JESÚS",
       "ACCIÓN DE GRACIAS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1662,7 +1684,8 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
       "VOCACIONAL",
-      "MISIÓN"
+      "MISIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1772,7 +1795,9 @@ const SONGS_DATA = [
     "ytId": "96rQA-5zsUY",
     "content": "@@ G                 C  G              \nGloria a Dios en el Cielo \n@@       Em     Bm        C    G\ny en la Tierra paz a los hombres\n@@       C      Bm        Am   Em\ny en la Tierra paz a los hombres \n@@     A7        D\nque ama el Señor.\n@@G                     C     G \nPor tu inmensa gloria te alabamos, \n@@                 C     G         \nte bendecimos, te adoramos.\n@@ G              C          D\nTe glorificamos, te damos gracias.\n@@   Em   Bm   C        Em   \nSeñor Dios, Rey Celestial, \n@@      A7             Dsus D\nDios Padre Todopoderoso.\n\n@@   Em      Am  Em      D  Em\nSeñor, Hijo Único Jesucristo,\n@@        Em      Am       Em  \nSeñor Dios, Cordero de Dios, \n@@        D   Em\nHijo del Padre.\n@@C                  Am         Em \nTú que quitas el pecado del mundo, \n@@C        Am      Em\nten piedad de nosotros.\n@@C                   Am        Em      \nTú que quitas el pecado del mundo, \n@@  C              D   Em \natiende nuestra súplica.\n@@G                           D        Em    \nTú que estás sentado la derecha del Padre, \n@@ A7             Dsus  D\nten piedad de nosotros.\n\n@@ G              C    G    \nPorque sólo Tú eres Santo, \n@@Em   C       G\nsólo Tú Señor.\n@@ G               C     D\nSólo Tú Altísimo Jesucristo,\n@@Em          Bm    C  G\ncon el Espíritu Santo \n@@      A7              Dsus D\nen la gloria de Dios Padre.\n@@C   G  C   G\nAmén, amén.\n",
     "tags": [
-      "GLORIA"
+      "GLORIA",
+      "MISA",
+      "LITÚRGICA"
     ],
     "source": "",
     "srcTag": "base",
@@ -1816,7 +1841,8 @@ const SONGS_DATA = [
     "content": "(Original: Am)\n@@Em                      G         D      \nComenzaste a hacerte pan en Belén \n@@          C            B7\nsol pequeñito en esta noche\n@@Em                  G            D     \nAprendiste en Nazaret de ellos dos, \n@@          C             B7\nel gesto manso de la entrega\n\n@@Em                  C                       \nPibe que en Jerusalén \n@@        D             C\nte abrazaste de una vez\n@@      D           Em\na las cosas de tu Padre\n\n@@Em                C       \nDebe tu cuerpo crecer \n@@      D            A7\npara poderse ofrecer \n@@                      C     D      \ncomo pan a nuestro hambre\n\n\n@@Em                 \nMi Cuerpo es esto \n@@C\nMi Sangre es esta\n@@D                 Em\nque por ustedes doy\n@@Em              \nComan y vivan, \n@@C             \ncrean y vivan \n@@D                  Em\nque para siempre soy\n@@     C      D Em\nSoy yo, soy yo.\n\n\n@@Em                 G\nSe multiplicó tu amor, \n@@       D\nse partió, \n@@          C              B7\ntodos saciados y aún sobraba\n@@Em                  G\nSe mostró tu intimidad \n@@      D\neres pan\n@@          C          B7 \nque sólo vive por donarse\n\n@@Em                C\nNoche de Jerusalén \n@@        D          C\nCristo-Pan entrégate\n@@      D             Em \neres Tú nuestro cordero\n\n@@Em                     C\nCena, huerto, beso y cruz\n@@       D            A7 \ny tu entrega Pan-Jesús\n@@                          C   D \nfue más fuerte que el madero.\n\n\n@@Em                 \nMi Cuerpo es esto \n@@C\nMi Sangre es esta\n@@D                 Em\nque por ustedes doy\n@@Em              \nComan y vivan, \n@@C             \ncrean y vivan \n@@D                  Em\nque para siempre soy\n@@     C      D Em\nSoy yo, soy yo.",
     "tags": [
       "COMUNIÓN",
-      "PASCUA"
+      "PASCUA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2058,7 +2084,9 @@ const SONGS_DATA = [
     "ytId": "_GavWYtsXg8",
     "content": "@@       A         D          A   \nOh Jesús de dulcísima memoria \n@@                   D         E\nque nos das la alegría verdadera\n@@          F#m        C#m       D   Dm         \nMás que miel y que toda otra cosa\n@@       A        Bm   E\nnos infunde dulzura Tu presencia.\n\n@@        A         D      E    A\nNo habrá canto más suave al oído, \n@@               D             E\nni que grato resulte al escucharlo\n@@       F#m   C#m           D    Dm\nNi tan dulce para ser recordado, \n@@       A        Bm    E     A\ncomo Tú, oh Jesús, el Hijo amado.\n\n\n@@      F#m       B7         E          \nEn Jesús se confía el que sufre \n@@        F#m        B7              E\n¡Qué piadoso te muestras al que ruega!\n@@         F#m          C#m               D  Dm         \nQué bondad en Ti encuentra el que te busca, \n@@        A      Bm     E        A\nqué dichoso será el que te encuentra.\n\n\n@@        A         D      E        A\nNo habrá canto que pueda expresarlo \n@@                 D            E\nni palabras que puedan traducirlo\n@@          F#m          C#m           D   Dm\nPues tan sólo el que lo ha experimentado\n@@       A        Bm        E    A\nes capaz de saber lo que es amarlo.",
     "tags": [
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2078,7 +2106,9 @@ const SONGS_DATA = [
     "ytId": "",
     "content": "@@C#m           G#m      C#m\nSeñor ten piedad de nosotros\n@@C#m           G#m       C#m\nSeñor ten piedad de nosotros\n\n@@  E            B        C#m\nCristo ten piedad de nosotros \n@@  E            B        C#m\nCristo ten piedad de nosotros\n\n@@C#m           G#m      C#m\nSeñor ten piedad de nosotros\n@@C#m           G#m       C#m\nSeñor ten piedad de nosotros\n",
     "tags": [
-      "PENITENCIAL"
+      "PENITENCIAL",
+      "MISA",
+      "LITÚRGICA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2305,7 +2335,9 @@ const SONGS_DATA = [
     "tags": [
       "MARÍA",
       "ACCIÓN DE GRACIAS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA",
+      "SALIDA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2390,7 +2422,9 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "COMUNIÓN",
-      "JESÚS"
+      "JESÚS",
+      "MISA",
+      "ACCIÓN DE GRACIAS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2689,7 +2723,8 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "VOCACIONAL",
       "PASCUA",
-      "JESÚS"
+      "JESÚS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2759,7 +2794,8 @@ const SONGS_DATA = [
       "ACCIÓN DE GRACIAS",
       "SALIDA",
       "COMUNIÓN",
-      "COMUNIDAD"
+      "COMUNIDAD",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2892,7 +2928,8 @@ const SONGS_DATA = [
       "ESPÍRITU SANTO",
       "COMUNIÓN",
       "ANIMACIÓN",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -2982,7 +3019,8 @@ const SONGS_DATA = [
       "MISIÓN",
       "COMUNIDAD",
       "VOCACIONAL",
-      "JESÚS"
+      "JESÚS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3004,7 +3042,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "SALMO",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3027,7 +3066,8 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "SALMO",
       "ANIMACIÓN",
-      "ALABANZA"
+      "ALABANZA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3049,7 +3089,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "SALMO",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3072,7 +3113,8 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "SALMO",
       "DIOS PADRE",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3094,7 +3136,8 @@ const SONGS_DATA = [
     "tags": [
       "ALABANZA",
       "ANIMACIÓN",
-      "SALMO"
+      "SALMO",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3114,7 +3157,8 @@ const SONGS_DATA = [
     "ytId": "HFUuF9I0NV0",
     "content": "@@ Em                Bm\nSalve, Reina de los Cielos\n@@C               G\ny Señora de los ángeles;\n@@Am     B7        Em  A\nsalve raíz, salve puerta,\n@@ C                     Dsus D\nque dio paso a nuestra luz.\n\n@@  Em               Bm\nAlégrate, Virgen gloriosa,\n@@ C                  G\nentre todas la más bella;\n@@Am         B7       Em  A \nsalve, agraciada doncella,\n@@  C                   D\nruega a Cristo por nosotros. \n@@C   G  Am  D   G\nAmén, aaaaamén.",
     "tags": [
-      "MARÍA"
+      "MARÍA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3156,7 +3200,9 @@ const SONGS_DATA = [
     "ytId": "16RhCJfY96w",
     "content": "@@Am     A7     Dm \nSanto, Santo, Santo,\n@@ G             C\nSanto es el Señor\n@@Dm          Am\nDios del universo,\n@@E7            Am\nSanto es el Señor\n\n@@   A7          Dm \nHosanna en el cielo,\n@@   G              C\nHosanna en las alturas\n@@    Dm          Am\nBendito el que viene\n@@    E7            Am\nen nombre del Señor\n\n@@   A7          Dm \nHosanna en el cielo,\n@@   G              C\nHosanna en las alturas\n@@    Dm          Am\nBendito el que viene\n@@    E7            Am\nen nombre del Señor",
     "tags": [
-      "SANTO"
+      "SANTO",
+      "LITÚRGICA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -3176,7 +3222,9 @@ const SONGS_DATA = [
     "ytId": "BxjM71rYXWI",
     "content": "@@ A     E  \nSanto, santo, \n@@F#m           C#m \nSanto es el Señor, \n@@D            E\nDios del universo.\n@@A              E  \nLlenos están \n@@   F#m      C#m  \nel cielo y la tierra \n@@D       E\nde Su gloria.\n\n\n@@A         E       \nHosanna en el cielo, \n@@F#m         C#m\nHosanna en las alturas\n@@D          A                       \nBendito es el que viene \n@@     E\nen nombre del Señor.\n@@A         E       \nHosanna en el cielo, \n@@F#m         C#m\nHosanna en las alturas\n@@D          A                       \nBendito es el que viene \n@@     E             D A\nen nombre del Señor.",
     "tags": [
-      "SANTO"
+      "SANTO",
+      "LITÚRGICA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4012,7 +4060,8 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "OFRENDA",
       "ACCIÓN DE GRACIAS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4055,7 +4104,8 @@ const SONGS_DATA = [
     "content": "@@                  G\nDame Tu transparencia,\n@@               Bm               C   B7\n¡oh! fuente del ser, fuente de la vida.\n@@                 Em\nDame tu transparencia,\n@@          Am                    D\nel deseo claro, tu estable armonía.\n\n@@     B7            Em                  Bm\n/No dejes que preocupen mi alma en exceso,\n@@                C                    D\nlas nubes que tienen que cruzar mi cielo.\n@@            Em\nDame ojos limpios,\n@@     C            D            G      D\ncorazón más creyente y más bueno./ x2\n\n\nDame tu transparencia,\n¡oh! fuente de todo, fuente de hermosura.\nDame tu transparencia,\ncreativas mis manos, mansas y seguras.\nLava mi corazón del mal que lo enturbia,\nmi amor sea un arroyo de aguas profundas;\ndame alma de niño,\ntransparente a la mirada tuya.\n\n\nDame tu transparencia,\n¡oh! fuente de amor, fuente de la gracia.\nDame tu transparencia,\nrecta la intención y fiel la palabra.\nDevuelve la inocencia que robó el pecado,\nla estable certeza de saberme amado,\ndame tu presencia,\nagua viva que limpia mi barro.",
     "tags": [
       "ADORACIÓN",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4120,7 +4170,8 @@ const SONGS_DATA = [
       "ANIMACIÓN",
       "VOCACIONAL",
       "MISIÓN",
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4143,7 +4194,8 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
       "VOCACIONAL",
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4212,7 +4264,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
-      "JESÚS"
+      "JESÚS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4258,7 +4311,8 @@ const SONGS_DATA = [
       "COMUNIÓN",
       "VOCACIONAL",
       "SALIDA",
-      "ANIMACIÓN"
+      "ANIMACIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4304,7 +4358,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "MISIÓN",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4391,7 +4446,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "JESÚS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4478,7 +4534,8 @@ const SONGS_DATA = [
       "COMUNIÓN",
       "ADORACIÓN",
       "VOCACIONAL",
-      "JESÚS"
+      "JESÚS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4567,7 +4624,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "COMUNIÓN",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4634,7 +4692,8 @@ const SONGS_DATA = [
       "ENTRADA",
       "ANIMACIÓN",
       "COMUNIDAD",
-      "SALIDA"
+      "SALIDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4656,7 +4715,8 @@ const SONGS_DATA = [
     "tags": [
       "COMUNIÓN",
       "JESÚS",
-      "ACCIÓN DE GRACIAS"
+      "ACCIÓN DE GRACIAS",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4699,7 +4759,8 @@ const SONGS_DATA = [
     "ytId": "AXv1c3sQIpo",
     "content": "@@                  Am                   \nHoy te quiero contar \n@@         G\nJesús amigo\n@@         F           G\nQue contigo estoy feliz\n@@                Am                          \nSi tengo tu amistad \n@@         G\nlo tengo todo\n@@         F             G\nPues estás dentro de mí.\n\n@@                    C\nDespués de comulgar \n@@           G\nme haces como Tú,\n@@    F            G\nMe llenas de Tu paz.\n@@              C\nEn cada pedacito \n@@          G\nde este pan\n@@              F          G\nCompleto estás y así te das.\n\n@@              Am\nEstás ahí por mí \n@@           G\nporque conoces\n@@        F            G\nQue sin Ti pequeño soy.\n@@                 C\nDe ahora en adelante \n@@       G         F\nnada nos separará\n@@         G\nYa lo verás.\n\n\n@@                    C\nTe escondes en el pan\n@@       F                G\nY aunque no te puedo ver\n@@    E7             Am\nTe puedo  acompañar\n@@         F       G \nEs mi lugar preferido  \n\n@@                   C\nHoy quiero comulgar, \n@@   F            G\nAbrirte mi corazón\n@@ E7           Am\nAsí de par en par \n@@         F       G\nEres mi mejor amigo\n\n\n@@                Am\nDos mil años atrás \n@@        G\na tus amigos\n@@    F         G\nInvitaste a cenar,\n@@                Am\nY ahí les prometiste\n@@         G\nque con ellos\n@@     F                G\nPor siempre ibas a estar\n\n@@               C\nY ahora cada vez \n@@             G\nque el sacerdote\n@@         F          G\nEleva el pan en el altar\n@@                 C \nMe pongo de rodillas \n@@        G\nporque se\n@@             F           G\nQue en esa hostia Tú estás.\n\n\n@@                    C\nTe escondes en el pan\n@@       F                G\nY aunque no te puedo ver\n@@    E7             Am\nTe puedo  acompañar\n@@         F       G \nEs mi lugar preferido  \n\n@@                   C\nHoy quiero comulgar, \n@@   F            G\nAbrirte mi corazón\n@@ E7           Am\nAsí de par en par \n@@         F       G\nEres mi mejor amigo\n\n@@                 C\nMe vuelves a salvar \n@@    F                  G\ncomo lo hiciste en la Cruz, \n@@    E7        Am\nen cada Misa Tú, \n@@         F     G\nrevives Tu sacrificio. ",
     "tags": [
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4719,7 +4780,8 @@ const SONGS_DATA = [
     "ytId": "YnC48XGMAWs",
     "content": "@@D               Bm   \nQueremos ofrecerte \n@@G                 A\ncon nuestra oración,\n@@D                Bm  \njunto al pan y al vino \n@@G             A\nnuestro corazón.\n\n@@       D            Bm\nTe ofrecemos la alegría \n@@      G           A\nde vivir en Tu presencia,\n@@      D            Bm\nla dicha de congregarnos \n@@       G               A\nnuevamente hoy a Tu mesa.\n\n\n@@D                 Bm    \nTe ofrecemos Señor, \n@@G     A           D\ntodo, todo lo que somos. (x2)\n\n\n@@ D             Bm\nNuestro pan y vino \n@@G           A\nse convertirán,\n@@D               Bm\nen tu Cuerpo y Sangre \n@@ G            A\nque nos salvará.\n\n@@       D            Bm\nAl comer hoy de tu Cuerpo, \n@@       G            A\nbeber Tu preciosa Sangre,\n@@       D             Bm\nCrecerá en nuestras vidas \n@@       G         A\nla Gracia Santificante.\n\n\n@@D                 Bm    \nTe ofrecemos Señor, \n@@G     A           D\ntodo, todo lo que somos. (x2)\n",
     "tags": [
-      "OFRENDA"
+      "OFRENDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4739,7 +4801,9 @@ const SONGS_DATA = [
     "ytId": "iQX49UQFSLQ",
     "content": "@@Dm                 Gm      \nGloria a Dios en el cielo, \n@@  C            F  \ny en la tierra paz\n@@Dm          Gm     \na todos los hombres \n@@      A7       Dm \nque ama el Señor.\n@@ D7             Gm    C     F        \nPor tu inmensa gloria te alabamos, \n@@Dm       Gm     A7        Dm A7\nte bendecimos, te adoramos,\n@@         Dm                  \nTe glorificamos, \n@@           Gm         C                              \nte damos gracias, Señor \n@@ C              F\nDios, Rey celestial,\n@@     Dm              Gm       A7    \nDios Padre todopoderoso Señor, \n@@    Dm     \nHijo único, \n@@Gm C F A7 D G D\nJesucristo.\n\n\n@@        D       G        D      \nSeñor Dios, Cordero de Dios, \n@@ A       D\nHijo del Padre;\n@@D                  G          D       \nTú que quitas el pecado del mundo,\n@@G       D   A     D\nten piedad de nosotros;\n@@         D         G          D       \nTú que quitas el pecado del mundo,\n@@  G              A\natiende nuestra súplica;\n@@          D      G     \nTú que estás sentado \n@@       D          A\na la derecha del Padre,\n@@ G      D   A7        Dm\nten piedad de nosotros;\n\n\n@@             Gm  C    F \nPorque sólo Tú eres Santo,\n@@Dm         Gm   A7      Dm    \nsólo Tú Señor, sólo Tú Altísimo, \n@@Gm C F A7 Dm\nJesucristo,\n@@D7       Gm     C  F  \ncon el Espíritu Santo \n@@Dm                  Gm                   \nen la gloria de Dios Padre. \n@@A7  Dm\nAmén \n@@Gm C F A7 D\nAmén.\n",
     "tags": [
-      "GLORIA"
+      "GLORIA",
+      "MISA",
+      "LITÚRGICA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4763,7 +4827,8 @@ const SONGS_DATA = [
       "VOCACIONAL",
       "COMUNIDAD",
       "MISIÓN",
-      "SALIDA"
+      "SALIDA",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4784,7 +4849,8 @@ const SONGS_DATA = [
     "content": "@@           Am\nSobre tu altar,\n@@                  Am/G\nlo más preciado, Señor\n@@           C\nSobre Tu altar, \n@@                  Csus4\nmi pan y vino de amor\n@@           Dm \nSobre Tu altar, \n@@   F      E7\nmi vida entera\n\n@@     Am\nMi pasado te lo doy\n@@       C\nMi presente con todo mi amor\n@@     Dm\nMi futuro \n@@    F            E7\nlo pongo en tus manos\n\n@@           Am\nSobre Tu altar te dejo mi corazón\n@@            C\nSobre Tu altar te dejo mi voluntad\n@@           Dm \nSobre Tu altar \n@@    F      E7\nmi vida entera\n\n\n@@       C\nConfiaré, no temeré\n@@       G\nConfiaré, me entregaré\n@@       Dm   F     E7\nConfiaré en Tí, Señor\n\n@@          C\nConsagraré mi corazón\n@@       Gm      F       E7\nA Tu amor, mi Dios, mi rey.",
     "tags": [
       "OFRENDA",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4828,7 +4894,8 @@ const SONGS_DATA = [
     "ytId": "f8-RC7LmMnA",
     "content": "@@      C\nTú conoces \n@@     F              C\nla dureza en mi sentir\n@@     F        \ny la terquedad \n@@         G          C C7\nque hay en mi corazón.\n@@        F               G \nSon las cosas que me alejaron \n@@    C    Am\nde Ti, Señor,\n@@ F           G          C\nházme renacer en Tu amor.\n\n\n@@            F      G\nDéjame nacer de nuevo,\n@@            C G/B  Am\nDéjame nacer de nuevo\n@@            F      G           C\nDéjame nacer de nuevo, oh Señor\n@@                 F       G\nNo importa la edad que tenga\n@@            C  G/B Am\nTú no lo tienes en cuenta\n@@            F      G           C\nDéjame nacer de nuevo oh Señor.\n\n\n@@      C\nTú conoces \n@@      F                C\nel pecado que hay en mí\n@@        F        G             C\ny el dolor que dejó en mi corazón.\n@@        F                G\nPor la muerte que he causado \n@@         C     Am\nvuelvo a Ti, Señor,\n@@  F          G              C\nDame vida nueva con Tu amor\n\n\n@@            F      G\nDéjame nacer de nuevo,\n@@            C G/B  Am\nDéjame nacer de nuevo\n@@            F      G           C\nDéjame nacer de nuevo, oh Señor\n@@                 F       G\nNo importa la edad que tenga\n@@            C  G/B Am\nTú no lo tienes en cuenta\n@@            F      G           C\nDéjame nacer de nuevo oh Señor.",
     "tags": [
-      "PENITENCIAL"
+      "PENITENCIAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4850,7 +4917,8 @@ const SONGS_DATA = [
     "tags": [
       "ENTRADA",
       "COMUNIDAD",
-      "ANIMACIÓN"
+      "ANIMACIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -4917,7 +4985,8 @@ const SONGS_DATA = [
       "SALMO",
       "ACCIÓN DE GRACIAS",
       "ADORACIÓN",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -5009,7 +5078,8 @@ const SONGS_DATA = [
       "COMUNIDAD",
       "VOCACIONAL",
       "SALIDA",
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -5031,7 +5101,8 @@ const SONGS_DATA = [
     "tags": [
       "COMUNIÓN",
       "JESÚS",
-      "ANIMACIÓN"
+      "ANIMACIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -5055,7 +5126,8 @@ const SONGS_DATA = [
       "COMUNIÓN",
       "JESÚS",
       "ANIMACIÓN",
-      "MISIÓN"
+      "MISIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -5075,7 +5147,8 @@ const SONGS_DATA = [
     "ytId": "zzI7cV1cDyA",
     "content": "@@ C D  G Em  C      D       G  \nJesucristo, danos de este Pan;\n@@ C   D   G  Em  C        D      G\nque tu Pueblo crezca en la unidad. \n\n\n@@         G                Bm\nSiendo Dios, hombre te hiciste\n@@      C     D       G\npara poderte entregar\n@@                       Bm\nen la cruz, sangriento altar\n@@          C               D\ndonde a los hombres te diste.\n@@      Em         Bm\nAl morir te diste todo, \n@@      C    D         G\nofreciéndote en la cruz,\n@@         A7\ny era el Cielo, Buen Jesús,\n@@          D\nque nos dabas de ese modo.  \n\n\n@@ C D  G Em  C      D       G  \nJesucristo, danos de este Pan;\n@@ C   D   G  Em  C        D      G\nque tu Pueblo crezca en la unidad. \n\n\n@@         G        Bm\nCuando eres celebrado\n@@      C     D     G\nen cada misa te das,\n@@                    Bm\npero ya no mueres más\n@@           C        D\nporque estás resucitado.\n@@Em              Bm\nUna vez todo te diste,\n@@        C            G\ny es cada misa esa vez;\n@@       A7 \nhasta que vuelvas después,\n@@       D\ncomo Tú lo prometiste.  \n\n\n@@ C D  G Em  C      D       G  \nJesucristo, danos de este Pan;\n@@ C   D   G  Em  C        D      G\nque tu Pueblo crezca en la unidad. \n\n\n@@       G               Bm\nTú, Señor, has visto el hambre\n@@       C                  G\nque tenemos de hermandad\n@@       G            Bm\ny nos brindas la unidad\n@@         C               D\ncon tu Cuerpo y con tu Sangre.\n@@       Em            Bm\nY tu Cuerpo nos congrega\n@@     C            G\nen eterna Comunión,\n@@     A7\ny la Sangre del Perdón\n@@         D\nhasta el corazón nos llega.  \n\n\n@@ C D  G Em  C      D       G  \nJesucristo, danos de este Pan;\n@@ C   D   G  Em  C        D      G\nque tu Pueblo crezca en la unidad. \n\n\n@@        G             Bm\nQue podamos con Marí­a,\n@@         C        G\nen tu Espí­ritu, Jesús,\n@@       G           Bm\nser los hijos de la Luz,\n@@          C           D\nmás hermanos cada dí­a.\n@@        Em               Bm\nY estrechando nuestras manos,\n@@     C           G\nobedientes a tu Voz\n@@    A7\nser así­ Pueblo de Dios,\n@@      D\nservidor de los hermanos.\n\n\n@@ C D  G Em  C      D       G  \nJesucristo, danos de este Pan;\n@@ C   D   G  Em  C        D      G\nque tu Pueblo crezca en la unidad. \n",
     "tags": [
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
@@ -5095,7 +5168,8 @@ const SONGS_DATA = [
     "ytId": "42yod5oivkI",
     "content": "@@   Am    Dm      Am\nYo soy la luz del mundo,\n@@Dm       Am      E      Am  G\nno hay tinieblas junto a mí­.\n@@      C     F       C\nTendrán la luz de la vida\n@@ Dm      Am     F      E\npor la palabra que les di.\n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@    Am    Dm     Am\nYo soy el pan de vida\n@@Dm       Am     E      Am G\ny con ustedes me quedé;\n@@       C     F        C\nme entrego como alimento\n@@Dm        Am    F    E\nsoy el misterio de la fe.  \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@    Am    Dm      Am\nYo soy el Buen Pastor\n@@Dm      Am     E    Am G\ny por amor mi vida doy;\n@@      C       F      C\nyo quiero un solo rebaño,\n@@Dm        Am     F    E\nsoy para todos salvador.  \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@Am        Dm       Am\nYo soy la Vid verdadera\n@@Dm        Am      E   Am G\nmi Padre Dios, el Viñador\n@@     C      F          C\nproduzcan fruto abundante\n@@Dm       Am      F        E\npermaneciendo en mi amor. \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.\n\n\n@@Am        Dm      Am\nYo soy Señor y Maestro\n@@  Dm         Am      E     Am G\ny un mandamiento nuevo doy:\n@@        C     F      C\nque se amen unos a otros\n@@Dm        Am    F    E\ncomo los he amado Yo. \n\n\n@@   Am     A7     Dm\nYo soy el camino firme,\n@@          G            C\nyo soy la vida y la verdad.\n@@     F            Dm\nPor mí­ llegarán al Padre\n@@              E         Am\ny al Santo Espí­ritu tendrán.",
     "tags": [
-      "COMUNIÓN"
+      "COMUNIÓN",
+      "MISA"
     ],
     "source": "",
     "srcTag": "base",
