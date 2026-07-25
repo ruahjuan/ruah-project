@@ -1134,3 +1134,23 @@ a{color:inherit;text-decoration:none}
   flex: 1;
   line-height: 1.4;
 }
+
+/* ── Modal "Escuchar" (YouTube embebido) ── */
+.listen-modal{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+  z-index:1000;align-items:center;justify-content:center;padding:16px;
+}
+.listen-modal.open{ display:flex; }
+.listen-modal-box{
+  width:100%;max-width:480px;background:var(--surf2);
+  border:1px solid var(--bord);border-radius:14px;overflow:hidden;
+}
+.listen-modal-header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 14px;font-size:13px;color:var(--muted);
+  border-bottom:1px solid var(--bord);
+}
+.listen-modal-close{ cursor:pointer;color:var(--muted);font-size:16px; }
+.listen-modal-close:hover{ color:var(--f4); }
+.listen-modal-frame{ aspect-ratio:16/9;background:#000; }
+.listen-modal-frame iframe{ width:100%;height:100%;border:0; }
