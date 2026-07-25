@@ -151,12 +151,74 @@ function renderLinks(s) {
     spBtn.style.display = s.spotify ? '' : 'none';
     spBtn.dataset.spUrl = s.spotify || '';
   }
+
+  // Mostrar/ocultar el botón "Escuchar" del toolbar principal
+  const listenBtn = document.getElementById('btn-listen');
+  if (listenBtn) {
+    listenBtn.style.display = s.youtube ? '' : 'none';
+    listenBtn.dataset.ytUrl = s.youtube || '';
+  }
 }
 
 function openYoutube() {
   const btn = document.getElementById('dot-yt-btn');
   if (btn && btn.dataset.ytUrl) window.open(btn.dataset.ytUrl, '_blank');
 }
+
+// ── Modal "Escuchar" — reproduce el mismo s.youtube embebido ──
+
+function extractYoutubeId(url) {
+  if (!url) return null;
+  const m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([a-zA-Z0-9_-]{11})/);
+  return m ? m[1] : null;
+}
+
+function openListenModal() {
+  const btn = document.getElementById('btn-listen');
+  const id = extractYoutubeId(btn?.dataset.ytUrl);
+  if (!id) return;
+
+  let modal = document.getElementById('listen-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'listen-modal';
+    modal.className = 'listen-modal';
+    modal.innerHTML = `
+      <div class="listen-modal-box">
+        <div class="listen-modal-header">
+          <span id="listen-modal-title"></span>
+          <span class="listen-modal-close" onclick="closeListenModal()">✕</span>
+        </div>
+        <div class="listen-modal-frame">
+          <iframe id="listen-modal-iframe" src="" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeListenModal(); });
+  }
+
+  document.getElementById('listen-modal-title').textContent = document.title || 'Escuchar';
+  document.getElementById('listen-modal-iframe').src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+  modal.classList.add('open');
+}
+
+function closeListenModal() {
+  const modal = document.getElementById('listen-modal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  const iframe = document.getElementById('listen-modal-iframe');
+  if (iframe) iframe.src = ''; // corta la reproducción al cerrar
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('listen-modal');
+    if (modal && modal.classList.contains('open')) closeListenModal();
+  }
+});
 
 function openSpotify() {
   const btn = document.getElementById('dot-sp-btn');
