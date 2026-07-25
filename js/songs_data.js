@@ -5176,5 +5176,139 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "hasta-el-cielo-no-paramos",
+    "title": "HASTA EL CIELO NO PARAMOS",
+    "artist": "CIRENEOS MUSIC",
+    "composer": "",
+    "key": "Am",
+    "spotify": "https://open.spotify.com/intl-es/track/5aVgXAlhHyALT5icMWexZo?si=915e3fe43ad04ccc",
+    "spId": "5aVgXAlhHyALT5icMWexZo",
+    "youtube": "https://www.youtube.com/watch?v=jEU8VpfN7T0",
+    "ytId": "jEU8VpfN7T0",
+    "content": "@@Am  G         Fmaj7\nToma lo poco que soy\n@@Am  G            Fmaj7\nDame Tu gracia y perdón\n@@Am  G              Fmaj7\nNo soy digno de Tu amor\n@@Am Fmaj7          G   Gsus4 G\nQuiero seguir Tu misión\n\n\n@@           Am \nDame Tus planes\n@@            Fmaj7\nMarca el sendero\n@@          C\nGuía mis pasos\n@@            G\nY seré Tu obrero\n@@          Am\nQue Tu palabra\n@@                  Fmaj7\nSe cumpla en mis manos\n@@          C\nHoy de rodillas \n@@                 G\nte cantan tus soldados\n@@                            Am Fmaj7\nLos que hasta el Cielo no paramos\n@@                    C   G\nHasta el Cielo no paramos\n\n\n@@   Am   G              Fmaj7\nTú buscas y salvas al perdido\n@@     Am  G               Fmaj7\nNos miras al borde del camino\n@@    Am   G                 Fmaj7\nTus fuerzas aplacan mis tormentas\n@@    Am  G                 Fmaj7\nTus llagas me piden más entrega\n\n@@    Am   G               Fmaj7\nMis manos van firmes al arado\n@@      Am G              Fmaj7\nTe entrego del todo mi pasado\n@@    Am G               Fmaj7\nNo temo navegar en Tu barca\n@@    Am Fmaj7            G Gsus4 G\nHoy tiro mi red en Tu palabra\n\n\n@@           Am \nDame Tus planes\n@@            Fmaj7\nMarca el sendero\n@@          C\nGuía mis pasos\n@@            G\nY seré Tu obrero\n@@          Am\nQue Tu palabra\n@@                  Fmaj7\nSe cumpla en mis manos\n@@          C\nHoy de rodillas \n@@                 G\nte cantan tus soldados\n@@                            Am Fmaj7\nLos que hasta el Cielo no paramos\n@@                    C   G  E7\nHasta el Cielo no paramos\n\n\n@@Am                             F\nHijo: alimenta esa llama encendida\n@@                                C\nNo te la di pa′ que quede escondida\n@@                   G  E7\nQue tú luz sea la mía\n@@Am                             F\nQue no te turben todas tus heridas\n@@                                       C\nNo hay alma más limpia que la arrepentida\n@@                Gsus4 G\n¡Levántate y camina!\n\n\n\n@@           Am \nDame Tus planes\n@@            Fmaj7\nMarca el sendero\n@@          C\nGuía mis pasos\n@@            G\nY seré Tu obrero\n@@          Am\nQue Tu palabra\n@@                  Fmaj7\nSe cumpla en mis manos\n@@          C\nHoy de rodillas \n@@                 G\nte cantan tus soldados\n@@                            Am Fmaj7\nLos que hasta el Cielo no paramos\n@@                    C   G\nHasta el Cielo no paramos\n@@                    Am   F\nHasta el Cielo no paramos\n@@                    C   G\nHasta el Cielo no paramos",
+    "tags": [
+      "ACCIÓN DE GRACIAS",
+      "MISIÓN",
+      "COMUNIDAD",
+      "ADORACIÓN",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "decision",
+    "title": "DECISIÓN",
+    "artist": "FAREMO METÁ",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/2PwhDPxsAeXfM17SJJaMdZ?si=f4429f21be0447c9",
+    "spId": "2PwhDPxsAeXfM17SJJaMdZ",
+    "youtube": "https://www.youtube.com/watch?v=4IfaTyGgrM0",
+    "ytId": "4IfaTyGgrM0",
+    "content": "@@C \nTodo en esta vida\n@@G\nes un decidir\n@@Am              \nSi me voy contigo\n@@Em\no me quedo aquí.\n@@F               \nRomperé los muros\n@@C\nde mi propia casa\n@@Dm                           \nIré mar adentro \n@@               G\ny pescaré por Tí\n\n\n@@F                        C                    \nHoy mi pueblo esta clamando,\n@@E7               Am         \nPide vida, pide amor,\n@@                F               \nGritan mis hermanos\n@@                Dm       G        \nY llega hasta el cielo su voz.\n\n\n@@F                         C\nLa misión que tú me has dado\n@@E7                  Am\nQuiero hacerla realidad,\n@@              F\nLuchar por la vida,\n@@                Dm        G\nLuchar por un mundo de paz.\n\n\n@@F                          C\nMe has hablado en mil canciones\n@@ E7                   Am\nMas no te quise escuchar,\n@@           F\nCerré mis oídos\n@@                 Dm      G\nPorque es muy difícil hablar.\n\n\n@@F                     C\nHace tiempo me pregunto,\n@@E7                     Am\nTu respuesta escucho hoy,\n@@               F\nTu voz habla adentro\n@@            Dm      G\nY por tu camino ya voy.",
+    "tags": [
+      "ANIMACIÓN",
+      "COMUNIDAD",
+      "COMUNIÓN",
+      "MISIÓN",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "llena-de-gracia",
+    "title": "LLENA DE GRACIA",
+    "artist": "VERÓNICA SANFILIPPO",
+    "composer": "VERÓNICA SANFILIPPO",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/6jjVbG30R9IQimu2hJSjPJ?si=ad8d1f5ba3084c9a",
+    "spId": "6jjVbG30R9IQimu2hJSjPJ",
+    "youtube": "https://www.youtube.com/watch?v=-0vS7pTGecg",
+    "ytId": "-0vS7pTGecg",
+    "content": "@@      C                         Am\nNo existe un corazón que ame más\n@@       C                       Am                                \nque aquel que dijo sí hasta el final,\n@@        F               C               \nno descansó, nunca dudó, \n@@       Dm                   G                 \nlo hizo todo con fe y con amor.\n\n@@ C                     Am                       \nDesde el principio recibió\n@@              F             G                             \nla gracia que viene solo de Dios.\n\n@@ C                        Am                         \nCon su pequeñez y su humildad  \n@@                   F           G                               \nnos muestra el camino a la santidad. \n\n@@           F             Am                        \nMadre de Dios, llena de gracia, \n@@          Dm                G\nReina de paz, Consuelo del alma... \n\n\n@@        F                C                     \nMaría cuídame, con tu manto cúbreme, \n@@Dm                               G                             \nsé mi puente al cielo, llévame a Dios.\n@@            F                  C                              \nY así como Tú quiero llenarme de Su gracia \n@@                     Dm\nque se refleje en mi alma \n@@               Gsus4 G       \nla alegría de su amor, \n@@         F Am\nDe su amor, \n@@         Dm G\nde su amor.\n\n\n@@    C                   Am                     \nMaría cuídame, con tu manto cúbreme\n@@               F                    G                               \nTrasforma mi corazón, sé mi compañía.  \n\n\n@@           F             Am                        \nMadre de Dios, llena de gracia, \n@@          Dm                G\nReina de paz, Consuelo del alma... \n\n\n@@        F                C                     \nMaría cuídame, con tu manto cúbreme, \n@@Dm                               G                             \nsé mi puente al cielo, llévame a Dios.\n@@            F                  C                              \nY así como Tú quiero llenarme de Su gracia \n@@                     Dm\nque se refleje en mi alma \n@@               Gsus4 G       \nla alegría de su amor, \n@@         F Am\nDe su amor, \n@@         Dm G\nde su amor.\n",
+    "tags": [
+      "MARÍA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "mi-lampara-encendida",
+    "title": "MI LÁMPARA ENCENDIDA",
+    "artist": "DANIEL POLI",
+    "composer": "DANIEL POLI",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/4KEZDU86bsMmKqaC6dh9Kj?si=448f2eee124d4099",
+    "spId": "4KEZDU86bsMmKqaC6dh9Kj",
+    "youtube": "https://www.youtube.com/watch?v=0av7JoOIdmc&list=OLAK5uy_l6dHFbOwZN90wt2qpXoF5GhvLfxyf_tAI&index=10",
+    "ytId": "0av7JoOIdmc",
+    "content": "@@    D       A\nSeñor, aquí tienes \n@@   Bm             G\nmi lámpara encendida\n@@   D          F#m                              \nEnséñame a llevar tu luz \n@@G            A\npor toda mi vida\n@@   G               A            \nPara que cuando vengas \n@@   D              Bm              \na mi puerta a golpear\n@@    G         A             D                   \nyo pueda tu rostro contemplar.",
+    "tags": [
+      "ACCIÓN DE GRACIAS",
+      "COMUNIDAD",
+      "MISIÓN",
+      "ENTREGA",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "lo-que-agrada-a-dios",
+    "title": "LO QUE AGRADA A DIOS",
+    "artist": "LUIS ALFREDO DÍAZ",
+    "composer": "LUIS ALFREDO DÍAZ",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/3MlCYZk8IY5kvTWDVirbPT?si=28e0dd7264fe44d7",
+    "spId": "3MlCYZk8IY5kvTWDVirbPT",
+    "youtube": "https://www.youtube.com/watch?v=ZXmoN8fdKxI&list=OLAK5uy_m6oRR5w18J4loDcEAJj8J3l6-_TUpU2_8",
+    "ytId": "ZXmoN8fdKxI",
+    "content": "@@             G  \nLo agrada a Dios \n@@Am7             G\nde mi pequeña alma \n@@               Am7       \nes que ame mi pequeñez \n@@D        G  \ny mi pobreza. \n\n@@             G  \nLo agrada a Dios \n@@Am7             G \nde mi pequeña alma \n@@               Am7  \nes que ame mi pequeñez \n@@D       G    G7\ny mi pobreza. \n\n@@          C   D \nEs la esperanza \n@@Bm  Em \nciega \n@@     Am7 D \nque tengo \n@@             G     G7  \nen su misericordia. \n\n@@          C   D \nEs la esperanza \n@@Bm  Em   \nciega \n@@     Am7 D \nque tengo \n@@             G  \nen su misericordia. ",
+    "tags": [
+      "ACCIÓN DE GRACIAS",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "hasta-dar-la-vida",
+    "title": "HASTA DAR LA VIDA",
+    "artist": "PASCUA JOVEN SAN ISIDRO",
+    "composer": "P. EDUARDO MEANA",
+    "key": "F#m",
+    "spotify": "https://open.spotify.com/intl-es/track/1Pcb7tXYwd1qfF0DNZr9g6?si=edd886280df54ac6",
+    "spId": "1Pcb7tXYwd1qfF0DNZr9g6",
+    "youtube": "https://www.youtube.com/watch?v=AqbEILQ5yeI",
+    "ytId": "AqbEILQ5yeI",
+    "content": "@@F#m            D       E   F#m\nHablame ya, amigo, al corazón. \n@@F#m                  D                \nDescansa en Vos mi frente, \n@@    E      F#m\nmi vida en Vos. \n@@F#m               D  \nPorque me rescataste \n@@            E   F#m\ndel fatal secuestro, \n@@F#m            D                  \nporque me liberaste \n@@               E  F#m\nde mi eterna tumba. \n\n\n@@ F#m                 D       E   F#m\n/Porque me amaste hasta dar la vida/ x2\n\n\n@@F#m              D      E     F#m\nTan asombrado miro, todo acabó.\n@@F#m               D    \nManso te has dormido, \n@@     E      F#m\nhermano y Dios. \n@@F#m               D     \nMuriendo descuajaste \n@@                   E  F#m\nmi árbol más sombrío, \n@@F#m                D \nmuriendo conquistaste \n@@                 E  F#m\nel centro de mí mismo. \n\n\n@@ F#m                 D       E   F#m\n/Porque me amaste hasta dar la vida/ x2\n\n\n@@F#m            D      E      F#m\nPartir en una mesa y no guardar,\n@@F#m              D       \nsoltar y echar a vuelo, \n@@    E     F#m\nya no aferrar. \n@@F#m            D                \nYo recibí al nacer \n@@               E F#m\nmi moneda dorada,\n@@F#m          D   \nno la atesoraré, \n@@                  E  F#m\nquiero verla entregada. \n\n\n@@ F#m                 D       E   F#m\n/Porque me amaste hasta dar la vida/ x2\n\n\n@@F#m                D      E     F#m\nCruzaré este mar (hasta dar la vida), \n@@F#m            D     E     F#m\nme levantaré (hasta dar la vida),\n@@F#m             D      E    F#m \ny saldré de mí (hasta dar la vida).\n",
+    "tags": [
+      "COMUNIÓN",
+      "PASCUA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
