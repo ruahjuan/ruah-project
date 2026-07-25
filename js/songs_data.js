@@ -5310,5 +5310,51 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "mar-adentro",
+    "title": "MAR ADENTRO",
+    "artist": "PASCUA JOVEN SAN ISIDRO",
+    "composer": "",
+    "key": "E",
+    "spotify": "https://open.spotify.com/intl-es/track/3gEhNUDBxvoeLPv4HgQENV?si=0fd60da09ad64efc",
+    "spId": "3gEhNUDBxvoeLPv4HgQENV",
+    "youtube": "https://www.youtube.com/watch?v=L34mOLqoZqw",
+    "ytId": "L34mOLqoZqw",
+    "content": "@@E        A \nEs hora de partir \n@@       E                     B\nmar adentro y no voy a esperar. \n@@E         A \nEl vendrá para ir \n@@       E          B          E \nmar adentro y lo voy a esperar. \n\n@@E          A \nEl ya está junto a mí \n@@      E                  B \ny sus ojos derraman ternura. \n@@E       A \nEl espera mi si \n@@     E            B          E \ny yo no quiero hacerlo esperar. \n\n\n@@           E       A \nQuiero sentir tu amor \n@@         E    B \ny volver a nacer, \n@@          C#m   A \nquiero decirte ven \n@@             E  B \nmi barca es tuya. \n@@          E         A \nEs tan inmenso el mar \n@@         E        B\npero yo voy con Vos, \n@@         C#m   A \nno temo navegar \n@@           E  B\nsi está mi Dios. \n\n\n@@   E        A\nQuiero ser como Vos\n@@       E                  B \ny ser pan que se deja comer.\n@@    E       A \nQuiero que los demás\n@@         E        B      E \nvean en mí tu sonrisa Señor. \n\n@@    E       A\nQuiero ser manantial \n@@        E                      B\nque da vida donde quiera que vaya, \n@@   E      A\nquiero llevar tu luz \n@@        E             B         E\na este mundo que no habla de Dios.\n\n\n@@           E       A \nQuiero sentir tu amor \n@@         E    B \ny volver a nacer, \n@@          C#m   A \nquiero decirte ven \n@@             E  B \nmi barca es tuya. \n@@          E         A \nEs tan inmenso el mar \n@@         E        B\npero yo voy con Vos, \n@@         C#m   A \nno temo navegar \n@@           E  B\nsi está mi Dios. \n",
+    "tags": [
+      "SALIDA",
+      "ANIMACIÓN",
+      "COMUNIDAD",
+      "MISIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "en-ti-perfecto",
+    "title": "EN TI PERFECTO",
+    "artist": "TRIGO 13",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/4VLVg99o0Atqw7HpZwTlHC?si=95fcbd663fc541a4",
+    "spId": "4VLVg99o0Atqw7HpZwTlHC",
+    "youtube": "https://www.youtube.com/watch?v=TsWwrXl1KcM",
+    "ytId": "TsWwrXl1KcM",
+    "content": "@@   C                  D\nCuántas veces le he preguntado \n@@     G            Em\nla razón de mi existir\n@@  C             D\nCuántas veces he dudado \n@@         G          Em \nde por qué me hizo así\n@@         C          D\nTan desnudo, tan herido\n@@      G      D    C\nIncapaz de dar amor\n@@       Am         D\nHoy te pido de rodillas, \n@@       C      D\n¿por qué, Señor?\n\n\n@@     Em     C           G            D \nPues yo te hice así, perfecto de verdad\n@@    Em       C           G            D \nPensé cada uno de tus gestos para amar\n@@        Em            C            \nPues en ti están mis huellas\n@@          G             D \npara que otros puedan ver\n@@      C                     \nA través de alguien precioso \n@@      D           C\nmaravillas que creé\n\n\n@@     Em     C           G            D \nPues yo te hice así, perfecto de verdad\n@@    Em       C           G            D \nPensé cada uno de tus gestos para amar\n@@        Em            C            \nPues en ti están mis huellas\n@@          G             D \npara que otros puedan ver\n@@      C                     \nA través de alguien precioso \n@@      D           C\nmaravillas que creé\n\n\n@@     Em     C           G            D \nPues yo te hice así, perfecto de verdad\n@@    Em       C           G            D \nPensé cada uno de tus gestos para amar\n@@        Em            C            \nPues en ti están mis huellas\n@@          G             D \npara que otros puedan ver\n@@      C                     \nA través de alguien precioso \n@@      D           C\nmaravillas que creé\n\n@@        D         C\nQue tú eres mi reflejo\n@@ D                  C  G\nAquí tienes tu porqué",
+    "tags": [
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS",
+      "DIOS PADRE",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
