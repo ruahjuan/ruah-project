@@ -5356,5 +5356,29 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "sediento",
+    "title": "SEDIENTO",
+    "artist": "SERTRES",
+    "composer": "",
+    "key": "E",
+    "spotify": "https://open.spotify.com/intl-es/track/3MhFsrxkuYFXEKWRkIuYcc?si=0abcb45166fb421d",
+    "spId": "3MhFsrxkuYFXEKWRkIuYcc",
+    "youtube": "https://www.youtube.com/watch?v=r9V3JjvUDIE",
+    "ytId": "r9V3JjvUDIE",
+    "content": "@@ E \nAsí como el sediento busca \n@@F#m  \nla vertiente de agua fresca\n@@        A          B            E\nAsí mi corazón te busca a ti Señor\n@@E                    \nY como un hijo busca \n@@F#m\nel abrazo de su Padre\n@@       A          B              E\nAsí estoy, yo buscándote a ti Señor\n\n\n@@      E        F#m \nY te busco, y te llamo \n@@      A     B              E\nte deseo, ¿donde estás Señor?\n\n\n@@E\nY Tú te haces presente, \n@@F#m\nen el silencio te haces fuerte\n@@          A      B              E\nNo estoy sólo, ahora contigo estoy\n@@E\nMe inundas de tu vida, \n@@F#m\nen mi eres fuente de agua viva\n@@      A          B             E\nTu torrente desborda mi corazón.\n\n\n@@      E         F#m \nY te busco, y te llamo \n@@      A     B              E\nte deseo, ¿donde estás Señor?\n@@E\nSi me buscas (en tu hermano voy)\n@@      F#m\nSi me llamas (Palabra viva soy)\n@@        A   \nMe deseas, \n@@           B                  E\nCuerpo y Sangre derramado me doy.\n\n\n@@E \nAhora puedo verte, \n@@F#m\nen tantos rostros tanta gente\n@@       A         B          E\nTe descubro en cada situación.\n@@E\nTu Palabra me guía, \n@@F#m\ny a la vez me desafía\n@@      A         B           E\nA seguirte con toda mi pasión.\n\n\n@@      E         F#m \nY te busco, y te llamo \n@@      A     B              E\nte deseo, ¿donde estás Señor?\n@@E\nSi me buscas (en tu hermano voy)\n@@      F#m\nSi me llamas (Palabra viva soy)\n@@        A   \nMe deseas, \n@@           B                  E\nCuerpo y Sangre derramado me doy.\n\n\n@@Emaj7      G#m\nNunca imaginé \n@@         F#m           B   \nque vendrías a mi encuentro\n@@Emaj7   G#m           A       B\nquiero vivir siempre buscándote\n\n\n@@      E         F#m \nY te busco, y te llamo \n@@      A     B              E\nte deseo, ¿donde estás Señor?\n@@E\nSi me buscas (en tu hermano voy)\n@@      F#m\nSi me llamas (Palabra viva soy)\n@@        A   \nMe deseas, \n@@           B                  E\nCuerpo y Sangre derramado me doy.\n@@          G#m  A\nTodo me doy, todo me doy\n@@ B        E\ntodo me doy.",
+    "tags": [
+      "COMUNIÓN",
+      "VOCACIONAL",
+      "COMUNIDAD",
+      "ACCIÓN DE GRACIAS",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
