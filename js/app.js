@@ -1705,7 +1705,7 @@ function buildHomeStats() {
 // Últimas N canciones agregadas. No depende de fecha: las nuevas siempre
 // se cargan al final de SONGS_DATA, así que el orden de posición en el
 // array ya es el orden de "agregado" (la más nueva, última).
-function getUltimasAgregadas(n = 4) {
+function getUltimasAgregadas(n = 3) {
   return songs.slice(-n).reverse();
 }
 
@@ -1772,7 +1772,7 @@ function buildHomeLatest() {
   const wrap = document.getElementById('home-latest');
   if (!wrap) return;
 
-  const latest = getUltimasAgregadas(4);
+  const latest = getUltimasAgregadas(3);
   if (!latest.length) return;
 
   const spCache = _loadSpCoverCache();
