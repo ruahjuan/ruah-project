@@ -1709,17 +1709,59 @@ function getUltimasAgregadas(n = 4) {
   return songs.slice(-n).reverse();
 }
 
-// Iniciales del artista/autor para la "portada" de la card (ej: "M. Ruiz Luque" → "MR")
-function _initials(name) {
-  if (!name) return '♪';
-  return name.split(' ').filter(Boolean).slice(0, 2).map(w => w[0].toUpperCase()).join('');
-}
-
-// Color de "portada" según el primer tag de la canción — reusa la misma
-// paleta que las categorías destacadas del home para que no desentone.
+// Color de fondo detrás de la portada (o del ícono, si no hay portada),
+// según el primer tag de la canción — reusa la paleta de las categorías
+// destacadas del home para que no desentone.
 function _coverColor(tags) {
   const t = (tags || [])[0];
   return CAT_COLORS[t] || { bg: 'var(--f2)', fg: 'var(--f4)' };
+}
+
+// Miniatura de YouTube: URL pública y predecible, sin API key. hqdefault
+// es 480x360 (16:9) — se recorta a cuadrado por CSS (object-fit: cover).
+function _youtubeThumb(ytId) {
+  return ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : null;
+}
+
+// Portadas de Spotify resueltas vía su endpoint público de oEmbed (no
+// requiere autenticación). Se cachean en localStorage para no repetir el
+// fetch en cada carga del Home — la portada de un track no cambia.
+const SP_COVER_CACHE_KEY = 'ruah_sp_covers';
+function _loadSpCoverCache() {
+  try { return JSON.parse(localStorage.getItem(SP_COVER_CACHE_KEY) || '{}'); }
+  catch { return {}; }
+}
+function _saveSpCoverCache(cache) {
+  try { localStorage.setItem(SP_COVER_CACHE_KEY, JSON.stringify(cache)); }
+  catch { /* localStorage lleno o deshabilitado: no es crítico, se reintenta la próxima carga */ }
+}
+async function _fetchSpotifyCover(spId) {
+  try {
+    const res = await fetch(`https://open.spotify.com/oembed?url=https://open.spotify.com/track/${spId}`);
+    if (!res.ok) throw new Error('oEmbed no OK');
+    const data = await res.json();
+    return data.thumbnail_url || null;
+  } catch {
+    return null; // se queda con el ícono de categoría como fallback
+  }
+}
+
+// Si la <img> de portada falla al cargar (video/track eliminado, red, etc.)
+// cae al ícono de categoría en vez de quedar rota.
+function handleCoverImgError(imgEl) {
+  const cover = imgEl.closest('.hli-cover');
+  if (!cover) return;
+  cover.innerHTML = _catIconSvg(imgEl.dataset.fallbackTag || '');
+}
+
+function _coverImgTag(url, tags) {
+  const tag = esc((tags || [])[0] || '');
+  return `<img src="${esc(url)}" alt="" loading="lazy" data-fallback-tag="${tag}" onerror="handleCoverImgError(this)">`;
+}
+
+function _coverInnerHTML(s) {
+  const url = s.cover || _youtubeThumb(s.ytId);
+  return url ? _coverImgTag(url, s.tags) : _catIconSvg((s.tags || [])[0]); // sin ytId/cover: ícono mientras se resuelve (o definitivo) Spotify
 }
 
 function buildHomeLatest() {
@@ -1729,14 +1771,22 @@ function buildHomeLatest() {
   const latest = getUltimasAgregadas(4);
   if (!latest.length) return;
 
+  const spCache = _loadSpCoverCache();
+
   wrap.innerHTML = latest.map(s => {
     const c = _coverColor(s.tags);
     const tagsHTML = (s.tags || []).slice(0, 2)
       .map(t => `<span class="hli-tag">${esc(toTitleCase(t))}</span>`)
       .join('');
+
+    // Portada ya resuelta sincrónicamente: manual > YouTube > Spotify cacheado.
+    // Si no hay ninguna todavía, se muestra el ícono mientras se resuelve.
+    const cachedSp = (!s.cover && !s.ytId && s.spId) ? spCache[s.spId] : null;
+    const coverInner = cachedSp ? _coverImgTag(cachedSp, s.tags) : _coverInnerHTML(s);
+
     return `
     <button class="home-latest-item" data-id="${esc(s.id)}">
-      <span class="hli-cover" style="background:${c.bg};color:${c.fg}">${esc(_initials(s.artist))}</span>
+      <span class="hli-cover" style="background:${c.bg};color:${c.fg}">${coverInner}</span>
       <span class="hli-info">
         <span class="hli-title">${esc(s.title)}</span>
         <span class="hli-artist">${esc(s.artist || '—')}</span>
@@ -1745,6 +1795,23 @@ function buildHomeLatest() {
     </button>
   `;
   }).join('');
+
+  // Resolver en segundo plano las portadas de Spotify que no estaban cacheadas
+  // (solo para canciones sin cover manual ni ytId, que ya se resuelven al toque).
+  latest
+    .filter(s => !s.cover && !s.ytId && s.spId && !spCache[s.spId])
+    .forEach(s => {
+      _fetchSpotifyCover(s.spId).then(url => {
+        if (!url) return;
+        const cache = _loadSpCoverCache();
+        cache[s.spId] = url;
+        _saveSpCoverCache(cache);
+
+        const item = wrap.querySelector(`.home-latest-item[data-id="${CSS.escape(s.id)}"]`);
+        const coverEl = item && item.querySelector('.hli-cover');
+        if (coverEl) coverEl.innerHTML = _coverImgTag(url, s.tags);
+      });
+    });
 }
 
 // Delegación de eventos para las filas de "Últimas añadidas" (mismo patrón
