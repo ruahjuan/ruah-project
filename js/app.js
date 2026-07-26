@@ -1688,7 +1688,7 @@ document.addEventListener('click', e => {
 });
 
 // ═══════════════════════════════════════════════════════
-// HOME — Stats, Canción de la semana, Categorías
+// HOME — Stats, Últimas añadidas, Categorías
 // ═══════════════════════════════════════════════════════
 
 function buildHomeStats() {
@@ -1702,29 +1702,59 @@ function buildHomeStats() {
   el('stat-prayers', nPrayers);
 }
 
-function buildSotW() {
-  if (!songs.length) return;
-
-  // Determinar canción de la semana: rotar por número de semana del año
-  const now       = new Date();
-  const startYear = new Date(now.getFullYear(), 0, 1);
-  const weekNum   = Math.floor((now - startYear) / (7 * 24 * 3600 * 1000));
-  const s         = songs[weekNum % songs.length];
-
-  const el = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
-  el('sotw-title',  s.title);
-  el('sotw-artist', s.artist || '—');
-
-  const tagsEl = document.getElementById('sotw-tags');
-  if (tagsEl) {
-    tagsEl.innerHTML = (s.tags || [])
-      .map(t => `<span class="sotw-tag">${esc(t)}</span>`)
-      .join('');
-  }
-
-  const btn = document.getElementById('sotw-btn');
-  if (btn) btn.onclick = () => { showView('songs'); openSong(s.id); };
+// Últimas N canciones agregadas. No depende de fecha: las nuevas siempre
+// se cargan al final de SONGS_DATA, así que el orden de posición en el
+// array ya es el orden de "agregado" (la más nueva, última).
+function getUltimasAgregadas(n = 3) {
+  return songs.slice(-n).reverse();
 }
+
+// Snippet de letra sin acordes ni directivas ChordPro, para preview de card.
+function _snippetFromContent(content) {
+  if (!content) return '';
+  return content
+    .split('\n')
+    .filter(line => !/^\{.*\}$/.test(line.trim())) // saca directivas {title:...}
+    .join(' ')
+    .replace(/\[[^\]]*\]/g, '')                     // saca acordes [C] [Am7]
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 90);
+}
+
+// Iniciales del artista/autor para el avatar de la card (ej: "M. Ruiz Luque" → "MR")
+function _initials(name) {
+  if (!name) return '♪';
+  return name.split(' ').filter(Boolean).slice(0, 2).map(w => w[0].toUpperCase()).join('');
+}
+
+function buildHomeLatest() {
+  const wrap = document.getElementById('home-latest');
+  if (!wrap) return;
+
+  const latest = getUltimasAgregadas(3);
+  if (!latest.length) return;
+
+  wrap.innerHTML = latest.map(s => `
+    <button class="home-latest-card" data-id="${esc(s.id)}">
+      <span class="hlc-avatar">${esc(_initials(s.artist))}</span>
+      <span class="hlc-title">${esc(s.title)}</span>
+      <span class="hlc-snippet">${esc(_snippetFromContent(s.content))}</span>
+      <span class="hlc-author">${esc(s.artist || '—')}</span>
+    </button>
+  `).join('');
+}
+
+// Delegación de eventos para las cards de "Últimas añadidas" (mismo patrón
+// que goCat: nunca onclick inline, porque títulos/artistas pueden traer
+// comillas o tildes que rompen el atributo).
+document.addEventListener('click', e => {
+  const card = e.target.closest('#home-latest .home-latest-card');
+  if (card && card.dataset.id) {
+    showView('songs');
+    openSong(card.dataset.id);
+  }
+});
 
 // Iconos por categoría (Tabler-style, mismo set de trazos que el resto del home)
 const CAT_ICONS = {
@@ -1889,7 +1919,7 @@ function init() {
     showView('home');         // vista de inicio (primero mostrar)
     buildPrayers();           // sección de oraciones (después de mostrar el DOM)
     buildHomeStats();         // stats: canciones, categorías, oraciones
-    buildSotW();              // canción de la semana
+    buildHomeLatest();        // últimas 3 canciones añadidas
     buildHomeCats();          // chips de categorías
 
     if (isAdminUrl) adminAccess(); // pide contraseña y entra directo a Admin
