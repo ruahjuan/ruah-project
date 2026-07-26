@@ -1759,9 +1759,13 @@ function _coverImgTag(url, tags) {
   return `<img src="${esc(url)}" alt="" loading="lazy" data-fallback-tag="${tag}" onerror="handleCoverImgError(this)">`;
 }
 
+// Portada sincrónica de mejor calidad disponible en el momento: manual >
+// YouTube (inmediata, mientras se resuelve Spotify) > ícono. Spotify nunca
+// entra acá porque, salvo que ya esté cacheado, requiere un fetch async
+// (ver buildHomeLatest).
 function _coverInnerHTML(s) {
   const url = s.cover || _youtubeThumb(s.ytId);
-  return url ? _coverImgTag(url, s.tags) : _catIconSvg((s.tags || [])[0]); // sin ytId/cover: ícono mientras se resuelve (o definitivo) Spotify
+  return url ? _coverImgTag(url, s.tags) : _catIconSvg((s.tags || [])[0]);
 }
 
 function buildHomeLatest() {
@@ -1779,9 +1783,9 @@ function buildHomeLatest() {
       .map(t => `<span class="hli-tag">${esc(toTitleCase(t))}</span>`)
       .join('');
 
-    // Portada ya resuelta sincrónicamente: manual > YouTube > Spotify cacheado.
-    // Si no hay ninguna todavía, se muestra el ícono mientras se resuelve.
-    const cachedSp = (!s.cover && !s.ytId && s.spId) ? spCache[s.spId] : null;
+    // Prioridad: Spotify cacheado (mejor calidad, cuadrada) > manual >
+    // YouTube (inmediata mientras se resuelve Spotify) > ícono.
+    const cachedSp = (!s.cover && s.spId) ? spCache[s.spId] : null;
     const coverInner = cachedSp ? _coverImgTag(cachedSp, s.tags) : _coverInnerHTML(s);
 
     return `
@@ -1796,10 +1800,12 @@ function buildHomeLatest() {
   `;
   }).join('');
 
-  // Resolver en segundo plano las portadas de Spotify que no estaban cacheadas
-  // (solo para canciones sin cover manual ni ytId, que ya se resuelven al toque).
+  // Resolver en segundo plano las portadas de Spotify que no estaban
+  // cacheadas — corre para TODAS las que tengan spId (aunque ya se esté
+  // mostrando la de YouTube), porque Spotify es la fuente preferida: al
+  // llegar reemplaza la miniatura de YouTube por la portada de álbum.
   latest
-    .filter(s => !s.cover && !s.ytId && s.spId && !spCache[s.spId])
+    .filter(s => !s.cover && s.spId && !spCache[s.spId])
     .forEach(s => {
       _fetchSpotifyCover(s.spId).then(url => {
         if (!url) return;
