@@ -1705,54 +1705,56 @@ function buildHomeStats() {
 // Últimas N canciones agregadas. No depende de fecha: las nuevas siempre
 // se cargan al final de SONGS_DATA, así que el orden de posición en el
 // array ya es el orden de "agregado" (la más nueva, última).
-function getUltimasAgregadas(n = 3) {
+function getUltimasAgregadas(n = 4) {
   return songs.slice(-n).reverse();
 }
 
-// Snippet de letra sin acordes ni directivas ChordPro, para preview de card.
-function _snippetFromContent(content) {
-  if (!content) return '';
-  return content
-    .split('\n')
-    .filter(line => !/^\{.*\}$/.test(line.trim())) // saca directivas {title:...}
-    .join(' ')
-    .replace(/\[[^\]]*\]/g, '')                     // saca acordes [C] [Am7]
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 90);
-}
-
-// Iniciales del artista/autor para el avatar de la card (ej: "M. Ruiz Luque" → "MR")
+// Iniciales del artista/autor para la "portada" de la card (ej: "M. Ruiz Luque" → "MR")
 function _initials(name) {
   if (!name) return '♪';
   return name.split(' ').filter(Boolean).slice(0, 2).map(w => w[0].toUpperCase()).join('');
+}
+
+// Color de "portada" según el primer tag de la canción — reusa la misma
+// paleta que las categorías destacadas del home para que no desentone.
+function _coverColor(tags) {
+  const t = (tags || [])[0];
+  return CAT_COLORS[t] || { bg: 'var(--f2)', fg: 'var(--f4)' };
 }
 
 function buildHomeLatest() {
   const wrap = document.getElementById('home-latest');
   if (!wrap) return;
 
-  const latest = getUltimasAgregadas(3);
+  const latest = getUltimasAgregadas(4);
   if (!latest.length) return;
 
-  wrap.innerHTML = latest.map(s => `
-    <button class="home-latest-card" data-id="${esc(s.id)}">
-      <span class="hlc-avatar">${esc(_initials(s.artist))}</span>
-      <span class="hlc-title">${esc(s.title)}</span>
-      <span class="hlc-snippet">${esc(_snippetFromContent(s.content))}</span>
-      <span class="hlc-author">${esc(s.artist || '—')}</span>
+  wrap.innerHTML = latest.map(s => {
+    const c = _coverColor(s.tags);
+    const tagsHTML = (s.tags || []).slice(0, 2)
+      .map(t => `<span class="hli-tag">${esc(toTitleCase(t))}</span>`)
+      .join('');
+    return `
+    <button class="home-latest-item" data-id="${esc(s.id)}">
+      <span class="hli-cover" style="background:${c.bg};color:${c.fg}">${esc(_initials(s.artist))}</span>
+      <span class="hli-info">
+        <span class="hli-title">${esc(s.title)}</span>
+        <span class="hli-artist">${esc(s.artist || '—')}</span>
+        ${tagsHTML ? `<span class="hli-tags">${tagsHTML}</span>` : ''}
+      </span>
     </button>
-  `).join('');
+  `;
+  }).join('');
 }
 
-// Delegación de eventos para las cards de "Últimas añadidas" (mismo patrón
+// Delegación de eventos para las filas de "Últimas añadidas" (mismo patrón
 // que goCat: nunca onclick inline, porque títulos/artistas pueden traer
 // comillas o tildes que rompen el atributo).
 document.addEventListener('click', e => {
-  const card = e.target.closest('#home-latest .home-latest-card');
-  if (card && card.dataset.id) {
+  const item = e.target.closest('#home-latest .home-latest-item');
+  if (item && item.dataset.id) {
     showView('songs');
-    openSong(card.dataset.id);
+    openSong(item.dataset.id);
   }
 });
 
