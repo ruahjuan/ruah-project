@@ -47,75 +47,86 @@
   letter-spacing: .05em;
 }
 
-/* ── Canción de la semana ───────────────────────────── */
-.sotw-card {
+/* ── Últimas añadidas ────────────────────────────────── */
+.home-latest-row {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px 2px 4px;
+  scrollbar-width: none;
+}
+
+.home-latest-row::-webkit-scrollbar {
+  display: none;
+}
+
+.home-latest-card {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 2px;
   background: var(--surf2);
   border: 1px solid var(--bord);
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 12px;
+  cursor: pointer;
+  transition: filter .15s, transform .1s, box-shadow .15s;
 }
 
-.sotw-info {
-  flex: 1;
-  min-width: 0;
+.home-latest-card:hover {
+  filter: brightness(0.97);
+  box-shadow: var(--shadow, 0 2px 14px rgba(100,60,10,.09));
+  transform: translateY(-1px);
 }
 
-.sotw-title {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 2px;
+.home-latest-card:active {
+  transform: translateY(0);
 }
 
-.sotw-artist {
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 7px;
-}
-
-.sotw-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.sotw-tag {
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 20px;
-  border: 1px solid var(--bord);
-  color: var(--muted);
-  background: var(--bg);
-  text-transform: uppercase;
-  letter-spacing: .04em;
-}
-
-.sotw-btn {
+.hlc-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--f1);
+  color: var(--f4);
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--gold, #c9a84c);
-  background: transparent;
-  color: var(--gold, #c9a84c);
-  font-size: 12px;
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background .15s, color .15s;
-  flex-shrink: 0;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
-.sotw-btn:hover {
-  background: var(--gold, #c9a84c);
-  color: #1c1510;
+.hlc-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hlc-snippet {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.35;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hlc-author {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
 }
 
 /* ── Explorar por categoría ─────────────────────────── */
