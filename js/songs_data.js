@@ -5380,5 +5380,29 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "cuando-el-reina",
+    "title": "CUANDO EL REINA",
+    "artist": "KÉNOSIS BY RC",
+    "composer": "",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/771owk5BCHgGmws71Qk6Pd?si=1d9d4fc9d1d2466f",
+    "spId": "771owk5BCHgGmws71Qk6Pd",
+    "youtube": "https://www.youtube.com/watch?v=2AT3E0zPffw",
+    "ytId": "2AT3E0zPffw",
+    "content": "@@D                  A\nVen y vende toda tu seguridad\n@@       Bm                  G\nPues más en el Cielo tendrás\n@@D                  A\nVen y vende toda tu seguridad\n@@       Bm                  G\nPues más en el Cielo tendrás\n@@        D                    \nEs imposible para el hombre, \n@@      A\nes posible para Dios\n@@          Bm                             G\nPero que sea como Él quiere y no como yo\n\n\n@@         D                       A\nCuando Él reina en la tierra, ella tiembla\n@@          Bm                    G\nY cuando toca los montes, humean\n\n\n@@      Bm\nCantaré al Señor\n@@     A\nTocaré para mi Dios\n@@         G\nQue no busca méritos\n@@         A          \nQue busca tarea \n@@   D A Bm G\ny don \n\n\n@@       Bm          F#m\nY al mirar en mi memoria\n@@        G\nYo me siento entre tus manos\n@@           A                      Bm\nComo un niño en brazos de su papá \n@@        F#m\nQuiero presumirte\n@@     G\nY decir a mis amigos\n@@             A                  D\nQue aquí estás y nunca vas a irte\n\n\n@@         D                       A\nCuando Él reina en la tierra, ella tiembla\n@@          Bm                    G\nY cuando toca los montes, humean\n\n\n@@      Bm\nCantaré al Señor\n@@     A\nTocaré para mi Dios\n@@         G\nQue no busca méritos\n@@         A          \nQue busca tarea \n@@   D A Bm G\ny don \n\n\n@@       Bm          F#m\nY al mirar en mi memoria\n@@        G\nYo me siento entre tus manos\n@@           A                      Bm\nComo un niño en brazos de su papá \n@@        F#m\nQuiero presumirte\n@@     G\nY decir a mis amigos\n@@             A                  D\nQue aquí estás y nunca vas a irte\n\n\n@@D                  A\nVen y vende toda tu seguridad\n@@       Bm                  G\nPues más en el Cielo tendrás",
+    "tags": [
+      "MISIÓN",
+      "VOCACIONAL",
+      "ADORACIÓN",
+      "ENTREGA",
+      "ACCIÓN DE GRACIAS"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
