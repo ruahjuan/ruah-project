@@ -1688,19 +1688,8 @@ document.addEventListener('click', e => {
 });
 
 // ═══════════════════════════════════════════════════════
-// HOME — Stats, Últimas añadidas, Categorías
+// HOME — Últimas añadidas, Categorías
 // ═══════════════════════════════════════════════════════
-
-function buildHomeStats() {
-  const nSongs    = songs.length;
-  const allTags   = new Set(songs.flatMap(s => s.tags || []));
-  const nPrayers  = (typeof PRAYERS !== 'undefined') ? PRAYERS.length : 5;
-
-  const el = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
-  el('stat-songs',   nSongs);
-  el('stat-tags',    allTags.size);
-  el('stat-prayers', nPrayers);
-}
 
 // Últimas N canciones agregadas. No depende de fecha: las nuevas siempre
 // se cargan al final de SONGS_DATA, así que el orden de posición en el
@@ -1993,7 +1982,6 @@ function init() {
     renderList();             // lista inicial
     showView('home');         // vista de inicio (primero mostrar)
     buildPrayers();           // sección de oraciones (después de mostrar el DOM)
-    buildHomeStats();         // stats: canciones, categorías, oraciones
     buildHomeLatest();        // últimas 3 canciones añadidas
     buildHomeCats();          // chips de categorías
 
