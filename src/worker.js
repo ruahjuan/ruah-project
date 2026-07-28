@@ -13,7 +13,7 @@ const EVANGELIZO_BASE = 'https://feed.evangelizo.org/v2/reader.php';
 // lógica de armado de la respuesta): la Cache API no se entera solita de
 // que el código cambió, así que sin esto la respuesta vieja (ya cacheada
 // por hasta 24hs) seguiría sirviéndose tal cual después de un deploy.
-const CACHE_VERSION = 'v4';
+const CACHE_VERSION = 'v5';
 
 const READING_LABELS = {
   FR:  'Primera lectura',
@@ -49,14 +49,18 @@ function limpiarTexto(raw) {
     if (idx !== -1) t = t.slice(0, idx);
   }
 
-  t = t.replace(/<br\s*\/?>/gi, '\n');       // <br/> → salto de línea real
-  t = t.replace(/<\/?[a-z][^>]*>/gi, '');    // cualquier otra etiqueta, conservando el texto de adentro
+  t = t.replace(/\r\n?/g, '\n');             // normalizar fin de línea (\r\n / \r sueltos → \n)
+  t = t.replace(/<br\s*\/?>/gi, '\n');        // <br/> → salto de línea real
+  t = t.replace(/<\/?[a-z][^>]*>/gi, '');     // cualquier otra etiqueta, conservando el texto de adentro
 
   t = t.replace(/&[a-zA-Z]+;/g, m => HTML_ENTITIES[m] ?? m);
   t = t.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
   t = t.replace(/&#x([0-9a-fA-F]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)));
 
-  return t.replace(/\n{3,}/g, '\n\n').trim();
+  return t
+    .replace(/[ \t]*\n[ \t]*/g, '\n')  // espacios sueltos pegados a un salto de línea
+    .replace(/\n{3,}/g, '\n\n')        // más de 2 saltos seguidos → 1 línea en blanco
+    .trim();
 }
 
 // Argentina no usa horario de verano, así que un offset fijo de -3 alcanza
