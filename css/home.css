@@ -6,13 +6,17 @@
 
 /* ── Últimas añadidas ────────────────────────────────── */
 
-/* Carrusel horizontal: cada .home-latest-page es una "pantalla" de 3
+/* Carrusel vertical: cada .home-latest-page es una "pantalla" de 3
    canciones (mismo layout de fila que antes), y se desliza a la
-   siguiente página con scroll-snap nativo (swipe en mobile). */
+   siguiente página con scroll-snap nativo (swipe vertical en mobile).
+   La altura de .home-latest-list se fija por JS (buildHomeLatest) para
+   que se vean exactamente 3 filas, sin importar si tienen tags o no. */
 .home-latest-list {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   margin-bottom: 10px;
@@ -24,7 +28,7 @@
 
 .home-latest-page {
   flex: 0 0 100%;
-  min-width: 0;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
