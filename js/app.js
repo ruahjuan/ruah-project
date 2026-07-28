@@ -1177,6 +1177,7 @@ function doSearch() {
 // ═══════════════════════════════════════════════════════
 
 function showView(v) {
+  document.body.dataset.view = v;
   document.querySelectorAll('.view').forEach(el => el.classList.remove('on'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('on'));
   document.getElementById('v-' + v).classList.add('on');
@@ -2014,7 +2015,7 @@ function goCat(tag) {
 // mitad y deja el HTML del botón roto. data-tag + addEventListener es inmune
 // a esto sin importar qué caracteres tenga el tag.
 document.addEventListener('click', e => {
-  const btn = e.target.closest('#home-cats-featured .home-cat-card, #home-cat-chips .home-cat-chip');
+  const btn = e.target.closest('#home-cats-featured .home-cat-card, #home-cat-chips .home-cat-chip, .hero-chips .hero-chip');
   if (btn && btn.dataset.tag) goCat(btn.dataset.tag);
 });
 
