@@ -1757,7 +1757,7 @@ function _coverInnerHTML(s) {
   return url ? _coverImgTag(url, s.tags) : _catIconSvg((s.tags || [])[0]);
 }
 
-const HOME_LATEST_TOTAL = 10;
+const HOME_LATEST_TOTAL = 12;
 const HOME_LATEST_PAGE_SIZE = 3;
 
 function _homeLatestItemHTML(s, spCache) {
@@ -2050,7 +2050,7 @@ function init() {
     renderList();             // lista inicial
     showView('home');         // vista de inicio (primero mostrar)
     buildPrayers();           // sección de oraciones (después de mostrar el DOM)
-    buildHomeLatest();        // últimas 10 canciones añadidas, en carrusel de a 3
+    buildHomeLatest();        // últimas 12 canciones añadidas, en carrusel de a 3
     buildHomeCats();          // chips de categorías
 
     if (isAdminUrl) adminAccess(); // pide contraseña y entra directo a Admin
