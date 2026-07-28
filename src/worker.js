@@ -13,7 +13,7 @@ const EVANGELIZO_BASE = 'https://feed.evangelizo.org/v2/reader.php';
 // lógica de armado de la respuesta): la Cache API no se entera solita de
 // que el código cambió, así que sin esto la respuesta vieja (ya cacheada
 // por hasta 24hs) seguiría sirviéndose tal cual después de un deploy.
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 
 const READING_LABELS = {
   FR:  'Primera lectura',
@@ -40,6 +40,7 @@ function limpiarTexto(raw) {
   let t = raw;
 
   const promoMarkers = [
+    /Extra[ií]do de la Biblia/i,
     /Para recibir cada ma[nñ]ana el Evangelio por correo/i,
     /Lee el Evangelio en Evangelizo/i,
   ];
