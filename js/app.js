@@ -1812,6 +1812,17 @@ function buildHomeLatest() {
     ).join('');
   }
 
+  // Fija la altura del carrusel a exactamente 3 filas (medidas en base a
+  // la altura real del primer ítem, ya que puede variar según si trae
+  // tags o no) para que el scroll vertical siempre muestre 3 canciones.
+  requestAnimationFrame(() => {
+    const firstItem = wrap.querySelector('.home-latest-item');
+    if (firstItem) {
+      const itemHeight = firstItem.getBoundingClientRect().height;
+      wrap.style.height = (itemHeight * HOME_LATEST_PAGE_SIZE) + 'px';
+    }
+  });
+
   // Resolver en segundo plano las portadas de Spotify que no estaban
   // cacheadas — corre para TODAS las que tengan spId (aunque ya se esté
   // mostrando la de YouTube), porque Spotify es la fuente preferida: al
@@ -1832,9 +1843,10 @@ function buildHomeLatest() {
     });
 }
 
-// Sincroniza los puntitos con la página visible al deslizar (swipe/scroll).
-// Delegado una sola vez sobre #home-latest; recalcula qué página está
-// centrada usando el ancho del propio contenedor (cada página mide 100%).
+// Sincroniza los puntitos con la página visible al deslizar (swipe/scroll
+// vertical). Delegado una sola vez sobre #home-latest; recalcula qué
+// página está a la vista usando la altura del propio contenedor (cada
+// página mide 100% de esa altura).
 (function () {
   const wrap = document.getElementById('home-latest');
   if (!wrap) return;
@@ -1844,7 +1856,7 @@ function buildHomeLatest() {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(() => {
-      const pageIndex = Math.round(wrap.scrollLeft / wrap.clientWidth);
+      const pageIndex = Math.round(wrap.scrollTop / wrap.clientHeight);
       const dotsWrap = document.getElementById('home-latest-dots');
       if (dotsWrap) {
         dotsWrap.querySelectorAll('.home-latest-dot').forEach((dot, i) => {
@@ -1862,7 +1874,7 @@ document.addEventListener('click', e => {
   if (!dot) return;
   const wrap = document.getElementById('home-latest');
   const page = Number(dot.dataset.page || 0);
-  if (wrap) wrap.scrollTo({ left: page * wrap.clientWidth, behavior: 'smooth' });
+  if (wrap) wrap.scrollTo({ top: page * wrap.clientHeight, behavior: 'smooth' });
 });
 
 // Delegación de eventos para las filas de "Últimas añadidas" (mismo patrón
