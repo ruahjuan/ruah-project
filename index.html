@@ -463,6 +463,29 @@
       <p class="hero-tagline">Cancionero · Música de Dios</p>
       <h1 class="hero-name"><span class="r1">R</span><span class="r2">UAH</span></h1>
       <p class="hero-sub">Soplo de Dios · Espíritu que mueve</p>
+
+      <!-- Atajo de búsqueda: no filtra acá mismo, lleva a Canciones con el
+           buscador real (#si) ya enfocado — evita duplicar la lógica de
+           filtrado del listado en el home. -->
+      <button type="button" class="hero-search" onclick="showView('songs'); document.getElementById('si').focus();">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <span>Buscar canción o artista…</span>
+      </button>
+
+      <!-- Chips de acceso rápido a las categorías más usadas. Reusan
+           goCat(), la misma función que las tarjetas de "Explorar por
+           categoría" — nunca onclick inline con el tag (ver comentario
+           en la delegación de eventos, más abajo en app.js). -->
+      <div class="hero-chips">
+        <button class="hero-chip" data-tag="all">Todas</button>
+        <button class="hero-chip" data-tag="ADORACIÓN">Adoración</button>
+        <button class="hero-chip" data-tag="ACCIÓN DE GRACIAS">Acción de Gracias</button>
+        <button class="hero-chip" data-tag="MISA">Misa</button>
+        <button class="hero-chip" data-tag="VOCACIONAL">Vocacional</button>
+      </div>
+
       <div class="hero-divider"></div>
       <p class="hero-verse">«Cantad al Señor un cántico nuevo,<br>cantad al Señor, toda la tierra.»</p>
       <p class="hero-ref">Salmo 96, 1</p>
