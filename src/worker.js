@@ -9,11 +9,53 @@
 
 const EVANGELIZO_BASE = 'https://feed.evangelizo.org/v2/reader.php';
 
+// Subir este número cada vez que cambie limpiarTexto() (o cualquier otra
+// lógica de armado de la respuesta): la Cache API no se entera solita de
+// que el código cambió, así que sin esto la respuesta vieja (ya cacheada
+// por hasta 24hs) seguiría sirviéndose tal cual después de un deploy.
+const CACHE_VERSION = 'v2';
+
 const READING_LABELS = {
   FR:  'Primera lectura',
   PS:  'Salmo responsorial',
   GSP: 'Evangelio',
 };
+
+const HTML_ENTITIES = {
+  '&quot;': '"', '&amp;': '&', '&lt;': '<', '&gt;': '>',
+  '&nbsp;': ' ', '&apos;': "'", '&#39;': "'",
+  '&aacute;': 'á', '&eacute;': 'é', '&iacute;': 'í', '&oacute;': 'ó', '&uacute;': 'ú',
+  '&Aacute;': 'Á', '&Eacute;': 'É', '&Iacute;': 'Í', '&Oacute;': 'Ó', '&Uacute;': 'Ú',
+  '&ntilde;': 'ñ', '&Ntilde;': 'Ñ', '&iexcl;': '¡', '&iquest;': '¿',
+};
+
+// Evangelizo devuelve texto plano que trae HTML sin decodificar adentro
+// (<font dir="ltr">...</font>, <br />, &quot;) y además le pega, en la
+// misma respuesta, un párrafo promocional al final ("Lee el Evangelio en
+// Evangelizo...", "Para recibir cada mañana el Evangelio por correo...").
+// Esta función deja el texto limpio, listo para mostrar.
+function limpiarTexto(raw) {
+  if (!raw) return '';
+  let t = raw;
+
+  const promoMarkers = [
+    /Para recibir cada ma[nñ]ana el Evangelio por correo/i,
+    /Lee el Evangelio en Evangelizo/i,
+  ];
+  for (const marker of promoMarkers) {
+    const idx = t.search(marker);
+    if (idx !== -1) t = t.slice(0, idx);
+  }
+
+  t = t.replace(/<br\s*\/?>/gi, '\n');       // <br/> → salto de línea real
+  t = t.replace(/<\/?[a-z][^>]*>/gi, '');    // cualquier otra etiqueta, conservando el texto de adentro
+
+  t = t.replace(/&[a-zA-Z]+;/g, m => HTML_ENTITIES[m] ?? m);
+  t = t.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+  t = t.replace(/&#x([0-9a-fA-F]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)));
+
+  return t.replace(/\n{3,}/g, '\n\n').trim();
+}
 
 // Argentina no usa horario de verano, así que un offset fijo de -3 alcanza
 // para no depender de datos de timezone en el runtime del Worker.
@@ -51,11 +93,11 @@ async function obtenerLecturaDelDia(dateStr) {
 
   return {
     date: dateStr,
-    liturgic,
+    liturgic: limpiarTexto(liturgic),
     readings: {
-      FR:  { label: READING_LABELS.FR,  cite: frCite,  text: frText },
-      PS:  { label: READING_LABELS.PS,  cite: psCite,  text: psText },
-      GSP: { label: READING_LABELS.GSP, cite: gspCite, text: gspText },
+      FR:  { label: READING_LABELS.FR,  cite: limpiarTexto(frCite),  text: limpiarTexto(frText) },
+      PS:  { label: READING_LABELS.PS,  cite: limpiarTexto(psCite),  text: limpiarTexto(psText) },
+      GSP: { label: READING_LABELS.GSP, cite: limpiarTexto(gspCite), text: limpiarTexto(gspText) },
     },
   };
 }
@@ -66,7 +108,7 @@ async function handleLecturaDelDia(ctx) {
   // Cache API de Cloudflare: una sola consulta real a Evangelizo por día,
   // sin importar cuánta gente entre a Oraciones ese día.
   const cache = caches.default;
-  const cacheKey = new Request(`https://ruah-cache.local/lectura-del-dia/${dateStr}`);
+  const cacheKey = new Request(`https://ruah-cache.local/lectura-del-dia/${CACHE_VERSION}/${dateStr}`);
 
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
