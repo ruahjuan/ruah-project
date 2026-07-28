@@ -1757,27 +1757,21 @@ function _coverInnerHTML(s) {
   return url ? _coverImgTag(url, s.tags) : _catIconSvg((s.tags || [])[0]);
 }
 
-function buildHomeLatest() {
-  const wrap = document.getElementById('home-latest');
-  if (!wrap) return;
+const HOME_LATEST_TOTAL = 10;
+const HOME_LATEST_PAGE_SIZE = 3;
 
-  const latest = getUltimasAgregadas(3);
-  if (!latest.length) return;
+function _homeLatestItemHTML(s, spCache) {
+  const c = _coverColor(s.tags);
+  const tagsHTML = (s.tags || []).slice(0, 2)
+    .map(t => `<span class="hli-tag">${esc(toTitleCase(t))}</span>`)
+    .join('');
 
-  const spCache = _loadSpCoverCache();
+  // Prioridad: Spotify cacheado (mejor calidad, cuadrada) > manual >
+  // YouTube (inmediata mientras se resuelve Spotify) > ícono.
+  const cachedSp = (!s.cover && s.spId) ? spCache[s.spId] : null;
+  const coverInner = cachedSp ? _coverImgTag(cachedSp, s.tags) : _coverInnerHTML(s);
 
-  wrap.innerHTML = latest.map(s => {
-    const c = _coverColor(s.tags);
-    const tagsHTML = (s.tags || []).slice(0, 2)
-      .map(t => `<span class="hli-tag">${esc(toTitleCase(t))}</span>`)
-      .join('');
-
-    // Prioridad: Spotify cacheado (mejor calidad, cuadrada) > manual >
-    // YouTube (inmediata mientras se resuelve Spotify) > ícono.
-    const cachedSp = (!s.cover && s.spId) ? spCache[s.spId] : null;
-    const coverInner = cachedSp ? _coverImgTag(cachedSp, s.tags) : _coverInnerHTML(s);
-
-    return `
+  return `
     <button class="home-latest-item" data-id="${esc(s.id)}">
       <span class="hli-cover" style="background:${c.bg};color:${c.fg}">${coverInner}</span>
       <span class="hli-info">
@@ -1787,7 +1781,36 @@ function buildHomeLatest() {
       </span>
     </button>
   `;
-  }).join('');
+}
+
+function buildHomeLatest() {
+  const wrap = document.getElementById('home-latest');
+  const dotsWrap = document.getElementById('home-latest-dots');
+  if (!wrap) return;
+
+  const latest = getUltimasAgregadas(HOME_LATEST_TOTAL);
+  if (!latest.length) return;
+
+  const spCache = _loadSpCoverCache();
+
+  // Agrupar en páginas de a 3 (vista se mantiene igual, se desliza a la
+  // siguiente tanda de canciones en vez de mostrar una lista larga).
+  const pages = [];
+  for (let i = 0; i < latest.length; i += HOME_LATEST_PAGE_SIZE) {
+    pages.push(latest.slice(i, i + HOME_LATEST_PAGE_SIZE));
+  }
+
+  wrap.innerHTML = pages.map(page => `
+    <div class="home-latest-page">
+      ${page.map(s => _homeLatestItemHTML(s, spCache)).join('')}
+    </div>
+  `).join('');
+
+  if (dotsWrap) {
+    dotsWrap.innerHTML = pages.map((_, i) =>
+      `<button class="home-latest-dot${i === 0 ? ' active' : ''}" data-page="${i}" aria-label="Página ${i + 1}"></button>`
+    ).join('');
+  }
 
   // Resolver en segundo plano las portadas de Spotify que no estaban
   // cacheadas — corre para TODAS las que tengan spId (aunque ya se esté
@@ -1808,6 +1831,39 @@ function buildHomeLatest() {
       });
     });
 }
+
+// Sincroniza los puntitos con la página visible al deslizar (swipe/scroll).
+// Delegado una sola vez sobre #home-latest; recalcula qué página está
+// centrada usando el ancho del propio contenedor (cada página mide 100%).
+(function () {
+  const wrap = document.getElementById('home-latest');
+  if (!wrap) return;
+  let ticking = false;
+
+  wrap.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const pageIndex = Math.round(wrap.scrollLeft / wrap.clientWidth);
+      const dotsWrap = document.getElementById('home-latest-dots');
+      if (dotsWrap) {
+        dotsWrap.querySelectorAll('.home-latest-dot').forEach((dot, i) => {
+          dot.classList.toggle('active', i === pageIndex);
+        });
+      }
+      ticking = false;
+    });
+  }, { passive: true });
+})();
+
+// Click en un puntito → desliza a esa página.
+document.addEventListener('click', e => {
+  const dot = e.target.closest('#home-latest-dots .home-latest-dot');
+  if (!dot) return;
+  const wrap = document.getElementById('home-latest');
+  const page = Number(dot.dataset.page || 0);
+  if (wrap) wrap.scrollTo({ left: page * wrap.clientWidth, behavior: 'smooth' });
+});
 
 // Delegación de eventos para las filas de "Últimas añadidas" (mismo patrón
 // que goCat: nunca onclick inline, porque títulos/artistas pueden traer
@@ -1982,7 +2038,7 @@ function init() {
     renderList();             // lista inicial
     showView('home');         // vista de inicio (primero mostrar)
     buildPrayers();           // sección de oraciones (después de mostrar el DOM)
-    buildHomeLatest();        // últimas 3 canciones añadidas
+    buildHomeLatest();        // últimas 10 canciones añadidas, en carrusel de a 3
     buildHomeCats();          // chips de categorías
 
     if (isAdminUrl) adminAccess(); // pide contraseña y entra directo a Admin
