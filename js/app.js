@@ -1202,7 +1202,7 @@ let _lecturaDelDiaCargada = false;
 // Subir esta versión junto con CACHE_VERSION en worker.js cuando cambie el
 // formato de datos — evita que quede pegado en el navegador de alguien un
 // localStorage viejo con datos de una versión anterior del endpoint.
-const LECTURA_CACHE_VERSION = 'v2';
+const LECTURA_CACHE_VERSION = 'v3';
 
 function _hoyStrArg() {
   const d = new Date();
@@ -1246,7 +1246,7 @@ function _renderLecturaDelDia(wrap, data) {
   let dateFmt = new Date(y, m, d).toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' });
   dateFmt = dateFmt.charAt(0).toUpperCase() + dateFmt.slice(1);
 
-  const order = ['FR', 'PS', 'GSP']; // Evangelio queda expandido por defecto
+  const order = ['FR', 'PS', 'SR', 'GSP']; // Evangelio queda expandido por defecto; SR (2da lectura) se salta sola si no viene texto
   const itemsHTML = order.map(key => {
     const r = data.readings[key];
     if (!r || !r.text) return '';
