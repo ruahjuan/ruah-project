@@ -1184,6 +1184,7 @@ function showView(v) {
   document.getElementById('nb-' + v).classList.add('on');
   if (v === 'admin') adminRenderTable();
   if (v === 'setlists') { renderMyLists(); _updateSaveBtnVisibility(); }
+  if (v === 'prayers') buildLecturaDelDia();
   const hb = document.getElementById('hamburger');
   if (hb) hb.style.display = 'none';
   if (v === 'home' || v === 'songs' || v === 'prayers') {
@@ -1191,6 +1192,96 @@ function showView(v) {
     resetMeta();
   }
 }
+
+// ═══════════════════════════════════════════════════════
+// LECTURA DEL DÍA (Oraciones)
+// ═══════════════════════════════════════════════════════
+
+let _lecturaDelDiaCargada = false;
+
+function _hoyStrArg() {
+  const d = new Date();
+  return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+}
+
+async function buildLecturaDelDia() {
+  const wrap = document.getElementById('reading-accordion');
+  if (!wrap || _lecturaDelDiaCargada) return;
+
+  const cacheKey = `ruah_lectura_${_hoyStrArg()}`;
+
+  // El endpoint ya cachea 24hs del lado del Worker; esto además evita
+  // repetir el fetch cada vez que se entra a Oraciones en el mismo día.
+  let data = null;
+  try {
+    const raw = localStorage.getItem(cacheKey);
+    if (raw) data = JSON.parse(raw);
+  } catch (e) { /* localStorage no disponible o corrupto — se ignora */ }
+
+  if (!data) {
+    try {
+      const res = await fetch('/api/lectura-del-dia');
+      if (!res.ok) return; // endpoint no disponible en este deploy todavía — no rompe nada
+      data = await res.json();
+      try { localStorage.setItem(cacheKey, JSON.stringify(data)); } catch (e) { /* ignorar */ }
+    } catch (e) {
+      return; // sin conexión / CORS / lo que sea — el widget simplemente no aparece
+    }
+  }
+
+  if (!data || !data.readings) return;
+  _renderLecturaDelDia(wrap, data);
+  _lecturaDelDiaCargada = true;
+}
+
+function _renderLecturaDelDia(wrap, data) {
+  const y = Number(data.date.slice(0, 4));
+  const m = Number(data.date.slice(4, 6)) - 1;
+  const d = Number(data.date.slice(6, 8));
+  let dateFmt = new Date(y, m, d).toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' });
+  dateFmt = dateFmt.charAt(0).toUpperCase() + dateFmt.slice(1);
+
+  const order = ['FR', 'PS', 'GSP']; // Evangelio queda expandido por defecto
+  const itemsHTML = order.map(key => {
+    const r = data.readings[key];
+    if (!r || !r.text) return '';
+    const expanded = key === 'GSP';
+    return `
+      <button type="button" class="ra-item" data-key="${key}" aria-expanded="${expanded}">
+        <span class="ra-label">
+          <b>${esc(r.label || key)}</b>
+          ${r.cite ? `<span>${esc(r.cite)}</span>` : ''}
+        </span>
+        <span class="ra-chev">▾</span>
+      </button>
+      <div class="ra-body" id="ra-body-${key}" ${expanded ? '' : 'hidden'}>
+        <div class="ra-body-inner">${esc(r.text)}</div>
+      </div>
+    `;
+  }).join('');
+
+  if (!itemsHTML) return; // día sin datos utilizables — mejor no mostrar nada
+
+  wrap.innerHTML = `
+    <div class="ra-head">
+      <div class="ra-eyebrow">${esc(data.liturgic || 'Lecturas de hoy')}</div>
+      <div class="ra-date">${esc(dateFmt)}</div>
+    </div>
+    ${itemsHTML}
+  `;
+  wrap.hidden = false;
+}
+
+// Expandir/colapsar una lectura del acordeón.
+document.addEventListener('click', e => {
+  const btn = e.target.closest('#reading-accordion .ra-item');
+  if (!btn) return;
+  const body = document.getElementById(`ra-body-${btn.dataset.key}`);
+  if (!body) return;
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!expanded));
+  body.hidden = expanded;
+});
 
 // ═══════════════════════════════════════════════════════
 // EDITOR
