@@ -1202,7 +1202,7 @@ let _lecturaDelDiaCargada = false;
 // Subir esta versión junto con CACHE_VERSION en worker.js cuando cambie el
 // formato de datos — evita que quede pegado en el navegador de alguien un
 // localStorage viejo con datos de una versión anterior del endpoint.
-const LECTURA_CACHE_VERSION = 'v4';
+const LECTURA_CACHE_VERSION = 'v5';
 
 function _hoyStrArg() {
   const d = new Date();
