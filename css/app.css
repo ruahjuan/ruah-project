@@ -138,10 +138,6 @@ body[data-view="home"] #logo .logo-sub{
   background:#c9a84c;border-color:#c9a84c;color:#fff;font-weight:600;
 }
 .hero-chip[data-tag="all"]:hover{color:#fff}
-
-.hero-divider{width:48px;height:2px;background:#c9a84c;margin:0 auto 18px;border-radius:2px;opacity:.7}
-.hero-verse{font-family:var(--font-d);font-size:clamp(14px,1.8vw,16px);color:var(--text);font-style:italic;margin-bottom:4px;line-height:1.65}
-.hero-ref{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:28px}
 .hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .hero-cta{
   display:inline-flex;align-items:center;gap:8px;
