@@ -980,6 +980,12 @@
   <div class="view" id="v-prayers">
     <div style="max-width:700px;margin:0 auto;width:100%;padding:32px 24px 60px;overflow-y:auto">
       <h2 class="home-h2" style="margin-bottom:16px">Oraciones</h2>
+
+      <!-- Lectura del día — la rellena buildLecturaDelDia() en app.js.
+           Arranca oculta: si /api/lectura-del-dia todavía no está
+           desplegado o falla, el widget simplemente no aparece. -->
+      <div class="reading-accordion" id="reading-accordion" hidden></div>
+
       <div class="prayer-tabs" id="ptabs-p"></div>
       <div id="prayer-panels-p"></div>
     </div>
