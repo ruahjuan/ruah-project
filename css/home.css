@@ -5,10 +5,58 @@
 ═══════════════════════════════════════════════════════ */
 
 /* ── Últimas añadidas ────────────────────────────────── */
+
+/* Carrusel horizontal: cada .home-latest-page es una "pantalla" de 3
+   canciones (mismo layout de fila que antes), y se desliza a la
+   siguiente página con scroll-snap nativo (swipe en mobile). */
 .home-latest-list {
   display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-bottom: 10px;
+}
+
+.home-latest-list::-webkit-scrollbar {
+  display: none;
+}
+
+.home-latest-page {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
   flex-direction: column;
+  scroll-snap-align: start;
+}
+
+/* Puntitos indicadores de página (mismo patrón visual que el modo
+   escenario de los setlists) */
+.home-latest-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
   margin-bottom: 28px;
+}
+
+.home-latest-dots:has(.home-latest-dot:only-child) {
+  display: none; /* si hay una sola página, no tiene sentido mostrar el puntito */
+}
+
+.home-latest-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--bord);
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: background .15s, transform .15s;
+}
+
+.home-latest-dot.active {
+  background: var(--gold, #c9a84c);
+  transform: scale(1.3);
 }
 
 .home-latest-item {
