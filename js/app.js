@@ -1199,6 +1199,11 @@ function showView(v) {
 
 let _lecturaDelDiaCargada = false;
 
+// Subir esta versión junto con CACHE_VERSION en worker.js cuando cambie el
+// formato de datos — evita que quede pegado en el navegador de alguien un
+// localStorage viejo con datos de una versión anterior del endpoint.
+const LECTURA_CACHE_VERSION = 'v2';
+
 function _hoyStrArg() {
   const d = new Date();
   return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
@@ -1208,7 +1213,7 @@ async function buildLecturaDelDia() {
   const wrap = document.getElementById('reading-accordion');
   if (!wrap || _lecturaDelDiaCargada) return;
 
-  const cacheKey = `ruah_lectura_${_hoyStrArg()}`;
+  const cacheKey = `ruah_lectura_${LECTURA_CACHE_VERSION}_${_hoyStrArg()}`;
 
   // El endpoint ya cachea 24hs del lado del Worker; esto además evita
   // repetir el fetch cada vez que se entra a Oraciones en el mismo día.
