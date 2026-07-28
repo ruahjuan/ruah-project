@@ -13,10 +13,11 @@ const EVANGELIZO_BASE = 'https://feed.evangelizo.org/v2/reader.php';
 // lógica de armado de la respuesta): la Cache API no se entera solita de
 // que el código cambió, así que sin esto la respuesta vieja (ya cacheada
 // por hasta 24hs) seguiría sirviéndose tal cual después de un deploy.
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 
 const READING_LABELS = {
   FR:  'Primera lectura',
+  SR:  'Segunda lectura',
   PS:  'Salmo responsorial',
   GSP: 'Evangelio',
 };
@@ -81,10 +82,12 @@ async function pedirCampo(dateStr, type, content) {
 }
 
 async function obtenerLecturaDelDia(dateStr) {
-  const [liturgic, frCite, frText, psCite, psText, gspCite, gspText] = await Promise.all([
+  const [liturgic, frCite, frText, srCite, srText, psCite, psText, gspCite, gspText] = await Promise.all([
     pedirCampo(dateStr, 'liturgic_t', null),
     pedirCampo(dateStr, 'reading_st', 'FR'),
     pedirCampo(dateStr, 'reading',    'FR'),
+    pedirCampo(dateStr, 'reading_st', 'SR'),
+    pedirCampo(dateStr, 'reading',    'SR'),
     pedirCampo(dateStr, 'reading_st', 'PS'),
     pedirCampo(dateStr, 'reading',    'PS'),
     pedirCampo(dateStr, 'reading_st', 'GSP'),
@@ -96,6 +99,7 @@ async function obtenerLecturaDelDia(dateStr) {
     liturgic: limpiarTexto(liturgic),
     readings: {
       FR:  { label: READING_LABELS.FR,  cite: limpiarTexto(frCite),  text: limpiarTexto(frText) },
+      SR:  { label: READING_LABELS.SR,  cite: limpiarTexto(srCite),  text: limpiarTexto(srText) },
       PS:  { label: READING_LABELS.PS,  cite: limpiarTexto(psCite),  text: limpiarTexto(psText) },
       GSP: { label: READING_LABELS.GSP, cite: limpiarTexto(gspCite), text: limpiarTexto(gspText) },
     },
