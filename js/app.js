@@ -1199,11 +1199,10 @@ function showView(v) {
 
 let _lecturaDelDiaCargada = false;
 
-// Subir esta versión junto con CACHE_VERSION en worker.js cuando cambie el
-// formato de datos — evita que quede pegado en el navegador de alguien un
-// localStorage viejo con datos de una versión anterior del endpoint.
-const LECTURA_CACHE_VERSION = 'v5';
-
+// El caché por día ya lo maneja el Worker (Cache API, clave con fecha,
+// 24hs) y ahora también el Service Worker (networkFirst en sw.js). Se
+// sacó la capa extra de localStorage acá: era redundante y, al no estar
+// alineada con esas otras dos, terminaba sirviendo la lectura de ayer.
 function _hoyStrArg() {
   const d = new Date();
   return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
@@ -1213,33 +1212,22 @@ async function buildLecturaDelDia() {
   const wrap = document.getElementById('reading-accordion');
   if (!wrap || _lecturaDelDiaCargada) return;
 
-  const cacheKey = `ruah_lectura_${LECTURA_CACHE_VERSION}_${_hoyStrArg()}`;
-
-  // El endpoint ya cachea 24hs del lado del Worker; esto además evita
-  // repetir el fetch cada vez que se entra a Oraciones en el mismo día.
-  let data = null;
   try {
-    const raw = localStorage.getItem(cacheKey);
-    if (raw) data = JSON.parse(raw);
-  } catch (e) { /* localStorage no disponible o corrupto — se ignora */ }
-
-  if (!data) {
-    try {
-      const res = await fetch('/api/lectura-del-dia');
-      if (!res.ok) return; // endpoint no disponible en este deploy todavía — no rompe nada
-      data = await res.json();
-      try { localStorage.setItem(cacheKey, JSON.stringify(data)); } catch (e) { /* ignorar */ }
-    } catch (e) {
-      return; // sin conexión / CORS / lo que sea — el widget simplemente no aparece
-    }
+    const res = await fetch('/api/lectura-del-dia');
+    if (!res.ok) return; // endpoint no disponible en este deploy todavía — no rompe nada
+    const data = await res.json();
+    if (!data || !data.readings) return;
+    // Si esto vuelve a pasar (SW/Worker sirviendo algo viejo), que se note
+    // en la UI en vez de quedar disimulado.
+    const isStale = data.date !== _hoyStrArg();
+    _renderLecturaDelDia(wrap, data, isStale);
+    _lecturaDelDiaCargada = true;
+  } catch (e) {
+    return; // sin conexión / CORS / lo que sea — el widget simplemente no aparece
   }
-
-  if (!data || !data.readings) return;
-  _renderLecturaDelDia(wrap, data);
-  _lecturaDelDiaCargada = true;
 }
 
-function _renderLecturaDelDia(wrap, data) {
+function _renderLecturaDelDia(wrap, data, isStale) {
   const y = Number(data.date.slice(0, 4));
   const m = Number(data.date.slice(4, 6)) - 1;
   const d = Number(data.date.slice(6, 8));
@@ -1271,6 +1259,7 @@ function _renderLecturaDelDia(wrap, data) {
     <div class="ra-head">
       <div class="ra-eyebrow">${esc(data.liturgic || 'Lecturas de hoy')}</div>
       <div class="ra-date">${esc(dateFmt)}</div>
+      ${isStale ? '<div class="ra-stale">⚠ Podría no ser de hoy — probá recargar</div>' : ''}
     </div>
     ${itemsHTML}
   `;
