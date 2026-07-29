@@ -166,6 +166,7 @@ body[data-view="home"] #logo .logo-sub{
 .ra-head{padding:14px 16px;background:var(--surf2)}
 .ra-head .ra-eyebrow{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#c9a84c;font-weight:700;margin-bottom:3px}
 .ra-head .ra-date{font-family:var(--font-d);font-size:15px;color:var(--text)}
+.ra-head .ra-stale{margin-top:5px;font-size:11.5px;font-weight:600;color:#b5541c}
 .ra-item{
   display:flex;align-items:center;justify-content:space-between;gap:10px;
   width:100%;padding:12px 16px;border:none;border-top:1px solid var(--bord);
