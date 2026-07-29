@@ -180,7 +180,9 @@ body[data-view="home"] #logo .logo-sub{
 .ra-item[aria-expanded="true"] .ra-chev{transform:rotate(180deg)}
 .ra-body{padding:0 16px 16px;font-family:var(--font-b);font-size:14.5px;color:var(--text);line-height:1.75;border-top:1px solid var(--bord)}
 .ra-body[hidden]{display:none}
-.ra-body .ra-body-inner{padding-top:12px;white-space:pre-line}
+.ra-body .ra-body-inner{padding-top:12px}
+.ra-body .ra-body-inner p{margin:0 0 14px}
+.ra-body .ra-body-inner p:last-child{margin-bottom:0}
 .home-section-header{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:14px}
 .home-section-rule{width:32px;height:2px;background:var(--gold,#c9a84c);border-radius:2px}
 .home-h2{font-family:var(--font-d);font-size:20px;color:var(--text);margin:0}
