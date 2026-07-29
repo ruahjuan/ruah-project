@@ -126,7 +126,14 @@ async function handleLecturaDelDia(ctx) {
   const response = new Response(JSON.stringify(data), {
     headers: {
       'Content-Type': 'application/json; charset=UTF-8',
-      'Cache-Control': 'public, max-age=86400',
+      // Antes: 'public, max-age=86400'. Eso hacía que el navegador
+      // cacheara la respuesta por 24hs a nivel HTTP, sin enterarse de
+      // que la URL debería devolver algo distinto al día siguiente —
+      // servía la lectura de ayer aunque el SW y la Cache API de acá
+      // abajo ya tuvieran la de hoy lista. El cacheo por día ya está
+      // resuelto explícitamente con `cache.put`/`cache.match` (clave
+      // con fecha), así que no hace falta caché HTTP además.
+      'Cache-Control': 'no-store',
     },
   });
 
