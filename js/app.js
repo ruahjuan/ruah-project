@@ -1227,6 +1227,22 @@ async function buildLecturaDelDia() {
   }
 }
 
+// Evangelizo separa párrafos con 1 o más líneas en blanco, sin mucha
+// consistencia. Antes esto se mostraba con white-space:pre-line, así que
+// cada línea en blanco se traducía en una línea entera de alto (según
+// line-height) — con textos que traen varias, se veía un espacio enorme
+// entre párrafos. Acá se arman <p> reales, separados por saltos simples
+// dentro del párrafo, y el espaciado entre párrafos lo controla el CSS
+// (.ra-body-inner p), no la cantidad de \n que vino en el texto.
+function _formatReadingText(raw) {
+  return raw
+    .split(/\n{2,}/)
+    .map(p => p.trim())
+    .filter(Boolean)
+    .map(p => `<p>${esc(p).replace(/\n/g, '<br>')}</p>`)
+    .join('');
+}
+
 function _renderLecturaDelDia(wrap, data, isStale) {
   const y = Number(data.date.slice(0, 4));
   const m = Number(data.date.slice(4, 6)) - 1;
@@ -1234,11 +1250,11 @@ function _renderLecturaDelDia(wrap, data, isStale) {
   let dateFmt = new Date(y, m, d).toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' });
   dateFmt = dateFmt.charAt(0).toUpperCase() + dateFmt.slice(1);
 
-  const order = ['FR', 'PS', 'SR', 'GSP']; // Evangelio queda expandido por defecto; SR (2da lectura) se salta sola si no viene texto
+  const order = ['FR', 'PS', 'SR', 'GSP']; // todo arranca colapsado; SR (2da lectura) se salta sola si no viene texto
   const itemsHTML = order.map(key => {
     const r = data.readings[key];
     if (!r || !r.text) return '';
-    const expanded = key === 'GSP';
+    const expanded = false;
     return `
       <button type="button" class="ra-item" data-key="${key}" aria-expanded="${expanded}">
         <span class="ra-label">
@@ -1248,7 +1264,7 @@ function _renderLecturaDelDia(wrap, data, isStale) {
         <span class="ra-chev">▾</span>
       </button>
       <div class="ra-body" id="ra-body-${key}" ${expanded ? '' : 'hidden'}>
-        <div class="ra-body-inner">${esc(r.text)}</div>
+        <div class="ra-body-inner">${_formatReadingText(r.text)}</div>
       </div>
     `;
   }).join('');
