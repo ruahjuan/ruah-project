@@ -32,6 +32,7 @@ const STATIC_ASSETS = [
 // Assets que se actualizan desde la red si hay conexión
 const NETWORK_FIRST = [
   '/js/songs_data.js',
+  '/api/lectura-del-dia',
 ];
 
 
