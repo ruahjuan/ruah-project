@@ -1213,7 +1213,7 @@ async function buildLecturaDelDia() {
   if (!wrap || _lecturaDelDiaCargada) return;
 
   try {
-    const res = await fetch('/api/lectura-del-dia');
+    const res = await fetch('/api/lectura-del-dia', { cache: 'no-store' });
     if (!res.ok) return; // endpoint no disponible en este deploy todavía — no rompe nada
     const data = await res.json();
     if (!data || !data.readings) return;
