@@ -13,7 +13,7 @@ const EVANGELIZO_BASE = 'https://feed.evangelizo.org/v2/reader.php';
 // lógica de armado de la respuesta): la Cache API no se entera solita de
 // que el código cambió, así que sin esto la respuesta vieja (ya cacheada
 // por hasta 24hs) seguiría sirviéndose tal cual después de un deploy.
-const CACHE_VERSION = 'v5';
+const CACHE_VERSION = 'v6';
 
 const READING_LABELS = {
   FR:  'Primera lectura',
@@ -39,6 +39,8 @@ function limpiarTexto(raw) {
   if (!raw) return '';
   let t = raw;
 
+  t = t.replace(/_/g, ' '); // Evangelizo a veces manda "1_Jn" en vez de "1 Jn"
+
   const promoMarkers = [
     /Extra[ií]do de la Biblia/i,
     /Para recibir cada ma[nñ]ana el Evangelio por correo/i,
@@ -61,6 +63,69 @@ function limpiarTexto(raw) {
     .replace(/[ \t]*\n[ \t]*/g, '\n')  // espacios sueltos pegados a un salto de línea
     .replace(/\n{3,}/g, '\n\n')        // más de 2 saltos seguidos → 1 línea en blanco
     .trim();
+}
+
+// Evangelizo devuelve la cita de cada lectura con abreviatura latina
+// ("1_Jn 4", "Ps 34", "Mt 5"), no el nombre completo del libro. Este mapa
+// cubre las abreviaturas más comunes; si aparece una que no está acá, se
+// deja tal cual vino (mejor eso que romper la cita). Si ves alguna sin
+// expandir, mandámela y la sumo.
+const BOOK_NAMES = {
+  // Antiguo Testamento
+  gn: 'Génesis', ex: 'Éxodo', lv: 'Levítico', nm: 'Números', dt: 'Deuteronomio',
+  jos: 'Josué', jc: 'Jueces', jue: 'Jueces', rt: 'Rut',
+  '1s': 'Primer Libro de Samuel', '1sm': 'Primer Libro de Samuel',
+  '2s': 'Segundo Libro de Samuel', '2sm': 'Segundo Libro de Samuel',
+  '1r': 'Primer Libro de los Reyes', '1re': 'Primer Libro de los Reyes',
+  '2r': 'Segundo Libro de los Reyes', '2re': 'Segundo Libro de los Reyes',
+  '1cr': 'Primer Libro de las Crónicas', '1cro': 'Primer Libro de las Crónicas',
+  '2cr': 'Segundo Libro de las Crónicas', '2cro': 'Segundo Libro de las Crónicas',
+  esd: 'Esdras', ne: 'Nehemías', tb: 'Tobías', jdt: 'Judit', est: 'Ester',
+  '1m': 'Primer Libro de los Macabeos', '1ma': 'Primer Libro de los Macabeos',
+  '2m': 'Segundo Libro de los Macabeos', '2ma': 'Segundo Libro de los Macabeos',
+  jb: 'Job', sal: 'Salmos', ps: 'Salmos', pr: 'Proverbios',
+  qo: 'Eclesiastés', ecl: 'Eclesiastés', ct: 'Cantar de los Cantares',
+  sb: 'Sabiduría', sap: 'Sabiduría', si: 'Eclesiástico', eclo: 'Eclesiástico', sir: 'Eclesiástico',
+  is: 'Isaías', jr: 'Jeremías', lm: 'Lamentaciones', ba: 'Baruc', ez: 'Ezequiel', dn: 'Daniel',
+  os: 'Oseas', jl: 'Joel', am: 'Amós', ab: 'Abdías', jon: 'Jonás',
+  mi: 'Miqueas', miq: 'Miqueas', na: 'Nahúm', nah: 'Nahúm',
+  ha: 'Habacuc', hab: 'Habacuc', so: 'Sofonías', sof: 'Sofonías',
+  ag: 'Ageo', za: 'Zacarías', zac: 'Zacarías', ml: 'Malaquías', mal: 'Malaquías',
+  // Nuevo Testamento
+  mt: 'Mateo', mc: 'Marcos', lc: 'Lucas', jn: 'Juan',
+  hch: 'Hechos de los Apóstoles',
+  rm: 'Carta a los Romanos', rom: 'Carta a los Romanos',
+  '1co': 'Primera Carta a los Corintios', '2co': 'Segunda Carta a los Corintios',
+  ga: 'Carta a los Gálatas', gal: 'Carta a los Gálatas',
+  ef: 'Carta a los Efesios',
+  flp: 'Carta a los Filipenses', fil: 'Carta a los Filipenses',
+  col: 'Carta a los Colosenses',
+  '1ts': 'Primera Carta a los Tesalonicenses', '1tes': 'Primera Carta a los Tesalonicenses',
+  '2ts': 'Segunda Carta a los Tesalonicenses', '2tes': 'Segunda Carta a los Tesalonicenses',
+  '1tm': 'Primera Carta a Timoteo', '1tim': 'Primera Carta a Timoteo',
+  '2tm': 'Segunda Carta a Timoteo', '2tim': 'Segunda Carta a Timoteo',
+  tt: 'Carta a Tito', tit: 'Carta a Tito',
+  flm: 'Carta a Filemón', filem: 'Carta a Filemón',
+  hb: 'Carta a los Hebreos', heb: 'Carta a los Hebreos',
+  st: 'Carta de Santiago', sant: 'Carta de Santiago',
+  '1p': 'Primera Carta de Pedro', '1pe': 'Primera Carta de Pedro', '1pt': 'Primera Carta de Pedro',
+  '2p': 'Segunda Carta de Pedro', '2pe': 'Segunda Carta de Pedro', '2pt': 'Segunda Carta de Pedro',
+  '1jn': 'Primera Carta de Juan', '2jn': 'Segunda Carta de Juan', '3jn': 'Tercera Carta de Juan',
+  jud: 'Carta de Judas', ap: 'Apocalipsis', apo: 'Apocalipsis',
+};
+
+function _normalizarClave(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function expandirCita(cite) {
+  if (!cite) return cite;
+  const m = cite.match(/^\s*(?:([123])\s*)?([A-Za-zÀ-ÿ]{1,6})\.?\s*(.*)$/s);
+  if (!m) return cite;
+  const [, num, abbr, resto] = m;
+  const nombre = BOOK_NAMES[_normalizarClave((num || '') + abbr)];
+  if (!nombre) return cite; // abreviatura no mapeada — se deja como vino
+  return resto ? `${nombre} ${resto}` : nombre;
 }
 
 // Argentina no usa horario de verano, así que un offset fijo de -3 alcanza
@@ -103,10 +168,10 @@ async function obtenerLecturaDelDia(dateStr) {
     date: dateStr,
     liturgic: limpiarTexto(liturgic),
     readings: {
-      FR:  { label: READING_LABELS.FR,  cite: limpiarTexto(frCite),  text: limpiarTexto(frText) },
-      SR:  { label: READING_LABELS.SR,  cite: limpiarTexto(srCite),  text: limpiarTexto(srText) },
-      PS:  { label: READING_LABELS.PS,  cite: limpiarTexto(psCite),  text: limpiarTexto(psText) },
-      GSP: { label: READING_LABELS.GSP, cite: limpiarTexto(gspCite), text: limpiarTexto(gspText) },
+      FR:  { label: READING_LABELS.FR,  cite: expandirCita(limpiarTexto(frCite)),  text: limpiarTexto(frText) },
+      SR:  { label: READING_LABELS.SR,  cite: expandirCita(limpiarTexto(srCite)),  text: limpiarTexto(srText) },
+      PS:  { label: READING_LABELS.PS,  cite: expandirCita(limpiarTexto(psCite)),  text: limpiarTexto(psText) },
+      GSP: { label: READING_LABELS.GSP, cite: expandirCita(limpiarTexto(gspCite)), text: limpiarTexto(gspText) },
     },
   };
 }
