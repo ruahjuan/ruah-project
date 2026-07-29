@@ -128,7 +128,11 @@ async function cacheFirst(request) {
  */
 async function networkFirst(request) {
   try {
-    const response = await fetch(request);
+    // cache: 'no-store' porque este request puede ser /api/lectura-del-dia,
+    // cuya URL no varía por día — si se deja el modo 'default', el propio
+    // caché HTTP del navegador puede devolver una respuesta vieja sin
+    // siquiera llegar a la red, sin importar lo que diga esta función.
+    const response = await fetch(request, { cache: 'no-store' });
     if (response.ok) {
       const cache = await caches.open(CACHE_VERSION);
       cache.put(request, response.clone());
