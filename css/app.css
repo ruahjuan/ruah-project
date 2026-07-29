@@ -177,7 +177,7 @@ body[data-view="home"] #logo .logo-sub{
 .ra-item .ra-chev{color:var(--muted);font-size:12px;flex-shrink:0;transition:transform .15s}
 .ra-item[aria-expanded="true"]{background:var(--surf2)}
 .ra-item[aria-expanded="true"] .ra-chev{transform:rotate(180deg)}
-.ra-body{padding:0 16px 16px;font-family:var(--font-d);font-style:italic;font-size:13.5px;color:var(--text);line-height:1.65;border-top:1px solid var(--bord)}
+.ra-body{padding:0 16px 16px;font-family:var(--font-b);font-size:14.5px;color:var(--text);line-height:1.75;border-top:1px solid var(--bord)}
 .ra-body[hidden]{display:none}
 .ra-body .ra-body-inner{padding-top:12px;white-space:pre-line}
 .home-section-header{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:14px}
