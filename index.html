@@ -581,22 +581,28 @@
 
     <!-- Chips de ordenamiento y tags. En mobile se ocultan detrás de dos disparadores -->
     <div id="filter-bar">
-      <button class="filter-trigger" id="sort-trigger" onclick="toggleFilterPanel('sort')" type="button">
-        <span class="filter-label">Orden</span> <span id="sort-trigger-lbl">A–Z</span> <span class="fchev">▾</span>
-      </button>
-      <button class="filter-trigger" id="tag-trigger" onclick="toggleFilterPanel('tag')" type="button">
-        <span class="filter-label">Tags</span> <span id="tag-trigger-lbl">Todas</span> <span class="fchev">▾</span>
-      </button>
+      <div class="filter-triggers">
+        <button class="filter-trigger" id="sort-trigger" onclick="toggleFilterPanel('sort')" type="button">
+          <span class="filter-label">Orden</span> <span id="sort-trigger-lbl">A–Z</span> <span class="fchev">▾</span>
+        </button>
+        <button class="filter-trigger" id="tag-trigger" onclick="toggleFilterPanel('tag')" type="button">
+          <span class="filter-label">Tags</span> <span id="tag-trigger-lbl">Todas</span> <span class="fchev">▾</span>
+        </button>
+      </div>
 
       <span class="filter-label">Orden</span>
-      <span class="chip on sort-chip" data-sort="alpha"    onclick="setSort('alpha', this)">A–Z</span>
-      <span class="chip sort-chip"    data-sort="artist"   onclick="setSort('artist', this)">Artista</span>
-      <span class="chip sort-chip"    data-sort="composer" onclick="setSort('composer', this)">Compositor</span>
-      <span class="chip sort-chip"    data-sort="random"   onclick="setSort('random', this)">Aleatorio</span>
+      <div class="chip-strip" id="sort-chip-row">
+        <span class="chip on sort-chip" data-sort="alpha"    onclick="setSort('alpha', this)">A–Z</span>
+        <span class="chip sort-chip"    data-sort="artist"   onclick="setSort('artist', this)">Artista</span>
+        <span class="chip sort-chip"    data-sort="composer" onclick="setSort('composer', this)">Compositor</span>
+        <span class="chip sort-chip"    data-sort="random"   onclick="setSort('random', this)">Aleatorio</span>
+      </div>
       <div class="filter-sep"></div>
       <span class="filter-label">Tags</span>
-      <span class="chip on tag-chip" data-tag="all" onclick="setTag('all', this)">Todas</span>
-      <!-- Los chips de tags se insertan dinámicamente por buildTagChips() -->
+      <div class="chip-strip" id="tag-chip-row">
+        <span class="chip on tag-chip" data-tag="all" onclick="setTag('all', this)">Todas</span>
+        <!-- Los chips de tags se insertan dinámicamente por buildTagChips() -->
+      </div>
     </div>
 
     <!-- Split: lista izquierda + detalle derecho -->
