@@ -229,8 +229,9 @@ body[data-view="home"] #logo .logo-sub{
 .vision-box p{font-size:14.5px;line-height:1.85;margin-bottom:10px;color:var(--text)}
 .vision-box p:last-child{margin-bottom:0}
 .vision-box em{color:var(--muted);font-style:italic}
-.prayer-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.ptab{padding:9px 16px;border-radius:20px;border:1.5px solid var(--bord);background:var(--surf2);font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .15s;font-weight:500}
+.prayer-tabs{display:flex;gap:8px;margin-bottom:16px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding:0 2px 2px}
+.prayer-tabs::-webkit-scrollbar{display:none}
+.ptab{padding:9px 16px;border-radius:20px;border:1.5px solid var(--bord);background:var(--surf2);font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .15s;font-weight:500;flex-shrink:0;white-space:nowrap}
 .ptab:hover{border-color:var(--f3);color:var(--f4)}
 .ptab.on{background:var(--f4);border-color:var(--f4);color:#fff;font-weight:600}
 .prayer-content{display:none}
