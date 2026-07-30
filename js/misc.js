@@ -33,7 +33,7 @@ function deacc(s) {
 // ── Chips de tags ────────────────────────────────────────
 
 function buildTagChips() {
-  const bar = document.getElementById('filter-bar');
+  const bar = document.getElementById('tag-chip-row');
   ALL_TAGS.forEach(tag => {
     const chip = document.createElement('span');
     chip.className = 'chip tag-chip';
