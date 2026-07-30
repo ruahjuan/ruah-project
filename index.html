@@ -547,23 +547,26 @@
         <input id="si" type="search" placeholder="Buscar canción, artista…" oninput="doSearch()" autocomplete="off" spellcheck="false">
       </div>
 
-      <button class="pill on" onclick="setFilt('all', this)">Todas</button>
-      <button class="pill"    onclick="setFilt('fav', this)">
+      <!-- Favoritas: un solo botón que alterna Todas ⇄ Favoritas -->
+      <button class="pill" id="pill-fav" onclick="toggleFavFilter(this)" title="Ver solo favoritas" aria-label="Ver solo favoritas">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
         </svg>
-        Favoritas
+        <span class="pill-lbl">Favoritas</span>
       </button>
-      <!-- Botón ver setlist (solo mobile, se muestra cuando hay canciones) -->
-      <button class="pill" id="pill-sl-mobile" onclick="toggleMobileSL()" style="display:none">
+
+      <!-- Setlist en mobile: abre la hoja inferior -->
+      <button class="pill" id="pill-sl-mobile" onclick="toggleMobileSL()" style="display:none" title="Ver setlist" aria-label="Ver setlist">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
           <line x1="8" y1="18" x2="21" y2="18"/>
           <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
           <line x1="3" y1="18" x2="3.01" y2="18"/>
         </svg>
-        Ver setlist <span id="pill-sl-count"></span>
+        <span class="pill-lbl">Ver setlist</span> <span id="pill-sl-count"></span>
       </button>
+
+      <!-- Setlist en desktop: abre el panel lateral -->
       <button class="pill" id="pill-sl" onclick="toggleSL()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
@@ -571,28 +574,28 @@
           <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
           <line x1="3" y1="18" x2="3.01" y2="18"/>
         </svg>
-        Setlist
+        <span class="pill-lbl">Setlist</span>
       </button>
-      <button class="pill" id="pill-print" onclick="togglePrint()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="6 9 6 2 18 2 18 9"/>
-          <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
-          <rect x="6" y="14" width="12" height="8"/>
-        </svg>
-        Letra
-      </button>
+      <!-- Botón "Letra" eliminado: cada canción ya tiene su propio modo solo-letra -->
     </div>
 
-    <!-- Chips de ordenamiento y tags -->
+    <!-- Chips de ordenamiento y tags. En mobile se ocultan detrás de dos disparadores -->
     <div id="filter-bar">
+      <button class="filter-trigger" id="sort-trigger" onclick="toggleFilterPanel('sort')" type="button">
+        <span class="filter-label">Orden</span> <span id="sort-trigger-lbl">A–Z</span> <span class="fchev">▾</span>
+      </button>
+      <button class="filter-trigger" id="tag-trigger" onclick="toggleFilterPanel('tag')" type="button">
+        <span class="filter-label">Tags</span> <span id="tag-trigger-lbl">Todas</span> <span class="fchev">▾</span>
+      </button>
+
       <span class="filter-label">Orden</span>
-      <span class="chip on" data-sort="alpha"    onclick="setSort('alpha', this)">A–Z</span>
-      <span class="chip"    data-sort="artist"   onclick="setSort('artist', this)">Artista</span>
-      <span class="chip"    data-sort="composer" onclick="setSort('composer', this)">Compositor</span>
-      <span class="chip"    data-sort="random"   onclick="setSort('random', this)">Aleatorio</span>
+      <span class="chip on sort-chip" data-sort="alpha"    onclick="setSort('alpha', this)">A–Z</span>
+      <span class="chip sort-chip"    data-sort="artist"   onclick="setSort('artist', this)">Artista</span>
+      <span class="chip sort-chip"    data-sort="composer" onclick="setSort('composer', this)">Compositor</span>
+      <span class="chip sort-chip"    data-sort="random"   onclick="setSort('random', this)">Aleatorio</span>
       <div class="filter-sep"></div>
       <span class="filter-label">Tags</span>
-      <span class="chip on" data-tag="all" onclick="setTag('all', this)">Todas</span>
+      <span class="chip on tag-chip" data-tag="all" onclick="setTag('all', this)">Todas</span>
       <!-- Los chips de tags se insertan dinámicamente por buildTagChips() -->
     </div>
 
