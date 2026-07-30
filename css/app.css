@@ -174,21 +174,14 @@ body[data-view="home"] #logo .logo-sub{
   background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;
   transition:background .15s;
 }
-.ra-item::before{
-  content:"";order:-1;flex-shrink:0;
-  width:30px;height:30px;border-radius:9px;
+.ra-icon{
+  flex-shrink:0;
+  width:32px;height:32px;border-radius:9px;
   background:var(--f1);color:var(--f4);
   display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:700;
+  font-size:14px;font-weight:700;
 }
-/* Íconos por tipo de lectura, en el orden habitual de la Liturgia de la Palabra.
-   Si un día tiene 4 lecturas (p.ej. domingo con 2da lectura), el 4to ítem
-   cae en el icono genérico "•" — avisame si preferís mapear por texto en vez
-   de posición, hay que tocar buildLecturaDelDia() en app.js para eso. */
-.ra-item:nth-of-type(1)::before{content:"I"}
-.ra-item:nth-of-type(2)::before{content:"♪"}
-.ra-item:nth-of-type(3)::before{content:"✝"}
-.ra-item:nth-of-type(n+4)::before{content:"•"}
+.ra-icon svg{width:17px;height:17px}
 .ra-item .ra-label{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1;text-align:left}
 .ra-item .ra-label b{font-size:13.5px;font-weight:600;color:var(--text)}
 .ra-item .ra-label span{font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
