@@ -140,6 +140,23 @@ const READING_ICONS = {
   evangelio: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.29V2.70996C13.1595 2.70996 14.2715 3.17056 15.0913 3.99043C15.9112 4.8103 16.3718 5.92228 16.3718 7.08175C16.3718 8.24121 15.9112 9.35319 15.0913 10.1731C14.2715 10.9929 13.1595 11.4535 12 11.4535M5.37439 20.1971L18.6257 12.5465M5.37439 12.5464L18.6257 20.1971"/></svg>`
 };
 
+/**
+ * Corrige el formato de la referencia del Salmo tal como viene de la fuente:
+ * "Salmos 146(145),2abc.2d-4.5-6." → "Salmo 146 (145), 2 abc.2d-4.5-6."
+ * - "Salmos" → "Salmo" (singular)
+ * - espacio entre el número de capítulo y el paréntesis
+ * - espacio después de la coma
+ * - espacio entre el número de versículo y un grupo de letras (2abc → 2 abc),
+ *   pero NO cuando es una sola letra pegada a un rango (2d-4 queda igual)
+ */
+function formatSalmoRef(text) {
+  return text
+    .replace(/^Salmos\b/i, 'Salmo')
+    .replace(/(\d)\(/g, '$1 (')
+    .replace(/,(?!\s)/g, ', ')
+    .replace(/(\d)([a-z]{2,})/g, '$1 $2');
+}
+
 function iconizeReadingAccordion() {
   document.querySelectorAll('#reading-accordion .ra-item').forEach(item => {
     if (item.querySelector('.ra-icon')) return; // ya tiene ícono, no duplicar
@@ -149,7 +166,14 @@ function iconizeReadingAccordion() {
     if (label.includes('segunda')) inner = READING_ICONS.lectura2;
     else if (label.includes('primera') || (label.includes('lectura') && !label.includes('segunda'))) inner = READING_ICONS.lectura1;
     else if (label.includes('evangelio')) inner = READING_ICONS.evangelio;
-    else if (label.includes('salmo')) inner = '♪';
+    else if (label.includes('salmo')) {
+      inner = '♪';
+      const refSpan = item.querySelector('.ra-label span');
+      if (refSpan && !refSpan.dataset.fixed) {
+        refSpan.textContent = formatSalmoRef(refSpan.textContent);
+        refSpan.dataset.fixed = '1'; // evita re-aplicar el fix si corre de nuevo
+      }
+    }
     if (inner === null) return; // tipo desconocido: no le ponemos ícono raro
 
     const icon = document.createElement('span');
