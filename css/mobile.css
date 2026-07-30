@@ -50,7 +50,7 @@
   #ctrl-bar #pill-sl-count { font-size: 9px; }
   #pill-sl { display: none; } /* en mobile el setlist se ve con #pill-sl-mobile (hoja inferior) */
 
-  /* ── Orden / Tags: dos disparadores + panel que despliega ── */
+  /* ── Orden / Tags: dos disparadores + tira deslizable ── */
   .filter-trigger {
     display: inline-flex; align-items: center; gap: 4px;
     padding: 8px 12px; border-radius: 20px; border: 1px solid var(--bord);
@@ -63,18 +63,50 @@
   .fchev { font-size: 10px; color: var(--muted); }
 
   #filter-bar {
-    flex-wrap: wrap;
-    overflow-x: visible;
-    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    overflow: visible;
+    padding: 8px 10px;
   }
+  .filter-triggers { display: flex; gap: 8px; }
+
   /* Ocultar las etiquetas y el separador sueltos: ya están en los disparadores */
   #filter-bar > .filter-label,
   #filter-bar > .filter-sep { display: none; }
 
-  /* Los chips quedan ocultos hasta que se abre el disparador correspondiente */
-  #filter-bar .chip { display: none; }
-  #filter-bar.open[data-mode="sort"] .sort-chip { display: inline-block; }
-  #filter-bar.open[data-mode="tag"]  .tag-chip  { display: inline-block; }
+  /* Tira: una sola fila que se desliza horizontalmente, sin estilo de chip/pill */
+  .chip-strip {
+    display: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    border-top: 1px solid var(--bord);
+    margin-top: 2px;
+  }
+  .chip-strip::-webkit-scrollbar { display: none; }
+  #filter-bar.open[data-mode="sort"] #sort-chip-row { display: flex; }
+  #filter-bar.open[data-mode="tag"]  #tag-chip-row  { display: flex; }
+
+  .chip-strip .chip {
+    display: inline-flex !important;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 10px 16px;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--bord);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .chip-strip .chip:last-child { border-right: none; }
+  .chip-strip .chip.on,
+  .chip-strip .chip.tag-on { color: var(--f4); font-weight: 700; }
 
   /* Split: columna, lista scrollea */
   #split {
