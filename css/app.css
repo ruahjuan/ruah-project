@@ -232,6 +232,19 @@ body[data-view="home"] #logo .logo-sub{
 .prayer-content.on{display:block}
 .prayer-box{background:var(--surf);border:1px solid var(--bord);border-radius:var(--radius-lg);padding:24px 28px;border-left:4px solid var(--violet);box-shadow:var(--shadow)}
 .prayer-title{font-family:var(--font-d);font-size:18px;color:var(--text);margin-bottom:12px}
+
+.howto{
+  margin-top:28px;
+  background:var(--surf);border:1px solid var(--bord);border-radius:var(--radius-lg);
+  padding:18px 18px 16px;box-shadow:var(--shadow);
+}
+.howto-title{display:flex;align-items:center;gap:7px;font-family:var(--font-d);font-size:14.5px;font-weight:600;color:var(--text);margin-bottom:14px}
+.howto-title svg{width:15px;height:15px;color:var(--f4);flex-shrink:0}
+.howto-step{display:flex;align-items:flex-start;gap:12px;padding:9px 0}
+.howto-step + .howto-step{border-top:1px solid var(--surf2)}
+.howto .step-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--f1);color:var(--f4);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.howto .step-text{font-size:12.8px;line-height:1.55;color:var(--text)}
+.howto .step-text b{font-weight:600}
 .prayer-sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
 .prayer-body{font-size:14px;line-height:1.85}
 .prayer-body p{margin-bottom:8px}
