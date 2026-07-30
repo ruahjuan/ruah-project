@@ -37,76 +37,35 @@
 
   #ctrl-bar {
     flex-shrink: 0;
-    flex-wrap: wrap;
-    padding: 8px 10px;
-    gap: 6px;
-  }
-
-  #filter-bar     { flex-shrink: 0; }
-
-  /* ── Toolbar de Canciones: iconos en vez de texto ── */
-  #ctrl-bar .pill { width: 38px; height: 38px; padding: 0; border-radius: 50%; justify-content: center; }
-  #ctrl-bar .pill .pill-lbl { display: none; }
-  #ctrl-bar #pill-sl-count { font-size: 9px; }
-  #pill-sl { display: none; } /* en mobile el setlist se ve con #pill-sl-mobile (hoja inferior) */
-
-  /* ── Orden / Tags: dos disparadores + tira deslizable ── */
-  .filter-trigger {
-    display: inline-flex; align-items: center; gap: 4px;
-    padding: 8px 12px; border-radius: 20px; border: 1px solid var(--bord);
-    background: var(--surf); color: var(--text); font-size: 12.5px; font-weight: 600;
-    flex: 1; justify-content: center; white-space: nowrap;
-  }
-  .filter-trigger .filter-label {
-    color: var(--muted2); font-weight: 600; text-transform: none; font-size: 12.5px; letter-spacing: 0; padding: 0;
-  }
-  .fchev { font-size: 10px; color: var(--muted); }
-
-  #filter-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-    overflow: visible;
-    padding: 8px 10px;
-  }
-  .filter-triggers { display: flex; gap: 8px; }
-
-  /* Ocultar las etiquetas y el separador sueltos: ya están en los disparadores */
-  #filter-bar > .filter-label,
-  #filter-bar > .filter-sep { display: none; }
-
-  /* Tira: una sola fila que se desliza horizontalmente, sin estilo de chip/pill */
-  .chip-strip {
-    display: none;
+    flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
     scrollbar-width: none;
-    border-top: 1px solid var(--bord);
-    margin-top: 2px;
+    padding: 8px 10px;
+    gap: 6px;
+    position: relative;
   }
-  .chip-strip::-webkit-scrollbar { display: none; }
-  #filter-bar.open[data-mode="sort"] #sort-chip-row { display: flex; }
-  #filter-bar.open[data-mode="tag"]  #tag-chip-row  { display: flex; }
+  #ctrl-bar::-webkit-scrollbar { display: none; }
+  #ctrl-bar #sw { flex: 1 0 auto; min-width: 140px; }
 
-  .chip-strip .chip {
-    display: inline-flex !important;
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    padding: 10px 16px;
-    border-radius: 0;
-    background: transparent;
-    border: none;
-    border-right: 1px solid var(--bord);
-    color: var(--muted);
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
+  #filter-bar {
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
   }
-  .chip-strip .chip:last-child { border-right: none; }
-  .chip-strip .chip.on,
-  .chip-strip .chip.tag-on { color: var(--f4); font-weight: 700; }
+
+  /* Pista visual: sombra en el borde derecho indicando que hay más para deslizar */
+  #ctrl-bar::after,
+  #filter-bar::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 28px;
+    pointer-events: none;
+  }
+  #ctrl-bar::after   { background: linear-gradient(to right, transparent, var(--surf)); }
+  #filter-bar::after { background: linear-gradient(to right, transparent, var(--surf2)); }
 
   /* Split: columna, lista scrollea */
   #split {
