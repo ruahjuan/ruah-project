@@ -169,7 +169,7 @@ body[data-view="home"] #logo .logo-sub{
 .ra-head .ra-date{font-family:var(--font-d);font-size:18px;font-weight:600;color:var(--text)}
 .ra-head .ra-stale{margin-top:5px;font-size:11.5px;font-weight:600;color:#b5541c}
 .ra-item{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  display:flex;align-items:center;gap:12px;
   width:100%;padding:13px 18px;border:none;border-top:1px solid var(--bord);
   background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;
   transition:background .15s;
@@ -189,7 +189,7 @@ body[data-view="home"] #logo .logo-sub{
 .ra-item:nth-of-type(2)::before{content:"♪"}
 .ra-item:nth-of-type(3)::before{content:"✝"}
 .ra-item:nth-of-type(n+4)::before{content:"•"}
-.ra-item .ra-label{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ra-item .ra-label{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1;text-align:left}
 .ra-item .ra-label b{font-size:13.5px;font-weight:600;color:var(--text)}
 .ra-item .ra-label span{font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ra-item .ra-chev{color:var(--muted);font-size:12px;flex-shrink:0;transition:transform .15s}
@@ -230,9 +230,9 @@ body[data-view="home"] #logo .logo-sub{
 .vision-box p:last-child{margin-bottom:0}
 .vision-box em{color:var(--muted);font-style:italic}
 .prayer-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.ptab{padding:7px 15px;border-radius:20px;border:1px solid var(--bord);background:var(--surf2);font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .15s}
+.ptab{padding:9px 16px;border-radius:20px;border:1.5px solid var(--bord);background:var(--surf2);font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .15s;font-weight:500}
 .ptab:hover{border-color:var(--f3);color:var(--f4)}
-.ptab.on{background:var(--f1);border-color:var(--f3);color:var(--f4);font-weight:600}
+.ptab.on{background:var(--f4);border-color:var(--f4);color:#fff;font-weight:600}
 .prayer-content{display:none}
 .prayer-content.on{display:block}
 .prayer-box{background:var(--surf);border:1px solid var(--bord);border-radius:var(--radius-lg);padding:24px 28px;border-left:4px solid var(--violet);box-shadow:var(--shadow)}
