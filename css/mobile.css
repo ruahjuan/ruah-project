@@ -44,6 +44,38 @@
 
   #filter-bar     { flex-shrink: 0; }
 
+  /* ── Toolbar de Canciones: iconos en vez de texto ── */
+  #ctrl-bar .pill { width: 38px; height: 38px; padding: 0; border-radius: 50%; justify-content: center; }
+  #ctrl-bar .pill .pill-lbl { display: none; }
+  #ctrl-bar #pill-sl-count { font-size: 9px; }
+  #pill-sl { display: none; } /* en mobile el setlist se ve con #pill-sl-mobile (hoja inferior) */
+
+  /* ── Orden / Tags: dos disparadores + panel que despliega ── */
+  .filter-trigger {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 8px 12px; border-radius: 20px; border: 1px solid var(--bord);
+    background: var(--surf); color: var(--text); font-size: 12.5px; font-weight: 600;
+    flex: 1; justify-content: center; white-space: nowrap;
+  }
+  .filter-trigger .filter-label {
+    color: var(--muted2); font-weight: 600; text-transform: none; font-size: 12.5px; letter-spacing: 0; padding: 0;
+  }
+  .fchev { font-size: 10px; color: var(--muted); }
+
+  #filter-bar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 8px;
+  }
+  /* Ocultar las etiquetas y el separador sueltos: ya están en los disparadores */
+  #filter-bar > .filter-label,
+  #filter-bar > .filter-sep { display: none; }
+
+  /* Los chips quedan ocultos hasta que se abre el disparador correspondiente */
+  #filter-bar .chip { display: none; }
+  #filter-bar.open[data-mode="sort"] .sort-chip { display: inline-block; }
+  #filter-bar.open[data-mode="tag"]  .tag-chip  { display: inline-block; }
+
   /* Split: columna, lista scrollea */
   #split {
     flex: 1;
