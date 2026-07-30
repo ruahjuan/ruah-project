@@ -270,7 +270,6 @@ function toggleFav() {
 
 function togglePrint() {
   printMode = !printMode;
-  document.getElementById('pill-print').classList.toggle('on', printMode);
   const dotBtn   = document.getElementById('dot-print-btn');
   const dotLabel = document.getElementById('dot-print-label');
   if (dotBtn)   dotBtn.classList.toggle('on', printMode);
@@ -1140,10 +1139,10 @@ document.addEventListener('keydown', e => {
 // FILTROS Y BÚSQUEDA
 // ═══════════════════════════════════════════════════════
 
-function setFilt(f, btn) {
-  filt = f;
-  document.querySelectorAll('#ctrl-bar .pill').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
+// Favoritas: un solo botón que alterna entre "Todas" y "Favoritas"
+function toggleFavFilter(btn) {
+  filt = (filt === 'fav') ? 'all' : 'fav';
+  btn.classList.toggle('on', filt === 'fav');
   renderList();
 }
 
@@ -1153,6 +1152,8 @@ function setSort(s, el) {
   document.querySelectorAll('#filter-bar .chip[data-sort]').forEach(c => c.classList.remove('on'));
   el.classList.add('on');
   renderList();
+  _syncFilterTriggers();
+  _closeFilterPanelMobile();
 }
 
 function setTag(t, el) {
@@ -1166,6 +1167,38 @@ function setTag(t, el) {
   }
   renderList();
   showView('songs');
+  _syncFilterTriggers();
+  _closeFilterPanelMobile();
+}
+
+// Disparadores "Orden ▾" / "Tags ▾" (mobile)
+function toggleFilterPanel(mode) {
+  const bar = document.getElementById('filter-bar');
+  const alreadyOpenSame = bar.classList.contains('open') && bar.dataset.mode === mode;
+  if (alreadyOpenSame) {
+    bar.classList.remove('open');
+  } else {
+    bar.dataset.mode = mode;
+    bar.classList.add('open');
+  }
+}
+
+function _syncFilterTriggers() {
+  const sortLbl = document.getElementById('sort-trigger-lbl');
+  const tagLbl  = document.getElementById('tag-trigger-lbl');
+  if (sortLbl) {
+    const active = document.querySelector('#filter-bar .chip.on[data-sort]');
+    sortLbl.textContent = active ? active.textContent : 'A–Z';
+  }
+  if (tagLbl) {
+    const active = document.querySelector('#filter-bar .chip[data-tag].on, #filter-bar .chip[data-tag].tag-on');
+    tagLbl.textContent = active ? active.textContent : 'Todas';
+  }
+}
+
+function _closeFilterPanelMobile() {
+  if (window.innerWidth >= 640) return;
+  document.getElementById('filter-bar').classList.remove('open');
 }
 
 function doSearch() {

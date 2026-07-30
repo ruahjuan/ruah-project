@@ -36,7 +36,7 @@ function buildTagChips() {
   const bar = document.getElementById('filter-bar');
   ALL_TAGS.forEach(tag => {
     const chip = document.createElement('span');
-    chip.className = 'chip';
+    chip.className = 'chip tag-chip';
     chip.dataset.tag = tag;
     chip.textContent = tag;
     chip.onclick = () => setTag(tag, chip);
