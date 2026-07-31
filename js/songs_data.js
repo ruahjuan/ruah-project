@@ -5473,5 +5473,90 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "sin-miedo",
+    "title": "SIN MIEDO",
+    "artist": "P. CRISTÓBAL FONES",
+    "composer": "",
+    "key": "Em",
+    "spotify": "https://open.spotify.com/intl-es/track/6uWx8q0b5hjHwpzfVaQPvJ?si=287dab2050cb46e0",
+    "spId": "6uWx8q0b5hjHwpzfVaQPvJ",
+    "youtube": "https://www.youtube.com/watch?v=SghsXohCbQA&list=OLAK5uy_mb2hrTeVc_4yHn0dq37a-Hy6iRS1U_Fis",
+    "ytId": "SghsXohCbQA",
+    "content": "(Original: G#m)\n@@Em                   D\nBrilla en los ojos un fuego que arde\n@@       Em                 D\ny despierta una llama en mi corazón.\n@@  Em                  D \nNueva es la paz y mayor la alegrí­a; \n@@    Em                    D\nlos mismos colores, mas otro el sabor; \n@@       Em         D\nes lo eterno que viene de Ti, \n@@       Em         D\nes lo eterno que viene de Ti,  \n\n@@ Em                 D       Bm\nHoy dejo atrás esa vida de siempre,\n@@    Em              \nme pongo en camino, \n@@       D            Bm\nme ordeno hacia el fin. \n@@Em                    D          Bm\nEl amor me llama, conozco el deseo\n@@         Em                   D          \naunque pesa en mi vida el honor. \n@@              Em       D        Bm    \nMe hago más libre en busca de Ti, \n@@              Em       D        Bm          \nme hago más libre en busca de Ti, \n\n\n@@Em          D       G        D\nSin miedo abrazo y sigo tus pasos, \n@@Em           D     C       D\nbusco el camino, voy peregrino.\n@@Em          D      G        D\nSin miedo me confí­o en Tu gracia,\n@@Em             D         C          D\nme pongo en marcha, Tu amor me basta. \n@@Em           D     C       D\nSin miedo abrazo, sigo tus pasos, \n@@Em           D     C       D\nbusco el camino, voy peregrino. \n@@Em          D     G         D\nSin miedo me confí­o en Tu gracia, \n@@Em             D     \nme pongo en marcha, \n@@   C           D       Em\nTu amor me acompañará. \n\n\n@@Em                D\nEste camino, al igual que otros muchos, \n@@ Em                  D\nexige la lucha, no excluye el dolor. \n@@Em                    D\nCaben mis rodeos y mis pies cansados, \n@@     Em                       D\ntambién esas voces que me hacen dudar. \n@@             Em           D\nPero en mis noches, me aferro de Ti, \n@@             Em           D\npero en mis noches, me aferro de Ti, \n\n@@ Em                     D     Bm\nVeo más claro: he de estar vigilante\n@@      Em             \na los vientos que en guerra \n@@       D         Bm\nse enfrentan en mí­. \n@@ Em                 D        Bm\nLuces, señales, banderas opuestas, \n@@ Em                    D       Bm\nofertas de gloria y prestigio fugaz. \n@@            Em     D        Bm\nNo me acobardo, elijo a mi Rey, \n@@            Em     D        Bm\nno me acobardo, elijo a mi Rey, \n\n\n@@Em          D       G        D\nSin miedo abrazo y sigo tus pasos, \n@@Em           D     C       D\nbusco el camino, voy peregrino.\n@@Em          D      G        D\nSin miedo me confí­o en Tu gracia,\n@@Em             D         C          D\nme pongo en marcha, Tu amor me basta. \n@@Em           D     C       D\nSin miedo abrazo, sigo tus pasos, \n@@Em           D     C       D\nbusco el camino, voy peregrino. \n@@Em          D     G         D\nSin miedo me confí­o en Tu gracia, \n@@Em             D     \nme pongo en marcha, \n@@   C           D       Em\nTu amor me acompañará. ",
+    "tags": [
+      "VOCACIONAL",
+      "COMUNIÓN",
+      "ANIMACIÓN",
+      "MISIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "cancion-a-la-sagrada-familia",
+    "title": "CANCIÓN A LA SAGRADA FAMILIA",
+    "artist": "MECHI RUIZ LUQUE",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/1a0MGsmMtXS3ieQ9VtDgNh?si=927e9b6987a544d5",
+    "spId": "1a0MGsmMtXS3ieQ9VtDgNh",
+    "youtube": "https://www.youtube.com/watch?v=4y7w3yT6t0U",
+    "ytId": "4y7w3yT6t0U",
+    "content": "@@C                  G         Am \nEl corazón de una madre cantando \n@@F        C         G  \nlas maravillas de Dios \n@@C                   G        Am \nEs el que va por la casa enseñando \n@@F            C       G  \nsobre humildad y amor. \n\n@@      F               G  \nY el Dios que se hace niño \n@@        C       Am \npara estar más cerca \n@@ F  G         C      C7 \nde todos los hombres. \n\n\n@@F     G               C \nUn hogar donde se amasa paz, \n@@F     G            C \nun lugar donde se talla amor, \n@@F          G               E7 Am \ndonde se siembra con paciencia, \n@@F            G            C \ndonde lo sencillo es lo valioso. \n\n\n@@C                  G         Am \nLas manos de un padre trabajando \n@@F         C          G  \ncon constancia y amor. \n@@ C                    G       Am \nSon las mismas que van enseñando \n@@F           C             G  \nsu gran confianza en los planes de Dios. \n\n@@     F                 G  \nY el Niño que mira y aprende \n@@       C         Am \nva creciendo en gracia \n@@ F       G        C   C7 \nante los ojos de Dios.\n\n\n@@F     G               C \nUn hogar donde se amasa paz, \n@@F     G            C \nun lugar donde se talla amor, \n@@F          G               E7 Am \ndonde se siembra con paciencia, \n@@F            G            \ndonde lo sencillo...\n\n@@F     G               C \nUn hogar donde se amasa paz, \n@@F     G            C \nun lugar donde se talla amor, \n@@F          G               E7 Am \ndonde se siembra con paciencia, \n@@F            G            C \ndonde lo sencillo es lo valioso. ",
+    "tags": [
+      "VOCACIONAL",
+      "NAVIDAD"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "ven-y-reina-madre-de-dios",
+    "title": "VEN Y REINA, MADRE DE DIOS",
+    "artist": "MISIÓN PAÍS",
+    "composer": "",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/75Nxld9qtfYUlUaWED3pF5?si=ff2346bc39e948dc",
+    "spId": "75Nxld9qtfYUlUaWED3pF5",
+    "youtube": "https://www.youtube.com/watch?v=2qsy-K9-gCU",
+    "ytId": "2qsy-K9-gCU",
+    "content": "@@D                A       \nMadre de misericordia, \n@@Bm      A        G\nMadre del Salvador, \n@@Em                D  Bm\nauxilio de los cristianos,\n@@G            Em        A\nruega por nosotros a Dios. \n\n@@D                A      \nVirgen fiel y prudente, \n@@Bm  A        G\nReina de la paz, \n@@Em                D  Bm\nSanta Madre de Cristo,\n@@ G            Em        A\nque hagamos Su voluntad. \n\n\n@@        D               A\n¡Ven y reina, Madre de Dios, \n@@        Em                Bm\nReina y Madre de la Creación!\n@@       G                     D\n¡Ven y reina en nuestro corazón \n@@      C              A\npara que reine el Señor!\n\n@@        D                A\n¡Ven y reina, Madre, de Dios,\n@@        Em                Bm\nReina y Madre de la Creación! \n@@        G                    D\n¡Ven y reina en nuestro corazón, \n@@       C          A         G  D\npara que reine Jesús, el Señor!\n\n\n@@D                    A     \nMadre del Buen Consejo, \n@@Bm    A        G\nideal de Santidad,\n@@Em                 D Bm  \nReina del Santo Rosario, \n@@G       Em      A\nenséñanos a rezar.\n\n@@ D             A     \nMadre Inmaculada, \n@@Bm      A        G\nMadre del Creador, \n@@Em                 D  Bm\nReina asunta a los cielos,\n@@G           Em       A\nllévanos contigo a Dios.\n\n\n@@        D               A\n¡Ven y reina, Madre de Dios, \n@@        Em                Bm\nReina y Madre de la Creación!\n@@       G                     D\n¡Ven y reina en nuestro corazón \n@@      C              A\npara que reine el Señor!\n\n@@        D                A\n¡Ven y reina, Madre, de Dios,\n@@        Em                Bm\nReina y Madre de la Creación! \n@@        G                    D\n¡Ven y reina en nuestro corazón, \n@@       C          A         G  D\npara que reine Jesús, el Señor!\n",
+    "tags": [
+      "MARÍA",
+      "SALIDA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "no-te-canses-madre",
+    "title": "NO TE CANSES MADRE",
+    "artist": "TRIGO 13, MISIÓN JATARI",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/3VvL6W6FbFsFmd6nEOTMS5?si=3fe865c278284fc3",
+    "spId": "3VvL6W6FbFsFmd6nEOTMS5",
+    "youtube": "https://www.youtube.com/watch?v=Ty3g9ktuhKw",
+    "ytId": "Ty3g9ktuhKw",
+    "content": "@@      G           D         Em\nUna madre como tú, no se cansa\n@@         C\nde esperar al que se aleja,\n@@         D\nde abrazar lágrimas secas\n@@      G           D         Em\nUna madre como tú, no se cansa\n@@         C\nde acariciar al que está herido,\n@@          D\nde consolar a su débil hijo.\n@@               C\nNo te canses, Madre.\n\n\n@@G                 Em\nNo te canses, Madre,\n@@           C                      \nque en mí hay un peregrino \n@@       G\nsin camino, \n@@        D          C\nde tus pasos necesito.\n\n@@G                 Em\nNo te canses, Madre,\n@@            C    \nQue en mí hay un corazón \n@@       G\nsin timón, \n@@           D             Em\nque no aprende sin tu amor.\n@@      C        D         Em\nSolo una petición: No te canses \n\n\n@@  Em            C            G    D\nMaría vela mis pasos con paciencia,\n@@      Em           C        \nentre todas mis espinas \n@@            G   D\nella me encuentra.\n@@       Em       C          G  D\nEs tan fácil a tu lado mi torpeza\n@@       Em             C             \nque pedirte lo que te pido \n@@          D\nno me cuesta:\n\n\n@@G                 Em\nNo te canses, Madre,\n@@           C                      \nque en mí hay un peregrino \n@@       G\nsin camino, \n@@        D          C\nde tus pasos necesito.\n\n@@G                 Em\nNo te canses, Madre,\n@@            C    \nQue en mí hay un corazón \n@@       G\nsin timón, \n@@           D             Em\nque no aprende sin tu amor.\n@@      C        D         Em\nSolo una petición: No te canses \n\n@@         Em              C      \nGracias Madre por enseñarme\n@@          G         D\nque el dolor con Amor\n@@      Em            C        G   \nes perfume que se eleva a Dios.",
+    "tags": [
+      "MARÍA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
