@@ -5727,5 +5727,70 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "con-y-por-amor",
+    "title": "CON Y POR AMOR",
+    "artist": "MARTÍN VALVERDE",
+    "composer": "MARTÍN VALVERDE",
+    "key": "A",
+    "spotify": "https://open.spotify.com/intl-es/album/689Zp72ujpOh6PKaqJbgxO?si=58bbfe4c56464ca6",
+    "spId": "",
+    "youtube": "https://www.youtube.com/watch?v=GJGzj4SdcR0",
+    "ytId": "GJGzj4SdcR0",
+    "content": "@@A                                      \nTe has puesto a pensar \n@@                   D\nlo que puedes hacer con amor \n@@A                     \nte has puesto a medir \n@@             D\ntan siquiera su gran valor \n@@C#7           F#m           \nno hablo de amor de palabras \n@@C#7           F#m  A7          D \nyo hablo de amor que sabe hacer \n@@           E                 A \ndar por el otro lo que por ti das. \n\n@@A \nDe muchos ojos lágrimas \n@@ D\nhas de quitar \n@@A                        D\na muchas bocas podrás alimentar\n@@C#7          F#m\nllenando su hambre de pan \n@@C#7          F#m     A7    D\nllenando su hambre de amor\n\n\n@@D           E          C#m \nSe que es difícil de realizar\n@@        F#7              Bm\nsé que mucho ha de costar\n@@        Esus4      E         A  \npero lo puedes hacer con amor. \n\n\n@@A\nSiempre hay montañas que no,\n@@       D\nno te dejan amar\n@@A \nSi tratas tú sólo \n@@              D\njamás las podrías quitar\n@@   C#7       F#m\nes duro en la lucha seguir\n@@ C#7      F#m        A7        D\ncuando parece que sólo tu estás\n\n@@D            E                   C#m\nCuando tu creas que no puedes más,\n@@          F#7             Bm \nsigue adelante y encontrarás\n@@               Esus4          E       A \nsiempre habrá alguien que está sin amor",
+    "tags": [
+      "MISIÓN",
+      "VOCACIONAL",
+      "SALIDA",
+      "COMUNIDAD",
+      "ANIMACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "tu-mirada",
+    "title": "TU MIRADA",
+    "artist": "PASCUA JOVEN SAN ISIDRO",
+    "composer": "",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/2mSbxPcJni56u4cjEUmfkM?si=0898d0fb6d6d4fd3",
+    "spId": "2mSbxPcJni56u4cjEUmfkM",
+    "youtube": "https://www.youtube.com/watch?v=PJkm5ceBAL0",
+    "ytId": "PJkm5ceBAL0",
+    "content": "@@D                 \nNo tengo palabras \n@@Bm                            \nque puedan formar \n@@         Em                  A\nuna oración que me salga entera. \n\n@@D\nBebo tu silencio\n@@Bm\nde a sorbos pequeños\n@@        Em              A\npara llenar mi aljibe solitario. \n\n\n@@   F#7                   \nPedirte dones \n@@        Bm\nno me ocupa la intención, \n@@         G                     A \nsino sentirme estando bien amado. \n\n@@           F#7       Bm  \nSólo Vos y yo, y Tu mirada \n@@                        G \nque traspasa, que me acaba, \n@@      A             D \nsacudiendo el corazón. \n\n\n@@D\nCómo te despiertas, \n@@Bm                      Em\nflor de primavera, mi Jesús\n@@                      A \ncuando a Vos me dispongo. \n\n@@D\nQué suave es tu aliento, \n@@Bm                      Em\nmi respiración del corazón\n@@                 A \nrezando en tus manos. \n\n\n@@    F#7                 \nY siento que en esto \n@@   Bm\nde la contemplación \n@@        Em                       A\nno miro yo tan hondo como me mirás Vos. \n\n@@           F#7           Bm\nEn mi soledad, yo y Tu mirada \n@@                        G\nque traspasa, que me acaba,\n@@      A             D \nsacudiendo el corazón.",
+    "tags": [
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "adorador",
+    "title": "ADORADOR",
+    "artist": "DANIEL POLI",
+    "composer": "DANIEL POLI",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/5k6MSk2H53LFZC1HjHTWYD?si=b3a729e7ffc44438",
+    "spId": "5k6MSk2H53LFZC1HjHTWYD",
+    "youtube": "https://www.youtube.com/watch?v=wz7evlaRJDQ",
+    "ytId": "wz7evlaRJDQ",
+    "content": "@@   D             Bm \nSeñor, yo quiero ser               \n@@         Em          A\nun verdadero adorador. \n@@      G  A    D      Bm \nEn espíritu y en verdad \n@@        Em       A \nyo te quiero adorar. \n\n\n@@G              A      D   D7 \nDame un corazón sencillo, \n@@G              A      D   D7 \ndame un corazón sencillo, \n@@G              A      D      Bm \ndame un corazón sencillo, Señor, \n@@        Em            A \npara entrar en Tu presencia. \n\n\n@@   D             Bm \nSeñor, yo quiero ser               \n@@         Em          A\nun verdadero adorador. \n@@      G  A    D      Bm \nEn espíritu y en verdad \n@@        Em       A \nyo te quiero adorar. \n\n\n@@   G          A    D  D7\nQuiero ser agradecido, \n@@   G          A    D  D7\nquiero ser agradecido, \n@@   G          A    D      Bm\nquiero ser agradecido, Señor,\n@@         Em           A \npara entrar en Tu presencia. \n\n\n@@   D             Bm \nSeñor, yo quiero ser               \n@@         Em          A\nun verdadero adorador. \n@@      G  A    D      Bm \nEn espíritu y en verdad \n@@        Em       A \nyo te quiero adorar. \n\n\n@@   G       A    D  D7\nQuiero dejarlo todo,\n@@   G       A    D  D7 \nquiero dejarlo todo, \n@@     G       A    D       Bm\nyo quiero dejarlo todo, Señor,\n@@         Em            A \npara entrar en Tu presencia.",
+    "tags": [
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
