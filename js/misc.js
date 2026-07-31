@@ -92,7 +92,7 @@ function sortedVisible() {
   return vis;
 }
 
-// ── Cover de la canción (YouTube → Spotify oEmbed → ocultar) ────
+// ── Cover de la canción (Spotify oEmbed → YouTube → ocultar) ────
 
 async function loadCover(song) {
   const ci = document.getElementById('cover-img');
@@ -141,8 +141,20 @@ async function loadCover(song) {
     ci.src = url;
   }
 
+  function tryYoutube() {
+    if (!song.ytId) { hideAll(); return; }
+    tryImgUrls(
+      [
+        `https://img.youtube.com/vi/${song.ytId}/mqdefault.jpg`,
+        `https://img.youtube.com/vi/${song.ytId}/hqdefault.jpg`,
+      ],
+      showImage,
+      hideAll
+    );
+  }
+
   async function trySpotify() {
-    if (!song.spId) { hideAll(); return; }
+    if (!song.spId) { tryYoutube(); return; }
     try {
       const res  = await fetch(
         `https://open.spotify.com/oembed?url=https://open.spotify.com/track/${song.spId}`
@@ -151,29 +163,18 @@ async function loadCover(song) {
       const data = await res.json();
       if (!data.thumbnail_url) throw new Error('no thumbnail');
       // La URL de imagen de Spotify sí es cross-origin segura
-      tryImgUrls([data.thumbnail_url], showImage, hideAll);
+      tryImgUrls([data.thumbnail_url], showImage, tryYoutube); // Spotify falló → intentar YouTube
     } catch {
-      hideAll();
+      tryYoutube(); // Spotify falló → intentar YouTube
     }
   }
 
   // ── Cadena principal ──────────────────────────────────────────
-  // 1. YouTube: mqdefault → hqdefault
-  // 2. Si falla (o no hay ytId): Spotify oEmbed
+  // 1. Spotify oEmbed (fuente principal)
+  // 2. Si falla (o no hay spId): YouTube mqdefault → hqdefault (fuente por defecto)
   // 3. Si falla todo: ocultar
 
-  if (song.ytId) {
-    tryImgUrls(
-      [
-        `https://img.youtube.com/vi/${song.ytId}/mqdefault.jpg`,
-        `https://img.youtube.com/vi/${song.ytId}/hqdefault.jpg`,
-      ],
-      showImage,
-      trySpotify  // YouTube falló → intentar Spotify
-    );
-  } else {
-    trySpotify();
-  }
+  trySpotify();
 }
 
 // ── Favorito ─────────────────────────────────────────────
