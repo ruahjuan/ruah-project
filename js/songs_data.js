@@ -5792,5 +5792,26 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "espiritu-santo",
+    "title": "ESPÍRITU SANTO",
+    "artist": "ATHENAS",
+    "composer": "ATHENAS",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/3D4pZWV4T4BnkOxQjigKe5?si=9d7a315f1e904db8",
+    "spId": "3D4pZWV4T4BnkOxQjigKe5",
+    "youtube": "https://www.youtube.com/watch?v=jtt7zyFeNls",
+    "ytId": "jtt7zyFeNls",
+    "content": "@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@               Em     G\nMi alma tiene sed de Ti, \n@@               A\nmi alma tiene sed\n\n@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@               Em     G\nMi alma tiene sed de Ti, \n@@               A  Asus4\nmi alma tiene sed\n\n\n@@         D      G       A\nEspíritu Santo ven a arder\n@@            Bm      G     A\nDerrama tu fuego y tu poder\n@@          Em\nActúa en mí\n@@          Bm\nActúa en mí\n@@          A\nActúa en mí\n\n@@             Em          Bm    A\nEstas derramando la unción aquí\n@@             Em          Bm    A\nEstas derramando la unción aquí\n@@             Em          Bm    A\nEstas derramando la unción aquí\n@@             Em          Bm    A\nEstas derramando la unción aquí\n",
+    "tags": [
+      "ESPÍRITU SANTO",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
