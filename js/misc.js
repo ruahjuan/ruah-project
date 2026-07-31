@@ -153,11 +153,18 @@ async function loadCover(song) {
     );
   }
 
+  const SPOTIFY_TIMEOUT_MS = 3000;
+
   async function trySpotify() {
     if (!song.spId) { tryYoutube(); return; }
+
+    const controller = new AbortController();
+    const timeoutId  = setTimeout(() => controller.abort(), SPOTIFY_TIMEOUT_MS);
+
     try {
       const res  = await fetch(
-        `https://open.spotify.com/oembed?url=https://open.spotify.com/track/${song.spId}`
+        `https://open.spotify.com/oembed?url=https://open.spotify.com/track/${song.spId}`,
+        { signal: controller.signal }
       );
       if (!res.ok) throw new Error('oembed fail');
       const data = await res.json();
@@ -165,13 +172,16 @@ async function loadCover(song) {
       // La URL de imagen de Spotify sí es cross-origin segura
       tryImgUrls([data.thumbnail_url], showImage, tryYoutube); // Spotify falló → intentar YouTube
     } catch {
-      tryYoutube(); // Spotify falló → intentar YouTube
+      // Cubre error de red, oembed fail, sin thumbnail, y timeout (abort)
+      tryYoutube(); // Spotify falló (o tardó demasiado) → intentar YouTube
+    } finally {
+      clearTimeout(timeoutId);
     }
   }
 
   // ── Cadena principal ──────────────────────────────────────────
-  // 1. Spotify oEmbed (fuente principal)
-  // 2. Si falla (o no hay spId): YouTube mqdefault → hqdefault (fuente por defecto)
+  // 1. Spotify oEmbed (fuente principal, con timeout de 3s)
+  // 2. Si falla, tarda demasiado, o no hay spId: YouTube mqdefault → hqdefault (fuente por defecto)
   // 3. Si falla todo: ocultar
 
   trySpotify();
