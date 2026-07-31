@@ -5558,5 +5558,26 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "madre-mostranos-a-jesus",
+    "title": "MADRE, MOSTRANOS A JESÚS",
+    "artist": "PABLO MARTÍNEZ",
+    "composer": "PABLO MARTÍNEZ",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/0GSorDDp1IOJ9RiQoQIT4v?si=c9ad3e4de2814804",
+    "spId": "0GSorDDp1IOJ9RiQoQIT4v",
+    "youtube": "https://www.youtube.com/watch?v=1vCrKbbXqG0",
+    "ytId": "1vCrKbbXqG0",
+    "content": "@@D \nVamos caminando, \n@@        G\nvamos transitando el tiempo,\n@@D\nsomos peregrinos \n@@         G\nque buscamos al Dios vivo.\n@@D\nUna sed intensa \n@@         G\nque nos nace desde adentro,\n@@D\nes la que nos lleva \n@@      G\na querer ver al maestro.\n@@D\nY con nosotros vas, \n@@Em\nvos nos acompañás,\n@@F#                  Bm\nseguro contigo a tu hijo \n@@      Bm/A\nvamos a encontrar.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D                                        \nVos que lo tuviste \n@@       G\nen tu seno virginal,\n@@D\nque lo acompañaste \n@@      G\nen su vida hasta el final.\n@@D\nVos que le enseñaste \n@@        G\nsiendo niño a caminar,\n@@D\nvos que lo escuchaste \n@@           G\ndecir su primer \"mamá\".\n@@D\nHoy nosotros también, \n@@Em\nqueremos aprender,\n@@F#                      Bm  \nmás de tu hijo y qué mejor \n@@          Bm/A\nsi vos nos enseñás.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                     G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D\nFiel a sus promesas\n@@         G\ndiste un sí que no cesó,\n@@D\nse escuchó al inicio \n@@       G\ny resonó en la pasión.\n@@D\nEn la noche de la historia \n@@G\nuna luz brilló,\n@@D\ncuando tu hijo amado \n@@       G\nen la cruz nos redimió.\n@@D\nAl pie estabas vos, \n@@Em\ny nosotros también,\n@@F#                                  \nfue allí donde tu vida \n@@Bm \ncon la nuestra Él unió.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D\nMadre que nos amas \n@@        G\ny en el viaje nos animas,\n@@D\nMadre que nos llamas \n@@    G\na vivir la Eucaristía.\n@@D \nMujer generosa \n@@         G\nque se ofrece por el Reino,\n@@D  \nDulce intercesora \n@@       G\ny consuelo para el pueblo.\n@@D\nAsí como en Caná, \n@@Em\nhacelo una vez más,\n@@F#                           \npedí a tu hijo \n@@                 Bm\nque transforme nuestra vida en más,\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.",
+    "tags": [
+      "MARÍA",
+      "SALIDA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
