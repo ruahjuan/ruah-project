@@ -2355,7 +2355,7 @@ const SONGS_DATA = [
     "spId": "0MaGutTmEj5SnI92E4JaW7",
     "youtube": "https://www.youtube.com/watch?v=R52PmAZHk1g",
     "ytId": "R52PmAZHk1g",
-    "content": "@@D                    A\nManda tu Espíritu, Jesús\n@@Bm                   G\nQue descienda hoy aquí\n@@D                    A\nQue su soplo llene nuestro corazón\n@@Bm     G\nVen Señor.\n\n@@D      \nLlénanos con tu poder\n@@A\nVen a nuestro corazón\n@@Bm                     G\nSopla tu Espíritu de amor\n\n@@D                         A\nEnciende en nuestro corazón\n@@Bm                       G\nEl fuego sagrado de tu amor\n\n\n@@            D\n/Manda tu Espíritu\n@@             A\nManda tu Espíritu\n@@         Bm              G\nQue descienda en este lugar/ x3\n\n\n@@ D \n/Ven, ven, Espíritu Santo\n@@ A\nVen, ven, Espiritu Santo\n@@ Bm                G\nVen, ven, derrama Tu poder/ x3\n\n\n@@           D\n/Manda tu fuego,\n@@           A\nmanda tu fuego\n@@      Bm             G\nY que arda en este lugar/ x2\n\n\n@@ D \n/Ven, ven, Espíritu Santo\n@@ A\nVen, ven, Espiritu Santo\n@@ Bm                G\nVen, ven, derrama Tu poder/ x3",
+    "content": "@@D                    A\nManda tu Espíritu, Jesús\n@@Bm                   G\nQue descienda hoy aquí\n@@D                    A\nQue su soplo llene nuestro corazón\n@@Bm     G\nVen Señor.\n\n@@D      \nLlénanos con tu poder\n@@A\nVen a nuestro corazón\n@@Bm                     G\nSopla tu Espíritu de amor\n\n@@D                         A\nEnciende en nuestro corazón\n@@Bm                       G\nEl fuego sagrado de tu amor\n\n\n@@            D\n/Manda tu Espíritu\n@@             A\nManda tu Espíritu\n@@         Bm              G\nQue descienda en este lugar/ x3\n\n\n@@ D \n/Ven, ven, Espíritu Santo\n@@ A\nVen, ven, Espiritu Santo\n@@ Bm                G\nVen, ven, derrama Tu poder/ x4\n\n\n@@           D\n/Manda tu fuego,\n@@           A\nmanda tu fuego\n@@      Bm             G\nY que arda en este lugar/ x2\n\n\n@@ D \n/Ven, ven, Espíritu Santo\n@@ A\nVen, ven, Espiritu Santo\n@@ Bm                G\nVen, ven, derrama Tu poder/ x4",
     "tags": [
       "ESPÍRITU SANTO",
       "ADORACIÓN"
@@ -5569,10 +5569,158 @@ const SONGS_DATA = [
     "spId": "0GSorDDp1IOJ9RiQoQIT4v",
     "youtube": "https://www.youtube.com/watch?v=1vCrKbbXqG0",
     "ytId": "1vCrKbbXqG0",
-    "content": "@@D \nVamos caminando, \n@@        G\nvamos transitando el tiempo,\n@@D\nsomos peregrinos \n@@         G\nque buscamos al Dios vivo.\n@@D\nUna sed intensa \n@@         G\nque nos nace desde adentro,\n@@D\nes la que nos lleva \n@@      G\na querer ver al maestro.\n@@D\nY con nosotros vas, \n@@Em\nvos nos acompañás,\n@@F#                  Bm\nseguro contigo a tu hijo \n@@      Bm/A\nvamos a encontrar.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D                                        \nVos que lo tuviste \n@@       G\nen tu seno virginal,\n@@D\nque lo acompañaste \n@@      G\nen su vida hasta el final.\n@@D\nVos que le enseñaste \n@@        G\nsiendo niño a caminar,\n@@D\nvos que lo escuchaste \n@@           G\ndecir su primer \"mamá\".\n@@D\nHoy nosotros también, \n@@Em\nqueremos aprender,\n@@F#                      Bm  \nmás de tu hijo y qué mejor \n@@          Bm/A\nsi vos nos enseñás.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                     G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D\nFiel a sus promesas\n@@         G\ndiste un sí que no cesó,\n@@D\nse escuchó al inicio \n@@       G\ny resonó en la pasión.\n@@D\nEn la noche de la historia \n@@G\nuna luz brilló,\n@@D\ncuando tu hijo amado \n@@       G\nen la cruz nos redimió.\n@@D\nAl pie estabas vos, \n@@Em\ny nosotros también,\n@@F#                                  \nfue allí donde tu vida \n@@Bm \ncon la nuestra Él unió.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D\nMadre que nos amas \n@@        G\ny en el viaje nos animas,\n@@D\nMadre que nos llamas \n@@    G\na vivir la Eucaristía.\n@@D \nMujer generosa \n@@         G\nque se ofrece por el Reino,\n@@D  \nDulce intercesora \n@@       G\ny consuelo para el pueblo.\n@@D\nAsí como en Caná, \n@@Em\nhacelo una vez más,\n@@F#                           \npedí a tu hijo \n@@                 Bm\nque transforme nuestra vida en más,\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.",
+    "content": "@@D \nVamos caminando, \n@@        G\nvamos transitando el tiempo,\n@@D\nsomos peregrinos \n@@         G\nque buscamos al Dios vivo.\n@@D\nUna sed intensa \n@@         G\nque nos nace desde adentro,\n@@D\nes la que nos lleva \n@@      G\na querer ver al Maestro.\n@@D\nY con nosotros vas, \n@@Em\nvos nos acompañás,\n@@F#                  Bm\nseguro contigo a tu Hijo \n@@      Bm/A\nvamos a encontrar.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D                                        \nVos que lo tuviste \n@@       G\nen tu seno virginal,\n@@D\nque lo acompañaste \n@@      G\nen su vida hasta el final.\n@@D\nVos que le enseñaste \n@@        G\nsiendo niño a caminar,\n@@D\nvos que lo escuchaste \n@@      G\ndecir su primer \"mamá\".\n@@D\nHoy nosotros también, \n@@Em\nqueremos aprender,\n@@F#                      Bm  \nmás de tu Hijo y qué mejor \n@@          Bm/A\nsi vos nos enseñás.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D\nFiel a sus promesas\n@@         G\ndiste un sí que no cesó,\n@@D\nse escuchó al inicio \n@@       G\ny resonó en la pasión.\n@@D\nEn la noche de la historia \n@@G\nuna luz brilló,\n@@D\ncuando tu hijo amado \n@@       G\nen la cruz nos redimió.\n@@D\nAl pie estabas vos, \n@@Em\ny nosotros también,\n@@F#                                  \nfue allí donde tu vida \n@@Bm \ncon la nuestra Él unió.\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.\n\n\n@@D\nMadre que nos amas \n@@        G\ny en el viaje nos animas,\n@@D\nMadre que nos llamas \n@@    G\na vivir la Eucaristía.\n@@D \nMujer generosa \n@@         G\nque se ofrece por el Reino,\n@@D  \nDulce intercesora \n@@       G\ny consuelo para el pueblo.\n@@D\nAsí como en Caná, \n@@Em\nhacelo una vez más,\n@@F#                           \npedí a tu Hijo \n@@          Bm\nque transforme nuestra vida en más,\n@@Em\npor eso todos hoy \n@@   Asus4          A\nte queremos cantar:\n\n\n@@D                      G\nMadre mostranos a tu hijo Jesús,\n@@D                       G\nAbrí el camino que nos lleve a su luz.\n@@Em          \nTu amor nos guía, \n@@Asus4       A       D\nqueremos ver a Jesús.",
     "tags": [
       "MARÍA",
       "SALIDA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "mirarte-a-ti",
+    "title": "MIRARTE A TI",
+    "artist": "PASCUA JOVEN SAN ISIDRO",
+    "composer": "ROMINA GONZÁLEZ",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/66cB7wb4SdoAKt4hzrwoMD?si=3d30c3c558ed426f",
+    "spId": "66cB7wb4SdoAKt4hzrwoMD",
+    "youtube": "https://www.youtube.com/watch?v=4RHCr6RVeC0",
+    "ytId": "4RHCr6RVeC0",
+    "content": "@@  Am               D\nMirarte a ti es sentir\n@@                     Em\na Dios muy cerca de mi\n@@          D       C\nmirarte a ti es volar.\n\n@@  Am              D\nMirarte a ti es soñar\n@@                           Em\nque puedo volar sobre el mar,\n@@          D           B7    Em\nmirarte a ti es encontrar la paz.\n\n@@  Am               D\nMirarte a ti es perder la razón\n@@   B7                Em\ny enloquecerse con tanto amor\n@@   C                  Am               \nal ver en tus ojos a tu hijo, \n@@          D\nCristo Jesús.\n\n\n@@  G              D            Em   C\nMaría, dame un poco de tu serenidad,\n@@   Cm             Em        \nun poco de tu paciencia, \n@@            Am     D\nun poco de tu fidelidad.\n\n@@    G                D    \nMaría, enciende mi fuego, \n@@              Em     C\nenciéndeme con tu luz,\n@@     G                Em               \nyo quiero arder por Cristo \n@@          C        D     G\ncon el fervor que tienes tú.\n\n\n@@   Am             D\nMirarte a ti es tener\n@@                       Em\nel alma dispuesta a creer,\n@@          D      C\nmirarte a ti es orar.\n\n@@  Am               D\nMirarte a ti es vencer el temor\n@@B7                 Em\ny entregarse en un sí de amor\n@@   C               \nal ver tus ojos \n@@   Am                 D\nla calma de un cielo azul.\n\n\n@@  G              D            Em   C\nMaría, dame un poco de tu serenidad,\n@@   Cm             Em        \nun poco de tu paciencia, \n@@            Am     D\nun poco de tu fidelidad.\n\n@@    G                D    \nMaría, enciende mi fuego, \n@@              Em     C\nenciéndeme con tu luz,\n@@     G                Em               \nyo quiero arder por Cristo \n@@          C        D     G\ncon el fervor que tienes tú.\n",
+    "tags": [
+      "MARÍA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "mi-mejor-decision",
+    "title": "MI MEJOR DECISIÓN",
+    "artist": "FRUTO DEL MADERO",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/3e6dePtNzKaWDYvKItvQaV?si=fd0fec9e59944578",
+    "spId": "3e6dePtNzKaWDYvKItvQaV",
+    "youtube": "https://www.youtube.com/watch?v=7y-eZQGUmH8&list=OLAK5uy_k3dqIf9D8RPCP9XbpdJ-dPX8JkqBHgIyU",
+    "ytId": "7y-eZQGUmH8",
+    "content": "@@C\nEntre tantas preguntas\n@@              Fmaj7\nNo le podía mentir al corazón\n@@C\nUn vacío en mi alma\n@@              Fmaj7\nQue tú llenaste de ilusión\n\n@@Dm                     G\nEntre los juegos de amor\n@@             C\nFaltaba esa pieza\n@@      G       Am\nPara ser ganador\n@@     Dm\nY llegaste tú\n@@        F\nCon toda tu luz\n@@        C                    G\nA enseñarme cuál es la solución\n\n\n@@                 F                 C\nYo no le temo a nada si estás junto a mí\n@@      Am                 G\nSi somos los dos soñando\n@@                    F\nConstruyendo una vida\n@@                 C\nCon quien compartir\n@@       Am\nYa somos los dos\n@@                F\nSabiendo que Dios \n@@                       G\nnos va a enseñar el camino\n@@   C                       G \nPara tratar de hacer lo mejor\n@@           Dm                 G\nY haberte prometido toda mi vida\n@@                  C\nEs mi mejor decisión\n\n\n@@ C\nAunque pasen los años\n@@               Fmaj7\nCada mañana quiero\n@@                     F\nDespertarme junto a ti\n@@      Fsus\nPara poder decirte\n\n@@C\nQue ya no es tan extraño\n@@              Fmaj7\nQuererte a mi lado\n@@                     F\nPor el resto de mis días\n\n@@        Dm \nY te amaré\n@@                      G\nHasta que seamos viejitos\n@@     C           G            Am\nY la vida se nos pase de a poquitos\n@@            F                        G\nSiempre seré el primero en darte la mano\n\n\n@@                 F                 C\nYo no le temo a nada si estás junto a mí\n@@      Am                 G\nSi somos los dos soñando\n@@                    F\nConstruyendo una vida\n@@                 C\nCon quien compartir\n@@       Am\nYa somos los dos\n@@                F\nSabiendo que Dios \n@@                       G\nnos va a enseñar el camino\n@@   C                       G \nPara tratar de hacer lo mejor\n@@           Dm                 G\nY haberte prometido toda mi vida\n@@                  C\nEs mi mejor decisión\n\n\n@@               F                  C\nNo le temas a nada si estás junto a mí\n@@      Am                 G\nSi somos los dos soñando\n@@                    F\nConstruyendo una vida\n@@                 C\nCon quien compartir\n@@       Am\nYa somos los dos\n@@                F\nSabiendo que Dios \n@@                       G\nnos va a enseñar el camino\n@@   C                       G \nPara tratar de hacer lo mejor\n@@           Dm                 G\nY haberte prometido toda mi vida\n@@                  C\nEs mi mejor decisión\n",
+    "tags": [
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "te-celebrare",
+    "title": "TE CELEBRARÉ",
+    "artist": "DANIEL POLI",
+    "composer": "DANIEL POLI",
+    "key": "Em",
+    "spotify": "https://open.spotify.com/intl-es/track/356EgPig4RqMJcjdvS5dXX?si=1bd63ddbb4374d20",
+    "spId": "356EgPig4RqMJcjdvS5dXX",
+    "youtube": "https://www.youtube.com/watch?v=9ejLvuSalWA",
+    "ytId": "9ejLvuSalWA",
+    "content": "@@  Em             G         A\nSeñor inclina tu oído y óyeme\n@@           C         Bm           Em\nPorque estoy solo y voy desamparado\n@@   Em       G               A\nProtégeme ya que soy tu amigo\n@@C              Bm               Em\nSiempre salvas al que espera en Ti.\n\n\n@@      C       D             Bm Em\nYo te celebraré con toda el alma\n@@     C         D              Bm Em\nGlorificaré Tu nombre eternamente\n@@        C               D            Bm  Em\nPorque Tu bondad conmigo ha sido grande\n@@        C         Bm           Em\nMe salvaste del abismo de la muerte.\n\n\n@@  Em             G         A\nA Ti clamo en el día de mi pena\n@@  C         Bm              Em\nY Señor se que me escucharás\n@@        Em             G          A\nPorque eres grande y haces maravillas\n@@C         Bm           Em\nSolo Tú Señor eres mi Dios.\n\n\n@@      C       D             Bm Em\nYo te celebraré con toda el alma\n@@     C         D              Bm Em\nGlorificaré Tu nombre eternamente\n@@        C               D            Bm  Em\nPorque Tu bondad conmigo ha sido grande\n@@        C         Bm           Em\nMe salvaste del abismo de la muerte.\n\n\n@@     Em        G            A\nDios mío enseñame tus caminos\n@@ C                Bm              Em\nPara que siempre ande en Tu verdad\n@@Em              G                A\nPon en mi corazón amor, por Tu nombre\n@@C        Bm         Em\nMírame, sálvame Señor\n\n\n@@      C       D             Bm Em\nYo te celebraré con toda el alma\n@@     C         D              Bm Em\nGlorificaré Tu nombre eternamente\n@@        C               D            Bm  Em\nPorque Tu bondad conmigo ha sido grande\n@@        C         Bm           Em\nMe salvaste del abismo de la muerte.",
+    "tags": [
+      "SALMO",
+      "ALABANZA",
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "salmo-150",
+    "title": "SALMO 150",
+    "artist": "FAREMO METÁ",
+    "composer": "",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/1sWKt0dX36DQbeOyuxStvI?si=34d5bae9b4054b44",
+    "spId": "1sWKt0dX36DQbeOyuxStvI",
+    "youtube": "https://www.youtube.com/watch?v=_wc8s1DdO7g",
+    "ytId": "_wc8s1DdO7g",
+    "content": "@@          D              G\nAlaben a Dios en su santuario,\n@@               D\nalábenlo en el firmamento\n@@                  Em\nde su inmensa potencia,\n@@                  F#m\nlo alaben por sus obras grandiosas,\n@@              A                G  D\nlo alaben por su inmensa grandeza,\n@@            Em             A\nalábenlo al son de trompetas.\n\n\n@@              D\nAlábenlo con cítara y arpa,\n@@                   G\nlo alaben con tambores y danzas,\n@@                    D\nlo alaben con trompetas y flautas,\n@@                Em\nlo alaben con platillos sonoros,\n@@                F#m\nlo alaben con platillos vibrantes.\n@@             A                    D\nQue todo viviente de gloria a Su nombre,\n@@       Em           A\na Su nombre, a Su nombre\n\n@@D        G\nAleluya, aleluya\n@@D        G\nAleluya, aleluya\n@@D          Em\nAleluya, aleluya\n@@   A\nAleluya\n\n\n@@              D\nAlábenlo con cítara y arpa,\n@@                   G\nlo alaben con tambores y danzas,\n@@                    D\nlo alaben con trompetas y flautas,\n@@                Em\nlo alaben con platillos sonoros,\n@@                F#m\nlo alaben con platillos vibrantes.\n@@             A                    D\nQue todo viviente de gloria a Su nombre,\n@@       Em           A\na Su nombre, a Su nombre\n\n",
+    "tags": [
+      "ADORACIÓN",
+      "ALABANZA",
+      "ACCIÓN DE GRACIAS",
+      "SALMO"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "mas",
+    "title": "MÁS",
+    "artist": "PABLO MARTÍNEZ",
+    "composer": "PABLO MARTÍNEZ",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/1K8vCEtuOFBj1Q28GGcZFv?si=0ab0308d64054231",
+    "spId": "1K8vCEtuOFBj1Q28GGcZFv",
+    "youtube": "https://www.youtube.com/watch?v=oHOis2d-vac",
+    "ytId": "oHOis2d-vac",
+    "content": "@@D\nNo temas, hijo mío, \n@@   G        Gm           D\nestoy aquí, junto a ti, pequeño. \n@@    A             D\nEn mis brazos te llevo.\n\n@@D\nSi miras en mis manos, \n@@   G         Gm             D\nverás ahí tu nombre así grabado, \n@@   A            D\nen la palma tatuado\n\n\n@@ D              A          D\nMás de lo que puedas pensar\n@@         A     Bm\nTe amo eso y más \n@@           G           D\nde lo que logres imaginar.\n@@            A        D\nBusco me des un lugar \n@@           A        Bm\npara que pueda morar \n@@  G        A      D\ny tú mi amor probar.\n\n\n@@   D \nTe llamo por tu nombre, \n@@    G            Gm\nse más de ti que tú de mí,\n@@    D     A          D\nprecioso eres a mis ojos.\n\n@@    D  \nPor ti muevo montañas \n@@   G                        \ny se estremecen mis entrañas \n@@   D        A          D\nsi pienso dejar de quererte\n\n\n@@ D              A          D\nMás de lo que puedas pensar\n@@         A     Bm\nTe amo eso y más \n@@           G           D\nde lo que logres imaginar.\n@@            A        D\nBusco me des un lugar \n@@           A        Bm\npara que pueda morar \n@@  G        A      D\ny tú mi amor probar",
+    "tags": [
+      "DIOS PADRE",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "siervo-por-amor",
+    "title": "SIERVO POR AMOR",
+    "artist": "ALTER CHRISTUS",
+    "composer": "GEN ROSSO",
+    "key": "Em",
+    "spotify": "https://open.spotify.com/intl-es/album/0VsDkm5NUaiQBwnKT8iVkN?si=bf246b955e8b4853",
+    "spId": "",
+    "youtube": "https://www.youtube.com/watch?v=ZTXnjctbI_s",
+    "ytId": "ZTXnjctbI_s",
+    "content": "@@     Em\nUna noche de sudor \n@@       G\ncon la barca en altamar,\n@@          D\nmientras amanece ya, \n@@    C               Em\ntus redes están vacías.\n\n@@      Em\nPero una voz que te llama \n@@      G\notro mar te enseñará,\n@@       D\nsobre cada corazón \n@@    C          Em\nsus redes echará.\n\n@@Em             G\n/Dona dona tu vida \n@@          D               Em\ncomo María al lado de la cruz\n@@D       G               D\ny serás siervo de todo hombre, \n@@              C\nsiervo por amor,\n@@ G          C       D    Em\nsacerdote de la humanidad/ x2\n\n\n@@     Em\nAvanzabas en el silencio, \n@@      G\nentre lágrimas esperabas\n@@          D\nque la semilla antes sembrada \n@@   C                Em\ncayera sobre tierra fértil.\n\n@@        Em\nNace el gozo ya en Tí \n@@          G\nviendo el trigo madurar\n@@      D\ny crecido bajo el sol, \n@@       C            Em\nya se puede almacenar.\n\n\n@@Em             G\n/Dona dona tu vida \n@@          D               Em\ncomo María al lado de la cruz\n@@D       G               D\ny serás siervo de todo hombre, \n@@              C\nsiervo por amor,\n@@ G          C       D    Em\nsacerdote de la humanidad/ x2",
+    "tags": [
+      "COMUNIÓN",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "exulte-mi-alma",
+    "title": "EXULTE MI ALMA",
+    "artist": "HAKUNA GROUP MUSIC",
+    "composer": "HAKUNA GROUP MUSIC",
+    "key": "E",
+    "spotify": "https://open.spotify.com/intl-es/track/5UTlVJw88REZ281JEjzDH9?si=f16159f509be4329",
+    "spId": "5UTlVJw88REZ281JEjzDH9",
+    "youtube": "https://www.youtube.com/watch?v=ZEGAQNARgbc",
+    "ytId": "ZEGAQNARgbc",
+    "content": "@@      E           A\nUn saludo confirmó\n@@            E          A\nque lo imposible ya no era:\n@@    F#m               B\n“¡Bendita entre las mujeres!\n@@            A  B        E\n¡Bendito el que contigo llega!”.\n\n@@    E           A\nEs por haber creído\n@@            E               A\nen que acabó tal larga espera,\n@@         F#m          B\nque a salvarnos ha venido;\n@@       A   B         E\na cumplir su fiel promesa.\n\n\n@@     G#m             C#m\nLa patada me hizo arder,\n@@           A            E\n¡exulte mi alma su grandeza!\n@@         G#m        C#m\n¡Qué alegría da el saber \n@@                     A B     E\nque una nueva Creación comienza!\n\n\n@@    E             A\nMadre de Dios y hombre;\n@@           E               A\nEl nuevo Adán. La nueva Eva.\n@@     F#m             B\nSu favor ya no se esconde:\n@@         A  B           E \n¡A su humilde esclava eleva!\n\n@@           E              A\nSu santo nombre y su poder,\n@@              E             A\nque no escapen a la memoria.\n@@        F#m             B\nPorque siempre vino a ser\n@@    A   B            E\n¡el Rey de misericordia!\n\n\n@@       G#m                 C#m\nDe los cielos ha hecho un cuadro,\n@@       A         E\nÉl los pinta y alimenta,\n@@         G#m          C#m\nPues su brazo no ha dejado \n@@          A B            E\nde convertir todo en proeza.\n\n@@         G#m         C#m\nSiempre fue tan generoso\n@@            A               E\ncon quien hambre o sed tuviera,\n@@              G#m       C#m\nmás frente al rico u orgulloso \n@@         A B            E\nla humildad fue su bandera.\n\n\n@@         E            A\nSerá entonces mi papel,\n@@      E                 A\nel de ser vuestra escalera,\n@@        F#m          B\nY así podáis llegar a Él,\n@@           A  B           E\nsin encontrar... ya más barrera",
+    "tags": [
+      "MARÍA"
     ],
     "source": "",
     "srcTag": "base",
