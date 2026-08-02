@@ -316,7 +316,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
-      "MISA"
+      "MISA",
+      "SANTOS"
     ],
     "source": "",
     "srcTag": "base",
@@ -426,7 +427,8 @@ const SONGS_DATA = [
     "content": "(Original: Bb)\n@@ G                        C\nArde, con fuerza en este frío,\n@@                     Em\nCon todo el alma en vilo\n@@                  D\nBuscando una razón.\n@@   G                         C\nTiemblan, los Muros de esta celda,\n@@                     Em\nQue no pueden ni intentan\n@@                  D\nContener su corazón.\n@@ G                       C\nBrazos, cerrándose en abrazos,\n@@                      Em\nDe un padre que dio tanto\n@@                   D\nDe un hijo que murió.\n@@ G                     C\nLloran, reyes y tronos lloran,\n@@                       Em\nAnte un hombre en la sombra,\n@@                 D\nRezándole a su Dios.\n\n@@    G                       C\nLa mira, y al verla el mundo gira.\n@@               Em\nY en un solo segundo,\n@@                 D\nAl cielo estremeció.\n@@ G                      C\nBesa, donde ella pisa él besa.\n@@               Em\nSecándose las lágrimas\n@@               D\nal pedirle perdón.\n\n@@ G                      C\nAlza, un paso al firme al alba.\n@@             Em\nEjércitos se apartan\n@@                D\nante su convicción.\n@@ G                     C\nSiente, el peso que le viene.\n@@              Em\nPero nada detiene\n@@                 D\nSu sencilla decisión.\n\n@@   G                       C\nDuerme, tranquilo el niño duerme\n@@                  Em\nSufre porque no puede\n@@              D\ndarle algo mejor.\n@@ G                    C\nCalla, y en el silencio grita.\n@@                 Em\nSe le traspasa el alma.\n@@                D\nSufre su condición.\n\n\n@@ G              C  \nUn “Te quiero” mudo \n@@        Em            D\nen un silencio acogedor.\n@@       G           C\nUn humilde carpintero \n@@            Em           D\nduerme en brazos a su Dios.\nUn “Te quiero” mudo \n@@        Em            D\nen un silencio acogedor.\n@@       G           C\nUn humilde carpintero \n@@       Em          D\nmira a los ojos a Dios.\n\n\n@@G \nSonríe, tranquilo \n@@          C\nal fin sonríe.\n@@                Em\nY en un último aliento\n@@              D  D7\nHizo llorar a Dios.\n\n\n@@ G              C  \nUn “Te quiero” mudo \n@@        Em            D\nen un silencio acogedor.\n@@       G           C\nUn humilde carpintero \n@@            Em           D\nduerme en brazos a su Dios.\n\n@@ G              C\nUn “Te quiero” mudo \n@@        Em            D\nen un silencio acogedor.\n@@       G           C\nUn humilde carpintero \n@@       Em          D\nmira a los ojos a Dios.\n",
     "tags": [
       "ACCIÓN DE GRACIAS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "SANTOS"
     ],
     "source": "",
     "srcTag": "base",
@@ -2561,7 +2563,8 @@ const SONGS_DATA = [
     "tags": [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "SANTOS"
     ],
     "source": "",
     "srcTag": "base",
@@ -5282,7 +5285,8 @@ const SONGS_DATA = [
     "content": "@@             G  \nLo agrada a Dios \n@@Am7             G\nde mi pequeña alma \n@@               Am7       \nes que ame mi pequeñez \n@@D        G  \ny mi pobreza. \n\n@@             G  \nLo agrada a Dios \n@@Am7             G \nde mi pequeña alma \n@@               Am7  \nes que ame mi pequeñez \n@@D       G    G7\ny mi pobreza. \n\n@@          C   D \nEs la esperanza \n@@Bm  Em \nciega \n@@     Am7 D \nque tengo \n@@             G     G7  \nen su misericordia. \n\n@@          C   D \nEs la esperanza \n@@Bm  Em   \nciega \n@@     Am7 D \nque tengo \n@@             G  \nen su misericordia. ",
     "tags": [
       "ACCIÓN DE GRACIAS",
-      "ADORACIÓN"
+      "ADORACIÓN",
+      "SANTOS"
     ],
     "source": "",
     "srcTag": "base",
@@ -5510,7 +5514,8 @@ const SONGS_DATA = [
     "content": "@@C                  G         Am \nEl corazón de una madre cantando \n@@F        C         G  \nlas maravillas de Dios \n@@C                   G        Am \nEs el que va por la casa enseñando \n@@F            C       G  \nsobre humildad y amor. \n\n@@      F               G  \nY el Dios que se hace niño \n@@        C       Am \npara estar más cerca \n@@ F  G         C      C7 \nde todos los hombres. \n\n\n@@F     G               C \nUn hogar donde se amasa paz, \n@@F     G            C \nun lugar donde se talla amor, \n@@F          G               E7 Am \ndonde se siembra con paciencia, \n@@F            G            C \ndonde lo sencillo es lo valioso. \n\n\n@@C                  G         Am \nLas manos de un padre trabajando \n@@F         C          G  \ncon constancia y amor. \n@@ C                    G       Am \nSon las mismas que van enseñando \n@@F           C             G  \nsu gran confianza en los planes de Dios. \n\n@@     F                 G  \nY el Niño que mira y aprende \n@@       C         Am \nva creciendo en gracia \n@@ F       G        C   C7 \nante los ojos de Dios.\n\n\n@@F     G               C \nUn hogar donde se amasa paz, \n@@F     G            C \nun lugar donde se talla amor, \n@@F          G               E7 Am \ndonde se siembra con paciencia, \n@@F            G            \ndonde lo sencillo...\n\n@@F     G               C \nUn hogar donde se amasa paz, \n@@F     G            C \nun lugar donde se talla amor, \n@@F          G               E7 Am \ndonde se siembra con paciencia, \n@@F            G            C \ndonde lo sencillo es lo valioso. ",
     "tags": [
       "VOCACIONAL",
-      "NAVIDAD"
+      "NAVIDAD",
+      "SANTOS"
     ],
     "source": "",
     "srcTag": "base",
@@ -5806,6 +5811,50 @@ const SONGS_DATA = [
     "content": "@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@               Em     G\nMi alma tiene sed de Ti, \n@@               A\nmi alma tiene sed\n\n@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@ D      Em\nEspíritu de Dios, \n@@G        D\nEspíritu Santo\n@@               Em     G\nMi alma tiene sed de Ti, \n@@               A  Asus4\nmi alma tiene sed\n\n\n@@         D      G       A\nEspíritu Santo ven a arder\n@@            Bm      G     A\nDerrama tu fuego y tu poder\n@@          Em\nActúa en mí\n@@          Bm\nActúa en mí\n@@          A\nActúa en mí\n\n@@             Em          Bm    A\nEstas derramando la unción aquí\n@@             Em          Bm    A\nEstas derramando la unción aquí\n@@             Em          Bm    A\nEstas derramando la unción aquí\n@@             Em          Bm    A\nEstas derramando la unción aquí\n",
     "tags": [
       "ESPÍRITU SANTO",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "himno-a-san-jose",
+    "title": "HIMNO A SAN JOSÉ",
+    "artist": "CANTO CATÓLICO",
+    "composer": "",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/38ONotTcaxcLlreK2FMjOB?si=efe64b4fc8f34acc",
+    "spId": "38ONotTcaxcLlreK2FMjOB",
+    "youtube": "https://www.youtube.com/watch?v=qWxGT7TUZ5g",
+    "ytId": "qWxGT7TUZ5g",
+    "content": "@@           D      Em       D      A \nHoy a tus pies ponemos nuestra vida; \n@@           G        A            D \nhoy a tus pies, ¡Glorioso San José! \n@@          G          D    \nEscucha nuestra oración \n@@   A       D     A\ny por tu intercesión \n@@       G          A           D \nobtendremos la paz del corazón. \n\n\n@@       D      Em      D      A \nEn Nazaret junto a la Virgen Santa; \n@@       G          A          D \nen Nazaret, ¡Glorioso San José! \n@@            G       D         \ncuidaste al niño Jesús \n@@       A      D      A\npues por tu gran virtud \n@@       G         A          D \nfuiste digno custodio de la luz. \n\n\n@@         D       Em     D    A \nCon sencillez humilde carpintero; \n@@          G         A          D \ncon sencillez, ¡Glorioso San José! \n@@        G         D    \nhiciste bien tu labor \n@@   A     D     A\nobrero del Señor \n@@      G        A          D \nofreciendo trabajo y oración. \n\n\n@@        D      Em    D      A \nTuviste Fe en Dios y su promesa; \n@@        G       A           D \ntuviste Fe, ¡Glorioso San José! \n@@         G       D     \nMaestro de oración \n@@   A     D      A\nalcánzanos el don \n@@          G        A             D \nde escuchar y seguir la voz de Dios. \n\n\n@@           D     Em     D    A \nCon sencillez humilde carpintero; \n@@           G        A          D \ncon sencillez, ¡Glorioso San José! \n@@         G        D      \nhiciste bien tu labor \n@@   A    D      A\nobrero del Señor \n@@     G         A          D \nofreciendo trabajo y oración. \n\n\n@@        D      Em    D      A \nTuviste Fe en Dios y su promesa; \n@@        G       A           D \ntuviste Fe, ¡Glorioso San José! \n@@         G       D     \nMaestro de oración \n@@   A     D      A\nalcánzanos el don \n@@          G        A             D \nde escuchar y seguir la voz de Dios. ",
+    "tags": [
+      "SANTOS",
+      "SALIDA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "todo-es-bendicion",
+    "title": "TODO ES BENDICIÓN",
+    "artist": "ATHENAS, NICO CABRERA",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/7JT8wEw2Yy8L8NUfsY13ZW?si=34182cb04e2847d4",
+    "spId": "7JT8wEw2Yy8L8NUfsY13ZW",
+    "youtube": "https://www.youtube.com/watch?v=XuoLzjLI_DQ",
+    "ytId": "XuoLzjLI_DQ",
+    "content": "(Original: F#)\n@@                G                   D \nTodo es bendición cuando estás aquí\n@@               Am7            C\nMuy dentro de mí, Señor, mi Dios\n\n@@                G                     D\nTodo es bendición cuando espero en Tí\n@@                Am7           C\nCuando creo en Ti, Señor, mi Dios\n\n\n@@    G               D\nContigo reinará la calma\n@@                Am7         C\nPara los que te aman, todo es bendición\n@@    G                    D\nContigo nada es coincidencia\n@@              Am7          C           G D\nTodo es providencia, Tú estás en control\n@@                Am7 C\nTú estás en control\n\n\n@@                G                   D \nTodo es bendición cuando estás aquí\n@@               Am7            C\nMuy dentro de mí, Señor, mi Dios\n\n@@                G                     D\nTodo es bendición cuando espero en Tí\n@@                Am7           C\nCuando creo en Ti, Señor, mi Dios\n\n\n@@    G               D\nContigo reinará la calma\n@@                Am7         C\nPara los que te aman, todo es bendición\n@@    G                    D\nContigo nada es coincidencia\n@@              Am7          C           G D\nTodo es providencia, Tú estás en control\n@@                Am7 C\nTú estás en control\n\n\n@@          Am7            C \nTodo lo entrego, nada reservo\n@@           Em                    D\nPorque yo se que algo bueno harás\n@@           Am7           C\nTodo lo entrego, nada reservo\n@@           Em                      D\nPorque yo se perfecta es Tu voluntad\n\n@@          Am7            C \nTodo lo entrego, nada reservo\n@@           Em                    D\nPorque yo se que algo bueno harás\n@@           Am7           C\nTodo lo entrego, nada reservo\n@@           Em                      D\nPorque yo se perfecta es Tu voluntad\n\n\n@@    G               D\nContigo reinará la calma\n@@                Am7         C\nPara los que te aman, todo es bendición\n@@    G                    D\nContigo nada es coincidencia\n@@              Am7          C           G D\nTodo es providencia, Tú estás en control\n@@                Am7 C\nTú estás en control\n\n\n@@                G\nTodo es bendición (Todo es bendición)\n@@                D\nTodo es bendición (Cuando estás aquí)\n@@                Am7    C\nCuando estás aquí en mí",
+    "tags": [
+      "ANIMACIÓN",
+      "COMUNIDAD",
+      "VOCACIONAL",
       "ADORACIÓN"
     ],
     "source": "",
