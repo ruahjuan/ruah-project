@@ -6,27 +6,6 @@
 
 const PRAYERS = [
   {
-    id: 'antes',
-    label: 'Antes de servir',
-    title: 'Oración antes de servir',
-    body: `<p>Señor, estoy aquí.</p>
-<p>No vengo a mostrar mi voz ni mis acordes.<br>Vengo a abrir una puerta para que Vos entrés.</p>
-<p>Si sueno bien, que sea tu belleza la que se escuche.<br>Si me equivoco, que mi error no opaque tu gracia.</p>
-<p>Toma estos dedos, esta voz, este corazón inquieto.<br>Que la música que toque hoy no sea mía: sea tuya.</p>
-<p>Hágase tu voluntad, Señor. No la mía.</p>
-<p><em>Amén.</em></p>`
-  },
-  {
-    id: 'despues',
-    label: 'Después de servir',
-    title: 'Oración después de servir',
-    body: `<p>Gracias, Señor.</p>
-<p>Por haberme usado como instrumento hoy.<br>Por lo que sonó bien y por lo que no sonó tan bien.</p>
-<p>Perdóname si en algún momento busqué aplausos.<br>Perdóname si me olvidé de que servía a Vos.</p>
-<p>Que las canciones de hoy sigan resonando en los corazones de los que cantaron. Y si alguien se acercó un poco más a Vos a través de esta música, toda la gloria es tuya.</p>
-<p><em>Amén.</em></p>`
-  },
-  {
     id: 'letanias',
     label: 'Letanías de la Humildad',
     title: 'Letanías de la Humildad',
@@ -58,25 +37,68 @@ const PRAYERS = [
 <p style="margin-top:14px;font-size:13px"><em>Oh Jesús, que siendo Dios te humillaste hasta la muerte de Cruz, concédenos la gracia de aprender y practicar tu ejemplo. Amén.</em></p>`
   },
   {
-    id: 'cecilia',
-    label: 'A Santa Cecilia',
-    title: 'Oración a Santa Cecilia',
-    subtitle: 'Patrona de los músicos',
-    body: `<p>Santa Cecilia, patrona de quienes tocamos y cantamos, intercede por nosotros ante el Señor.</p>
-<p>Tú que consagraste tu arte y tu vida entera a Dios, enséñanos a tocar con humildad y a cantar con amor.</p>
-<p>Que nuestra música nunca sea vanidad, sino puente entre los corazones y el Cielo.</p>
-<p>Que cada nota que suene en este cancionero sea un acto de adoración, no de exhibición.</p>
-<p>Ruega por los músicos que sirven sin aplausos, por los que ensayan cuando nadie los ve, por los que cantan aunque la voz tiemble.</p>
+    id: 'generosidad',
+    label: 'Por la generosidad',
+    title: 'Oración para la generosidad',
+    subtitle: 'San Ignacio de Loyola',
+    body: `<p>Señor, enséñame a ser generoso.</p>
+<p>Enséñame a servirte como te mereces; a dar, y no contar el costo, a luchar, y no prestar atención a las heridas, a esforzarme, y no buscar descanso, a trabajar, y no pedir recompensa, excepto la de saber que estamos haciendo Tu voluntad.</p>
+<p><em>Amén.</em></p>`
+  },
+  {
+    id: 'abandono',
+    label: 'De abandono',
+    title: 'Oración de abandono',
+    subtitle: 'San Charles de Foucauld',
+    body: `<p>Padre, me pongo en tus manos, haz de mí lo que quieras, sea lo que sea, te doy las gracias.</p>
+<p>Estoy dispuesto a todo, lo acepto todo, con tal de que tu voluntad se cumpla en mí, y en todas tus criaturas. No deseo nada más, Padre.</p>
+<p>Te confío mi alma, te la doy con todo el amor de que soy capaz, porque te amo. Y necesito darme, ponerme en tus manos sin medida, con una infinita confianza, porque Tú eres mi Padre.</p>
 <p><em>Amén.</em></p>`
   },
   {
     id: 'espiritu',
     label: 'Ven, Espíritu Santo',
-    title: 'Ven, Espíritu Santo',
-    body: `<p>Ven, Espíritu Santo, llena los corazones de tus fieles y enciende en ellos el fuego de tu amor.</p>
-<p>Envía tu Espíritu y serán creadas las cosas y renovarás la faz de la tierra.</p>
-<p>Que la música de esta noche no sea solo música: que sea oración cantada, encuentro real, gracia que desciende sobre cada uno que canta.</p>
-<p><em>Por Jesucristo Nuestro Señor. Amén.</em></p>`
+    title: 'Ven Espíritu Santo',
+    body: `<p>Ven, Espíritu divino, manda tu luz desde el cielo.<br>Padre amoroso del pobre; don, en tus dones espléndido;<br>luz que penetra las almas; fuente del mayor consuelo.</p>
+<p>Ven, dulce huésped del alma, descanso de nuestro esfuerzo,<br>tregua en el duro trabajo, brisa en las horas de fuego,<br>gozo que enjuga las lágrimas y reconforta en los duelos.</p>
+<p>Entra hasta el fondo del alma, divina luz, y enriquécenos.<br>Mira el vacío del hombre, si tú le faltas por dentro;<br>mira el poder del pecado, cuando no envías tu aliento.</p>
+<p>Riega la tierra en sequía, sana el corazón enfermo,<br>lava las manchas, infunde calor de vida en el hielo,<br>doma el espíritu indómito, guía al que tuerce el sendero.</p>
+<p>Reparte tus siete dones, según la fe de tus siervos;<br>por tu bondad y tu gracia, dale al esfuerzo su mérito;<br>salva al que busca salvarse y danos tu gozo eterno.</p>
+<p><em>Amén.</em></p>`
+  },
+  {
+    id: 'cecilia-corta',
+    label: 'A Santa Cecilia (breve)',
+    title: 'Oración corta a Santa Cecilia',
+    subtitle: 'Patrona de los músicos',
+    body: `<p>Oh santa Cecilia, patrona amada de los músicos, vengo a ti con humildad y gratitud.</p>
+<p>Te pido que intercedas por los músicos y nos brindes tu protección y bendiciones en nuestra búsqueda musical.</p>
+<p>Inspíranos con tu gracia para que podamos expresar la belleza a través de la música y superar los desafíos que puedan surgir en nuestro camino.</p>
+<p>Agradezco tu guía y amor.</p>
+<p><em>Amén.</em></p>`
+  },
+  {
+    id: 'cecilia',
+    label: 'A Santa Cecilia',
+    title: 'Oración a Santa Cecilia',
+    subtitle: 'Patrona de los músicos',
+    body: `<p>Oh Santa Cecilia, patrona amada de los músicos, escucha nuestras súplicas en este momento de inspiración y creación.</p>
+<p>Tú, que en tu martirio elevaste tu voz en canción divina, guía nuestras manos y nuestros corazones mientras exploramos las melodías del mundo.</p>
+<p>Encomendamos a ti, Santa Cecilia, nuestras partituras y nuestras interpretaciones. Concédenos la gracia de transmitir la belleza y la armonía que residen en la esencia de la música.</p>
+<p>Que nuestras composiciones reflejen la luz divina que iluminó tu camino en los momentos más oscuros.</p>
+<p>Intercede por nosotros, Santa Cecilia, ante el Dios de la melodía y el ritmo. Que nuestras obras resuenen como un himno de amor y esperanza en este mundo necesitado de paz.</p>
+<p><em>Amén.</em></p>`
+  },
+  {
+    id: 'todo-momento',
+    label: 'Para rezar en todo momento',
+    title: 'Oración para rezar en todo momento',
+    subtitle: 'San Ignacio de Loyola',
+    body: `<p>Ayúdame a clarificar mis intenciones, purifica mis sentimientos, santifica mis pensamientos y bendice mis esfuerzos, para que todo en mi vida sea de acuerdo a tu voluntad.</p>
+<p>Tengo tantos deseos contradictorios… Me preocupo por cosas que ni importan ni son duraderas. Pero sé que si te entrego mi corazón haga lo que haga seguiré a mi nuevo corazón.</p>
+<p>En todo lo que hoy soy, en todo lo que intente hacer, en mis encuentros, reflexiones, incluso en las frustraciones y fallos, y sobre todo en este rato de oración, en todo ello, haz que ponga mi vida en tus manos.</p>
+<p>Señor, soy todo tuyo. Haz de mí lo que Tú quieras.</p>
+<p><em>Amén.</em></p>`
   }
 ];
 
