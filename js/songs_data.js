@@ -3369,7 +3369,7 @@ const SONGS_DATA = [
   },
   {
     "id": "senor-aqui-estoy",
-    "title": "SEÑOR, AQUÍ ESTOY",
+    "title": "AQUÍ ESTOY",
     "artist": "DANIEL POLI",
     "composer": "DANIEL POLI",
     "key": "E",
@@ -5206,7 +5206,7 @@ const SONGS_DATA = [
   },
   {
     "id": "decision",
-    "title": "DECISIÓN",
+    "title": "TODO EN ESTA VIDA (DECISIÓN)",
     "artist": "FAREMO METÁ",
     "composer": "",
     "key": "C",
@@ -5856,6 +5856,72 @@ const SONGS_DATA = [
       "COMUNIDAD",
       "VOCACIONAL",
       "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "paz-armada",
+    "title": "PAZ ARMADA",
+    "artist": "P. CRISTOBAL FONES",
+    "composer": "",
+    "key": "A",
+    "spotify": "https://open.spotify.com/track/6P7cA8KCGuzvdaMQtvUN4E?si=HS6cCZxGTa-aHFLarwCrpQ&utm_source=copy-link&sci=spotify%3Acard-config%3A3t0oQNFUBeWF9B5iBdvSzs",
+    "spId": "6P7cA8KCGuzvdaMQtvUN4E",
+    "youtube": "https://www.youtube.com/watch?v=1CJz38I1BVY&pp=ygUacGF6IGFybWFkYSBjcmlzdG9iYWwgZm9uZXM%3D",
+    "ytId": "1CJz38I1BVY",
+    "content": "@@   A             D            A\nSerá una paz armada, compañeros,\n@@ D           E           A\nserá toda la vida esta batalla,\n@@         D          Bm7        E\nque el cráter de la carne sólo calla\n@@ F#m                Bm7          E\ncuando la muerte acalla sus braseros.\n\n@@     A              D        A\nSin lumbre en el hogar y el sueño mudo,\n@@    D          E         A\nsin hijos las rodillas y la boca.\n@@   D          Bm7                E\nA veces sentiréis que el hielo os toca;\n@@  F#m         Bm7          E\nla soledad os besará a menudo.\n\n\n@@        D         E            F#m7\nNo es que dejéis el corazón sin bodas;\n@@     D             A            E\nhabréis de amarlo todo, todos, todas;\n@@    D             E               A \ndiscípulos de Aquél que amó primero.\n@@    D           E/G#          F#m7\nPerdida por el Reino y conquistada,\n@@   D             A/C#          Bm7 E/G#\nserá una paz tan libre como armada,\n@@   D            E                A  \nserá el amor amado a cuerpo entero.",
+    "tags": [
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "yo-te-miro-pan-del-cielo",
+    "title": "YO TE MIRO (PAN DEL CIELO)",
+    "artist": "FRUTO DEL MADERO",
+    "composer": "",
+    "key": "Bm",
+    "spotify": "https://open.spotify.com/track/3UaF0IuX8zZtL3Prsiu8wE?si=5wwsEalzQW-9_-FRTZaSQw&utm_source=copy-link&sci=spotify%3Acard-config%3A0YBvQRrD8Ce6G0O4kqMqcj",
+    "spId": "3UaF0IuX8zZtL3Prsiu8wE",
+    "youtube": "https://www.youtube.com/watch?v=QqpQeY9tTaE&pp=ygUecGFuIGRlbCBjaWVsbyBmcnV0byBkZWwgbWFkZXJv",
+    "ytId": "QqpQeY9tTaE",
+    "content": "@@       Bm        G\nAhí estás, yo te miro\n@@        D\nTú me miras a mí\n@@        A\nNos miramos así\n\n@@         Bm     G\nUna conquista, un amor\n@@     D                 A\nQue por las grietas Tú entras\n@@      Bm     G\nA lo más profundo\n@@D           A  \nDe mi corazón\n\n\n@@G        A              D\nPan del cielo, pan de amor\n@@    Bm           G\nAlimento de mi vida\n@@          A             D\nPan del cielo, pan de amor\n@@           Bm          G  A  Bm\nSangre y Cuerpo del Señor \n\n\n@@         Bm         G\nNo hay amor más grande\n@@ D                        A\nQue el que has dado por mí\n@@       Bm         G\nQue dejaste tu cuerpo\n@@   D             A       \nPara poderte mirar así\n\n\n@@G        A              D\nPan del cielo, pan de amor\n@@    Bm           G\nAlimento de mi vida\n@@          A             D\nPan del cielo, pan de amor\n@@           Bm          G  A  Bm\nSangre y Cuerpo del Señor \n\n\n@@       Bm          G\nYo te miro, Tú me miras\n@@       D\nNos miramos así\n@@   A\nEstás ahí\n\n@@       Bm          G\nYo te miro, tú me miras\n@@       D\nNos miramos así\n@@   A\nEstás ahí\n\n@@       Bm G        \nYo te miro, \n@@        D  A\nTú me miras\n@@       Bm      G\nNos miramos así\n@@   D    A  \nEstás ahí\n\n@@G        A              D\nPan del cielo, pan de amor\n@@    Bm           G\nAlimento de mi vida\n@@          A             D\nPan del cielo, pan de amor\n@@           Bm            G  \nSangre y Cuerpo del Señor \n\n@@          A             D\nPan del cielo, pan de amor\n@@      Bm           G\nSana todas mis heridas\n\n@@          A             D\nPan del cielo, pan de amor\n@@       Bm                 G A \nHasta que se apague mi voz\n\n@@      Bm         G\nAhí estás, yo te miro\n@@       D\nTú me miras a mí\n@@   A      Bm\nEstás ahí\n",
+    "tags": [
+      "COMUNIÓN",
+      "ACCIÓN DE GRACIAS",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "misionero-ideal",
+    "title": "MISIONERO IDEAL",
+    "artist": "CIRENEOS MUSIC",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/track/36X7oHnDVIQKAlTyu4rqFA?si=LnySqthHTJmPN4feY9KX4g&utm_source=copy-link&sci=spotify%3Acard-config%3A0tPJUMnHGk3DXe8TrHvwBv",
+    "spId": "36X7oHnDVIQKAlTyu4rqFA",
+    "youtube": "https://www.youtube.com/watch?v=Xqb_fvKdh2o&pp=ygUOY2lyZW5lb3MgbXVzaWM%3D",
+    "ytId": "Xqb_fvKdh2o",
+    "content": "@@    C\nJesús te pido \n@@                Csus4         C\nque me des un poco de Tu amor\n@@    Am\nLa gracia de saberme \n@@         Am7\ncomo un hijo del Señor\n@@        F                            \nQue mi ego muera en Ti, \n@@  Fm                       C G\ny Tu Palabra se refleje en mi\n\n@@    C\nTe pido, Madre, \n@@            Csus4             C\nenséñame a vivir con tu bondad\n@@    Am\nA estar atento \n@@             Am7\na lo que necesitan los demás\n@@    F                             \nEnséñame a rezar, \n@@       Fm                 C G\ny ser fuerte para perseverar\n\n@@Dm                      G\nDame todo lo que necesito\n@@Dm            F           G\nPara a ser Tu misionero ideal\n\n\n@@          C               G\nLlevar Tu luz donde haga falta\n@@          Am                   \nQue Tu Palabra sacie \n@@                 F\ntanta sed de amar\n\n@@         C           G\nTú guíanos sobre las aguas\n@@             Am                    \nCon mis hermanos \n@@                 F\nvamos a peregrinar\n@@              F G             \nUnidos en la cruz, \n@@                    Am   \nTransformando el mundo\n@@    F     C      G\nOh oh oh oh oh oh\n@@                    Am   \nTransformando el mundo\n@@    F     C     G\nOh oh oh oh oh oh\n\n\n@@      Am\nOh, Madre hoy \n@@             Am7\nte pido tu palabra maternal\n@@   Fmaj7\nTu fe para \n@@                F\nla voluntad del Padre priorizar\n@@            C\nQue no me turbe cada vez \n@@          Csus4       \nque una espada \n@@                    G\namenace con lastimar.\n\n@@   Am\nJesús, dame \n@@             Am7\nTu fuerza al salir a predicar\n@@          Fmaj7\nEl entendimiento de que el Cielo\n@@         F\nes nuestra meta final\n@@         C\nTe pido que seas alfarero: \n@@         Csus4\ntoma mi barro\n@@                   G\ny Tú ponte a moldear\n\n@@                       F\nQuiero más de Vos en mí\n@@                       C \nQuiero más de Vos en mí\n@@                        G\nQuiero más de Vos en mí\n@@                       Am\nQuiero más de Vos en mí\n\n@@         G              F\nQuiero más de Vos en mí\n@@                        C \nQuiero más de Vos en mí\n@@                        G\nQuiero más de Vos en mí\n@@                       Am\nQuiero más de Vos en mí\n\n@@         G              F\nQuiero más de Vos en mí\n@@                        C \nQuiero más de Vos en mí\n@@                        G\nQuiero más de Vos en mí\n@@                       Am\nQuiero más de Vos en mí\n\n@@         G              F\nQuiero más de Vos en mí\n@@                        C \nQuiero más de Vos en mí\n@@                        G\nQuiero más de Vos en mí\n@@                       Am G\nQuiero más de Vos en mí\n\n\n@@          C               G\nLlevar Tu luz donde haga falta\n@@          Am                   \nQue Tu Palabra sacie \n@@                 F\ntanta sed de amar\n\n@@         C           G\nTú guíanos sobre las aguas\n@@             Am                    \nCon mis hermanos \n@@                 F\nvamos a peregrinar\n@@              F G             \nUnidos en la cruz, \n@@                    Am   \nTransformando el mundo\n@@    F     C      G\nOh oh oh oh oh oh\n@@                    Am   \nTransformando el mundo\n@@    F     C     G\nOh oh oh oh oh oh\n",
+    "tags": [
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS",
+      "COMUNIDAD",
+      "MISIÓN",
+      "VOCACIONAL"
     ],
     "source": "",
     "srcTag": "base",
