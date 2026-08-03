@@ -19,6 +19,12 @@ const Parser = (function () {
   const CHORD_TOKEN_RE   = /\[([A-G][^\]]{0,8})\]/;
   const CHORD_TOKEN_SPLIT = /(\[[A-G][^\]]{0,8}\])/;
 
+  // Forma válida de acorde (root + calidad opcional + bajo opcional).
+  // Se usa para no confundir un acorde suelto ("[Am]", "[C7]", "[F#m7]")
+  // con una etiqueta de sección ("[CORO]", "[CODA]") que también empieza
+  // con letra A-G.
+  const CHORD_SHAPE_RE = /^[A-G][#b]?(?:maj7?|min7?|m7?|M7?|sus[24]?|add9?|aug|dim7?|°|ø)?\d*(?:\/[A-G][#b]?)?$/;
+
   // Parsea una línea ChordPro inline → array de tokens [{chord, lyric}]
   function parseTokens(line) {
     if (!CHORD_TOKEN_RE.test(line)) return null;
@@ -53,8 +59,11 @@ const Parser = (function () {
       if (!s) { blocks.push({ type: 'spacer' }); i++; continue; }
 
       // Sección [ESTRIBILLO], [VERSO], etc.
+      // (excluye acordes sueltos tipo [Am], [C7], [F#m7] que tienen
+      // la misma forma "[algo]" pero no son secciones)
       if (s[0] === '[' && s[s.length - 1] === ']'
-          && !s.slice(1, -1).includes('[') && !s.slice(1, -1).includes(']')) {
+          && !s.slice(1, -1).includes('[') && !s.slice(1, -1).includes(']')
+          && !CHORD_SHAPE_RE.test(s.slice(1, -1))) {
         const label = s.slice(1, -1);
         isChorus = /ESTRIBILLO|CORO/i.test(label);
         blocks.push({ type: 'section', label, isChorus });
