@@ -156,19 +156,72 @@ body[data-view="home"] #logo .logo-sub{
 .hero-cta svg{width:16px;height:16px}
 .home-wrap{max-width:840px;margin:0 auto;width:100%;padding:36px 32px 56px}
 
+/* ── Buscador de fecha de Lecturas (js/lecturas-nav.js) ──── */
+.lnav-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.lnav-strip{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none;padding-bottom:2px}
+.lnav-strip::-webkit-scrollbar{display:none}
+.lnav-chip{
+  flex-shrink:0;width:42px;text-align:center;padding:7px 0;border-radius:11px;
+  border:1px solid var(--bord);background:var(--surf2);cursor:pointer;transition:all .15s;
+}
+.lnav-chip:hover{border-color:var(--f3)}
+.lnav-dname{display:block;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.lnav-dnum{display:block;font-size:14px;font-weight:700;color:var(--text);margin-top:2px}
+.lnav-chip.on{background:var(--f4);border-color:var(--f4)}
+.lnav-chip.on .lnav-dname,.lnav-chip.on .lnav-dnum{color:#fff}
+.lnav-search{
+  flex-shrink:0;width:37px;height:37px;border-radius:11px;border:1px solid var(--bord);
+  background:var(--surf2);color:var(--text);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .15s;
+}
+.lnav-search svg{width:15px;height:15px}
+.lnav-search:hover{border-color:var(--f3);color:var(--f4)}
+.lnav-search.on{background:var(--f4);border-color:var(--f4);color:#fff}
+.lnav-picker{
+  display:none;background:var(--surf2);border:1px solid var(--bord);border-radius:var(--radius);
+  padding:13px 14px;margin-bottom:12px;
+}
+.lnav-picker.open{display:block}
+.lnav-picker label{font-size:10.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.lnav-picker-row{display:flex;gap:8px;margin-top:8px}
+.lnav-picker input[type=date]{
+  flex:1;font-family:var(--font-b);font-size:13.5px;padding:8px 9px;border-radius:8px;
+  border:1px solid var(--bord);background:var(--surf);color:var(--text);min-width:0;
+}
+.lnav-picker button{
+  font-family:var(--font-b);font-weight:700;font-size:12.5px;background:var(--f4);color:#fff;
+  border:none;border-radius:8px;padding:0 14px;cursor:pointer;flex-shrink:0;
+}
+.lnav-picker button:hover{background:var(--f5)}
+.lnav-quick{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}
+.lnav-quick-btn{
+  font-size:11px;font-weight:600;padding:5px 10px;border-radius:999px;border:1px solid var(--bord);
+  background:var(--surf);color:var(--muted);cursor:pointer;
+}
+.lnav-quick-btn:hover{border-color:var(--f3);color:var(--f4)}
+
 /* ── Lectura del día (Oraciones) ─────────────────────── */
-.home-section-header:has(+ #reading-accordion[hidden]){display:none}
+.home-section-header:has(+ #lectura-nav + #reading-accordion[hidden]),
+#lectura-nav:has(+ #reading-accordion[hidden]){display:none}
 .reading-accordion{
   border:1px solid var(--bord);
   border-radius:var(--radius-lg, 16px);
   overflow:hidden;
   margin-bottom:24px;
   box-shadow:var(--shadow);
+  transition:opacity .15s;
 }
-.ra-head{padding:16px 18px}
+.ra-head{padding:16px 18px;display:flex;align-items:center;gap:13px}
 .ra-head .ra-eyebrow{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--f4);font-weight:700;margin-bottom:4px}
 .ra-head .ra-date{font-family:var(--font-d);font-size:18px;font-weight:600;color:var(--text)}
 .ra-head .ra-stale{margin-top:5px;font-size:11.5px;font-weight:600;color:#b5541c}
+.ra-seal{
+  flex-shrink:0;width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 8px rgba(0,0,0,.22);
+}
+.ra-seal svg{width:19px;height:19px}
+.ra-head-text{min-width:0}
 .ra-item{
   display:flex;align-items:center;gap:12px;
   width:100%;padding:13px 18px;border:none;border-top:1px solid var(--bord);
@@ -223,15 +276,22 @@ body[data-view="home"] #logo .logo-sub{
 .vision-box p{font-size:14.5px;line-height:1.85;margin-bottom:10px;color:var(--text)}
 .vision-box p:last-child{margin-bottom:0}
 .vision-box em{color:var(--muted);font-style:italic}
-.prayer-tabs{display:flex;gap:8px;margin-bottom:16px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding:0 2px 2px}
-.prayer-tabs::-webkit-scrollbar{display:none}
-.ptab{padding:9px 16px;border-radius:20px;border:1.5px solid var(--bord);background:var(--surf2);font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .15s;font-weight:500;flex-shrink:0;white-space:nowrap}
-.ptab:hover{border-color:var(--f3);color:var(--f4)}
-.ptab.on{background:var(--f4);border-color:var(--f4);color:#fff;font-weight:600}
+.prayer-index{display:flex;flex-direction:column;margin-bottom:16px;border-top:1px solid var(--bord)}
+.pidx-item{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  width:100%;padding:13px 4px;border:none;border-bottom:1px solid var(--bord);
+  background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;
+}
+.pidx-name{font-family:var(--font-d);font-size:15.5px;font-weight:600;color:var(--text)}
+.pidx-arrow{color:var(--muted);font-size:13px;flex-shrink:0;transition:transform .15s,color .15s}
+.pidx-item:hover .pidx-name{color:var(--violet)}
+.pidx-item.on .pidx-name{color:var(--violet)}
+.pidx-item.on .pidx-arrow{color:var(--violet);transform:translateX(2px)}
 .prayer-content{display:none}
 .prayer-content.on{display:block}
-.prayer-box{background:var(--surf);border:1px solid var(--bord);border-radius:var(--radius-lg);padding:24px 28px;border-left:4px solid var(--violet);box-shadow:var(--shadow)}
-.prayer-title{font-family:var(--font-d);font-size:18px;color:var(--text);margin-bottom:12px}
+.prayer-box{background:var(--surf);border:1px solid var(--bord);border-radius:2px var(--radius-lg) var(--radius-lg) 2px;padding:24px 28px;border-left:4px solid var(--violet);box-shadow:var(--shadow)}
+.prayer-eyebrow{font-family:var(--font-m);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.prayer-title{font-family:var(--font-d);font-size:19px;color:var(--text);margin-bottom:12px;line-height:1.25}
 
 .howto{
   margin-top:28px;
@@ -245,10 +305,15 @@ body[data-view="home"] #logo .logo-sub{
 .howto .step-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--f1);color:var(--f4);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .howto .step-text{font-size:12.8px;line-height:1.55;color:var(--text)}
 .howto .step-text b{font-weight:600}
-.prayer-sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
 .prayer-body{font-size:14px;line-height:1.85}
 .prayer-body p{margin-bottom:8px}
 .prayer-body em{color:var(--muted);font-size:13px}
+/* Capitular en el primer párrafo de la oración, como una página de
+   breviario. Solo en el primer <p>, no en cada uno. */
+.pp-dropcap p:first-of-type::first-letter{
+  font-family:var(--font-d);font-weight:700;color:var(--violet);
+  font-size:2.6em;line-height:.7;float:left;margin:.06em .07em 0 0;
+}
 .litany-item{padding:3px 0 3px 14px;border-left:2px solid var(--f2);margin:2px 0;font-size:13.5px}
 .litany-resp{font-style:italic;color:var(--muted);font-size:12.5px;margin:2px 0 8px 14px}
 
