@@ -1788,6 +1788,19 @@ function exportSetlistPDF() {
   }
 }
 
+// ── Exportar el setlist a un cancionero de letras, sin acordes (Word/.docx) ──
+// Encabezado editable, numerado en el orden del setlist, a 3 columnas apaisado.
+function exportSetlistDocx() {
+  if (!setlist.length) { toast('El setlist está vacío'); return; }
+  const items = setlist.map(id => songs.find(x => x.id === id)).filter(Boolean);
+  try {
+    DocxExport.exportSetlist(setlistName && setlistName.trim() ? setlistName.trim() : 'Setlist', items);
+  } catch (e) {
+    console.error('exportSetlistDocx:', e);
+    toast('No se pudo generar el cancionero');
+  }
+}
+
 // Navegación con botón Atrás / Adelante del navegador
 function handleNavigation() {
   // Soporta rutas reales /cancion/id (History API), /setlist (modo presentación)
