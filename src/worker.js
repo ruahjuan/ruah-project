@@ -139,6 +139,24 @@ function fechaHoyArgentina() {
   return `${y}${m}${d}`;
 }
 
+// Valida y convierte el ?fecha=YYYY-MM-DD que manda el buscador de fecha
+// del front al formato YYYYMMDD que espera Evangelizo. Devuelve null si
+// falta, está mal formado, o es una fecha que no existe (ej. 2026-02-30).
+function parseFechaParam(param) {
+  if (!param) return null;
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(param);
+  if (!m) return null;
+
+  const [, y, mo, d] = m;
+  const asDate = new Date(`${y}-${mo}-${d}T00:00:00Z`);
+  const esFechaReal =
+    asDate.getUTCFullYear() === Number(y) &&
+    asDate.getUTCMonth() + 1 === Number(mo) &&
+    asDate.getUTCDate() === Number(d);
+
+  return esFechaReal ? `${y}${mo}${d}` : null;
+}
+
 async function pedirCampo(dateStr, type, content) {
   const url = new URL(EVANGELIZO_BASE);
   url.searchParams.set('date', dateStr);
@@ -176,11 +194,15 @@ async function obtenerLecturaDelDia(dateStr) {
   };
 }
 
-async function handleLecturaDelDia(ctx) {
-  const dateStr = fechaHoyArgentina();
+async function handleLecturaDelDia(ctx, url) {
+  const hoy = fechaHoyArgentina();
+  const fechaSolicitada = parseFechaParam(url.searchParams.get('fecha'));
+  const dateStr = fechaSolicitada || hoy;
+  const esHoy = dateStr === hoy;
 
-  // Cache API de Cloudflare: una sola consulta real a Evangelizo por día,
-  // sin importar cuánta gente entre a Oraciones ese día.
+  // Cache API de Cloudflare: una sola consulta real a Evangelizo por
+  // fecha (sea hoy o una fecha específica pedida por el buscador),
+  // sin importar cuánta gente la pida.
   const cache = caches.default;
   const cacheKey = new Request(`https://ruah-cache.local/lectura-del-dia/${CACHE_VERSION}/${dateStr}`);
 
@@ -191,14 +213,17 @@ async function handleLecturaDelDia(ctx) {
   const response = new Response(JSON.stringify(data), {
     headers: {
       'Content-Type': 'application/json; charset=UTF-8',
-      // Antes: 'public, max-age=86400'. Eso hacía que el navegador
-      // cacheara la respuesta por 24hs a nivel HTTP, sin enterarse de
-      // que la URL debería devolver algo distinto al día siguiente —
-      // servía la lectura de ayer aunque el SW y la Cache API de acá
-      // abajo ya tuvieran la de hoy lista. El cacheo por día ya está
-      // resuelto explícitamente con `cache.put`/`cache.match` (clave
-      // con fecha), así que no hace falta caché HTTP además.
-      'Cache-Control': 'no-store',
+      // "Hoy" (sin ?fecha, o ?fecha=la de hoy) es la única URL cuyo
+      // contenido cambia de un día a otro sin cambiar de dirección —
+      // ahí seguimos con no-store para que el navegador no se quede
+      // pegado a la lectura de ayer (el bug que arreglamos antes).
+      // Una fecha explícita (?fecha=2026-10-06) no tiene ese problema:
+      // esa URL siempre va a devolver lo mismo, pasado o futuro, así
+      // que se puede cachear tranquilo tanto en el navegador como acá
+      // en la Cache API — evita pisar el caché de "hoy" con cada
+      // búsqueda de otra fecha, y evita volver a pegarle a Evangelizo
+      // si alguien busca la misma fecha de nuevo.
+      'Cache-Control': esHoy ? 'no-store' : 'public, max-age=2592000, immutable',
     },
   });
 
@@ -212,7 +237,7 @@ export default {
 
     if (url.pathname === '/api/lectura-del-dia') {
       try {
-        return await handleLecturaDelDia(ctx);
+        return await handleLecturaDelDia(ctx, url);
       } catch (err) {
         return new Response(
           JSON.stringify({ error: 'No se pudo obtener la lectura del día' }),
