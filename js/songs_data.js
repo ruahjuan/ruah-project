@@ -3369,7 +3369,7 @@ const SONGS_DATA = [
   },
   {
     "id": "senor-aqui-estoy",
-    "title": "AQUÍ ESTOY",
+    "title": "SEÑOR, AQUÍ ESTOY",
     "artist": "DANIEL POLI",
     "composer": "DANIEL POLI",
     "key": "E",
@@ -5206,7 +5206,7 @@ const SONGS_DATA = [
   },
   {
     "id": "decision",
-    "title": "TODO EN ESTA VIDA (DECISIÓN)",
+    "title": "DECISIÓN",
     "artist": "FAREMO METÁ",
     "composer": "",
     "key": "C",
@@ -5922,6 +5922,51 @@ const SONGS_DATA = [
       "COMUNIDAD",
       "MISIÓN",
       "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "comunidades-en-comunidad",
+    "title": "COMUNIDADES EN COMUNIDAD (HIMNO DE CUV))",
+    "artist": "CUV MINISTERIO DE MÚSICA",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/4V1fuAaarkjIpdtXFge6MT?si=183de16937e442ed",
+    "spId": "4V1fuAaarkjIpdtXFge6MT",
+    "youtube": "https://www.youtube.com/watch?v=xx8bo69LRto",
+    "ytId": "xx8bo69LRto",
+    "content": "@@C      G      Am          C \nTan pesada estaba la mochila \n@@F          C         Dm         G \nque cada vez nos costaba más caminar. \n@@C        G      Am            C \nTanto esfuerzo, tanta lucha y garra \n@@F      C           Dm     \ny una cruz en la espalda \n@@ F              G\ndifícil de soportar. \n\n@@C  G     Am  G \nPero un día \n@@F      C     Dm        \nlos caminos del Señor \n@@    F          G\nnos iban a juntar \n\n@@Dm G            Em A7             Dm \ny esa mochila cruel se iba a alivianar \n@@F                       G \ncargándola en comunidad. \n\n\n@@ C  G   Bb A7  Dm         G \nComunidades en comunidad, \n@@F      G    C    Am           \nen misión, identidad \n@@         Dm    D   G\ncon un vivir espiritual. \n\n@@ C  G      Bb A7 Dm          G \nPadre Francisco de Paula Vallet \n@@F       G       C     Am   \ncon servicio y con pasión \n@@       Dm     G        C\ncooperemos junto al Rey. \n\n\n@@ C      G    Am         C\nPadre San Ignacio de Loyola,\n@@F       C        Dm         G \nenséñanos a buscar el camino de Dios. \n\n@@C       G     Am            C \nUnidos en la Iglesia que queremos,\n@@F         C        Dm  \nfundada por Jesucristo \n@@ F                      G\ntrayendo un Reino de amor. \n\n@@C  G     Am G   \nSeamos uno \n@@F       C      Dm    G\njunto a Dios para lograr \n@@C    G      Am  G  Dm      G \nser con el mundo una unidad\n\n@@Dm  G     Em A7             \ny una vez allí \n@@               Dm\npoderles anunciar \n@@ F                       G \nque Jesucristo es la verdad. \n\n\n@@ C  G   Bb A7  Dm         G \nComunidades en comunidad, \n@@F      G    C    Am           \nen misión, identidad \n@@         Dm    D   G\ncon un vivir espiritual. \n\n@@ C  G      Bb A7 Dm          G \nPadre Francisco de Paula Vallet \n@@F       G       C     Am   \ncon servicio y con pasión \n@@       Dm     G        C  A7\ncooperemos junto al Rey. \n@@       Dm     G     C   A7  \njuntos para Cristo Rey, \n@@       Dm    G        C \ncooperemos junto al Rey.",
+    "tags": [
+      "SALIDA",
+      "COMUNIDAD"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "resucitados",
+    "title": "RESUCITADOS",
+    "artist": "KÉNOSIS BY RC",
+    "composer": "",
+    "key": "Am",
+    "spotify": "https://open.spotify.com/intl-es/track/5Jj3dmNCGDJ6BvTReVcAuv?si=37655705453140ff",
+    "spId": "5Jj3dmNCGDJ6BvTReVcAuv",
+    "youtube": "https://www.youtube.com/watch?v=lyxE8Oq-228&t=16s",
+    "ytId": "lyxE8Oq-228",
+    "content": "@@        Bm        G \nEnséñame a abrazar \n@@     D      A \nMi cruz, Señor \n@@            Bm \nA no escandalizarme \n@@           G \nDe todas mis heridas \n@@ D \nAsí me has hecho Tú \n@@  A \nAsí me amas, mi Dios \n\n@@        Bm        G \nEnséñame a abrazar \n@@         D      A \nTu voluntad, Señor \n@@          Bm \nSi no puedo apartar \n@@        G \nEl cáliz de mi realidad \n@@    D \nRenuncio a mi plan \n@@   A \nAcojo Tu verdad \n\n\n@@        Bm       G \nQuiero ser, ser lavado \n@@ D \nSer curado, y quiero \n@@ A \nMorir a mí mismo \n\n\n@@        Bm        G \nEnséñame a abrazar \n@@          D       A \nMi condición, Señor\n\n@@           Bm \nNo puedo dar la talla \n@@        G \nNo soy suficiente \n@@     D \nQuiero dejar de hacer \n@@   A                    Bm A \nPara dejarme amar (por Ti) \n\n\n@@        Bm       G \nQuiero ser, ser lavado \n@@ D \nSer curado, y quiero \n@@ A \nMorir a mí mismo \n\n@@           Bm        G \nY quiero estar arrodillado \n@@   D \nQuiero vaciarme \n@@   A \nY, en el fondo, siento\n\n@@                Bm \nQue no soy valorado \n@@         G \nEstoy herido \n@@          D \nSoy rechazado \n@@        A \nSoy pecador \n\n@@            Bm \nPero, soy amado \n@@          G \nSoy aceptado \n@@          D \nSoy rescatado \n@@           A \nNo soy esclavo \n\n\n@@        Bm       G \nQuiero ser, ser lavado \n@@ D \nSer curado, y quiero \n@@ A \nMorir a mí mismo\n\n@@           Bm        G \nY quiero estar arrodillado \n@@   D \nQuiero vaciarme \n@@   A \nQuiero vivir como \n@@      Bm           G \nResucitado, resucitado \n@@       D           A \nResucitado, resucitado ",
+    "tags": [
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS",
+      "VOCACIONAL",
+      "PENITENCIAL",
+      "PASCUA"
     ],
     "source": "",
     "srcTag": "base",
