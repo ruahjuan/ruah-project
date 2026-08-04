@@ -5931,7 +5931,7 @@ const SONGS_DATA = [
   },
   {
     "id": "comunidades-en-comunidad",
-    "title": "COMUNIDADES EN COMUNIDAD (HIMNO DE CUV))",
+    "title": "COMUNIDADES EN COMUNIDAD (HIMNO DE CUV)",
     "artist": "CUV MINISTERIO DE MÚSICA",
     "composer": "",
     "key": "C",
