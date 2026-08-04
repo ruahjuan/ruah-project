@@ -117,27 +117,28 @@ function buildPrayerSet(tabsId, panelsId) {
   panels.innerHTML = '';
 
   PRAYERS.forEach((p, i) => {
-    // Tab
+    // Índice
     const btn = document.createElement('button');
-    btn.className = 'ptab' + (i === 0 ? ' on' : '');
-    btn.textContent = p.label;
+    btn.className = 'pidx-item' + (i === 0 ? ' on' : '');
+    btn.innerHTML = `<span class="pidx-name">${p.label}</span><span class="pidx-arrow">→</span>`;
     btn.onclick = () => {
-      tabs.querySelectorAll('.ptab').forEach(x => x.classList.remove('on'));
+      tabs.querySelectorAll('.pidx-item').forEach(x => x.classList.remove('on'));
       panels.querySelectorAll('.prayer-content').forEach(x => x.classList.remove('on'));
       btn.classList.add('on');
       document.getElementById(panelsId + '-pc-' + p.id).classList.add('on');
     };
     tabs.appendChild(btn);
 
-    // Panel
+    // Página — capitular en el primer párrafo vía CSS (.pp-dropcap), sin
+    // tocar el HTML de cada oración (body ya viene armado como <p>...).
     const div = document.createElement('div');
     div.className = 'prayer-content' + (i === 0 ? ' on' : '');
     div.id = panelsId + '-pc-' + p.id;
     div.innerHTML = `
       <div class="prayer-box">
+        ${p.subtitle ? `<div class="prayer-eyebrow">${p.subtitle}</div>` : ''}
         <div class="prayer-title">${p.title}</div>
-        ${p.subtitle ? `<div class="prayer-sub">${p.subtitle}</div>` : ''}
-        <div class="prayer-body">${p.body}</div>
+        <div class="prayer-body pp-dropcap">${p.body}</div>
       </div>`;
     panels.appendChild(div);
   });
@@ -205,9 +206,66 @@ function iconizeReadingAccordion() {
   });
 }
 
+/**
+ * Sello con el color del tiempo litúrgico, al lado de la fecha en
+ * "Lecturas del Día". Igual que iconizeReadingAccordion() de arriba: en
+ * vez de tocar _renderLecturaDelDia() en app.js, se lee el texto que ya
+ * viene ahí (data.liturgic, mostrado en .ra-eyebrow) y se decide el color
+ * con un heurístico de palabras clave. No es un cálculo litúrgico real
+ * (no hay acceso al calendario completo desde acá) — es una aproximación
+ * a partir del texto que devuelve Evangelizo. Si en algún caso da un
+ * color que no corresponde, conviene ajustar las palabras clave de acá
+ * antes que desconfiar del dato en sí.
+ */
+const SEAL_ICON = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.9815 8.09051C10.072 8.53599 10.3133 8.93667 10.6646 9.22507C11.016 9.51348 11.456 9.67198 11.9106 9.6739C12.3652 9.67582 12.8065 9.52103 13.1603 9.2356C13.5141 8.95018 13.7587 8.55155 13.853 8.10685M11.9242 2.99686C11.7327 4.18724 11.1735 4.9476 10.7938 5.52689C10.3311 6.2328 9.8416 6.90775 9.97799 8.08785M11.9193 3.00122C12.6782 3.59864 13.2594 4.39209 13.6001 5.29583C13.9408 6.19957 14.0281 7.17924 13.8525 8.12898M12 11.7795V9.67392M8.5 21.0031H15.5C15.5 21.0031 15.1198 18.9134 15.1198 16.3913C15.1198 13.8692 15.5 11.7795 15.5 11.7795L8.5 11.7795C8.5 11.7795 8.88022 13.8692 8.88022 16.3913C8.88022 18.9134 8.5 21.0031 8.5 21.0031Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+// Verde por defecto (Tiempo Ordinario); el resto por palabra clave en el
+// texto que trae Evangelizo (ej. "Martes de la 18ª semana del Tiempo
+// Ordinario", "IV Domingo de Cuaresma", "Solemnidad de la Asunción").
+const LITURGICAL_SEASONS = [
+  { test: /cuaresma|adviento/i,                    color: 'var(--violet)' },
+  { test: /pascua|navidad|solemnidad|domingo/i,    color: '#B08A1E' },
+  { test: /viernes santo|semana santa|mártir(es)?/i, color: '#A5311C' },
+];
+const LITURGICAL_ORDINARY_COLOR = '#4C7A5A';
+
+function _liturgicalColor(texto) {
+  const match = LITURGICAL_SEASONS.find(s => s.test.test(texto));
+  return match ? match.color : LITURGICAL_ORDINARY_COLOR;
+}
+
+function addLiturgicalSeal() {
+  const head = document.querySelector('#reading-accordion .ra-head');
+  if (!head || head.querySelector('.ra-seal')) return;
+
+  const eyebrow = head.querySelector('.ra-eyebrow');
+  const dateEl = head.querySelector('.ra-date');
+  if (!eyebrow || !dateEl) return;
+
+  const color = _liturgicalColor(eyebrow.textContent);
+
+  const seal = document.createElement('div');
+  seal.className = 'ra-seal';
+  seal.style.background = color;
+  seal.innerHTML = SEAL_ICON;
+
+  const textWrap = document.createElement('div');
+  textWrap.className = 'ra-head-text';
+  const staleEl = head.querySelector('.ra-stale');
+  textWrap.appendChild(eyebrow);
+  textWrap.appendChild(dateEl);
+  if (staleEl) textWrap.appendChild(staleEl);
+  eyebrow.style.color = color;
+
+  head.innerHTML = '';
+  head.appendChild(seal);
+  head.appendChild(textWrap);
+}
+
 const _raContainer = document.getElementById('reading-accordion');
 if (_raContainer) {
   iconizeReadingAccordion(); // por si ya tiene contenido al cargar
-  new MutationObserver(iconizeReadingAccordion)
+  addLiturgicalSeal();
+  new MutationObserver(() => { iconizeReadingAccordion(); addLiturgicalSeal(); })
     .observe(_raContainer, { childList: true, subtree: true });
 }

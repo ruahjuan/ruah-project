@@ -1230,33 +1230,51 @@ function showView(v) {
 // LECTURA DEL DÍA (Oraciones)
 // ═══════════════════════════════════════════════════════
 
-let _lecturaDelDiaCargada = false;
+let _fechaLecturaActual = null; // YYYYMMDD que se está mostrando ahora mismo
 
 // El caché por día ya lo maneja el Worker (Cache API, clave con fecha,
-// 24hs) y ahora también el Service Worker (networkFirst en sw.js). Se
-// sacó la capa extra de localStorage acá: era redundante y, al no estar
-// alineada con esas otras dos, terminaba sirviendo la lectura de ayer.
+// 24hs para hoy / 30 días para fechas explícitas) y ahora también el
+// Service Worker (networkFirst en sw.js). Se sacó la capa extra de
+// localStorage acá: era redundante y, al no estar alineada con esas otras
+// dos, terminaba sirviendo la lectura de ayer.
 function _hoyStrArg() {
   const d = new Date();
   return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
 }
 
-async function buildLecturaDelDia() {
+// dateStr: YYYYMMDD. Si se omite, es "hoy" (comportamiento de siempre).
+// El buscador de fecha (js/lecturas-nav.js) llama a esto mismo pasando
+// la fecha elegida — no hace falta un endpoint ni un flujo aparte.
+async function buildLecturaDelDia(dateStr) {
   const wrap = document.getElementById('reading-accordion');
-  if (!wrap || _lecturaDelDiaCargada) return;
+  if (!wrap) return;
+
+  const target = dateStr || _hoyStrArg();
+  if (_fechaLecturaActual === target) return; // ya se está mostrando justo esta fecha
+
+  const esHoy = target === _hoyStrArg();
+  wrap.style.opacity = '.45';
 
   try {
-    const res = await fetch('/api/lectura-del-dia', { cache: 'no-store' });
+    const fechaParam = `${target.slice(0, 4)}-${target.slice(4, 6)}-${target.slice(6, 8)}`;
+    const url = esHoy ? '/api/lectura-del-dia' : `/api/lectura-del-dia?fecha=${fechaParam}`;
+    // "Hoy" sigue sin pasar por el HTTP cache del navegador (por el bug de
+    // antes). Una fecha explícita sí puede usarlo: el Worker ya la manda
+    // con max-age largo porque esa URL nunca cambia de contenido.
+    const res = await fetch(url, { cache: esHoy ? 'no-store' : 'default' });
     if (!res.ok) return; // endpoint no disponible en este deploy todavía — no rompe nada
     const data = await res.json();
     if (!data || !data.readings) return;
     // Si esto vuelve a pasar (SW/Worker sirviendo algo viejo), que se note
-    // en la UI en vez de quedar disimulado.
-    const isStale = data.date !== _hoyStrArg();
+    // en la UI en vez de quedar disimulado. Solo aplica a "hoy": una fecha
+    // explícita siempre va a devolver justo esa fecha, nunca hay drift.
+    const isStale = esHoy && data.date !== _hoyStrArg();
     _renderLecturaDelDia(wrap, data, isStale);
-    _lecturaDelDiaCargada = true;
+    _fechaLecturaActual = data.date;
   } catch (e) {
     return; // sin conexión / CORS / lo que sea — el widget simplemente no aparece
+  } finally {
+    wrap.style.opacity = '1';
   }
 }
 
