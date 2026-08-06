@@ -1973,7 +1973,7 @@ const SONGS_DATA = [
     "spId": "1bOPbCiJaCiCSQzXUGLJ1y",
     "youtube": "https://www.youtube.com/watch?v=ZzlGZjigGX0",
     "ytId": "ZzlGZjigGX0",
-    "content": "(Original: A mayor, transporte en 2do)\n@@G            D   Em\nAsí como el ave vuela y la flor crece\n@@Am        D\ntodo porque Tu amor lo quiere\n@@G            D        Em\nAsí como el árbol es refugio cuando llueve\n@@Am          D\nporque Tu amor todo lo puede\n\n@@C      D     Em      C        D    Em\nPuedo oír Tu voz llamándome al desierto\n@@C       D       Em     Am           D\nNo puedo decir no, te sigo aún sin verlo\n\n@@       Am G/B C       \nPorque sé \n@@        Am            G            D\nque tus brazos me levantan si me caigo\n@@    Am G/B C      \nQuiero ir     \n@@              D\ncontigo caminando.\n\n\n@@Em            D  \nAquí está mi voz, \n@@C        D             Em             D C D\núsala y hazla un instrumento de tu amor\n@@Em          D       \nContigo yo voy, \n@@     C           D    \nTu gracia me sostiene \n@@       Em           D C D\ny fortalece el corazón.\n\n@@   C  D    Em        C   D    Em\n/A todo lugar donde quieras llegar\n@@    C      D   Em               Am D\nMi vida es para Tí, te quiero seguir/ x2\n",
+    "content": "(Original: A mayor, transporte en 2do)\n@@G            D   Em\nAsí como el ave vuela y la flor crece\n@@Am        D\ntodo porque Tu amor lo quiere\n@@G            D        Em\nAsí como el árbol es refugio cuando llueve\n@@Am          D\nporque Tu amor todo lo puede\n\n@@C      D     Em      C        D    Em\nPuedo oír Tu voz llamándome al desierto\n@@C       D       Em     Am           D\nNo puedo decir no, te sigo aún sin verlo\n\n@@        Am G/B C       \nPorque sé \n@@        Am            G            D\nque tus brazos me levantan si me caigo\n@@       Am G/B C      \nQuiero ir     \n@@              D\ncontigo caminando.\n\n\n@@Em            D  \nAquí está mi voz, \n@@C        D             Em             D C D\núsala y hazla un instrumento de Tu amor\n@@    Em       D       \nContigo yo voy, \n@@     C           D    \nTu gracia me sostiene \n@@      Em           D C D\ny fortalece el corazón.\n\n@@   C  D    Em          C  D    Em\n/A todo lugar donde quieras llegar\n@@    C       D   Em              Am D\nMi vida es para Tí, te quiero seguir/ x2",
     "tags": [
       "ADORACIÓN",
       "VOCACIONAL",
@@ -3334,7 +3334,7 @@ const SONGS_DATA = [
     "spId": "71FF85itDM6ArHuBaWNyah",
     "youtube": "https://www.youtube.com/watch?v=oSb-TD1f9Rk&list=RDoSb-TD1f9Rk&start_radio=1",
     "ytId": "oSb-TD1f9Rk",
-    "content": "(Original: A mayor, transporte en 2do)\n@@              G    C                    G      C\nDesde el principio, cuando Dios te pensó, \n@@           Em   Am                  G    C\nquiso regalarte un hermoso plan de amor.\n\n@@                  G    C                  G  C\nPensó en cada detalle de tu vida y de tu ser,\n@@                        Em     \ntrazó una historia interesante \n@@ Am                 G\nque quiere verte recorrer.\n\n@@            G     C            G  C\nQuiso entregarte un precioso don, \n@@                       Em   Am           G\npara que lleves su mensaje por toda la creación.\n\n\n\n@@                  Em       \nY no guardes para ti \n@@C                           G  D\nesa misión que El te ha confiado, \n@@             Em \nÉl espera de ti \n@@C                    G  D\nque fructifique su regalo, \n@@              Em\ndando a conocer \n@@C                    G  D\nla grandeza de ser amado \n@@        Am                        D\npor un Dios que te confía más y más \n@@                   G\nsi eres fiel a su llamado.\n\n\n\n@@                  G\nÉl quiere que se cumpla \n@@C        G \nen ti su plan de amor \n@@             D           Em\npara que al verte cara a cara \n@@Am                      G\npueda expresar a viva voz: \n@@ Dsus  D            G\n«Servidor bueno y fiel, \n@@C                    G       C\nya que respondiste siendo fiel,\n@@                Em \nven entra en tu casa \n@@Am                G Dsus D\na gozar con tu Señor»\n\n\n\n@@                  Em       \nY no guardes para ti \n@@C                           G  D\nesa misión que El te ha confiado, \n@@             Em \nÉl espera de ti \n@@C                    G  D\nque fructifique su regalo, \n@@              Em\ndando a conocer \n@@C                    G  D\nla grandeza de ser amado \n@@        Am                        D\npor un Dios que te confía más y más \n@@                   G\nsi eres fiel a su llamado.",
+    "content": "(Original: A mayor, transporte en 2do)\n@@              G    C                    G C\nDesde el principio, cuando Dios te pensó, \n@@           Em   Am                     G  C\nquiso regalarte un hermoso plan de amor.\n\n@@                  G    C                  G  C\nPensó en cada detalle de tu vida y de tu ser,\n@@                        Em     \ntrazó una historia interesante \n@@ Am                 G\nque quiere verte recorrer.\n\n@@Dsus4 D     G     C             G C\nQuiso entregarte un precioso don, \n@@                       Em   Am            G\npara que lleves su mensaje por toda la creación.\n\n\n\n@@                  Em       \nY no guardes para tí \n@@C                           G  D\nesa misión que El te ha confiado, \n@@             Em \nÉl espera de tí \n@@C                    G  D\nque fructifique su regalo, \n@@               Em\ndando a conocer \n@@C                    G  D\nla grandeza de ser amado \n@@        Am                        D\npor un Dios que te confía más y más \n@@                   G\nsi eres fiel a su llamado.\n\n\n@@                  G\nÉl quiere que se cumpla \n@@C        G           C\nen ti su plan de amor \n@@             D           Em\npara que al verte cara a cara \n@@Am                      G\npueda expresar a viva voz: \n@@ Dsus  D            G\n«Servidor bueno y fiel, \n@@C                    G       C\nya que respondiste siendo fiel,\n@@                Em \nven entra en tu casa \n@@Am              G  Dsus D\na gozar con tu Señor»\n\n\n@@                  Em       \nY no guardes para tí \n@@C                           G  D\nesa misión que El te ha confiado, \n@@             Em \nÉl espera de tí \n@@C                    G  D\nque fructifique su regalo, \n@@               Em\ndando a conocer \n@@C                    G  D\nla grandeza de ser amado \n@@        Am                        D\npor un Dios que te confía más y más \n@@                   G\nsi eres fiel a su llamado.",
     "tags": [
       "VOCACIONAL",
       "MISIÓN"
@@ -5967,6 +5967,52 @@ const SONGS_DATA = [
       "VOCACIONAL",
       "PENITENCIAL",
       "PASCUA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "contra-toda-esperanza",
+    "title": "CONTRA TODA ESPERANZA",
+    "artist": "JIMENA MUÑOZ",
+    "composer": "",
+    "key": "A",
+    "spotify": "https://open.spotify.com/intl-es/track/49J4cdkon3F33nGbmw7NzQ?si=e0b9b86ee6c2445b",
+    "spId": "49J4cdkon3F33nGbmw7NzQ",
+    "youtube": "https://www.youtube.com/watch?v=JHYvbfYIP7g",
+    "ytId": "JHYvbfYIP7g",
+    "content": "@@ A     E    F#m           C#m  \nHoy al fin tenemos que seguir \n@@                D\ncaminando en paz,  \n@@     Bm                       E \nesperamos contra toda esperanza. \n\n@@  A   E      F#m           C#m\nY es así que todo va a cambiar, \n@@         D\nresucitarás \n@@     Bm                       E\nesperamos contra toda esperanza. \n\n\n@@     A          F#m\nVos sos la Vida sos la Paz, \n@@     D                E\nVos sos nuestra Esperanza \n@@     A         F#m\nSos el Camino para andar \n@@      D               E\nSos fuerza y sos confianza \n\n\n@@A      E     F#m             C#m\nNo aflojar, seguirte hasta el final, \n@@             D\nTu cruz abrazar,\n@@     Bm                       E \nesperamos contra toda esperanza. \n\n@@ A    E      F#m            C#m\nEsperar también es transformar \n@@                  D\nun sueño en realidad, \n@@     Bm                       E\nesperamos contra toda esperanza. \n\n\n@@     A          F#m\nVos sos la Vida sos la Paz, \n@@     D                E\nVos sos nuestra Esperanza \n@@     A         F#m\nSos el Camino para andar \n@@      D               E\nSos fuerza y sos confianza \n\n\n@@ A    E      F#m          C#m\nAl saber que Vos vas a volver \n@@         D\na resucitar, \n@@     Bm                       E\nesperamos contra toda esperanza. \n\n@@A      E    F#m            C#m\nAl sentir Jesús que estás aquí \n@@            D\nesperándonos, \n@@     Bm                       E\nesperamos contra toda esperanza. \n\n\n@@     A          F#m\nVos sos la Vida sos la Paz, \n@@     D                E\nVos sos nuestra Esperanza \n@@     A         F#m\nSos el Camino para andar \n@@      D               E\nSos fuerza y sos confianza \n",
+    "tags": [
+      "ANIMACIÓN",
+      "COMUNIDAD",
+      "COMUNIÓN",
+      "SALIDA",
+      "PASCUA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "asi-me-quedo",
+    "title": "ASÍ ME QUEDO",
+    "artist": "PABLO MARTÍNEZ",
+    "composer": "PABLO MARTÍNEZ",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/1nuY1lwuY6qwavOD3F5nDf?si=9cde8abcbc854202",
+    "spId": "1nuY1lwuY6qwavOD3F5nDf",
+    "youtube": "https://www.youtube.com/watch?v=v_uPxza6BXg",
+    "ytId": "v_uPxza6BXg",
+    "content": "@@          D             F#m\nEstoy enojado, malhumorado\n@@        G       Em        A\nno me salen alabanzas para decir\n@@        D                 F#m\npero lo sabes que no me muevo\n@@     G                 Em \na tu lado, siempre a tu lado\n@@   A       D\naquí me quedo\n\n\n@@              Bm\nEs que no entiendo tus silencios\n@@        F#m\ny tus criterios no comprendo\n@@           Em\ncomo me cuesta estar de acuerdo\n@@             A\ncuando me duele y es incierto\n@@            Em           A\ncuando me llevas al desierto\n\n@@          D                F#m\nTe soy sincero, hoy tengo miedo\n@@        G             Em        A\nNo me sé con tantas fuerzas para seguir\n@@        D                 F#m\npero lo sabes que no me muevo\n@@     G                 Em\na tu lado, siempre a tu lado\n@@   A       D\naquí me quedo.\n\n@@             Bm\nAunque tus planes son perfectos,\n@@        F#m\ninterpretarlos toma tiempo,\n@@         Em\nTu me conoces, que soy terco\n@@              A\nQue doy mil vueltas, y vas de nuevo\n@@               Em             A\nQue me amas tanto sin merecerlo\n\n\n@@        D               F#m\nAmigo bueno, sabes te quiero\n@@          G         Em       A\nAunque sea frágil y débil, te digo sí.\n@@         D              F#m\nSolo no puedo, solo no quiero,\n@@     G                 Em\nA tu lado, siempre a tu lado,\n@@    A      D\nAquí me quedo.\n\n@@    G Em A\nJesús,\n@@   A       D\nAquí me quedo.",
+    "tags": [
+      "ACCIÓN DE GRACIAS",
+      "ADORACIÓN",
+      "JESÚS"
     ],
     "source": "",
     "srcTag": "base",
