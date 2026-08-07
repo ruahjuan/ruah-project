@@ -2903,8 +2903,8 @@ const SONGS_DATA = [
     "key": "C",
     "spotify": "",
     "spId": "",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://youtu.be/B5a2TcMFj6c",
+    "ytId": "B5a2TcMFj6c",
     "content": "@@   C      G        F                        C G F\nLa misericordia cayó sobre el mundo en Belén\n@@ C         G         F                C G F\nGracias al sí de una niña que Dios eligió\n\n@@        Dm    G              Dm    G\nA Toda alma, Madre, Toda entrega Reina\n@@      Dm      G                  Bb          F   G\nToda pureza, inmaculada, instrumento del Padre.\n\n\n\n@@ C          G          F\nVirgen hermosa eres puerta del cielo\n@@  C        G             F\nFuego del Padre que enciende una Alianza\n@@   Am        G               F\nTu alma proclama a quien te amó primero\n@@Am                G              C   G  F\nInmaculada construye en mí tu Reino\n\n@@ C       G         F\nToda radiante, diadema preciosa\n@@  C         G        F\nHuerto del Padre, jardín cerrado\n@@ Am       G             F\nCielo intocado que encierras pureza\n@@ Dm               G              C\nInmaculada construye en mí tu Reino\n\n\n\n@@        Dm    G              Dm    G\nA Toda alma, Madre, Toda entrega Reina\n@@      Dm      G                  Bb          F   G A7\nToda pureza, inmaculada, instrumento del Padre.\n\n@@     D       A       G\nMontaña elevada te alzas María\n@@ D        A       G\nLuz en lo alto, suave melodía\n@@ Bm        A           G\nCanto perpetuo que nunca se apaga\n@@Em                A              D\nInmaculada construye en mí tu Reino\n\n@@ D          A          G\nVirgen hermosa eres puerta del cielo\n@@ D         A            G\nFuego del Padre que enciende una Alianza\n@@   Bm        A               G\nTu alma proclama a quien te amó primero\n@@Em        A  Em       A\nInmaculada, Inmaculada, \n@@G                 A               D\nInmaculada construye en mí tu Reino.",
     "tags": [
       "MARÍA"
@@ -2913,7 +2913,7 @@ const SONGS_DATA = [
     "srcTag": "base",
     "srcColor": "#9e9e9e",
     "fav": false,
-    "thumbnailHint": ""
+    "thumbnailHint": "youtube"
   },
   {
     "id": "que-todos-sean-uno",
@@ -6013,6 +6013,29 @@ const SONGS_DATA = [
       "ACCIÓN DE GRACIAS",
       "ADORACIÓN",
       "JESÚS"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "sanas",
+    "title": "SANAS",
+    "artist": "HAKUNA GROUP MUSIC",
+    "composer": "HAKUNA GROUP MUSIC",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/4tjcP5HR9rGYPDRqTgCtxk?si=95ce1dbfafaf4e3d",
+    "spId": "4tjcP5HR9rGYPDRqTgCtxk",
+    "youtube": "https://www.youtube.com/watch?v=2_ZD_hlt9aE",
+    "ytId": "2_ZD_hlt9aE",
+    "content": "@@    C             D      Bm    C\nTú sanas los corazones destrozados\n@@   C            D     Bm       C\nY vendas sus heridas con tus manos\n\n\n@@C           D            Em\nCuentas el número de estrellas,\n@@   G        C      D      Em\na cada una llamas por su nombre\n@@        C        D           Em\nReconstruyes cada vida arruinada\n@@   G             C       D    Em\ny no se escapa nada de Tu mirada.\n\n\n@@    C             D      Bm    C\nTú sanas los corazones destrozados\n@@   C            D     Bm       C\nY vendas sus heridas con tus manos\n\n@@    C             D      Bm    C\nTú sanas los corazones destrozados\n@@   C            D     Bm       C\nY vendas sus heridas con tus manos\n\n\n@@C          D        Em\nConfío en Tu misericordia\n@@          G\nTe cantaré mientras yo viva\n\n@@C         D        Em\nConfío en tu misericordia\n@@          G\nTe cantaré mientras yo viva\n\n@@C         D        Em\n Confío en tu misericordia\n@@          G\nTe cantaré mientras yo viva\n\n@@C        D         Em\n Confío en tu misericordia\n@@          G\nTe cantaré mientras yo viva\n\n@@C        D        Em\n Confío en tu misericordia\n@@         G\nTe cantaré mientras yo viva\n\n@@C         D       Em\n Confío en tu misericordia\n@@          G                C\nTe cantaré mientras yo viva\n\n\n@@ C             D      Bm   C\nTú sanas los corazones destrozados\n@@ C           D     Bm      Em\nY vendas sus heridas con tus manos.",
+    "tags": [
+      "ADORACIÓN",
+      "ALABANZA",
+      "ACCIÓN DE GRACIAS",
+      "SANACIÓN"
     ],
     "source": "",
     "srcTag": "base",
