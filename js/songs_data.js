@@ -6042,5 +6042,50 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "cristo-reina",
+    "title": "CRISTO REINA",
+    "artist": "ATHENAS",
+    "composer": "JONATAN NARVÁEZ",
+    "key": "A",
+    "spotify": "https://open.spotify.com/intl-es/track/3bcici8uBHodwS5QZEqbgc?si=d30714921dad41c8",
+    "spId": "3bcici8uBHodwS5QZEqbgc",
+    "youtube": "https://www.youtube.com/watch?v=5Sj83Y0-_a8",
+    "ytId": "5Sj83Y0-_a8",
+    "content": "(Original: B mayor)\n@@    A \nMi corazón quiere alabar \n@@E  \nalabarte \n@@   F#m  \nMi corazón quiere adorar \n@@D \nadorarte \n\n\n@@       A   E  \nCristo reina \n@@       F#m D \nCristo reina \n@@       A   E  \nCristo reina \n@@       D \ncon poder",
+    "tags": [
+      "ACCIÓN DE GRACIAS",
+      "ADORACIÓN",
+      "ALABANZA",
+      "JESÚS"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "confia",
+    "title": "CONFIA",
+    "artist": "PABLO MARTÍNEZ",
+    "composer": "PABLO MARTÍNEZ",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/0K15nNL7NO2ESJl9Zkh675?si=45926d4e12a04cfa",
+    "spId": "0K15nNL7NO2ESJl9Zkh675",
+    "youtube": "https://www.youtube.com/watch?v=rzKPxtFvWKA",
+    "ytId": "rzKPxtFvWKA",
+    "content": "@@     D          Bm  A  G\nConfía mi corazón, Señor\n@@    Bm          A\nConfía en tu amor\n\n@@     D          Bm  A  G\nConfía mi corazón, Señor\n@@    Bm          A\nConfía en tu amor\n\n\n@@Bm                         G\nToda mi esperanza está puesta en Vos\n@@ D         A\nTú no fallarás\n@@Bm                         G\nToda mi esperanza está puesta en Vos\n@@ D         A\nEn tu bondad\n@@      G           A\nQue sea lo que quieras\n@@     G             A\nConforme a tu manera\n@@     G           A            D\nQue todo, todo, todo estará bien\n\n\n@@   D            Bm   A  G\nEspera mi corazón, Señor\n@@   Bm          A\nEspera en tu amor\n\n\n@@Bm                         G\nToda mi esperanza está puesta en Vos\n@@ D         A\nTú no fallarás\n@@Bm                         G\nToda mi esperanza está puesta en Vos\n@@ D         A\nEn tu bondad\n@@      G           A\nQue sea lo que quieras\n@@     G             A\nConforme a tu manera\n@@     G           A            D\nQue todo, todo, todo estará bien\n\n@@Bm                         G\nToda mi esperanza está puesta en Vos\n@@ D         A\nTú no fallarás\n@@Bm                         G\nToda mi esperanza está puesta en Vos\n@@ D         A\nEn tu bondad\n@@      G           A\nQue sea lo que quieras\n@@     G             A\nConforme a tu manera\n@@     G           A            D\nQue todo, todo, todo estará bien\n\n@@      G           A\nQue sea lo que quieras\n@@     G             A\nConforme a tu manera\n@@     G           A            D\nQue todo, todo, todo estará bien",
+    "tags": [
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS",
+      "ALABANZA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
