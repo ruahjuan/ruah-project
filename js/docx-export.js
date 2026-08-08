@@ -163,6 +163,14 @@ const DocxExport = (function () {
     return xml;
   }
 
+  // Línea en blanco compacta: se usa tanto entre estrofas/estribillos
+  // como entre canciones, para que el espacio máximo sea "un párrafo"
+  // chico, no una línea entera a tamaño de cuerpo + espaciado extra.
+  function blankParagraph() {
+    return `<w:p><w:pPr><w:spacing w:before="0" w:after="0" w:line="130" w:lineRule="exact"/>` +
+      `<w:rPr><w:sz w:val="12"/><w:szCs w:val="12"/></w:rPr></w:pPr></w:p>`;
+  }
+
   function buildSongParagraphs(song, number) {
     const title = `${number}. ${(song.title || '').toUpperCase()}`;
     let xml = '';
@@ -182,10 +190,16 @@ const DocxExport = (function () {
     }
 
     const blocks = extractLyricBlocks(song.content || '');
+    let lastWasBlank = true; // evita un blanco colgado al arrancar la letra
     for (const b of blocks) {
       if (b.type === 'blank') {
-        xml += pXml('', '<w:pPr><w:spacing w:after="60"/></w:pPr>');
-      } else if (b.type === 'section') {
+        if (lastWasBlank) continue; // colapsa blancos consecutivos a 1 máx.
+        xml += blankParagraph();
+        lastWasBlank = true;
+        continue;
+      }
+      lastWasBlank = false;
+      if (b.type === 'section') {
         xml += pXml(
           rXml(b.text, { bold: true, size: BODY_SIZE }),
           '<w:pPr><w:spacing w:before="100" w:after="40"/></w:pPr>'
@@ -203,8 +217,9 @@ const DocxExport = (function () {
       }
     }
 
-    // Separador antes de la próxima canción.
-    xml += pXml('', '<w:pPr><w:spacing w:after="220"/></w:pPr>');
+    // Separador antes de la próxima canción: mismo blanco compacto,
+    // nunca más de "un párrafo" de espacio.
+    xml += blankParagraph();
     return xml;
   }
 
