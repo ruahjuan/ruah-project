@@ -164,11 +164,28 @@ const READING_ICONS = {
 };
 
 /**
- * Corrige el formato de la referencia del Salmo tal como viene de la fuente:
+ * Espacio después de coma, punto o punto y coma, si no lo tiene ya. El
+ * guión de rango (12-17) queda pegado a propósito — con espacio después
+ * se leía raro ("12- 17"). Se aplica a TODAS las citas (no solo al Salmo).
+ */
+function _formatCitationSpacing(text) {
+  return text.replace(/([,.;])(?!\s|$)/g, '$1 ');
+}
+
+/**
+ * "primera lectura" → "Primera Lectura". Los labels que manda Evangelizo
+ * vienen con mayúscula solo en la primera palabra.
+ */
+function _titleCase(text) {
+  return text.split(' ').map(w => w ? w.charAt(0).toUpperCase() + w.slice(1) : w).join(' ');
+}
+
+/**
+ * Corrige el formato de la referencia del Salmo, además del espaciado
+ * general de arriba:
  * "Salmos 146(145),2abc.2d-4.5-6." → "Salmo 146 (145), 2 abc.2d-4.5-6."
  * - "Salmos" → "Salmo" (singular)
  * - espacio entre el número de capítulo y el paréntesis
- * - espacio después de la coma
  * - espacio entre el número de versículo y un grupo de letras (2abc → 2 abc),
  *   pero NO cuando es una sola letra pegada a un rango (2d-4 queda igual)
  */
@@ -176,27 +193,34 @@ function formatSalmoRef(text) {
   return text
     .replace(/^Salmos\b/i, 'Salmo')
     .replace(/(\d)\(/g, '$1 (')
-    .replace(/,(?!\s)/g, ', ')
     .replace(/(\d)([a-z]{2,})/g, '$1 $2');
 }
 
 function iconizeReadingAccordion() {
   document.querySelectorAll('#reading-accordion .ra-item').forEach(item => {
+    const labelEl = item.querySelector('.ra-label b');
+    const refSpan = item.querySelector('.ra-label span');
+
+    if (labelEl && !labelEl.dataset.titled) {
+      labelEl.textContent = _titleCase(labelEl.textContent);
+      labelEl.dataset.titled = '1';
+    }
+
+    const label = (labelEl?.textContent || '').toLowerCase();
+    if (refSpan && !refSpan.dataset.fixed) {
+      refSpan.textContent = label.includes('salmo')
+        ? formatSalmoRef(_formatCitationSpacing(refSpan.textContent))
+        : _formatCitationSpacing(refSpan.textContent);
+      refSpan.dataset.fixed = '1'; // evita re-aplicar el fix si corre de nuevo
+    }
+
     if (item.querySelector('.ra-icon')) return; // ya tiene ícono, no duplicar
 
-    const label = (item.querySelector('.ra-label b')?.textContent || '').toLowerCase();
     let inner = null;
     if (label.includes('segunda')) inner = READING_ICONS.lectura2;
     else if (label.includes('primera') || (label.includes('lectura') && !label.includes('segunda'))) inner = READING_ICONS.lectura1;
     else if (label.includes('evangelio')) inner = READING_ICONS.evangelio;
-    else if (label.includes('salmo')) {
-      inner = '♪';
-      const refSpan = item.querySelector('.ra-label span');
-      if (refSpan && !refSpan.dataset.fixed) {
-        refSpan.textContent = formatSalmoRef(refSpan.textContent);
-        refSpan.dataset.fixed = '1'; // evita re-aplicar el fix si corre de nuevo
-      }
-    }
+    else if (label.includes('salmo')) inner = '♪';
     if (inner === null) return; // tipo desconocido: no le ponemos ícono raro
 
     const icon = document.createElement('span');
@@ -207,15 +231,19 @@ function iconizeReadingAccordion() {
 }
 
 /**
- * Sello con el color del tiempo litúrgico, al lado de la fecha en
- * "Lecturas del Día". Igual que iconizeReadingAccordion() de arriba: en
- * vez de tocar _renderLecturaDelDia() en app.js, se lee el texto que ya
- * viene ahí (data.liturgic, mostrado en .ra-eyebrow) y se decide el color
- * con un heurístico de palabras clave. No es un cálculo litúrgico real
- * (no hay acceso al calendario completo desde acá) — es una aproximación
- * a partir del texto que devuelve Evangelizo. Si en algún caso da un
- * color que no corresponde, conviene ajustar las palabras clave de acá
- * antes que desconfiar del dato en sí.
+ * Sello con el color del tiempo litúrgico + encabezado en 3 líneas
+ * (fecha / semana / tiempo litúrgico), al lado de la fecha en "Lecturas
+ * del Día". Igual que iconizeReadingAccordion() de arriba: en vez de
+ * tocar _renderLecturaDelDia() en app.js, se lee el texto que ya viene
+ * ahí (data.liturgic, mostrado en .ra-eyebrow) y se parsea + colorea acá.
+ *
+ * Dos heurísticos, no cálculos litúrgicos reales (no hay acceso al
+ * calendario completo desde acá):
+ * - _liturgicalColor(): color del sello por palabra clave.
+ * - _parseLiturgic(): separa "18ª semana"/"XIX" en un número de semana
+ *   arábigo + el nombre del tiempo litúrgico. Si el texto no calza con
+ *   ningún patrón conocido (solemnidades, fiestas sin número de semana),
+ *   se muestra tal cual en la 3ra línea y se omite la de la semana.
  */
 const SEAL_ICON = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.9815 8.09051C10.072 8.53599 10.3133 8.93667 10.6646 9.22507C11.016 9.51348 11.456 9.67198 11.9106 9.6739C12.3652 9.67582 12.8065 9.52103 13.1603 9.2356C13.5141 8.95018 13.7587 8.55155 13.853 8.10685M11.9242 2.99686C11.7327 4.18724 11.1735 4.9476 10.7938 5.52689C10.3311 6.2328 9.8416 6.90775 9.97799 8.08785M11.9193 3.00122C12.6782 3.59864 13.2594 4.39209 13.6001 5.29583C13.9408 6.19957 14.0281 7.17924 13.8525 8.12898M12 11.7795V9.67392M8.5 21.0031H15.5C15.5 21.0031 15.1198 18.9134 15.1198 16.3913C15.1198 13.8692 15.5 11.7795 15.5 11.7795L8.5 11.7795C8.5 11.7795 8.88022 13.8692 8.88022 16.3913C8.88022 18.9134 8.5 21.0031 8.5 21.0031Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
@@ -234,6 +262,47 @@ function _liturgicalColor(texto) {
   return match ? match.color : LITURGICAL_ORDINARY_COLOR;
 }
 
+const ROMAN_VALUES = { I: 1, V: 5, X: 10, L: 50, C: 100, M: 1000 };
+function _romanToArabic(str) {
+  const s = str.toUpperCase();
+  let total = 0;
+  for (let i = 0; i < s.length; i++) {
+    const cur = ROMAN_VALUES[s[i]];
+    const next = ROMAN_VALUES[s[i + 1]];
+    if (!cur) return null;
+    total += (next && cur < next) ? -cur : cur;
+  }
+  return total || null;
+}
+
+function _capitalizarInicial(s) {
+  s = s.trim().replace(/\.$/, '');
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+}
+
+// Separa el texto de Evangelizo en { semana, tiempo }. semana queda en
+// null si no se pudo identificar un número (ej. solemnidades) — ahí se
+// muestra el texto completo en la línea del tiempo litúrgico, sin línea
+// de semana.
+function _parseLiturgic(texto) {
+  let m = texto.match(/(\d+)\s*[ªº°]?\s*semana\s+(del|de)\s+(.+)$/i);
+  if (m) return { semana: m[1], prep: m[2].toLowerCase(), tiempo: _capitalizarInicial(m[3]) };
+
+  m = texto.match(/\b([IVXLCM]+)\s+semana\s+(del|de)\s+(.+)$/i);
+  if (m) {
+    const n = _romanToArabic(m[1]);
+    if (n) return { semana: String(n), prep: m[2].toLowerCase(), tiempo: _capitalizarInicial(m[3]) };
+  }
+
+  m = texto.match(/\b([IVXLCM]+)\s+(del|de)\s+(.+)$/i) || texto.match(/^([IVXLCM]+)\s+Domingo\s+(del|de)\s+(.+)$/i);
+  if (m) {
+    const n = _romanToArabic(m[1]);
+    if (n) return { semana: String(n), prep: m[2].toLowerCase(), tiempo: _capitalizarInicial(m[3]) };
+  }
+
+  return { semana: null, prep: null, tiempo: _capitalizarInicial(texto) };
+}
+
 function addLiturgicalSeal() {
   const head = document.querySelector('#reading-accordion .ra-head');
   if (!head || head.querySelector('.ra-seal')) return;
@@ -242,7 +311,9 @@ function addLiturgicalSeal() {
   const dateEl = head.querySelector('.ra-date');
   if (!eyebrow || !dateEl) return;
 
-  const color = _liturgicalColor(eyebrow.textContent);
+  const textoOriginal = eyebrow.textContent;
+  const color = _liturgicalColor(textoOriginal);
+  const { semana, prep, tiempo } = _parseLiturgic(textoOriginal);
 
   const seal = document.createElement('div');
   seal.className = 'ra-seal';
@@ -252,10 +323,17 @@ function addLiturgicalSeal() {
   const textWrap = document.createElement('div');
   textWrap.className = 'ra-head-text';
   const staleEl = head.querySelector('.ra-stale');
-  textWrap.appendChild(eyebrow);
+
+  // Orden: 1) fecha, 2) "Semana N del Tiempo X" (o el texto tal cual si
+  // no hay número de semana), coloreada según el tiempo litúrgico.
   textWrap.appendChild(dateEl);
-  if (staleEl) textWrap.appendChild(staleEl);
+
+  eyebrow.className = 'ra-week';
+  eyebrow.textContent = semana ? `Semana ${semana} ${prep} ${tiempo}` : tiempo;
   eyebrow.style.color = color;
+  textWrap.appendChild(eyebrow);
+
+  if (staleEl) textWrap.appendChild(staleEl);
 
   head.innerHTML = '';
   head.appendChild(seal);
