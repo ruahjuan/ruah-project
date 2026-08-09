@@ -228,24 +228,43 @@ const PdfExport = (function () {
 
       case 'chord-line': {
         let cx = x;
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(BASE.LYRIC_SIZE * scale);
 
         for (const { chord, lyric } of block.tokens) {
           const text = lyric || '';
-          const w = doc.getTextWidth(text) || 3 * scale;
+
+          doc.setFont('helvetica', block.isChorus ? 'italic' : 'normal');
+          doc.setFontSize(BASE.LYRIC_SIZE * scale);
+          const lyricW = doc.getTextWidth(text);
+
+          // El acorde se dibuja en otra fuente/tamaño (courier bold, más
+          // chico) que la letra. Si la letra debajo es corta o vacía
+          // (típico en intros/interludios con acordes muy juntos), el
+          // ancho del ACORDE puede ser mayor que el de la letra — hay
+          // que reservar el máximo de los dos o el próximo acorde se
+          // dibuja pisando al anterior.
+          let chordText = null, chordW = 0;
+          if (chord) {
+            chordText = applyNotation(
+              semitones ? Transposer.transposeChord(chord, semitones) : chord,
+              notation
+            );
+            doc.setFont('courier', 'bold');
+            doc.setFontSize(BASE.CHORDLINE_CHORD_SIZE * scale);
+            chordW = doc.getTextWidth(chordText);
+          }
+
+          const w = Math.max(lyricW, chordW, 3 * scale);
 
           if (cx + w > x + width) {
             cx = x;
             y += LH * 2;
           }
 
-          if (chord && draw) {
-            const c = semitones ? Transposer.transposeChord(chord, semitones) : chord;
+          if (chordText && draw) {
             doc.setFont('courier', 'bold');
             doc.setFontSize(BASE.CHORDLINE_CHORD_SIZE * scale);
             doc.setTextColor(...GOLD);
-            doc.text(applyNotation(c, notation), cx, y);
+            doc.text(chordText, cx, y);
           }
 
           doc.setFont('helvetica', block.isChorus ? 'italic' : 'normal');
