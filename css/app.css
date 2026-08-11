@@ -1170,6 +1170,14 @@ body[data-view="home"] #logo .logo-sub{
 }
 .footer-link:hover { color: var(--f4); text-decoration-color: var(--f3); }
 .footer-copy { color: var(--muted2); font-size: 11.5px; }
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color .15s;
+}
+.footer-social:hover { color: var(--f4); }
 
 /* ══════════════════════════════════════════
    MODAL CONTACTO
