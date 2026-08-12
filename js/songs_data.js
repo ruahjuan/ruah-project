@@ -1524,7 +1524,7 @@ const SONGS_DATA = [
     "spId": "14dKlVmsq73wjMrDtJhuoc",
     "youtube": "https://www.youtube.com/watch?v=tj6jkdiJI2Y",
     "ytId": "tj6jkdiJI2Y",
-    "content": "@@E                           A\nHoy quiero, Señor, ponerlo todo en tu presencia\n@@C#m                          B\nDarme hasta gastarme contigo y por Ti.\n@@E                           A\nHoy quiero, Señor, ponerlo todo ante tu puerta\n@@C#m                      B\nPara en todo amarte y servir.\n\n\n@@           E                              A\nEnciéndeme y déjame arder donde haga falta,\n@@          E                   A\nEnciéndeme y déjame ser tu luz,\n@@         E                          A\nY así poder llevarte hasta todas las almas,\n@@           E             B            E\nSaciar la sed que tienes Tú desde la cruz.\n\n\n@@ E                          A\nHoy quisiera Madre, poner todo en tu presencia,\n@@ C#m                         B\nDarme hasta gastarme, decirle que sí.\n@@ E                         A\nHoy te pido madre, que dejes mi puerta abierta,\n@@C#m                       B\nPara en todo amarle y servir\n\n",
+    "content": "@@E                           A\nHoy quiero, Señor, ponerlo todo en tu presencia\n@@C#m                          B\nDarme hasta gastarme contigo y por Ti.\n@@E                           A\nHoy quiero, Señor, ponerlo todo ante tu puerta\n@@C#m                      B\nPara en todo amarte y servir.\n\n\n@@           E                              A\nEnciéndeme y déjame arder donde haga falta,\n@@          E                   A\nEnciéndeme y déjame ser tu luz,\n@@         E                          A\nY así poder llevarte hasta todas las almas,\n@@           E             B            E\nSaciar la sed que tienes Tú desde la cruz.\n\n\n@@ E                          A\nHoy quisiera Madre, poner todo en tu presencia,\n@@ C#m                         B\nDarme hasta gastarme, decirle que sí.\n@@ E                         A\nHoy te pido Madre, que dejes mi puerta abierta,\n@@C#m                       B\nPara en todo amarle y servir\n\n",
     "tags": [
       "MARÍA",
       "ANIMACIÓN",
@@ -6081,6 +6081,26 @@ const SONGS_DATA = [
       "ADORACIÓN",
       "ACCIÓN DE GRACIAS",
       "ALABANZA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "hoy-he-vuelto",
+    "title": "HOY HE VUELTO",
+    "artist": "VERÓNICA SANFILIPPO",
+    "composer": "P. CESAREO GABARIN",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/5RDQ3MFokyskRTg270CFTJ?si=1bc14e72d2b2486b",
+    "spId": "5RDQ3MFokyskRTg270CFTJ",
+    "youtube": "https://www.youtube.com/watch?v=XtvONMljoGo",
+    "ytId": "XtvONMljoGo",
+    "content": "@@          G             D        G\nCuántas veces siendo niño te recé\n@@          G           C            D\nCon mis besos, te decía que te amaba\n@@         C            D\nPoco a poco, con el tiempo, \n@@       G          \nfui alejándome de Ti\n@@        D            D7            G\nPor caminos que se alejan, me perdí\n@@        D            D7            G\nPor caminos que se alejan, me perdí\n\n\n@@           D                    G\nY hoy he vuelto, Madre, a recordar\n@@          D                 G\nCuántas cosas dije ante tu altar\n@@       C                     G\nY al rezarte puedo comprender\n@@          D            D7            G\nQue una Madre no se cansa de esperar\n\n\n@@      G               D        G\nAl regreso, me encendías una luz\n@@      G           C              D\nSonriendo desde lejos, me esperabas\n@@       C         D\nEn la mesa, la comida \n@@       G\naún caliente y el mantel\n@@       D           D7        G\nY tu abrazo mi alegría de volver\n@@       D           D7        G\nY tu abrazo mi alegría de volver\n\n\n@@           D                    G\nY hoy he vuelto, Madre, a recordar\n@@          D                 G\nCuántas cosas dije ante tu altar\n@@       C                     G\nY al rezarte puedo comprender\n@@          D            D7            G\nQue una Madre no se cansa de esperar\n\n\n@@           G         D          G\nAunque el hijo se alejara del hogar\n@@      G                C          D\nUna madre siempre espera su regreso\n@@     C            D\nEl regalo más hermoso \n@@          G\nque a los hijos da el Señor\n@@      D           D7             G\nEs la Madre y el milagro de su amor\n@@      D           D7             G\nEs la Madre y el milagro de su amor\n\n\n@@           D                    G\nY hoy he vuelto, Madre, a recordar\n@@          D                 G\nCuántas cosas dije ante tu altar\n@@       C                     G\nY al rezarte puedo comprender\n@@          D            D7            G\nQue una Madre no se cansa de esperar",
+    "tags": [
+      "MARÍA"
     ],
     "source": "",
     "srcTag": "base",
