@@ -6107,5 +6107,48 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "comtigo-maria",
+    "title": "COMTIGO MARÍA",
+    "artist": "ATHENAS",
+    "composer": "",
+    "key": "D",
+    "spotify": "https://open.spotify.com/intl-es/track/1isN9cnGC34Cq699RN9PjN?si=02bbd9c09c304bb1",
+    "spId": "1isN9cnGC34Cq699RN9PjN",
+    "youtube": "https://www.youtube.com/watch?v=kkVtd-kam6A",
+    "ytId": "kkVtd-kam6A",
+    "content": "@@   D                        G\nQuiero caminar contigo María\n@@ D                               G\nPues tu eres mi Madre eres mi guía\n@@ A                              G\nTu eres para mi el mas grande ejemplo\n@@       D            A\nde santidad, de humildad.\n\n\n@@D                           G\nQuiero caminar contigo María\n@@D                                G\nNo solo un momento, todos los días\n@@ A                    G\nNecesito tu amor de Madre\n@@        D              A\nTu intercesión ante el Señor\n\n\n@@          D\nGuia mis pasos\n@@ G          D   A\nLlévame al cielo\n@@         Bm\nBajo tu manto\n@@ G          A\nNo tengo miedo\n@@           D\nLlena de gracia\n@@G       D  A\nAve María\n@@            Bm\nHoy yo te ofrezco\n@@ A       D\ntoda mi vida\n\n\n@@ D                          G\nQuiero caminar contigo María\n@@D                             G\nMadre en el dolor y en la alegría\n@@ A                               G\nTu que que fuiste fiel hasta el extremo\n@@       D             A\nFiel en la cruz, fiel a Jesús\n\n\n@@          D\nGuia mis pasos\n@@ G          D   A\nLlévame al cielo\n@@         Bm\nBajo tu manto\n@@ G          A\nNo tengo miedo\n@@           D\nLlena de gracia\n@@G       D  A\nAve María\n@@            Bm\nHoy yo te ofrezco\n@@ A       D\ntoda mi vida\n\n\n@@ Em\nCelestial princesa,\n@@     Bm       \nmírame con compasión\n@@  G\nHoy te doy mi alma,\n@@        A\nvida y corazón\n\n\n@@          D\nGuia mis pasos\n@@ G          D   A\nLlévame al cielo\n@@         Bm\nBajo tu manto\n@@ G          A\nNo tengo miedo\n@@           D\nLlena de gracia\n@@G       D  A\nAve María\n@@            Bm\nHoy yo te ofrezco\n@@ A       D\ntoda mi vida\n\nCORO 4 (suave)\n@@           D\nGuia mis pasos\n@@   G          D/F#\nLlévame al cielo\n@@A/C#      Bm\n  Bajo tu manto\n@@G           Asus A\nNo tengo miedo\n@@            D/F#\nLlena de gracia\n@@G       D/A\nAve María\n@@A/C#          Bm\n   Hoy yo te ofrezco\n@@ A       G\ntoda mi vida",
+    "tags": [
+      "MARÍA",
+      "SALIDA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "veras-cosas-mayores",
+    "title": "VERÁS COSAS MAYORES",
+    "artist": "BERIT",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/7vQza1UF3HA1W6RnRuh3Zm?si=cb9b837af4a44979",
+    "spId": "7vQza1UF3HA1W6RnRuh3Zm",
+    "youtube": "https://www.youtube.com/watch?v=BMIGCVra9t0",
+    "ytId": "BMIGCVra9t0",
+    "content": "@@C       Em                Am\nHe recorrido caminos sinuosos\n@@        Fmaj7                  C\nhe intentado encontrar la respuesta\n@@                  Em                 Am\nbuscando el control de mi vida y destino\n@@         Fmaj7     C G Am7 Fmaj7\ndebajo de la higuera\n\n@@C        Em               Am\nEn lo profundo de mi existencia\n@@       Fmaj7                 C\nvive lanzada una pregunta abierta\n@@             Em                      Am\nluchando en vano con mis propias fuerzas\n@@         Fmaj7     C\ndebajo de la higuera\n\n@@ G     Am        F         G\nTantas veces volviste a decir\n@@G      Am            F          G\ntantas veces que estás junto a mí\n\n\n@@   C      G           Am Fmaj7\nVerás, verás cosas mayores\n@@       C               G\nde mi mano encontrarás\n@@           Em Fmaj7\nsendas mejores\n@@             C              G\nincluso los sueños que perdiste\n@@         Em         Fmaj7\ntodo lo que no pudo ser\n@@          C\nte mostraré que siempre hay \n@@  G           Fmaj7\nmás de lo que ves\n\n\n@@C      Em                Am\nAl interior de mis pensamientos\n@@              Fmaj7            C\npensé que el silencio era soledad\n@@          Em                Am \ny hasta creí que nadie me veía\n@@         Fmaj7     C G Am Fmaj7\ndebajo de la higuera\n\n\n@@ G     Am        F         G\nTantas veces volviste a decir\n@@G      Am            F          G\ntantas veces que estás junto a mí\n\n\n@@   C      G           Am Fmaj7\nVerás, verás cosas mayores\n@@       C               G\nde mi mano encontrarás\n@@           Em Fmaj7\nsendas mejores\n@@             C              G\nincluso los sueños que perdiste\n@@         Em         Fmaj7\ntodo lo que no pudo ser\n@@          C\nte mostraré que siempre hay \n@@  G           Fmaj7\nmás de lo que ves\n",
+    "tags": [
+      "VOCACIONAL",
+      "MISIÓN",
+      "COMUNIDAD"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
