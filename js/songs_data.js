@@ -6110,7 +6110,7 @@ const SONGS_DATA = [
   },
   {
     "id": "comtigo-maria",
-    "title": "COMTIGO MARÍA",
+    "title": "CONTIGO MARÍA",
     "artist": "ATHENAS",
     "composer": "",
     "key": "D",
