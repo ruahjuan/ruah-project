@@ -6150,5 +6150,49 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "tengo",
+    "title": "TENGO",
+    "artist": "CIRENEOS MUSIC",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/5KotPs65epMfPL665R00X9?si=f0b042cab18e4e3c",
+    "spId": "5KotPs65epMfPL665R00X9",
+    "youtube": "https://www.youtube.com/watch?v=GqVgTXL_zqc",
+    "ytId": "GqVgTXL_zqc",
+    "content": "@@ C       F             C\nTengo unos pies que avanzan\n@@   F            C         G       C\nY que por Tus huellas se dejan guiar\n@@ C           F          C\nTengo unas manos que obran\n@@  F            C        G       C\nSiempre al servicio de Tu voluntad\n\n@@ C          F          C \nTengo una voz que te canta\n@@    F         C\nTe llora y te alaba\n@@      G       C\nQue pide Tu paz\n@@ C           F          C\nTengo una mente que sueña\n@@     F         C\nAl final del camino\n@@    G           C G\nVerte una vez más\n\n@@Dm            Am   G\nOh, Madre y ejemplo\n@@                Am\nDe entrega y amor\n@@   F            Dm             G\nEnséñame a entregarme a Su misión\n\n\n@@              F\nTodo a Tu servicio, Señor\n@@              C\nTe entrego mi alma, mi vida y mi voz\n@@                 G\nMoldeá a Tu manera\n@@              Am\nTodo es para Vos\n@@                   F\n¿Qué más ves en mí, mi Señor?\n@@                   C\nNo soy más que cualquier otro pecador\n@@                 G\nMe hablás de milagros\n@@                  Am\nCaminar sobre el mar y regalar Tu amor\n@@          F                   C\nY me decís que hay mucho más\n@@              E7                  Am\nQue ni me imagino cuánto puedo dar\n@@           F                 G \nQuiero ser lo que Tú ves en mí\n@@                    C\nY volverme a entregar\n\n\n@@ C           F        C\nTengo un corazón sediento\n@@      F       C\nQue grita Tu nombre\n@@   G         C\nPide Tu piedad\n\n@@     C     F         C\nUna lista eterna de dudas\n@@     F      C          G      C\nY alguna rotura que quiero curar\n\n@@Dm            Am  G\nLo poco que tengo\n@@                Am\nLo traigo a Tus pies\n@@ F          Dm                 G\nQue sea mi barro milagro otra vez\n\n@@             F              C\nTomá estos panes y estos peces;\n@@          G\nMultiplícalos\n@@               F            C\nTe entrego estas tinajas de agua\n@@                      G\nOh, transfórmalas, Señor\n@@          F             C\nNadie conoce a la creación\n@@                 G\nMás que El Creador\n@@         F            C             G\nTiro mis redes donde lo mande Tu voz\n\n@@             F            C\nDame esos panes y esos peces\n@@                 G\nEl resto lo hago Yo\n@@        F             C\nLlená esas tinajas de agua\n@@                G\nY de fe llenate vos\n@@        F           C\nTirá tu red en Mi palabra\n@@         E7        Am\nEscucha mi \"Talita Kum\"\n@@          F         C\nFuiste creado para ser\n@@                   G\nInstrumento de Mi amor\n\n@@              F\nTodo a Tu servicio, Señor\n@@               C\nTe entrego mi alma, mi vida y mi voz\n@@                 G\nMoldeá a Tu manera\n@@              Am\nTodo es para Vos\n@@                   F\n¿Qué más ves en mí, mi Señor?\n@@                  C\nNo soy más que cualquier otro pecador\n@@                 G\nMe hablás de milagros\n@@                  Am\nCaminar sobre el mar y regalar Tu amor\n@@         F                    C\nY me decís que hay mucho más\n@@               E7                 Am\nQue ni me imagino cuánto puedo dar\n@@           F                 G\nQuiero ser lo que Tú ves en mí\n@@                   Am F C G\nY volverme a entregar\n@@                   Am F C G\nY volverme a entregar\n@@                    C\nY volverme a entregar\n",
+    "tags": [
+      "COMUNIDAD",
+      "MISIÓN",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "no-nos-basta",
+    "title": "NO NOS BASTA",
+    "artist": "JORGE OCAMPO",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/2bFt9ip5b5wCbnxBkm73O6?si=4b0b9070d96249f0",
+    "spId": "2bFt9ip5b5wCbnxBkm73O6",
+    "youtube": "https://www.youtube.com/watch?v=LcNDu_RIbXc",
+    "ytId": "LcNDu_RIbXc",
+    "content": "@@ G                      C       D\nQue será lo que me ha de esperar,\n@@G                    C        D\nque será lo que podré encontrar,\n@@      G                         C    D\nal andar quiero dar con una inmensidad\n@@     G                      C     D\ny llegar, y llegar a ver si hay algo más.\n\n@@        Em                 D\n¿Para qué buscar en la oscuridad,\n@@       G               C               D\npara qué buscar en la falsedad, la verdad?\n\n\n@@         G           D\nNo nos basta, vivir la vida\n@@             Am          G D \nsin querer hallar la felicidad\n@@      Em                D\ny cantarle al mundo entero\n@@                         Am C D\nque en la vida hay algo más.\n@@                G\nPorque no nos basta,\n@@            D\nestar tranquilos\n@@                Am\nsi es que la Verdad\n@@                G D\nhoy grita de amor.\n@@      Em            D\nSólo Cristo lo dará todo\n@@                Am C D\nnos dará la libertad,\n@@                    G C D\ny nos llama a algo más.\n@@                    G C D\ny nos llama a algo más.\n\n\n@@ G                  C         D\nSólo en Ti, Señor, sólo en tu cruz\n@@G                 C    D\nse halla la única felicidad.\n@@       G              \nAlgo más, en el mundo \n@@         C          D\nno lo he de encontrar.\n@@        G                  \nSi Tu amor, si Tu amor \n@@             C      D\nnos mueve a la Verdad,\n\n\n@@        Em                 D\n¿Para qué buscar en la oscuridad,\n@@       G               C               D\npara qué buscar en la falsedad, la verdad?\n\n\n@@         G           D\nNo nos basta, vivir la vida\n@@             Am          G D \nsin querer hallar la felicidad\n@@      Em                D\ny cantarle al mundo entero\n@@                         Am C D\nque en la vida hay algo más.\n@@                G\nPorque no nos basta,\n@@            D\nestar tranquilos\n@@                Am\nsi es que la Verdad\n@@                G D\nhoy grita de amor.\n@@      Em            D\nSólo Cristo lo dará todo\n@@                Am C D\nnos dará la libertad,\n@@                    G C D\ny nos llama a algo más.\n@@                    G C D\ny nos llama a algo más.\n\n\n@@G                      C    D\nSe que no hay mayor felicidad\n@@G                     C     D\nque entregarlo todo con valor.\n@@      G                       C      D\nYo seré, yo seré quien ha de responder\n@@              G                      \nA la Voz, a la Voz \n@@            C         D\nque ya se alzó en la cruz.\n\n@@        Em                 D\n¿Para qué buscar en la oscuridad,\n@@       G               C               D\npara qué buscar en la falsedad, la verdad?\n\n\n@@         G           D\nNo nos basta, vivir la vida\n@@             Am          G D \nsin querer hallar la felicidad\n@@      Em                D\ny cantarle al mundo entero\n@@                         Am C D\nque en la vida hay algo más.\n@@                G\nPorque no nos basta,\n@@            D\nestar tranquilos\n@@                Am\nsi es que la Verdad\n@@                G D\nhoy grita de amor.\n@@      Em            D\nSólo Cristo lo dará todo\n@@                Am C D\nnos dará la libertad,\n@@                    G C D\ny nos llama a algo más.\n@@                    G C D\ny nos llama a algo más.",
+    "tags": [
+      "COMUNIDAD",
+      "MISIÓN",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
