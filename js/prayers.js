@@ -6,37 +6,6 @@
 
 const PRAYERS = [
   {
-    id: 'letanias',
-    label: 'Letanías de la Humildad',
-    title: 'Letanías de la Humildad',
-    subtitle: 'Cardenal Rafael Merry del Val',
-    body: `<p>Jesús manso y humilde de Corazón, <em>óyeme.</em></p>
-<p style="font-style:italic;color:var(--muted);font-size:13px">(Después de cada frase: <strong>Líbrame, Jesús.</strong>)</p>
-<div class="litany-item">Del deseo de ser lisonjeado,</div>
-<div class="litany-item">Del deseo de ser alabado,</div>
-<div class="litany-item">Del deseo de ser honrado,</div>
-<div class="litany-item">Del deseo de ser aplaudido,</div>
-<div class="litany-item">Del deseo de ser preferido a otros,</div>
-<div class="litany-item">Del deseo de ser consultado,</div>
-<div class="litany-item">Del deseo de ser aceptado,</div>
-<div class="litany-item">Del temor de ser humillado,</div>
-<div class="litany-item">Del temor de ser despreciado,</div>
-<div class="litany-item">Del temor de ser reprendido,</div>
-<div class="litany-item">Del temor de ser calumniado,</div>
-<div class="litany-item">Del temor de ser olvidado,</div>
-<div class="litany-item">Del temor de ser puesto en ridículo,</div>
-<div class="litany-item">Del temor de ser injuriado,</div>
-<div class="litany-item">Del temor de ser juzgado con malicia,</div>
-<p style="font-style:italic;color:var(--muted);font-size:13px;margin:14px 0 8px">(Después de cada frase: <strong>Jesús, dame la gracia de desearlo.</strong>)</p>
-<div class="litany-item">Que otros sean más amados que yo,</div>
-<div class="litany-item">Que otros sean más estimados que yo,</div>
-<div class="litany-item">Que otros crezcan en la opinión del mundo y yo me eclipse,</div>
-<div class="litany-item">Que otros sean alabados y de mí no se haga caso,</div>
-<div class="litany-item">Que otros sean empleados en cargos y a mí se me juzgue inútil,</div>
-<div class="litany-item">Que los demás sean más santos que yo, con tal que yo sea todo lo santo que pueda.</div>
-<p style="margin-top:14px;font-size:13px"><em>Oh Jesús, que siendo Dios te humillaste hasta la muerte de Cruz, concédenos la gracia de aprender y practicar tu ejemplo. Amén.</em></p>`
-  },
-  {
     id: 'generosidad',
     label: 'Por la generosidad',
     title: 'Oración para la generosidad',
@@ -99,6 +68,37 @@ const PRAYERS = [
 <p>En todo lo que hoy soy, en todo lo que intente hacer, en mis encuentros, reflexiones, incluso en las frustraciones y fallos, y sobre todo en este rato de oración, en todo ello, haz que ponga mi vida en tus manos.</p>
 <p>Señor, soy todo tuyo. Haz de mí lo que Tú quieras.</p>
 <p><em>Amén.</em></p>`
+  },
+  {
+    id: 'letanias',
+    label: 'Letanías de la Humildad',
+    title: 'Letanías de la Humildad',
+    subtitle: 'Cardenal Rafael Merry del Val',
+    body: `<p>Jesús manso y humilde de Corazón, <em>óyeme.</em></p>
+<p style="font-style:italic;color:var(--muted);font-size:13px">(Después de cada frase: <strong>Líbrame, Jesús.</strong>)</p>
+<div class="litany-item">Del deseo de ser lisonjeado,</div>
+<div class="litany-item">Del deseo de ser alabado,</div>
+<div class="litany-item">Del deseo de ser honrado,</div>
+<div class="litany-item">Del deseo de ser aplaudido,</div>
+<div class="litany-item">Del deseo de ser preferido a otros,</div>
+<div class="litany-item">Del deseo de ser consultado,</div>
+<div class="litany-item">Del deseo de ser aceptado,</div>
+<div class="litany-item">Del temor de ser humillado,</div>
+<div class="litany-item">Del temor de ser despreciado,</div>
+<div class="litany-item">Del temor de ser reprendido,</div>
+<div class="litany-item">Del temor de ser calumniado,</div>
+<div class="litany-item">Del temor de ser olvidado,</div>
+<div class="litany-item">Del temor de ser puesto en ridículo,</div>
+<div class="litany-item">Del temor de ser injuriado,</div>
+<div class="litany-item">Del temor de ser juzgado con malicia,</div>
+<p style="font-style:italic;color:var(--muted);font-size:13px;margin:14px 0 8px">(Después de cada frase: <strong>Jesús, dame la gracia de desearlo.</strong>)</p>
+<div class="litany-item">Que otros sean más amados que yo,</div>
+<div class="litany-item">Que otros sean más estimados que yo,</div>
+<div class="litany-item">Que otros crezcan en la opinión del mundo y yo me eclipse,</div>
+<div class="litany-item">Que otros sean alabados y de mí no se haga caso,</div>
+<div class="litany-item">Que otros sean empleados en cargos y a mí se me juzgue inútil,</div>
+<div class="litany-item">Que los demás sean más santos que yo, con tal que yo sea todo lo santo que pueda.</div>
+<p style="margin-top:14px;font-size:13px"><em>Oh Jesús, que siendo Dios te humillaste hasta la muerte de Cruz, concédenos la gracia de aprender y practicar tu ejemplo. Amén.</em></p>`
   }
 ];
 
