@@ -6172,5 +6172,26 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "gloria",
+    "title": "GLORIA",
+    "artist": "MARTÍN VALVERDE",
+    "composer": "MARTÍN VALVERDE",
+    "key": "Am",
+    "spotify": "",
+    "spId": "",
+    "youtube": "https://www.youtube.com/watch?v=AQwONG5UOuE",
+    "ytId": "AQwONG5UOuE",
+    "content": "@@Am   Am/G  \nGloria,      \n@@ F   E \nGloria,\n\n@@Am   Am/G  \nGloria,      \n@@ F   E \nGloria,\n\n@@A7   Dm       G\na Jesús el Señor,\n@@       C        Am\nal Cordero de Dios.\n@@    Dm          Esus4 E   \nAl nombre sobre todo \n@@ Am     A7\nnombre.\n\n@@A7   Dm       G\nA Jesús el Señor,\n@@       C        Am\nal Cordero de Dios.\n@@    Dm          Esus4 E   \nAl nombre sobre todo \n@@ Am     \nnombre.",
+    "tags": [
+      "ADORACIÓN",
+      "ALABANZA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
