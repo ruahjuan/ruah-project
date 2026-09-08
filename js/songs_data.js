@@ -6193,5 +6193,27 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "tuyas-son",
+    "title": "TUYAS SON",
+    "artist": "LUISPO, HAKUNA GROUP MUSIC",
+    "composer": "LUISPO",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/2GcYWT4tLVgkyvxGWNVbjE?si=ed9409d2e1274f4c",
+    "spId": "2GcYWT4tLVgkyvxGWNVbjE",
+    "youtube": "https://www.youtube.com/watch?v=qlfzQrZyxUI",
+    "ytId": "qlfzQrZyxUI",
+    "content": "@@           E                   \nLa bendición y la gloria, \n@@  G#m\nla sabiduría\n@@     C#m      B              A           \nla acción de gracias y el poder\n@@    B      G#       C#m           \nla honra y toda fortaleza\n\n@@        A            B          \n¡Tuyas son, bendito Dios!\n@@        E      B/D#  C#m\n¡Tuyas son, bendito Dios!\n@@       A         B      E      \n¡Para siempre, amén, amén!\n\n@@        A            B          \n¡Tuyas son, bendito Dios!\n@@        E      B/D#  C#m\n¡Tuyas son, bendito Dios!\n@@        A         B     E      \n¡Para siempre, amén, amén!",
+    "tags": [
+      "ACCIÓN DE GRACIAS",
+      "ADORACIÓN",
+      "ALABANZA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
