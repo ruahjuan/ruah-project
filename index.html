@@ -3,23 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RUAH Cancionero</title>
-  <meta name="description" content="Cancionero litúrgico para músicos. Letras, acordes, transposición y más.">
+  <title>RUAH Cancionero — Tu cancionero digital de fe</title>
+  <meta name="description" content="El cancionero digital pensado para músicos de comunidades de fe: letras, acordes, transposición y setlists en tiempo real.">
 
-  <!-- Open Graph (WhatsApp, redes sociales) -->
+  <!-- Robots: indexar todo -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (WhatsApp, Facebook, redes sociales) -->
   <meta property="og:type"        content="website">
   <meta property="og:site_name"   content="RUAH Cancionero">
-  <meta property="og:title"       content="RUAH Cancionero">
-  <meta property="og:description" content="Cancionero litúrgico para músicos. Letras, acordes, transposición y más.">
-  <meta property="og:url"         content="https://ruah-cancionero.netlify.app/">
-  <meta property="og:image"       content="https://ruah-cancionero.netlify.app/og-image.png">
-  <meta name="twitter:card"       content="summary">
+  <meta property="og:title"       content="RUAH Cancionero — Tu cancionero digital de fe">
+  <meta property="og:description" content="El cancionero digital pensado para músicos de comunidades de fe: letras, acordes, transposición y setlists en tiempo real.">
+  <meta property="og:url"         content="https://ruah-project.ruah-cancionero.workers.dev/">
+  <meta property="og:image"       content="https://ruah-project.ruah-cancionero.workers.dev/og-image.jpg">
+  <meta property="og:locale"      content="es_AR">
 
-  <!-- Canónica -->
-  <link rel="canonical" href="https://ruah-cancionero.netlify.app/">
+  <!-- Twitter Cards -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="RUAH Cancionero — Tu cancionero digital de fe">
+  <meta name="twitter:description" content="El cancionero digital pensado para músicos de comunidades de fe: letras, acordes, transposición y setlists en tiempo real.">
+  <meta name="twitter:image"       content="https://ruah-project.ruah-cancionero.workers.dev/og-image.jpg">
 
-  <link rel="icon" type="image/svg+xml" href="./icon.svg">
-  <link rel="apple-touch-icon" href="./icon.svg">
+  <!-- Canónica (se actualiza dinámicamente por canción desde app.js) -->
+  <link rel="canonical" href="https://ruah-project.ruah-cancionero.workers.dev/" id="canonical-tag">
+
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="apple-touch-icon" href="/icon.svg">
+
+  <!-- PWA: manifest e instalación -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#c9a84c">
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +40,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="/css/app.css">
   <style>
     .sl-foot { display:flex; gap:6px; }
     .sl-share {
@@ -38,12 +51,284 @@
     }
     .sl-share:hover { background:var(--surf3,var(--surf2)); }
     .sl-clr { flex:1; }
-  </style>
-  <link rel="stylesheet" href="./css/chords.css">
-  <link rel="stylesheet" href="./css/mobile.css">
-  <link rel="stylesheet" href="./css/home.css">
-</head>
 
+    /* ── Fila de canción dentro del panel de Setlist ──
+       Define estructura propia (no depende de reglas de app.css que no
+       controlamos acá) para encajar los controles de tono sin pisar nada. */
+    .sl-row {
+      display:flex; align-items:center; gap:6px;
+      padding:7px 4px; border-bottom:1px solid var(--bord);
+    }
+    .sl-row:last-child { border-bottom:none; }
+    .sl-title {
+      flex:1; min-width:0; font-size:11.5px; cursor:pointer;
+      overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+    }
+
+    /* ── Control de tono por canción (ajustable sin entrar a Presentar) ── */
+    .sl-tone {
+      display:flex; align-items:center; gap:3px; flex-shrink:0;
+      padding:2px; border-radius:6px; background:var(--surf2);
+    }
+    .sl-tone-custom { background:rgba(201,168,76,.16); }
+    .sl-tone-btn {
+      width:18px; height:18px; display:flex; align-items:center; justify-content:center;
+      border:none; border-radius:4px; background:transparent; color:var(--text);
+      font-size:13px; line-height:1; cursor:pointer; font-family:inherit;
+    }
+    .sl-tone-btn:hover { background:var(--bord); }
+    .sl-tone-disp {
+      min-width:26px; text-align:center; font-size:10.5px; font-weight:600;
+      color:var(--text);
+    }
+    .sl-tone-custom .sl-tone-disp { color:#c9a84c; }
+
+    /* ── Botón "Presentar" ─────────────────────────── */
+    .sl-present-btn {
+      width:100%; display:flex; align-items:center; justify-content:center; gap:6px;
+      padding:8px 10px; border-radius:6px; border:1px solid #c9a84c;
+      background:#c9a84c; color:#1c1510; font-size:12px; font-weight:600;
+      cursor:pointer; font-family:inherit;
+    }
+    .sl-present-btn:hover { background:#d8b85c; }
+
+    /* ── Modo presentación (escenario) ───────────────
+       OJO: #sl-present NO envuelve a #song-view en el HTML (son hermanos
+       dentro de #detail). Por eso esto no es un overlay "inset:0" que tapa
+       todo — es solo la barra superior + flechas, fijas en pantalla,
+       dejando #song-view visible debajo en su lugar normal del flujo.
+       (Versión anterior tapaba la pantalla entera con #sl-present por
+       encima de #song-view sin contenido propio → pantalla en negro.) */
+    #sl-present { display:none; }
+    #sl-present.on { display:block; }
+
+    body.sl-presenting #topbar,
+    body.sl-presenting #ctrl-bar,
+    body.sl-presenting #filter-bar,
+    body.sl-presenting #list-panel,
+    body.sl-presenting #mobile-back,
+    body.sl-presenting #hamburger { display:none !important; }
+
+    /* Con la barra de presentación fija arriba, #detail necesita ceder
+       ese espacio para que el contenido de la canción no quede tapado. */
+    body.sl-presenting #detail { padding-top:64px; }
+    @media (max-width:768px) {
+      body.sl-presenting #detail { padding-top:58px; }
+    }
+
+    #slp-bar {
+      position:fixed; top:0; left:0; right:0; z-index:300;
+      display:flex; align-items:center; gap:10px;
+      padding:10px 14px; padding-top:calc(10px + env(safe-area-inset-top));
+      border-bottom:1px solid var(--bord); background:var(--surf,var(--surf2));
+    }
+    #slp-exit, #slp-rename {
+      display:flex; align-items:center; justify-content:center;
+      width:32px; height:32px; flex-shrink:0; border-radius:8px;
+      border:1px solid var(--bord); background:var(--surf2); color:var(--text);
+      cursor:pointer;
+    }
+    #slp-info { flex:1; min-width:0; text-align:center; }
+    #slp-name {
+      font-size:12.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+      color:#c9a84c; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    #slp-pos { font-size:11px; color:var(--muted); margin-top:1px; }
+
+    #slp-track {
+      position:fixed; top:42px; left:0; right:0; z-index:300;
+      padding:6px 14px 0; background:var(--surf,var(--surf2));
+    }
+    @media (max-width:768px) { #slp-track { top:38px; } }
+    #slp-dots { display:flex; gap:5px; justify-content:center; flex-wrap:wrap; }
+    #slp-dots .slp-dot {
+      width:7px; height:7px; border-radius:50%; background:var(--bord);
+      cursor:pointer; flex-shrink:0; transition:background .15s, transform .15s;
+    }
+    #slp-dots .slp-dot.act { background:#c9a84c; transform:scale(1.25); }
+
+    #slp-prev, #slp-next {
+      position:fixed; top:50%; transform:translateY(-50%);
+      width:38px; height:64px; display:flex; align-items:center; justify-content:center;
+      background:rgba(0,0,0,.28); color:#fff; border:none; border-radius:8px;
+      cursor:pointer; z-index:301; opacity:.55; transition:opacity .15s;
+    }
+    #slp-prev:hover, #slp-next:hover { opacity:1; }
+    #slp-prev { left:4px; } #slp-next { right:4px; }
+    #slp-prev:disabled, #slp-next:disabled { opacity:.15; cursor:default; }
+
+    @media (max-width:768px) {
+      #slp-prev, #slp-next { width:30px; height:52px; }
+    }
+
+    /* ── Modo Proyector ──────────────────────────────────────
+       Variante del modo presentación para proyectar letra al
+       público. Fondo configurable, letra grande centrada, sin chrome.
+
+       Temas (clase en body):
+         .proj-dark  — negro  (default)
+         .proj-light — blanco
+         .proj-warm  — beige/crema
+    */
+
+    /* Variables por tema */
+    body.proj-dark  { --proj-bg:#0d0d0d; --proj-bar:#111; --proj-bord:#2a2a2a;
+                      --proj-text:#f0ead6; --proj-section:#c9a84c;
+                      --proj-muted:#777; --proj-arrow:rgba(255,255,255,.12); }
+    body.proj-light { --proj-bg:#ffffff; --proj-bar:#f2f2f2; --proj-bord:#ddd;
+                      --proj-text:#111111; --proj-section:#8a6a00;
+                      --proj-muted:#666; --proj-arrow:rgba(0,0,0,.10); }
+    body.proj-warm  { --proj-bg:#f5edd8; --proj-bar:#ede0c4; --proj-bord:#d8c9a3;
+                      --proj-text:#2a1f0e; --proj-section:#7a5200;
+                      --proj-muted:#7a6040; --proj-arrow:rgba(0,0,0,.10); }
+
+    /* Ocultar chrome de la canción */
+    body.proj-active #shdr,
+    body.proj-active #tp,
+    body.proj-active .act-row,
+    body.proj-active #gear-panel,
+    body.proj-active .gear-row,
+    body.proj-active #autoscroll-btn { display:none !important; }
+
+    /* Fondo */
+    body.proj-active #detail,
+    body.proj-active #song-view {
+      background: var(--proj-bg);
+      min-height: 100vh;
+    }
+
+    /* Ocultar acordes */
+    body.proj-active .cp-chords-row,
+    body.proj-active .cp-chord { display:none !important; }
+
+    /* Letra grande y centrada — el tamaño base es 3em pero los botones
+       +/- existentes siguen funcionando (modifican #sbody font-size en em,
+       que se multiplica encima de este valor). */
+    body.proj-active #sbody {
+      font-size: 3em;
+      padding: 24px 6vw 100px;
+      text-align: center;
+    }
+    body.proj-active .cp-lyric,
+    body.proj-active .cp-lyric-row,
+    body.proj-active .cp-lyric-only {
+      color: var(--proj-text);
+      line-height: 1.65;
+      white-space: normal;
+    }
+    body.proj-active .cp-section {
+      color: var(--proj-section);
+      font-size: 0.42em;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-top: 1.6em;
+      margin-bottom: .5em;
+    }
+    body.proj-active .cp-annotation {
+      color: var(--proj-muted);
+      font-size: 0.38em;
+    }
+    body.proj-active .cp-pair { margin-bottom: .5em; }
+
+    /* Título y artista */
+    body.proj-active #stitle {
+      color: var(--proj-section);
+      font-size: 1em;
+      text-align: center;
+      padding-top: 8px;
+    }
+    body.proj-active #sartist {
+      color: var(--proj-muted);
+      font-size: 0.45em;
+      text-align: center;
+    }
+
+    /* Flechas */
+    body.proj-active #slp-prev,
+    body.proj-active #slp-next {
+      background: var(--proj-arrow);
+      color: var(--proj-text);
+    }
+    body.proj-active #slp-prev:hover,
+    body.proj-active #slp-next:hover { filter: brightness(1.3); }
+
+    /* Barra superior */
+    body.proj-active #slp-bar,
+    body.proj-active #slp-track {
+      background: var(--proj-bar);
+      border-color: var(--proj-bord);
+    }
+    body.proj-active #slp-name { color: var(--proj-section); }
+    body.proj-active #slp-pos  { color: var(--proj-muted); }
+
+    /* Botón de ciclo de tema en la barra */
+    #slp-theme-btn {
+      display: none;
+      align-items: center; justify-content: center;
+      width: 32px; height: 32px; flex-shrink: 0;
+      border-radius: 8px; border: 1px solid var(--bord);
+      background: var(--surf2); color: var(--text);
+      cursor: pointer; font-size: 14px; line-height: 1;
+    }
+    body.proj-active #slp-theme-btn { display: flex; }
+
+    /* Botones A− / A+ de tamaño de letra en la barra del proyector */
+    #slp-font-ctrl {
+      display: none;
+      align-items: center; gap: 3px; flex-shrink: 0;
+    }
+    body.proj-active #slp-font-ctrl { display: flex; }
+    #slp-font-ctrl button {
+      width: 30px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 7px; border: 1px solid var(--bord);
+      background: var(--surf2); color: var(--text);
+      font-size: 11px; font-weight: 700; font-family: inherit;
+      cursor: pointer; flex-shrink: 0;
+    }
+    #slp-font-ctrl button:hover { background: var(--bord); }
+
+    /* Control de autoscroll del proyector (debajo de los dots) */
+    #slp-scroll-ctrl {
+      display: none;
+      align-items: center; justify-content: center;
+      gap: 6px; padding: 5px 0 2px;
+    }
+    body.proj-active #slp-scroll-ctrl { display: flex; }
+    #slp-scroll-ctrl button {
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 6px; border: 1px solid var(--bord);
+      background: var(--surf2); color: var(--text);
+      font-size: 13px; font-weight: 700; font-family: inherit;
+      cursor: pointer; flex-shrink: 0; transition: background .12s;
+    }
+    #slp-scroll-ctrl button:hover { background: var(--bord); }
+    #slp-scroll-btn.on {
+      background: #c9a84c; color: #1c1510; border-color: #c9a84c;
+    }
+    #slp-scroll-spd {
+      font-size: 11px; font-weight: 600; color: var(--muted);
+      min-width: 28px; text-align: center;
+    }
+
+    /* Indicador de modo en la barra */
+    #slp-proj-indicator {
+      display: none;
+      font-size: 10px; color: #c9a84c;
+      font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; opacity: .8;
+    }
+    body.proj-active #slp-proj-indicator { display: inline; }
+
+    @media (max-width:768px) {
+      body.proj-active #sbody { font-size: 2em; padding: 16px 4vw 90px; }
+    }
+  </style>
+  <link rel="stylesheet" href="/css/chords.css">
+  <link rel="stylesheet" href="/css/mobile.css">
+  <link rel="stylesheet" href="/css/home.css">
+</head>
 <body>
 
   <!-- ══════════════════════════════════════════
@@ -81,26 +366,20 @@
         </svg>
         <span>Canciones</span>
       </button>
-      <button class="nav-btn" id="nb-prayers" onclick="showView('prayers')">
+      <button class="nav-btn" id="nb-setlists" onclick="showView('setlists')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
-          <path d="M12 6v6l4 2"/>
+          <rect x="3" y="3" width="6" height="18" rx="1.3"/>
+          <line x1="13" y1="6" x2="21" y2="6"/>
+          <line x1="13" y1="12" x2="21" y2="12"/>
+          <line x1="13" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>Setlists</span>
+      </button>
+      <button class="nav-btn" id="nb-prayers" onclick="showView('prayers')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 6.5L12 12.5M10 8.5H14M6.5 21H18.5C19.3284 21 20 20.3284 20 19.5V4.5C20 3.67157 19.3284 3 18.5 3H6.5C5.11929 3 4 4.11929 4 5.5V18.5M6.5 21C5.11929 21 4 19.8807 4 18.5M6.5 21C6.1717 21 5.84661 20.9353 5.54329 20.8097C5.23998 20.6841 4.96438 20.4999 4.73223 20.2678C4.50009 20.0356 4.31594 19.76 4.1903 19.4567C4.06466 19.1534 4 18.8283 4 18.5M4 18.5C4 18.1717 4.06466 17.8466 4.1903 17.5433C4.31594 17.24 4.50009 16.9644 4.73223 16.7322C4.96438 16.5001 5.23998 16.3159 5.54329 16.1903C5.84661 16.0647 6.1717 16 6.5 16L20 16" />
         </svg>
         <span>Oraciones</span>
-      </button>
-      <button id="btn-dark" onclick="toggleDark()" title="Modo oscuro" aria-label="Alternar modo oscuro">
-        <!-- ícono sol (modo claro activo) -->
-        <svg id="icon-dark-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-        <!-- ícono luna (modo oscuro activo) -->
-        <svg id="icon-dark-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-        </svg>
       </button>
       <button class="nav-btn" id="nb-admin" onclick="adminAccess()"
         style="display:none">
@@ -111,6 +390,23 @@
         <span>Admin</span>
       </button>
     </nav>
+
+    <!-- Toggle de modo oscuro: se queda en el header (fuera de #nav) para
+         que en mobile el <nav> pueda flotar abajo sin llevárselo puesto -->
+    <button id="btn-dark" onclick="toggleDark()" title="Modo oscuro" aria-label="Alternar modo oscuro">
+      <!-- ícono sol (modo claro activo) -->
+      <svg id="icon-dark-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <!-- ícono luna (modo oscuro activo) -->
+      <svg id="icon-dark-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+      </svg>
+    </button>
 
     <!-- Hamburger (solo mobile, en vista canciones) -->
     <button id="hamburger" onclick="toggleDrawer()" aria-label="Abrir lista"
@@ -166,74 +462,62 @@
       <p class="hero-tagline">Cancionero · Música de Dios</p>
       <h1 class="hero-name"><span class="r1">R</span><span class="r2">UAH</span></h1>
       <p class="hero-sub">Soplo de Dios · Espíritu que mueve</p>
-      <div class="hero-divider"></div>
-      <p class="hero-verse">«Cantad al Señor un cántico nuevo,<br>cantad al Señor, toda la tierra.»</p>
-      <p class="hero-ref">Salmo 96, 1</p>
+
+      <!-- Atajo de búsqueda: no filtra acá mismo, lleva a Canciones con el
+           buscador real (#si) ya enfocado — evita duplicar la lógica de
+           filtrado del listado en el home. -->
+      <button type="button" class="hero-search" onclick="showView('songs'); document.getElementById('si').focus();">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <span>Buscar canción o artista…</span>
+      </button>
+
+      <!-- Chips de acceso rápido a las categorías más usadas. Reusan
+           goCat(), la misma función que las tarjetas de "Explorar por
+           categoría" — nunca onclick inline con el tag (ver comentario
+           en la delegación de eventos, más abajo en app.js). -->
+      <div class="hero-chips">
+        <button class="hero-chip" data-tag="all">Todas</button>
+        <button class="hero-chip" data-tag="ADORACIÓN">Adoración</button>
+        <button class="hero-chip" data-tag="ACCIÓN DE GRACIAS">Acción de Gracias</button>
+        <button class="hero-chip" data-tag="MISA">Misa</button>
+        <button class="hero-chip" data-tag="VOCACIONAL">Vocacional</button>
+      </div>
     </div>
 
     <div class="home-wrap">
 
-      <!-- Stats -->
-      <div class="home-stats" id="home-stats">
-        <div class="hstat">
-          <span class="hstat-n" id="stat-songs">—</span>
-          <span class="hstat-l">canciones</span>
-        </div>
-        <div class="hstat-sep"></div>
-        <div class="hstat">
-          <span class="hstat-n" id="stat-tags">—</span>
-          <span class="hstat-l">categorías</span>
-        </div>
-        <div class="hstat-sep"></div>
-        <div class="hstat">
-          <span class="hstat-n" id="stat-prayers">—</span>
-          <span class="hstat-l">oraciones</span>
-        </div>
-      </div>
-
-      <!-- Canción de la semana -->
+      <!-- Últimas añadidas -->
       <div class="home-section-header">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16" aria-hidden="true">
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-        </svg>
-        <h2 class="home-h2">Canción de la semana</h2>
+        <div class="home-section-rule"></div>
+        <h2 class="home-h2">Últimas añadidas</h2>
       </div>
-      <div class="sotw-card" id="sotw-card">
-        <div class="sotw-info">
-          <div class="sotw-title" id="sotw-title">—</div>
-          <div class="sotw-artist" id="sotw-artist">—</div>
-          <div class="sotw-tags" id="sotw-tags"></div>
-        </div>
-        <button class="sotw-btn" id="sotw-btn" onclick="">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
-            <polygon points="5 3 19 12 5 21 5 3"/>
-          </svg>
-          Abrir
-        </button>
+      <div class="home-latest-list" id="home-latest">
+        <!-- Se rellena dinámicamente por buildHomeLatest(): últimas 12 canciones,
+             agrupadas en páginas de a 3, deslizables -->
+      </div>
+      <div class="home-latest-dots" id="home-latest-dots">
+        <!-- Se rellena dinámicamente por buildHomeLatest() -->
       </div>
 
       <!-- Explorar por categoría -->
       <div class="home-section-header" style="margin-top:28px">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16" aria-hidden="true">
-          <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-          <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
-        </svg>
+        <div class="home-section-rule"></div>
         <h2 class="home-h2">Explorar por categoría</h2>
       </div>
-      <div class="home-cat-chips" id="home-cat-chips">
-        <!-- Se rellena dinámicamente por buildHomeCats() -->
+      <div class="home-cats-featured" id="home-cats-featured">
+        <!-- Se rellena dinámicamente por buildHomeCats(): tarjetas destacadas -->
       </div>
-
-      <!-- Oraciones del músico -->
-      <div class="home-section-header" style="margin-top:28px">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16" aria-hidden="true">
-          <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
-          <path d="M12 6v6l4 2"/>
+      <button class="home-cats-toggle" id="home-cats-toggle" onclick="toggleAllCats()">
+        Ver todas las categorías
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
         </svg>
-        <h2 class="home-h2">Oraciones del músico</h2>
+      </button>
+      <div class="home-cat-chips" id="home-cat-chips" hidden>
+        <!-- Se rellena dinámicamente por buildHomeCats(): el resto de las categorías -->
       </div>
-      <div class="prayer-tabs" id="ptabs"></div>
-      <div id="prayer-panels"></div>
 
     </div>
 
@@ -244,6 +528,14 @@
       <button class="footer-link" onclick="openContactModal()">Contacto &amp; sugerencias</button>
       <span class="footer-sep">·</span>
       <span class="footer-copy">Hecho con <span aria-label="amor" style="color:var(--f3)">♥</span> para la comunidad</span>
+      <span class="footer-sep">·</span>
+      <a href="https://www.instagram.com/ruahcancionero/" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram" class="footer-social">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/>
+        </svg>
+      </a>
     </footer>
 
   </div>
@@ -263,23 +555,26 @@
         <input id="si" type="search" placeholder="Buscar canción, artista…" oninput="doSearch()" autocomplete="off" spellcheck="false">
       </div>
 
-      <button class="pill on" onclick="setFilt('all', this)">Todas</button>
-      <button class="pill"    onclick="setFilt('fav', this)">
+      <!-- Favoritas: un solo botón que alterna Todas ⇄ Favoritas -->
+      <button class="pill" id="pill-fav" onclick="toggleFavFilter(this)" title="Ver solo favoritas" aria-label="Ver solo favoritas">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
         </svg>
-        Favoritas
+        <span class="pill-lbl">Favoritas</span>
       </button>
-      <!-- Botón ver setlist (solo mobile, se muestra cuando hay canciones) -->
-      <button class="pill" id="pill-sl-mobile" onclick="toggleMobileSL()" style="display:none">
+
+      <!-- Setlist en mobile: abre la hoja inferior -->
+      <button class="pill" id="pill-sl-mobile" onclick="toggleMobileSL()" style="display:none" title="Ver setlist" aria-label="Ver setlist">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
           <line x1="8" y1="18" x2="21" y2="18"/>
           <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
           <line x1="3" y1="18" x2="3.01" y2="18"/>
         </svg>
-        Ver mis listas <span id="pill-sl-count"></span>
+        <span class="pill-lbl">Ver setlist</span> <span id="pill-sl-count"></span>
       </button>
+
+      <!-- Setlist en desktop: abre el panel lateral -->
       <button class="pill" id="pill-sl" onclick="toggleSL()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
@@ -287,29 +582,35 @@
           <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
           <line x1="3" y1="18" x2="3.01" y2="18"/>
         </svg>
-        Mis listas
+        <span class="pill-lbl">Setlist</span>
       </button>
-      <button class="pill" id="pill-print" onclick="togglePrint()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="6 9 6 2 18 2 18 9"/>
-          <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
-          <rect x="6" y="14" width="12" height="8"/>
-        </svg>
-        Letra
-      </button>
+      <!-- Botón "Letra" eliminado: cada canción ya tiene su propio modo solo-letra -->
     </div>
 
-    <!-- Chips de ordenamiento y tags -->
+    <!-- Chips de ordenamiento y tags. En mobile se ocultan detrás de dos disparadores -->
     <div id="filter-bar">
+      <div class="filter-triggers">
+        <button class="filter-trigger" id="sort-trigger" onclick="toggleFilterPanel('sort')" type="button">
+          <span class="filter-label">Orden</span> <span id="sort-trigger-lbl">A–Z</span> <span class="fchev">▾</span>
+        </button>
+        <button class="filter-trigger" id="tag-trigger" onclick="toggleFilterPanel('tag')" type="button">
+          <span class="filter-label">Tags</span> <span id="tag-trigger-lbl">Todas</span> <span class="fchev">▾</span>
+        </button>
+      </div>
+
       <span class="filter-label">Orden</span>
-      <span class="chip on" data-sort="alpha"    onclick="setSort('alpha', this)">A–Z</span>
-      <span class="chip"    data-sort="artist"   onclick="setSort('artist', this)">Artista</span>
-      <span class="chip"    data-sort="composer" onclick="setSort('composer', this)">Compositor</span>
-      <span class="chip"    data-sort="random"   onclick="setSort('random', this)">Aleatorio</span>
+      <div class="chip-strip" id="sort-chip-row">
+        <span class="chip on sort-chip" data-sort="alpha"    onclick="setSort('alpha', this)">A–Z</span>
+        <span class="chip sort-chip"    data-sort="artist"   onclick="setSort('artist', this)">Artista</span>
+        <span class="chip sort-chip"    data-sort="composer" onclick="setSort('composer', this)">Compositor</span>
+        <span class="chip sort-chip"    data-sort="random"   onclick="setSort('random', this)">Aleatorio</span>
+      </div>
       <div class="filter-sep"></div>
       <span class="filter-label">Tags</span>
-      <span class="chip on" data-tag="all" onclick="setTag('all', this)">Todas</span>
-      <!-- Los chips de tags se insertan dinámicamente por buildTagChips() -->
+      <div class="chip-strip" id="tag-chip-row">
+        <span class="chip on tag-chip" data-tag="all" onclick="setTag('all', this)">Todas</span>
+        <!-- Los chips de tags se insertan dinámicamente por buildTagChips() -->
+      </div>
     </div>
 
     <!-- Split: lista izquierda + detalle derecho -->
@@ -379,6 +680,10 @@
                     </svg>
                   </button>
                   <div id="dot-menu" role="menu" aria-hidden="true">
+                    <button class="dot-item" id="dot-print-btn" onclick="togglePrint();closeDotMenu()" role="menuitem">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                      <span id="dot-print-label">Ocultar acordes</span>
+                    </button>
                     <button class="dot-item" onclick="copySong();closeDotMenu()" role="menuitem">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                       Copiar letra
@@ -389,7 +694,11 @@
                     </button>
                     <button class="dot-item" onclick="addToSL();closeDotMenu()" role="menuitem">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-                      Guardar en Mis listas
+                      Guardar en setlist
+                    </button>
+                    <button class="dot-item" onclick="exportSongPDF();closeDotMenu()" role="menuitem">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+                      Exportar PDF
                     </button>
                     <button class="dot-item" id="dot-yt-btn" onclick="openYoutube();closeDotMenu()" role="menuitem" style="display:none">
                       <svg viewBox="0 0 24 24" fill="#FF0000" width="14" height="14" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -422,7 +731,11 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
                 Scroll
               </button>
-              <button class="shdr-pill" id="btn-notation" onclick="toggleNotation()" title="Cifrado americano">A–B–C</button>
+              <button class="shdr-pill" id="btn-notation" onclick="toggleNotation()" title="Cifrado americano">C → Do</button>
+              <button class="shdr-pill" id="btn-listen" onclick="openListenModal()" title="Escuchar en YouTube" style="display:none">
+                <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3" fill="currentColor"/></svg>
+                Escuchar
+              </button>
             </div>
 
             <!-- Fila 3: ⚙ Más opciones (colapsable) -->
@@ -511,43 +824,156 @@
 
         </div><!-- /song-view -->
 
-        <!-- Bottom sheet setlist (solo mobile) -->
-        <div id="mobile-sl-sheet">
-          <div id="mobile-sl-backdrop" onclick="toggleMobileSL()"></div>
-          <div id="mobile-sl-panel">
-            <div class="mobile-sl-hd">
-              <span>Mis listas</span>
-              <button class="abtn" onclick="toggleMobileSL()" style="padding:3px 8px;font-size:11px">✕</button>
-            </div>
-            <div class="sl-scroll" id="mobile-sl-scroll">
-              <div class="sl-empty">Sin canciones aún.</div>
-            </div>
-            <div class="sl-foot">
-              <button class="sl-clr" onclick="clearSL()">Vaciar</button>
-              <button class="sl-share" onclick="shareSetlist()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                Compartir
-              </button>
-            </div>
+      </div><!-- /detail -->
+
+      <!-- ══════════════════════════════════════════
+           MODO PRESENTACIÓN DE SETLIST
+           Vista de escenario: barra superior con nombre del
+           setlist + posición, navegación prev/next y swipe.
+           Reusa #song-view y todos sus controles (transposición,
+           capo, scroll, tamaño de letra) tal cual están.
+           NOTA: vive FUERA de #detail a propósito. #detail tiene
+           display:none !important en mobile cuando no hay canción
+           abierta, y este panel necesita poder mostrarse independiente
+           de eso (enterPresent() abre una canción de todas formas,
+           pero mantenerlo afuera evita heredar ese estado por accidente).
+      ══════════════════════════════════════════ -->
+      <div id="sl-present" aria-hidden="true">
+        <div id="slp-bar">
+          <button id="slp-exit" onclick="exitPresent()" aria-label="Salir del modo presentación">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" width="16" height="16" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <div id="slp-info">
+            <div id="slp-name">Setlist</div>
+            <div id="slp-pos">1 / 1 <span id="slp-proj-indicator">· PROYECTOR</span></div>
+          </div>
+          <button id="slp-proj-btn" onclick="toggleProjector()" title="Modo proyector (letra para el público)" aria-label="Activar/desactivar modo proyector" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:8px;border:1px solid var(--bord);background:var(--surf2);color:var(--text);cursor:pointer;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
+          </button>
+          <button id="slp-theme-btn" onclick="cycleProjectorTheme()" aria-label="Cambiar fondo del proyector" title="Cambiar fondo: negro → blanco → beige">☀︎</button>
+          <div id="slp-font-ctrl">
+            <button onclick="projFontChange(-1)" aria-label="Letra más chica" title="Reducir tamaño de letra">A−</button>
+            <button onclick="projFontChange(1)"  aria-label="Letra más grande" title="Aumentar tamaño de letra">A+</button>
+          </div>
+          <button id="slp-rename" onclick="renamePresent()" title="Editar nombre del setlist" aria-label="Editar nombre">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          </button>
+        </div>
+        <div id="slp-track">
+          <!-- Tira de puntos / mini-índice de canciones -->
+          <div id="slp-dots"></div>
+          <!-- Autoscroll del proyector (visible solo en proj-active) -->
+          <div id="slp-scroll-ctrl">
+            <button id="slp-scroll-btn" onclick="projScrollToggle()" aria-label="Autoscroll" title="Iniciar autoscroll">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="13" height="13" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </button>
+            <button onclick="projScrollSpeed(-1)" aria-label="Más lento" title="Más lento">−</button>
+            <span id="slp-scroll-spd">1.0×</span>
+            <button onclick="projScrollSpeed(1)" aria-label="Más rápido" title="Más rápido">+</button>
           </div>
         </div>
+        <button id="slp-prev" onclick="presentNav(-1)" aria-label="Canción anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button id="slp-next" onclick="presentNav(1)" aria-label="Canción siguiente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
 
-      </div><!-- /detail -->
+      <!-- Bottom sheet setlist (solo mobile)
+           IMPORTANTE: vive FUERA de #detail. #detail tiene
+           display:none !important en mobile cuando no hay canción
+           abierta, así que cualquier panel anidado adentro heredaba
+           ese display:none sin que ningún CSS de .open pudiera
+           revertirlo — esta era la causa de que "Ver setlist" nunca
+           mostrara nada en mobile (se abre desde la lista, sin
+           canción abierta). -->
+      <div id="mobile-sl-sheet">
+        <div id="mobile-sl-backdrop" onclick="toggleMobileSL()"></div>
+        <div id="mobile-sl-panel">
+          <div class="mobile-sl-hd">
+            <span>Setlist</span>
+            <button class="abtn" onclick="toggleMobileSL()" style="padding:3px 8px;font-size:11px">✕</button>
+          </div>
+          <div class="sl-scroll" id="mobile-sl-scroll">
+            <div class="sl-empty">Sin canciones aún.</div>
+          </div>
+          <div class="sl-foot">
+            <button class="sl-present-btn" onclick="startPresent()">
+              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="13" height="13" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Presentar
+            </button>
+          </div>
+          <div class="sl-foot">
+            <button class="sl-present-btn" onclick="startProjector()" style="background:#1c1510;color:#c9a84c;border-color:#c9a84c;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
+              Proyectar
+            </button>
+          </div>
+          <div class="sl-foot">
+            <button class="sl-clr" onclick="openSaveSetlistDialog()" style="color:var(--f5);border-color:var(--f3)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Guardar lista
+            </button>
+            <button class="sl-clr" onclick="clearSL()">Vaciar</button>
+            <button class="sl-share" onclick="shareSetlist()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Compartir
+            </button>
+          </div>
+          <div class="sl-foot">
+            <button class="sl-clr" onclick="exportSetlistPDF()" style="flex:1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+              Exportar PDF
+            </button>
+            <button class="sl-clr" onclick="exportSetlistDocx()" style="flex:1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+              Cancionero (Word)
+            </button>
+          </div>
+        </div>
+      </div>
 
       <!-- Setlist lateral -->
       <div id="sl-panel">
         <div class="sl-hd">
-          <span>Mis listas</span>
+          <span>Setlist</span>
           <button class="abtn" onclick="toggleSL()" style="padding:3px 8px;font-size:11px">✕</button>
         </div>
         <div class="sl-scroll" id="sl-scroll">
           <div class="sl-empty">Sin canciones aún.</div>
         </div>
         <div class="sl-foot">
+          <button class="sl-present-btn" onclick="startPresent()">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="13" height="13" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            Presentar
+          </button>
+        </div>
+        <div class="sl-foot">
+          <button class="sl-present-btn" onclick="startProjector()" style="background:#1c1510;color:#c9a84c;border-color:#c9a84c;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 21v-2M8 21v-2M12 3v2M5 3h14"/><circle cx="12" cy="13" r="3"/></svg>
+            Proyectar
+          </button>
+        </div>
+        <div class="sl-foot">
+          <button class="sl-clr" onclick="openSaveSetlistDialog()" style="color:var(--f5);border-color:var(--f3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Guardar lista
+          </button>
           <button class="sl-clr" onclick="clearSL()">Vaciar</button>
           <button class="sl-share" onclick="shareSetlist()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
             Compartir
+          </button>
+        </div>
+        <div class="sl-foot">
+          <button class="sl-clr" onclick="exportSetlistPDF()" style="flex:1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+            Exportar PDF
+          </button>
+          <button class="sl-clr" onclick="exportSetlistDocx()" style="flex:1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+            Cancionero (Word)
           </button>
         </div>
       </div>
@@ -557,12 +983,44 @@
 
 
   <!-- ══════════════════════════════════════════
+       VISTA: MIS SETLISTS
+  ══════════════════════════════════════════ -->
+  <div class="view" id="v-setlists">
+    <div style="max-width:700px;margin:0 auto;width:100%;padding:32px 24px 60px;overflow-y:auto">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap">
+        <h2 class="home-h2">Mis Setlists</h2>
+        <button id="msl-save-current-btn" onclick="openSaveSetlistDialog()" style="display:none;background:var(--f1);border:1px solid var(--f3);color:var(--f5);border-radius:20px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap;">
+          + Guardar setlist actual
+        </button>
+      </div>
+      <div id="msl-list"></div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
        VISTA: ORACIONES
   ══════════════════════════════════════════ -->
   <div class="view" id="v-prayers">
     <div style="max-width:700px;margin:0 auto;width:100%;padding:32px 24px 60px;overflow-y:auto">
-      <h2 class="home-h2" style="margin-bottom:16px">Oraciones</h2>
-      <div class="prayer-tabs" id="ptabs-p"></div>
+
+      <!-- Lectura del día — la rellena buildLecturaDelDia() en app.js.
+           #lectura-nav (tira de días + buscador de fecha) la arma
+           js/lecturas-nav.js sin tocar ese render.
+           Arranca oculta: si /api/lectura-del-dia todavía no está
+           desplegado o falla, el widget simplemente no aparece. -->
+      <div class="home-section-header">
+        <div class="home-section-rule"></div>
+        <h2 class="home-h2">Lecturas del Día</h2>
+      </div>
+      <div id="lectura-nav"></div>
+      <div class="reading-accordion" id="reading-accordion" hidden></div>
+
+      <div class="home-section-header" style="margin-top:8px">
+        <div class="home-section-rule"></div>
+        <h2 class="home-h2">Oraciones del músico</h2>
+      </div>
+      <div class="prayer-index" id="ptabs-p"></div>
       <div id="prayer-panels-p"></div>
     </div>
   </div>
@@ -591,6 +1049,13 @@
               <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
             Exportar JSON
+          </button>
+          <button class="abtn" onclick="adminExportSongsData()" title="Descarga songs_data.js listo para reemplazar en el repo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Exportar songs_data.js
           </button>
           <label class="abtn" style="cursor:pointer">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
@@ -705,6 +1170,24 @@
       </div>
 
       <!-- ③ ÁREA PRINCIPAL flexible: editor | preview -->
+      <!-- El selector de pestañas de abajo solo se muestra en mobile
+           (ver mobile.css): en desktop editor y preview van lado a lado,
+           en mobile cada uno ocupa toda la pantalla y se alterna con esto. -->
+      <div class="ed-pane-switch">
+        <button type="button" class="eps-btn on" id="eps-edit" onclick="edSwitchPane('edit')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/>
+          </svg>
+          Editar
+        </button>
+        <button type="button" class="eps-btn" id="eps-preview" onclick="edSwitchPane('preview')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+          </svg>
+          Vista previa
+        </button>
+      </div>
+
       <div class="ed-body">
 
         <!-- Panel izquierdo: editor -->
@@ -840,18 +1323,73 @@ Sumergido en las aguas busco tu paz"
   <!-- ══════════════════════════════════════════
        SCRIPTS (orden de carga crítico)
   ══════════════════════════════════════════ -->
-  <script src="./js/darkmode.js"></script>
-  <script src="./js/songs_data.js"></script>
-  <script src="./js/state.js"></script>
-  <script src="./js/transposer.js"></script>
-  <script src="./js/migrator.js"></script>
-  <script src="./js/parser.js"></script>
-  <script src="./js/renderer.js"></script>
-  <script src="./js/misc.js"></script>
-  <script src="./js/mobile.js"></script>
-  <script src="./js/editor.js"></script>
-  <script src="./js/prayers.js"></script>
-  <script src="./js/app.js"></script>
+  <script src="/js/darkmode.js"></script>
+  <script src="/js/songs_data.js"></script>
+  <script src="/js/state.js"></script>
+  <script src="/js/transposer.js"></script>
+  <script src="/js/migrator.js"></script>
+  <script src="/js/parser.js"></script>
+  <script src="/js/renderer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="/js/pdf-export.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="/js/docx-export.js"></script>
+  <script src="/js/misc.js"></script>
+  <script src="/js/mobile.js"></script>
+  <script src="/js/editor.js"></script>
+  <script src="/js/prayers.js"></script>
+  <script src="/js/lecturas-nav.js"></script>
+  <script src="/js/setlists-howto.js"></script>
+  <script src="/js/app.js"></script>
+<script src="/js/banner-coordinator.js"></script>
+<script src="/js/pwa.js"></script>
+<script src="/js/update.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then((reg) => {
+        console.log('[RUAH] SW registrado');
+
+        // ¿Ya había un SW nuevo esperando? (ej: se abrió una pestaña vieja)
+        if (reg.waiting) {
+          window.ruahUpdate.mostrarBannerActualizacion(reg);
+        }
+
+        // Detecta cuando se instala una versión nueva
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              window.ruahUpdate.mostrarBannerActualizacion(reg);
+            }
+          });
+        });
+      })
+      .catch(err => console.error('[RUAH] SW error:', err));
+
+    // Cuando el SW nuevo toma control, recargamos la página
+    let refrescando = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (refrescando) return;
+      refrescando = true;
+      window.location.reload();
+    });
+  }
+</script>
+<!-- BANNER HTML (compartido entre instalación PWA y aviso de actualización) -->
+<div id="pwa-install-banner" role="dialog" aria-label="Aviso">
+  <img src="/icons/icon-192.png" alt="RUAH" width="40" height="40" />
+  <div class="pwa-install-text">
+    <strong id="pib-title">Instalar RUAH</strong>
+    <span id="pib-msg">Accedé offline desde tu pantalla de inicio</span>
+  </div>
+  <button class="pwa-btn-install" id="pib-action-btn" onclick="ruahPWA.triggerInstall()">
+    Instalar
+  </button>
+  <button class="pwa-btn-close" id="pib-close-btn" onclick="ruahPWA.hideInstallBanner()" aria-label="Cerrar">
+    ✕
+  </button>
+</div>
 
 </body>
 </html>
