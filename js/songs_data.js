@@ -6215,5 +6215,28 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "la-fila",
+    "title": "LA FILA",
+    "artist": "HAKUNA GROUP MUSIC",
+    "composer": "HAKUNA GROUP MUSIC",
+    "key": "Am",
+    "spotify": "https://open.spotify.com/intl-es/track/2Fwhtw2BXjcg846WNAXOKD?si=72d6b758e7444d83",
+    "spId": "2Fwhtw2BXjcg846WNAXOKD",
+    "youtube": "https://www.youtube.com/watch?v=jMAEQjD_O2s",
+    "ytId": "jMAEQjD_O2s",
+    "content": "(Tono original: C#m)\n@@   Am             E7         Am7 E7\nLa fila más importante de mi vida\n@@        Am           E7       \nUnos minutos me separan \n@@        Am7   E7\ndel momento.\n@@           Am\nDe encontrarme con mi amante\n@@       Am/G\ncara a cara con Dios Carne.\n@@       Fsus2\nNo soy digno de que entres en mi casa\n@@            G               E7\npero una palabra tuya bastará \n@@        Am   E7 Am7 E7\npara sanarme.\n\n@@         Am                   G\nCada segundo se hace una eternidad,\n@@        C                  G\nsi es para tenerte no importa esperar.\n@@           Am       \nY tengo este hormigueo\n@@           G \nque no cesa hasta que te veo.\n@@       C   \nCada paso hacia adelante \n@@    G                 Am E7 Am7 E7\nes un paso hacia el Cielo.\n\n@@   Am\nY ligeramente elevado,\n@@       C\ny con un Amén contestado.\n@@    G\nPor fin frente a un Pan \n@@                     E7\nque se ha hecho humano.\n\n\n@@              F          C \nY cuando el Cuerpo de Cristo,\n@@ G        Am\nse une a mí,\n@@         F                C\nme transformo, me hago uno\n@@      G            Am\ncon Quién más me ama.\n@@            F        C\nEse el que sacia el hambre\n@@ G          Am\nde todo existir.\n@@      F                  C\nEl sagrario hacia el que siempre\n@@               G\nestoy arrodillado.\n\n@@                  F\nSi los Ángeles hablaran,\n@@           C            G\nconcienciarían nuestra alma.\n@@                  F\nEs el Rey de los amores,\n@@           C          G\nQuien nos alimenta y habla.\n@@                       F  C G \nA Quien todo el Cielo alaba.\n@@                       F  C G E7\nA Quien todo el Cielo alaba.\n\n\n@@   Am           G\nAprieto mis costados,\n@@           Am           G\npara que sientas mis abrazos.\n@@      Am \nQue Dios no está en el pan,\n@@     G\nque Dios es este Pan,\n@@        Am             G\nque yo mismo lo he tocado\n@@         Am\ncon mis labios.\n\n@@           Am           G\nBusca un hueco en mi corazón,\n@@       C                   G\nlimpia todo lo que hay en mi interior\n@@          Am \nQue está boca que Tú tocas\n@@      G                C\nsolo sepa hablar el lenguaje,\n@@      G          Am E7 Am7 E7\nel lenguaje del Amor.\n\n@@   Am\nY ligeramente elevado,\n@@       C\ny con un Amén contestado.\n@@    G\nPor fin frente a un Pan \n@@                     E7\nque se ha hecho humano.\n\n\n@@              F          C \nY cuando el Cuerpo de Cristo,\n@@ G        Am\nse une a mí,\n@@         F                C\nme transformo, me hago uno\n@@      G            Am\ncon Quién más me ama.\n@@            F        C\nEse el que sacia el hambre\n@@ G          Am\nde todo existir.\n@@      F                  C\nEl sagrario hacia el que siempre\n@@               G\nestoy arrodillado.\n\n@@                  F\nSi los Ángeles hablaran,\n@@           C            G\nconcienciarían nuestra alma.\n@@                  F\nEs el Rey de los amores,\n@@           C          G\nQuien nos alimenta y habla.\n@@                       F  C G \nA Quien todo el Cielo alaba.\n@@                       F  C G E7\nA Quien todo el Cielo alaba.\n\n\n@@    F                     C\nY ahora que ya estás conmigo Señor,\n@@ G         E7        Am\nhazme saber que estás vivo en mí.\n@@  F              C\nQue no eres un alimento más,\n@@ G             E7     Am\nque es tu cuerpo inmolado por mí.\n\n@@    F                     C\nY ahora que ya estás conmigo Señor\n@@ G         E7        Am         G\nhazme saber que estás vivo en mí.\n@@   F                 C\nAhora ya soy miembro de tu Cuerpo,\n@@ G       E7     Am        D  F\nunido a mis hermanos en Ti.\n\n\n@@              F          C \nY cuando el Cuerpo de Cristo,\n@@ G        Am\nse une a mí,\n@@         F                C\nme transformo, me hago uno\n@@      G            Am\ncon Quién más me ama.\n@@            F        C\nEse el que sacia el hambre\n@@ G          Am\nde todo existir.\n@@      F                  C\nEl sagrario hacia el que siempre\n@@               G\nestoy arrodillado.\n\n@@                  F\nSi los Ángeles hablaran,\n@@           C            G\nconcienciarían nuestra alma.\n@@                  F\nEs el Rey de los amores,\n@@           C          G\nQuien nos alimenta y habla.\n@@                       F  C G \nA Quien todo el Cielo alaba.\n@@         Am      G     F   C G \nA Quien todo el Cielo alaba.\n@@                        F  C G \nA Quien todo el Cielo alaba.\n@@                       F   C G Am\nA Quien todo el Cielo alaba.\n",
+    "tags": [
+      "ANIMACIÓN",
+      "COMUNIDAD",
+      "COMUNIÓN",
+      "JESÚS"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
