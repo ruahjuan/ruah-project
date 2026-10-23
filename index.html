@@ -521,22 +521,7 @@
 
     </div>
 
-    <!-- ── Footer ── -->
-    <footer id="app-footer">
-      <span class="footer-brand">RUAH Cancionero</span>
-      <span class="footer-sep">·</span>
-      <button class="footer-link" onclick="openContactModal()">Contacto &amp; sugerencias</button>
-      <span class="footer-sep">·</span>
-      <span class="footer-copy">Hecho con <span aria-label="amor" style="color:var(--f3)">♥</span> para la comunidad</span>
-      <span class="footer-sep">·</span>
-      <a href="https://www.instagram.com/ruahcancionero/" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram" class="footer-social">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
-          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
-          <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/>
-        </svg>
-      </a>
-    </footer>
+
 
   </div>
 
@@ -1250,6 +1235,26 @@ Sumergido en las aguas busco tu paz"
 
 
   <!-- ══════════════════════════════════════════
+       PIE GLOBAL (visible en todas las secciones)
+  ══════════════════════════════════════════ -->
+  <footer id="app-footer">
+    <span class="footer-copy">Herramienta gratuita de uso exclusivamente pastoral. Las obras pertenecen a sus autores.</span>
+    <button class="footer-link" onclick="openLegalModal()">Aviso legal</button>
+    <span class="footer-sep">·</span>
+    <button class="footer-link" onclick="openRightsModal()">Derechos de autor</button>
+    <span class="footer-sep">·</span>
+    <button class="footer-link" onclick="openContactModal()">Contacto</button>
+    <a href="https://www.instagram.com/ruahcancionero/" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram" class="footer-social">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/>
+      </svg>
+    </a>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════
        MODAL CONTACTO
   ══════════════════════════════════════════ -->
   <div id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" onclick="if(event.target===this)closeContactModal()">
@@ -1266,6 +1271,17 @@ Sumergido en las aguas busco tu paz"
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
+      </div>
+
+      <!-- Aviso legal (se muestra solo en modo "legal") -->
+      <div class="ctm-legal" id="ctm-legal">
+        <p>RUAH Cancionero es una herramienta gratuita, sin fines de lucro y sin publicidad, creada al servicio de las comunidades de música litúrgica y pastoral de la Iglesia católica. Su finalidad es exclusivamente pastoral: facilitar la oración, la liturgia y la formación de los grupos de música.</p>
+        <p>Los textos, melodías y acordes de las canciones pertenecen a sus respectivos autores, compositores y editores. Se presentan aquí únicamente para uso litúrgico y pastoral, sin ánimo de lucro y sin intención de apropiarse de ninguna obra. Este sitio no vende ni monetiza contenido.</p>
+        <p>Si sos autor, compositor o titular de derechos de alguna obra y querés que se corrija su acreditación, se modifique o se retire, escribinos y atenderemos tu pedido a la brevedad.</p>
+        <p>El contenido es para uso personal y comunitario de carácter pastoral. No se autoriza su reproducción ni utilización con fines comerciales.</p>
+        <div class="ctm-legal-actions">
+          <button class="btn-save" onclick="ctmOpenRights()">Escribir sobre una obra</button>
+        </div>
       </div>
 
       <!-- Tipo de mensaje -->
