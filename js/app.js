@@ -2376,7 +2376,7 @@ const CTM_CONFIG = {
   song: {
     mainLabel: '¿Qué canción sugerís?',
     mainPlaceholder: 'Nombre de la canción y artista…',
-    msgLabel: 'Detalles adicionales (letra, acortes, tonalidad…)',
+    msgLabel: 'Detalles adicionales (letra, acordes, tonalidad…)',
     msgPlaceholder: '¿Algo más que quieras contarnos?',
     subject: '[RUAH] Sugerencia de canción',
   },
@@ -2394,18 +2394,75 @@ const CTM_CONFIG = {
     msgPlaceholder: 'Escribí lo que quieras hacernos llegar.',
     subject: '[RUAH] Contacto general',
   },
+  rights: {
+    mainLabel: '¿De qué obra se trata?',
+    mainPlaceholder: 'Título y autor de la canción…',
+    msgLabel: '¿Qué necesitás? (acreditar, corregir o retirar)',
+    msgPlaceholder: 'Contanos quién sos y qué querés que hagamos con esta obra.',
+    subject: '[RUAH] Derechos de autor',
+  },
 };
 
 let ctmType = 'song';
 
-function openContactModal() {
-  const modal = document.getElementById('contact-modal');
-  modal.classList.add('open');
+// Modos del modal: 'form' (contacto), 'legal' (aviso legal) y 'rights' (derechos de autor)
+const CTM_TITLES = {
+  form:   'Contacto & sugerencias',
+  legal:  'Aviso legal',
+  rights: 'Derechos de autor',
+};
+
+function _ctmMode(mode) {
+  const box = document.querySelector('#contact-modal .ctm-box');
+  box.classList.toggle('is-legal',  mode === 'legal');
+  box.classList.toggle('is-rights', mode === 'rights');
+  document.getElementById('contact-modal-title').textContent = CTM_TITLES[mode];
+}
+
+function _ctmShow() {
+  document.getElementById('contact-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
-  // Reset
-  ctmSetTypeByKey('song');
+}
+
+function _ctmReset() {
   document.getElementById('ctm-main').value = '';
   document.getElementById('ctm-msg').value = '';
+}
+
+function _ctmApplyConfig(type) {
+  ctmType = type;
+  const cfg = CTM_CONFIG[type];
+  document.getElementById('ctm-main-label').textContent = cfg.mainLabel;
+  document.getElementById('ctm-main').placeholder = cfg.mainPlaceholder;
+  document.getElementById('ctm-msg-label').textContent = cfg.msgLabel;
+  document.getElementById('ctm-msg').placeholder = cfg.msgPlaceholder;
+}
+
+function openContactModal() {
+  _ctmShow();
+  _ctmMode('form');
+  _ctmReset();
+  ctmSetTypeByKey('song');
+}
+
+function openLegalModal() {
+  _ctmShow();
+  _ctmMode('legal');
+}
+
+function openRightsModal() {
+  _ctmShow();
+  _ctmReset();
+  _ctmMode('rights');
+  _ctmApplyConfig('rights');
+}
+
+// Desde el aviso legal: pasa al formulario de derechos de autor
+function ctmOpenRights() {
+  _ctmReset();
+  _ctmMode('rights');
+  _ctmApplyConfig('rights');
+  document.getElementById('ctm-main').focus();
 }
 
 function closeContactModal() {
@@ -2417,12 +2474,7 @@ function closeContactModal() {
 function ctmSetType(btn, type) {
   document.querySelectorAll('.ctm-type').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
-  ctmType = type;
-  const cfg = CTM_CONFIG[type];
-  document.getElementById('ctm-main-label').textContent = cfg.mainLabel;
-  document.getElementById('ctm-main').placeholder = cfg.mainPlaceholder;
-  document.getElementById('ctm-msg-label').textContent = cfg.msgLabel;
-  document.getElementById('ctm-msg').placeholder = cfg.msgPlaceholder;
+  _ctmApplyConfig(type);
 }
 
 function ctmSetTypeByKey(type) {
