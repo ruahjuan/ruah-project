@@ -11,10 +11,11 @@
     overflow: hidden;
   }
 
-  /* ── Home: el footer queda tapado por el nav flotante de abajo
-     si no le damos aire (mismo criterio que #v-prayers). ── */
+  /* ── Pie global: ahora es hijo de <body> (visible en todas las vistas) y
+     queda al final de la columna. El nav flotante (≈63px + 10px de margen)
+     lo tapa, así que el pie reserva ese espacio debajo de su texto. ── */
   #app-footer {
-    padding-bottom: calc(24px + 70px + env(safe-area-inset-bottom));
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
   }
 
   /* ── Topbar: fijo, ya tiene height:52px ── */
@@ -30,7 +31,7 @@
   #v-home         { overflow-y: auto; }
   .hero           { padding: 36px 20px 32px; flex-shrink: 0; }
   .hero-name      { font-size: 52px; }
-  .home-wrap      { padding: 20px 16px 110px; flex: 1; }
+  .home-wrap      { padding: 20px 16px 24px; flex: 1; }
 
   /* ── CANCIONES ── */
   #v-songs        { flex-direction: column; }
@@ -73,7 +74,7 @@
     overflow-y: auto;
     border-right: none;
     height: auto;
-    padding-bottom: 90px;
+    padding-bottom: 16px;
   }
 
   /* Detalle: fixed encima, oculto hasta seleccionar */
@@ -244,7 +245,7 @@
 
   /* ── Oraciones ── */
   #v-prayers { overflow-y: auto; }
-  #v-prayers > div { padding: 20px 16px 110px; }
+  #v-prayers > div { padding: 20px 16px 24px; }
 
   /* ── Admin ── */
   #v-admin { overflow-y: auto; }
@@ -338,7 +339,7 @@
 @media print {
   #topbar, #ctrl-bar, #filter-bar, #list-panel,
   #shdr .act-row, #shdr #tp, #slinks,
-  #toast, #mobile-back { display: none !important; }
+  #toast, #mobile-back, #app-footer { display: none !important; }
   body   { overflow: visible !important; height: auto !important; }
   #detail {
     overflow: visible !important;
