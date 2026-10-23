@@ -1209,8 +1209,21 @@ function doSearch() {
 // NAVEGACIÓN DE VISTAS
 // ═══════════════════════════════════════════════════════
 
+// El pie vive al final del scroll en Home; en las demás vistas queda fijo abajo (hijo de <body>).
+function _placeFooter(v) {
+  const f = document.getElementById('app-footer');
+  if (!f) return;
+  if (v === 'home') {
+    const home = document.getElementById('v-home');
+    if (f.parentElement !== home) home.appendChild(f);
+  } else if (f.parentElement !== document.body) {
+    document.body.insertBefore(f, document.getElementById('contact-modal'));
+  }
+}
+
 function showView(v) {
   document.body.dataset.view = v;
+  _placeFooter(v);
   document.querySelectorAll('.view').forEach(el => el.classList.remove('on'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('on'));
   document.getElementById('v-' + v).classList.add('on');
