@@ -521,7 +521,23 @@
 
     </div>
 
-
+    <!-- ── Pie: en Home vive al final del scroll; en el resto de las vistas
+         showView() lo pasa a <body> para que quede siempre visible ── -->
+<footer id="app-footer">
+      <span class="footer-copy">Herramienta gratuita de uso exclusivamente pastoral. Las obras pertenecen a sus autores.</span>
+      <button class="footer-link" onclick="openLegalModal()">Aviso legal</button>
+      <span class="footer-sep">·</span>
+      <button class="footer-link" onclick="openRightsModal()">Derechos de autor</button>
+      <span class="footer-sep">·</span>
+      <button class="footer-link" onclick="openContactModal()">Contacto</button>
+      <a href="https://www.instagram.com/ruahcancionero/" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram" class="footer-social">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/>
+        </svg>
+      </a>
+    </footer>
 
   </div>
 
@@ -1232,26 +1248,6 @@ Sumergido en las aguas busco tu paz"
 
     </div>
   </div><!-- /song-editor -->
-
-
-  <!-- ══════════════════════════════════════════
-       PIE GLOBAL (visible en todas las secciones)
-  ══════════════════════════════════════════ -->
-  <footer id="app-footer">
-    <span class="footer-copy">Herramienta gratuita de uso exclusivamente pastoral. Las obras pertenecen a sus autores.</span>
-    <button class="footer-link" onclick="openLegalModal()">Aviso legal</button>
-    <span class="footer-sep">·</span>
-    <button class="footer-link" onclick="openRightsModal()">Derechos de autor</button>
-    <span class="footer-sep">·</span>
-    <button class="footer-link" onclick="openContactModal()">Contacto</button>
-    <a href="https://www.instagram.com/ruahcancionero/" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram" class="footer-social">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
-        <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
-        <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/>
-      </svg>
-    </a>
-  </footer>
 
 
   <!-- ══════════════════════════════════════════
