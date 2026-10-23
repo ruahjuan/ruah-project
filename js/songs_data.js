@@ -6238,5 +6238,46 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "herederas",
+    "title": "HEREDERAS",
+    "artist": "CIRENEOS MUSIC",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/621820qyACuic6D5taVQqN?si=3e3db3ad4226432c",
+    "spId": "621820qyACuic6D5taVQqN",
+    "youtube": "https://www.youtube.com/watch?v=2kXb5Z1gidk",
+    "ytId": "2kXb5Z1gidk",
+    "content": "@@G          Em\nTu mirada trae calma\n@@       C         D\nMaternal, maternal\n\n@@G             Em\nNo hace falta decir nada\n@@         C            D\nMe abrazás, me abrazás\n\n\n@@        Em               C\nMi corazón a tu disposición\n@@              G\nMis ojos, mi cuerpo; todo\n@@             D\nTodo lo que soy\n@@               Em\nEsta consagración\n@@                  C\nDe entregarme a vos\n@@         G            B7\nSer heredera de tu amor\n@@                 Em\nDe seguir tu misión\n@@                 C\nDe seguir tu misión\n@@                 G D \nDe seguir tu misión\n\n\n@@Em\nSomos portadoras\n@@                       C\nDe un fuego que no muere\n@@                   Am7\nInstrumentos de amor\n@@                            G\nAl servicio de quien más quiere\n@@             Gsus4 G\nEspejos de María\n@@                       D\nY de su ejemplo servicial\n\n@@Em\nAliadas a la Madre\n@@                    C\nDe la humanidad entera\n@@                    Am7\nQue prometen por siempre\n@@                G\nVivirán a su manera\n@@            Gsus4 G\nLa gran misionera\n@@            D  B7\nNos va a guiar\n\n@@Em \nToma lo mío lo que me quema\n@@C\nDoy mis virtudes, mi vida entera\n@@G\nTe ofrezco todo\n@@                  D  B7\nNo quiero escatimar\n\n@@Em\nSigo tus pasos muestra el camino\n@@C\nCierro los ojos en vos confío\n@@G\nOh, dulce Madre toma mi vida\n@@D\nEn adelante soy peregrina\n\n\n@@        Em               C\nMi corazón a tu disposición\n@@              G\nMis ojos, mi cuerpo; todo\n@@             D\nTodo lo que soy\n@@               Em\nEsta consagración\n@@                  C\nDe entregarme a vos\n@@         G            B7\nSer heredera de tu amor\n@@                 Em\nDe seguir tu misión\n@@                 C\nDe seguir tu misión\n@@                 G D \nDe seguir tu misión\n",
+    "tags": [
+      "MARÍA"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "quedate-senor-oracion-de-los-esposos",
+    "title": "QUEDATE SEÑOR (ORACION DE LOS ESPOSOS)",
+    "artist": "VERÓNICA SANFILIPPO",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/4HURToccMvKcRDCGXSYIp9?si=389b24ecb77d4a4e",
+    "spId": "4HURToccMvKcRDCGXSYIp9",
+    "youtube": "https://www.youtube.com/watch?v=8M7AfwuXbnQ",
+    "ytId": "8M7AfwuXbnQ",
+    "content": "@@C \nHoy venimos a tu casa \n@@Am \nA ofrendarte nuestro amor \n@@                   F \nQueremos que Tu gracia nos inunde \n@@               C          G   \nY consagre nuestra unión \n\n@@C \nTe entregamos los que somos \n@@     Am \nTe abrimos nuestro corazón \n@@                     F \nVen entra a nuestra casa \n@@                   C  G \nVen y quédate, Señor \n\n\n@@         Am \nY danos de Tu paz \n@@              F \nAlumbra con Tu luz \n@@          C \nBendice nuestro hogar \n@@                G \nVen y quédate, Jesús \n\n@@                        Am \nY enciende en nuestro corazón \n@@            F \nEl fuego de Tu amor \n@@                 C \nPara que esta familia \n@@                     G \nSea un reflejo de Tu luz \n@@                   Am F \nVen y quédate, Jesús \n@@                   C  G \nVen y quédate, Jesús \n\n\n@@                   C \nBendice a este esposo \n@@                  Am \nBendice a esta esposa \n@@                  F         Dm\nBendice a esta familia que hoy, \n@@                C   G \nte consagra su amor. \n@@                   Am F \nVen y quédate, Señor \n@@                   C  G \nVen y quédate, Señor \n@@                   C \nVen y quédate, Señor.",
+    "tags": [
+      "VOCACIONAL",
+      "MATRIMONIO"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
