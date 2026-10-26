@@ -6343,5 +6343,72 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "spotify"
+  },
+  {
+    "id": "tu-mejor-soldado",
+    "title": "TU MEJOR SOLDADO",
+    "artist": "CIRENEOS MUSIC",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/0eKfXaHBzUm6D3holkFwnD?si=262d19c320b84581",
+    "spId": "0eKfXaHBzUm6D3holkFwnD",
+    "youtube": "https://www.youtube.com/watch?v=DvsOBZXoaAw",
+    "ytId": "DvsOBZXoaAw",
+    "content": "(Original: Bb)\n@@G                              D\nTanto te busqué en distintas partes\n@@Am              C         D      \nY siempre estuviste a mi lado\n\n@@ G                      D\nSoportaste todas mis caídas\n@@ Am         C              D\nMe diste refugio en Tu costado\n\n@@Am                         C\nHoy me predispongo a seguirte\n@@                         G\nA anunciar que Tú estás vivo\n@@                   D\nA ser tu mejor soldado\n\n@@Am\nEs un sentimiento irreprimible\n@@                 G\nTodo lo que he vivido\n@@                 D\nCómo podría callarlo\n\n\n@@         C                        Em\nSi ya sentí Tu fuego bien adentro mío\n@@                           G                   \nQuemando y matando el frío \n@@                 D\nque mi ego generó\n\n@@         C                       Em\nSi ya curaste cada una de mis heridas\n@@                     G \nDios sos la luz de mi vida \n@@                 D\nno me quiero alejar \n\n@@            Am \nHoy me convierto en Tu soldado \n@@       C\ny solo pido\n@@                         G\nQue me des más de Tu fuego \n@@                    D\nque yo quiero iluminar\n\n@@           Am                          C\nNo quiero que se separen nuestros caminos\n@@                     G\nEmbriagame con Tu Sangre\n@@                        D\ndame Tu Cuerpo en el pan\n\n\n@@Em                          C\nQuiero ser Padre tu instrumento\n@@                    G\nSal y luz en los demás\n@@                    D\nSer espejo de Tu amor y Tu bondad\n@@   Em                       C\nQuiero contar que Tú estás vivo\n@@                G\nSer el mejor testigo\n@@                      D\nNo me lo quiero guardar\n\n\n@@         C                        Em\nSi ya sentí Tu fuego bien adentro mío\n@@                           G                   \nQuemando y matando el frío \n@@                 D\nque mi ego generó\n\n@@         C                       Em\nSi ya curaste cada una de mis heridas\n@@                     G \nDios sos la luz de mi vida \n@@                 D\nno me quiero alejar \n\n@@            Am \nHoy me convierto en Tu soldado \n@@       C\ny solo pido\n@@                         G\nQue me des más de Tu fuego \n@@                    D\nque yo quiero iluminar\n\n@@           Am                          C\nNo quiero que se separen nuestros caminos\n@@                     G\nEmbriagame con Tu Sangre\n@@                        D\ndame Tu Cuerpo en el pan.",
+    "tags": [
+      "ADORACIÓN",
+      "ACCIÓN DE GRACIAS",
+      "VOCACIONAL",
+      "COMUNIDAD"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "como-brisa-suave-espiritu-santo",
+    "title": "COMO BRISA SUAVE (ESPÍRITU SANTO)",
+    "artist": "ATHENAS",
+    "composer": "",
+    "key": "A",
+    "spotify": "https://open.spotify.com/intl-es/track/0EbrZ0OIBZvbOol1IlpdIm?si=a1f3037fa8984c55",
+    "spId": "0EbrZ0OIBZvbOol1IlpdIm",
+    "youtube": "https://www.youtube.com/watch?v=sSrnH6YlyWQ",
+    "ytId": "sSrnH6YlyWQ",
+    "content": "@@A            Amaj7\nComo brisa suave\n@@F#m                 D\nComo la lluvia que cae\n@@ A            E\nVen, Espíritu Santo\n@@F#m            D\nVen, Espíritu Santo\n\n@@A             E\nComo brisa suave\n@@F#m                 D\nComo la lluvia que cae\n@@ A            E\nVen, Espíritu Santo\n@@F#m            D\nVen, Espíritu Santo\n\n@@ A            E\nVen, Espíritu Santo\n@@F#m            D\nVen, Espíritu Santo\n",
+    "tags": [
+      "ESPÍRITU SANTO",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "amigos-en-jesus",
+    "title": "AMIGOS EN JESÚS",
+    "artist": "CORO JEREMIAS",
+    "composer": "",
+    "key": "E",
+    "spotify": "https://open.spotify.com/intl-es/track/2aFj36SNLP8fvK6AuJ7lMW?si=4257988731c342fc",
+    "spId": "2aFj36SNLP8fvK6AuJ7lMW",
+    "youtube": "",
+    "ytId": "",
+    "content": "@@      E G#m         A  B\nY es propio del que ama  \n@@     E G#m      A B\nel callarse y mirar, \n@@       E         G#m         A    B\nson miradas silenciosas que aman, \n@@      E G#m            A  \nya no es necesario hablar. \n\n\n@@ E       G#m       A       E\nTus ojos dejan ver el corazón, \n@@C#m       G#7   C#m7    F#\ncomo ventanas puedo ver\n@@A       B      E\nlo que hay en vos. \n\n@@G#7        C#m           \nY así en silencio, amigo,   \n@@G#7        C#m           \nno nos aburrirá, \n@@A        B     E  F#m     B\ny en tus ojos leeré la verdad. \n\n\n@@      E G#m         A  B\nY es propio del que ama  \n@@     E G#m      A B\nel callarse y mirar, \n@@       E         G#m         A    B\nson miradas silenciosas que aman, \n@@      E G#m            A  \nya no es necesario hablar. \n\n\n@@E      G#m      A              E\nMi vida yo daré junto con mi amor. \n@@C#m  G#7  C#m7     F#\nLo hizo Jesús por mí, \n@@F#m     B       E\nyo lo haré por vos. \n\n@@G#7         C#m\nComo el grano de trigo \n@@G#7      C#m\npara crecer \n@@A    B       E         F#m     B\ntendremos que morir para nacer. \n\n\n@@      E G#m         A  B\nY es propio del que ama  \n@@     E G#m      A B\nel callarse y mirar, \n@@       E         G#m         A    B\nson miradas silenciosas que aman, \n@@      E G#m            A  \nya no es necesario hablar. ",
+    "tags": [
+      "ACCIÓN DE GRACIAS",
+      "ADORACIÓN",
+      "COMUNIDAD",
+      "VOCACIONAL"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "spotify"
   }
 ];
