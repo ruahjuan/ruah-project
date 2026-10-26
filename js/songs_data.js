@@ -6304,14 +6304,14 @@ const SONGS_DATA = [
   },
   {
     "id": "cordero-i",
-    "title": "CORDERO I",
+    "title": "CORDERO I (ESTE ES EL CORDERO)",
     "artist": "",
     "composer": "",
     "key": "Dm",
     "spotify": "",
     "spId": "",
-    "youtube": "",
-    "ytId": "",
+    "youtube": "https://www.youtube.com/watch?v=83_nDC82xj4",
+    "ytId": "83_nDC82xj4",
     "content": "@@Dm             C       Dm C\nEste es el Cordero de Dios\n@@Dm             C       F\nEste es el Cordero de Dios\n@@      Gm                  Dm\nQue quita el pecado del mundo\n@@    Bb        C          Dm\nCordero de Dios ten piedad\n\n@@Dm             C       Dm C\nEste es el Cordero de Dios\n@@Dm             C       F\nEste es el Cordero de Dios\n@@      Gm                  Dm\nQue quita el pecado del mundo\n@@    Bb        C          Dm\nCordero de Dios ten piedad\n\n@@Dm             C       Dm C\nEste es el Cordero de Dios\n@@Dm             C        F\nEste es el Cordero de Dios\n@@      Gm                  Dm\nQue quita el pecado del mundo\n@@    Bb       C          Dm\nCordero de Dios danos paz\n@@    Bb       A7          Dm\nCordero de Dios danos paz",
     "tags": [
       "LITÚRGICA",
@@ -6321,6 +6321,27 @@ const SONGS_DATA = [
     "srcTag": "base",
     "srcColor": "#9e9e9e",
     "fav": false,
-    "thumbnailHint": ""
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "espiritu-de-dios",
+    "title": "ESPIRITU DE DIOS",
+    "artist": "CORO SAN JOSÉ",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/3UENKxhzZ25tCh3qj1pBQn?si=f8728f3361da4140",
+    "spId": "3UENKxhzZ25tCh3qj1pBQn",
+    "youtube": "",
+    "ytId": "",
+    "content": "@@   C       Am\nEspíritu, Espíritu de Dios\n@@ F                 G\nVen y lléname con todo Tu poder (x2)\n\n@@C     Am    \nRuah, Ruah,\n@@ F     G  \nRuah, lléname de Dios (x2)\n\n@@   C            Am\nSatúrame, enamórame de Tí\n@@F         G\nÚngeme con Tu fuego eterno\n\n@@C     Am    \nRuah, Ruah,\n@@ F     G              C\nRuah, lléname de Dios (x2)\n\n\n@@ C              Dm\nSanto, Espíritu Santo\n@@             Am\nEnséñame a orar\n@@        F      C G\ny a confiar en Tí\n\n@@ C               Dm\nLlena de gozo mi alma\n@@              Am\ny afianza Tu amor\n@@      F  G   C\nTu amor en mí\n\n@@      C               F           C\nEl Espíritu de Dios está en este lugar\n@@                        F              G\nEl Espíritu de Dios se mueve en este lugar\n@@        C             F\nEstá aquí para consolar\n@@        C           F\nEstá aquí para liberar\n@@        C \nEstá aquí para guiar\n@@      G                   C\nEl Espíritu de Dios está aquí\n\n@@             C\nQuédate en mí\n@@              F\nQuédate en mí\n@@          Dm              G\nToma mi mente y mi corazón\n@@         C            Am\nLlena mi vida de Tu amor\n@@             F           G\nQuédate en mí, Santo Espíritu,\n@@             C\nquédate en mí.\n@@             F           G\nQuédate en mí, Santo Espíritu,\n@@             C\nquédate en mí.",
+    "tags": [
+      "ESPÍRITU SANTO",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "spotify"
   }
 ];
