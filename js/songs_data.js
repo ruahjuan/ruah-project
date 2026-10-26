@@ -5595,7 +5595,8 @@ const SONGS_DATA = [
     "ytId": "7y-eZQGUmH8",
     "content": "@@C\nEntre tantas preguntas\n@@              Fmaj7\nNo le podía mentir al corazón\n@@C\nUn vacío en mi alma\n@@              Fmaj7\nQue tú llenaste de ilusión\n\n@@Dm                     G\nEntre los juegos de amor\n@@             C\nFaltaba esa pieza\n@@      G       Am\nPara ser ganador\n@@     Dm\nY llegaste tú\n@@        F\nCon toda tu luz\n@@        C                    G\nA enseñarme cuál es la solución\n\n\n@@                 F                 C\nYo no le temo a nada si estás junto a mí\n@@      Am                 G\nSi somos los dos soñando\n@@                    F\nConstruyendo una vida\n@@                 C\nCon quien compartir\n@@       Am\nYa somos los dos\n@@                F\nSabiendo que Dios \n@@                       G\nnos va a enseñar el camino\n@@   C                       G \nPara tratar de hacer lo mejor\n@@           Dm                 G\nY haberte prometido toda mi vida\n@@                  C\nEs mi mejor decisión\n\n\n@@ C\nAunque pasen los años\n@@               Fmaj7\nCada mañana quiero\n@@                     F\nDespertarme junto a ti\n@@      Fsus\nPara poder decirte\n\n@@C\nQue ya no es tan extraño\n@@              Fmaj7\nQuererte a mi lado\n@@                     F\nPor el resto de mis días\n\n@@        Dm \nY te amaré\n@@                      G\nHasta que seamos viejitos\n@@     C           G            Am\nY la vida se nos pase de a poquitos\n@@            F                        G\nSiempre seré el primero en darte la mano\n\n\n@@                 F                 C\nYo no le temo a nada si estás junto a mí\n@@      Am                 G\nSi somos los dos soñando\n@@                    F\nConstruyendo una vida\n@@                 C\nCon quien compartir\n@@       Am\nYa somos los dos\n@@                F\nSabiendo que Dios \n@@                       G\nnos va a enseñar el camino\n@@   C                       G \nPara tratar de hacer lo mejor\n@@           Dm                 G\nY haberte prometido toda mi vida\n@@                  C\nEs mi mejor decisión\n\n\n@@               F                  C\nNo le temas a nada si estás junto a mí\n@@      Am                 G\nSi somos los dos soñando\n@@                    F\nConstruyendo una vida\n@@                 C\nCon quien compartir\n@@       Am\nYa somos los dos\n@@                F\nSabiendo que Dios \n@@                       G\nnos va a enseñar el camino\n@@   C                       G \nPara tratar de hacer lo mejor\n@@           Dm                 G\nY haberte prometido toda mi vida\n@@                  C\nEs mi mejor decisión\n",
     "tags": [
-      "VOCACIONAL"
+      "VOCACIONAL",
+      "MATRIMONIO"
     ],
     "source": "",
     "srcTag": "base",
@@ -6279,5 +6280,47 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "arde-en-mi",
+    "title": "ARDE EN MI",
+    "artist": "CIRENEOS MUSIC",
+    "composer": "",
+    "key": "Bm",
+    "spotify": "https://open.spotify.com/intl-es/track/2Wm6tNSi1YwNn3O3Epl6so?si=ace298a5fb5a4fb9",
+    "spId": "2Wm6tNSi1YwNn3O3Epl6so",
+    "youtube": "https://www.youtube.com/watch?v=i0tKYAmZxuE",
+    "ytId": "i0tKYAmZxuE",
+    "content": "@@Bm\nArde en mí\n@@G\nArde en mí\n@@D\nArde en mí\n@@   F#m\nEn mí\n\n@@Bm             G\nVen, Fuego Sagrado\n@@            D\nSoplo del Cielo\n@@        F#7\nAmor de Dios \n\n@@Bm              G\nTu pueblo te aclama\n@@        D\nSolo Tú sacias\n@@        F#7\nSu corazón\n\n@@Bm           G\nQue baje Tu llama\n@@            D\nMi cuerpo arda\n@@             F#m\nMe entrego a Ti\n\n@@Bm             G\nTe entrego mi alma\n@@         D\nY mi alabanza\n@@           F#m\nDesciende aquí\n\n@@Bm\nArde en mí\n@@G\nArde en mí\n@@D\nArde en mí\n@@   F#m\nEn mí\n\n\n@@Bm\nVen a arder\n@@    G\nEnciéndeme\n@@ Em         F#7\nLléname de Ti\n\n@@Bm             G\nQue baje Tu llama\n@@           D\nMi cuerpo arda\n@@             F#m\nMe entrego a Ti\n\n@@Bm            G\nTe entrego mi alma\n@@          D\nY mi alabanza\n@@           F#m\nDesciende aquí",
+    "tags": [
+      "ESPÍRITU SANTO",
+      "ADORACIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "cordero-i",
+    "title": "CORDERO I",
+    "artist": "",
+    "composer": "",
+    "key": "Dm",
+    "spotify": "",
+    "spId": "",
+    "youtube": "",
+    "ytId": "",
+    "content": "@@Dm             C       Dm C\nEste es el Cordero de Dios\n@@Dm             C       F\nEste es el Cordero de Dios\n@@      Gm                  Dm\nQue quita el pecado del mundo\n@@    Bb        C          Dm\nCordero de Dios ten piedad\n\n@@Dm             C       Dm C\nEste es el Cordero de Dios\n@@Dm             C       F\nEste es el Cordero de Dios\n@@      Gm                  Dm\nQue quita el pecado del mundo\n@@    Bb        C          Dm\nCordero de Dios ten piedad\n\n@@Dm             C       Dm C\nEste es el Cordero de Dios\n@@Dm             C        F\nEste es el Cordero de Dios\n@@      Gm                  Dm\nQue quita el pecado del mundo\n@@    Bb       C          Dm\nCordero de Dios danos paz\n@@    Bb       A7          Dm\nCordero de Dios danos paz",
+    "tags": [
+      "LITÚRGICA",
+      "CORDERO"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": ""
   }
 ];
