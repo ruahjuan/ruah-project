@@ -4776,7 +4776,7 @@ const SONGS_DATA = [
     "title": "QUEREMOS OFRECERTE",
     "artist": "CANTARES",
     "composer": "",
-    "key": "",
+    "key": "D",
     "spotify": "",
     "spId": "",
     "youtube": "https://www.youtube.com/watch?v=YnC48XGMAWs",
@@ -6305,7 +6305,7 @@ const SONGS_DATA = [
   {
     "id": "cordero-i",
     "title": "CORDERO I (ESTE ES EL CORDERO)",
-    "artist": "",
+    "artist": "MUSICA LITURGICA",
     "composer": "",
     "key": "Dm",
     "spotify": "",
@@ -6410,5 +6410,67 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "spotify"
+  },
+  {
+    "id": "desciende-del-cielo",
+    "title": "DESCIENDE DEL CIELO",
+    "artist": "CORO SAN JOSÉ",
+    "composer": "",
+    "key": "E",
+    "spotify": "https://open.spotify.com/intl-es/track/1i5A3EXyMy2j57S3B0nsZY?si=f9ed4b2ef308481a",
+    "spId": "1i5A3EXyMy2j57S3B0nsZY",
+    "youtube": "https://www.youtube.com/watch?v=geC-BfhKdIQ",
+    "ytId": "geC-BfhKdIQ",
+    "content": "(Original: F mayor)\n@@ E                  A\n​Ven con Tu suave brisa\n@@E                        A\n​Renueva todo con Tu amor\n@@C#m                    A\n​Quiero ser fiel en tu venida\n@@           E              B\n​De nuevo ven, Espíritu de Dios\n\n@@E                         A\n​Hazte presente una vez más\n@@E                        A\n​Dame tus dones para obrar \n@@C#m                     A\n​Ven a cambiar toda mi vida\n@@          E              B\n​Ven a llenarme, quiero más\n\n​\n@@C#m \n​Ven a darme vida, \n@@ A\nque sin Ti la mía\n@@       E       B\nya no tiene sentido\n@@C#m                     \n​Desciende del Cielo \n@@A                     \ny eleva de nuevo \n@@    E\nesa fe y esperanza\n@@         B\n​Que en mí se durmieron\n\n\n@@A       C#m     B\n​Santifícame Espíritu\n@@A       C#m     B\n​Enciéndeme Espíritu\n\n@@A       C#m     B\n​Santifícame Espíritu\n@@A         C#m   B\n​Enciéndeme Espíritu\n\n\n@@C#m \n​Ven a darme vida, \n@@ A\nque sin Ti la mía\n@@       E       B\nya no tiene sentido\n@@C#m                     \n​Desciende del Cielo \n@@A                     \ny eleva de nuevo \n@@    E\nesa fe y esperanza\n@@         B            E\n​Que en mí se durmieron.\n",
+    "tags": [
+      "ESPÍRITU SANTO"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "bienvenido-leon",
+    "title": "BIENVENIDO LEON",
+    "artist": "FILOCALIA",
+    "composer": "",
+    "key": "G",
+    "spotify": "https://open.spotify.com/intl-es/track/4n5jTz0dWAD59X0jPSE9Lv?si=cc3d9c8b1d3d4135",
+    "spId": "4n5jTz0dWAD59X0jPSE9Lv",
+    "youtube": "https://www.youtube.com/watch?v=-OVdYm-tkY4",
+    "ytId": "-OVdYm-tkY4",
+    "content": "@@  C    D      G\nBienvenido, León,\n@@     C        G       Em        D\nmi pueblo espera por tu bendición.\n@@  C    D       G\nBienvenido, León,\n@@   C         G\nvicario de Cristo,\n@@   Em            D\ntestigo del más grande amor\n\n@@ C                           G\nQué hermoso es ver al que viene\n@@ B7                 Em\ncon un mensaje de paz,\n@@ C                        G\nqué hermoso oír a quien nos recuerda \n@@D                A\nel valor de la humanidad.\n\n\n@@  C    D      G\nBienvenido, León,\n@@     C        G       Em        D\nmi pueblo espera por tu bendición.\n@@  C    D       G\nBienvenido, León,\n@@   C         G\nvicario de Cristo,\n@@   Em            D\ntestigo del más grande amor\n\n\n@@C                   G\nBendito sea quien trae \n@@B7                 Em\ngestos de fraternidad,\n@@C                 G\ny superando las tristes grietas \n@@       D          A\nnos muestra más hermandad.\n\n\n@@  C    D      G\nBienvenido, León,\n@@     C        G       Em        D\nmi pueblo espera por tu bendición.\n@@  C    D       G\nBienvenido, León,\n@@   C         G\nvicario de Cristo,\n@@   Em            D\ntestigo del más grande amor\n\n\n@@C                     G\nLos pobres y los pequeños\n@@B7                  Em\nserán la piedra angular\n@@ C            G\nde una sociedad más justa, \n@@        D           A\nde un mundo de justicia y paz.\n\n\n@@  C    D      G\nBienvenido, León,\n@@     C        G       Em        D\nmi pueblo espera por tu bendición.\n@@  C    D       G\nBienvenido, León,\n@@   C         G\nvicario de Cristo,\n@@   Em            D\ntestigo del más grande amor\n\n\n@@C                   G\nLa Santa Virgen María \n@@B7                Em\nnos dice desde Luján,\n@@C                     G\na todo el pueblo que peregrina:\n@@  D          A\n«Argentina canta y camina».\n\n\n@@  C    D      G\nBienvenido, León,\n@@     C        G       Em        D\nmi pueblo espera por tu bendición.\n@@  C    D       G\nBienvenido, León,\n@@   C         G\nvicario de Cristo,\n@@   Em            D\ntestigo del más grande amor\n\n@@  G    D       C\nBienvenido, León…\n@@  G    D       C\nBienvenido, León…\n@@  G    D       C\nBienvenido, León…\n",
+    "tags": [
+      "ANIMACIÓN",
+      "MISIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
+  },
+  {
+    "id": "te-recibimos-papa-leon",
+    "title": "TE RECIBIMOS, PAPA LEON",
+    "artist": "FILOCALIA",
+    "composer": "",
+    "key": "C",
+    "spotify": "https://open.spotify.com/intl-es/track/6CohsZcupVzi85XstryPCi?si=df19e4e616604ab9",
+    "spId": "6CohsZcupVzi85XstryPCi",
+    "youtube": "https://www.youtube.com/watch?v=RKRXyvcu1hs",
+    "ytId": "RKRXyvcu1hs",
+    "content": "@@     C                            F\nBenditos son los pies del que camina \n@@                C                    G\nanunciando la paz, anunciando el amor;\n@@Am                                  F\nbenditos son los pies del que nos trae\n@@               C                  G\nla palabra de Dios (la palabra de Dios).\n\n@@Am       F  \nY sin temor \n@@        C                  G\na ensuciarse las manos en la tarea,\n@@Bb                    F\nteniendo a Dios en el horizonte \n@@     G\ny al ser humano en el centro.\n\n\n@@       Am             F\nTe recibimos, Papa León,\n@@              C                 G\nmi pueblo espera por tu bendición.\n@@          Am              F\nTierra sencilla, pueblo de fe,\n@@            C             G\nque aún a tientas elige creer,\n@@ Dm         F             G\nque hizo el cielo un pabellón\n@@           D                    F\nceleste y blanco como mi corazón.\n\n\n@@    C                               F\nBenditos son los pies del que nos trae \n@@                C              G\nun mensaje de paz y de liberación;\n@@   Am                            F\nbenditos son los pasos del que viene\n@@                  C                      G\nen el nombre de Dios (en el nombre de Dios)\n\n@@Am       F\npara llamar \n@@      C                  G\na las piedras que fueron desechadas,\n@@Bb                       F\npero han de ser piedras angulares\n@@     G\nde una sociedad más justa.\n\n\n@@       Am             F\nTe recibimos, Papa León,\n@@              C                 G\nmi pueblo espera por tu bendición.\n@@          Am              F\nTierra sencilla, pueblo de fe,\n@@            C             G\nque aún a tientas elige creer,\n@@ Dm         F             G\nque hizo el cielo un pabellón\n@@           D                    F\nceleste y blanco como mi corazón.\n\n@@C                   \nEntonces esa piedra que ha desechado el hombre,\n@@F\nlos migrantes, los enfermos, los pequeños y los pobres,\n@@C\nserán las angulares de un mundo más humano,\n@@G\ndonde el amor y la verdad se estrecharán la mano.\n\n@@Am\nSeamos constructores de paz y comunión,\n@@     F\nno siervos de Babel sino del reino de Dios,\n@@              C\npara que el mundo pueda entender una vez más\n@@          G\nque en el corazón del hombre es donde Dios quiere habitar.\n\n@@         F\nDesde Luján \n@@         Am                G\nnuestra Madre nos mira y nos anima,\n@@Bb                    F\ny dice al pueblo que peregrina:\n@@       G\n«Argentina, canta y camina»\n\n\n@@       Am             F\nTe recibimos, Papa León,\n@@              C                 G\nmi pueblo espera por tu bendición.\n@@          Am              F\nTierra sencilla, pueblo de fe,\n@@            C             G\nque aún a tientas elige creer,\n@@ Dm         F             G\nque hizo el cielo un pabellón\n@@           D                    F\nceleste y blanco como mi corazón.\n",
+    "tags": [
+      "ANIMACIÓN",
+      "MISIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
