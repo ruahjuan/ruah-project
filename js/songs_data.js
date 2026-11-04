@@ -6472,5 +6472,26 @@ const SONGS_DATA = [
     "srcColor": "#9e9e9e",
     "fav": false,
     "thumbnailHint": "youtube"
+  },
+  {
+    "id": "argentina-con-el-papa-leon",
+    "title": "ARGENTINA CON EL PAPA LEON",
+    "artist": "CONFERENCIA EPISCOPAL ARGENTINA",
+    "composer": "",
+    "key": "A",
+    "spotify": "https://open.spotify.com/intl-es/track/229U5mDbd5b8Geg24zKro3?si=92783b56e7b245a4",
+    "spId": "229U5mDbd5b8Geg24zKro3",
+    "youtube": "https://www.youtube.com/watch?v=fvxs7zqrPfc",
+    "ytId": "fvxs7zqrPfc",
+    "content": "@@      D        F#m\nArgentina, caminando\n@@          A            E\ncon esperanzas, intentando\n@@     G            D             E\nser Iglesia, ser camino hacia la paz.\n\n@@           D          F#m\nNuestros santos nos animan\n@@         A                      E\ny con la Virgen de Luján hoy decimos:\n@@         G \n-¡Bienvenido todo el mundo,\n@@          D                  E\nen esta mesa hay lugar para todos!\n\n\n@@ A                          F#m\nCaminamos juntos hacia adelante\n@@       Bm\ncon el Papa León,\n@@        D            E\ncon Jesús en el horizonte.\n@@ A                          F#m\nCaminamos juntos hacia adelante,\n@@       Bm\n¡hay lugar para todos!\n@@        D               E         G  D\nEs tiempo de que Argentina se levante.\n\n\n@@        D            F#m\nHoy la Iglesia no descansa,\n@@      A          E\ntestimonio y alabanza;\n@@        G                     D\nel que sufre es la piedra angular\n@@           E\npara edificar nuestra Iglesia.\n\n@@ A                          F#m\nCaminamos juntos hacia adelante\n@@       Bm\ncon el Papa León,\n@@        D            E\ncon Jesús en el horizonte.\n@@ A                          F#m\nCaminamos juntos hacia adelante,\n@@       Bm\n¡hay lugar para todos!\n@@        D               E         G  D\nEs tiempo de que Argentina se levante.\n\n@@       G    E     A\n¡Argentina con León!",
+    "tags": [
+      "ANIMACIÓN",
+      "MISIÓN"
+    ],
+    "source": "",
+    "srcTag": "base",
+    "srcColor": "#9e9e9e",
+    "fav": false,
+    "thumbnailHint": "youtube"
   }
 ];
